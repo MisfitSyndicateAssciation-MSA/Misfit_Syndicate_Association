@@ -1,0 +1,39 @@
+name: Update ESPN Fantasy Data
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "15 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-espn-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out MSA website
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch latest ESPN data
+        run: python scripts/update_espn.py
+
+      - name: Save updated league data
+        run: |
+          git config user.name "MSA ESPN Bot"
+          git config user.email "actions@github.com"
+          git add data/league.json
+
+          if git diff --cached --quiet; then
+            echo "No ESPN changes to save."
+          else
+            git commit -m "Update ESPN fantasy data"
+            git push
+          fi
