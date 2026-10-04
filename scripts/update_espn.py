@@ -9,7 +9,11 @@ SEASON = "2026"
 ESPN_URL = (
     f"https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/"
     f"seasons/{SEASON}/segments/0/leagues/{LEAGUE_ID}"
-    "?view=mTeam&view=mStandings&view=mMatchup"
+    "?view=mTeam"
+    "&view=mStandings"
+    "&view=mMatchup"
+    "&view=mBoxscore"
+    "&view=mLiveScoring"
 )
 
 # Names we want displayed on the MSA website.
@@ -57,12 +61,21 @@ def build_clean_data(raw):
             "wins": record.get("wins", 0),
             "losses": record.get("losses", 0),
             "ties": record.get("ties", 0),
-            "pointsFor": round(record.get("pointsFor", team.get("points", 0)), 2),
-            "pointsAgainst": round(record.get("pointsAgainst", 0), 2),
+            "pointsFor": round(
+                record.get("pointsFor", team.get("points", 0)),
+                2,
+            ),
+            "pointsAgainst": round(
+                record.get("pointsAgainst", 0),
+                2,
+            ),
             "streakType": record.get("streakType", "NONE"),
             "streakLength": record.get("streakLength", 0),
             "playoffPct": round(
-                team.get("currentSimulationResults", {}).get("playoffPct", 0) * 100,
+                team.get(
+                    "currentSimulationResults",
+                    {}
+                ).get("playoffPct", 0) * 100,
                 1,
             ),
             "waiverRank": team.get("waiverRank"),
@@ -86,7 +99,10 @@ def build_clean_data(raw):
 
     current_week = raw.get(
         "scoringPeriodId",
-        raw.get("status", {}).get("currentMatchupPeriod", 1),
+        raw.get(
+            "status",
+            {}
+        ).get("currentMatchupPeriod", 1),
     )
 
     matchups = []
@@ -102,8 +118,17 @@ def build_clean_data(raw):
             "week": current_week,
             "awayTeamId": away.get("teamId"),
             "homeTeamId": home.get("teamId"),
-            "awayScore": away.get("totalPoints", 0),
-            "homeScore": home.get("totalPoints", 0),
+
+            "awayScore": round(
+                away.get("totalPoints", 0),
+                2,
+            ),
+
+            "homeScore": round(
+                home.get("totalPoints", 0),
+                2,
+            ),
+
             "awayProjection": round(
                 away.get(
                     "totalProjectedPointsLive",
@@ -111,6 +136,7 @@ def build_clean_data(raw):
                 ),
                 2,
             ),
+
             "homeProjection": round(
                 home.get(
                     "totalProjectedPointsLive",
@@ -124,7 +150,9 @@ def build_clean_data(raw):
         "leagueId": raw.get("id"),
         "season": raw.get("seasonId"),
         "currentWeek": current_week,
-        "updatedAt": datetime.now(timezone.utc).isoformat(),
+        "updatedAt": datetime.now(
+            timezone.utc
+        ).isoformat(),
         "standings": standings,
         "matchups": matchups,
     }
@@ -136,12 +164,24 @@ def main():
     raw = fetch_espn()
     clean = build_clean_data(raw)
 
-    os.makedirs("data", exist_ok=True)
+    os.makedirs(
+        "data",
+        exist_ok=True
+    )
 
     output_file = "data/league.json"
 
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(clean, f, indent=2, ensure_ascii=False)
+    with open(
+        output_file,
+        "w",
+        encoding="utf-8"
+    ) as f:
+        json.dump(
+            clean,
+            f,
+            indent=2,
+            ensure_ascii=False
+        )
 
     print(f"SUCCESS: Created {output_file}")
     print(f"Week: {clean['currentWeek']}")
