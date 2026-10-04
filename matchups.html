@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Matchups | Misfit Syndicate Association</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
 <header>
 <div class="hero">
 
-<img src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
+<img
+src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
 alt="Misfit Syndicate Association Logo"
 class="logo">
 
@@ -56,7 +60,8 @@ Loading this week's chaos from ESPN...
 </p>
 
 
-<div id="matchups-container"
+<div
+id="matchups-container"
 style="max-width:850px;margin:auto">
 
 <div class="matchup">
@@ -75,7 +80,13 @@ Loading the latest MSA matchups...
 
 <script>
 
+
+/*
+MSA team emojis mapped to ESPN team IDs.
+*/
+
 const teamEmojis = {
+
     1: "🧀",
     3: "🐏",
     4: "🔮",
@@ -86,261 +97,507 @@ const teamEmojis = {
     10: "🦷",
     11: "🐦",
     12: "💋"
+
 };
 
 
 /*
-These are your existing Week 4 graphics.
+Week 4 graphics are matched by the TWO ESPN
+team IDs instead of ESPN's matchup order.
 
-Future weeks can still display live ESPN data
-even if a custom graphic hasn't been uploaded yet.
+This means ESPN can rearrange the schedule
+however it wants and the correct graphic
+will still appear with the correct game.
 */
 
-const week4Graphics = [
-    "WK4 Match Up 1.png",
-    "WK4 Match Up 2.png",
-    "WK4 Match Up 3.png",
-    "WK4 Match Up 4.png",
-    "WK4 Match Up 5.png"
-];
+const week4Graphics = {
+
+    "1-10": "WK4 Match Up 1.png",
+
+    "6-12": "WK4 Match Up 2.png",
+
+    "4-9": "WK4 Match Up 3.png",
+
+    "3-8": "WK4 Match Up 4.png",
+
+    "5-11": "WK4 Match Up 5.png"
+
+};
+
+
+/*
+Original MSA matchup numbers.
+
+This preserves the numbering used on
+your custom Week 4 graphics.
+*/
+
+const week4MatchupNumbers = {
+
+    "1-10": 1,
+
+    "6-12": 2,
+
+    "4-9": 3,
+
+    "3-8": 4,
+
+    "5-11": 5
+
+};
+
+
+/*
+Create a consistent matchup key.
+
+Example:
+
+Db.EAtERs ID 10
+Big Papi Queso ID 1
+
+Both 10 vs 1 and 1 vs 10 become:
+
+1-10
+*/
+
+function getMatchupKey(teamA, teamB) {
+
+    return [teamA, teamB]
+        .sort((a, b) => a - b)
+        .join("-");
+
+}
+
 
 
 async function loadMatchups() {
 
+
     const container =
-        document.getElementById("matchups-container");
+        document.getElementById(
+            "matchups-container"
+        );
+
 
     const weekTitle =
-        document.getElementById("week-title");
+        document.getElementById(
+            "week-title"
+        );
+
 
     const status =
-        document.getElementById("matchup-status");
+        document.getElementById(
+            "matchup-status"
+        );
 
 
     try {
 
+
+        /*
+        Timestamp prevents the browser from
+        showing an old cached league.json file.
+        */
+
         const response = await fetch(
-            "data/league.json?t=" + Date.now()
+            "data/league.json?t=" +
+            Date.now()
         );
 
+
         if (!response.ok) {
+
             throw new Error(
                 "Could not load league.json"
             );
+
         }
 
 
-        const data = await response.json();
+        const data =
+            await response.json();
+
+
+
+        /*
+        Automatically display the current
+        ESPN fantasy week.
+        */
 
         weekTitle.textContent =
             "🏈 WEEK " +
             data.currentWeek +
             " MATCHUPS";
 
+
         status.textContent =
-            "Live scores & projections powered by ESPN • Updated automatically";
+            "ESPN projections • Updated automatically";
+
 
         container.innerHTML = "";
 
 
+
         /*
-        Build a quick lookup table so we can turn
-        ESPN team IDs into team names and records.
+        Build a lookup table so ESPN team IDs
+        can be converted into team information.
         */
 
         const teams = {};
 
+
         data.standings.forEach(team => {
+
             teams[team.id] = team;
+
         });
 
 
-        data.matchups.forEach((matchup, index) => {
 
-            const away =
-                teams[matchup.awayTeamId];
+        /*
+        Build each matchup card.
+        */
 
-            const home =
-                teams[matchup.homeTeamId];
-
-            if (!away || !home) {
-                return;
-            }
+        data.matchups.forEach(
+            (matchup, index) => {
 
 
-            const awayRecord =
-                away.wins +
-                "-" +
-                away.losses +
-                "-" +
-                away.ties;
-
-            const homeRecord =
-                home.wins +
-                "-" +
-                home.losses +
-                "-" +
-                home.ties;
+                const away =
+                    teams[
+                        matchup.awayTeamId
+                    ];
 
 
-            const awayEmoji =
-                teamEmojis[away.id] || "🏈";
-
-            const homeEmoji =
-                teamEmojis[home.id] || "🏈";
-
-
-            const card =
-                document.createElement("div");
-
-            card.className = "matchup";
+                const home =
+                    teams[
+                        matchup.homeTeamId
+                    ];
 
 
-            let specialTitle =
-                "🔥 MATCHUP " + (index + 1);
+                if (!away || !home) {
 
-            let specialMessage = "";
+                    return;
 
-
-            /*
-            Preserve a little MSA personality.
-            */
-
-            if (
-                away.wins === 0 &&
-                home.wins === 0
-            ) {
-                specialTitle =
-                    "💀 MATCHUP " +
-                    (index + 1) +
-                    " — THE WINLESS BOWL";
-
-                specialMessage =
-                    "<br><em>Somebody has to win eventually... probably.</em>";
-            }
+                }
 
 
-            let scoreDisplay = "";
 
-            /*
-            Show current score.
-            During games these numbers will change
-            whenever GitHub pulls fresh ESPN data.
-            */
+                /*
+                Team records.
+                */
 
-            scoreDisplay = `
-                <br>
-                <strong>
-                Current Score:
-                ${Number(matchup.awayScore).toFixed(1)}
-                —
-                ${Number(matchup.homeScore).toFixed(1)}
-                </strong>
-            `;
+                const awayRecord =
+                    away.wins +
+                    "-" +
+                    away.losses +
+                    "-" +
+                    away.ties;
 
 
-            const projectionDisplay = `
-                <br>
-                <span class="gold">
-                ESPN Projection:
-                ${Number(matchup.awayProjection).toFixed(1)}
-                —
-                ${Number(matchup.homeProjection).toFixed(1)}
-                </span>
-            `;
+                const homeRecord =
+                    home.wins +
+                    "-" +
+                    home.losses +
+                    "-" +
+                    home.ties;
 
 
-            let graphic = "";
+
+                /*
+                Team emojis.
+                */
+
+                const awayEmoji =
+                    teamEmojis[away.id]
+                    || "🏈";
 
 
-            /*
-            Only attach the existing custom graphics
-            when we're displaying Week 4.
-            */
+                const homeEmoji =
+                    teamEmojis[home.id]
+                    || "🏈";
 
-            if (
-                data.currentWeek === 4 &&
-                week4Graphics[index]
-            ) {
 
-                graphic = `
-                    <img
-                    src="${week4Graphics[index]}"
-                    alt="Week 4 Matchup ${index + 1}">
+
+                /*
+                Identify this matchup using
+                the two ESPN team IDs.
+                */
+
+                const matchupKey =
+                    getMatchupKey(
+                        away.id,
+                        home.id
+                    );
+
+
+
+                /*
+                Determine matchup number.
+
+                During Week 4 we preserve
+                the original MSA numbering.
+
+                Future weeks simply use
+                ESPN's displayed order.
+                */
+
+                let matchupNumber =
+                    index + 1;
+
+
+                if (
+                    data.currentWeek === 4 &&
+                    week4MatchupNumbers[
+                        matchupKey
+                    ]
+                ) {
+
+                    matchupNumber =
+                        week4MatchupNumbers[
+                            matchupKey
+                        ];
+
+                }
+
+
+
+                /*
+                Standard matchup title.
+                */
+
+                let specialTitle =
+                    "🔥 MATCHUP " +
+                    matchupNumber;
+
+
+                let specialMessage = "";
+
+
+
+                /*
+                THE WINLESS BOWL
+
+                If both teams enter the week
+                without a win, the website
+                automatically recognizes it.
+                */
+
+                if (
+                    away.wins === 0 &&
+                    home.wins === 0
+                ) {
+
+                    specialTitle =
+                        "💀 MATCHUP " +
+                        matchupNumber +
+                        " — THE WINLESS BOWL";
+
+
+                    specialMessage = `
+                        <br>
+                        <em>
+                        Somebody is legally required
+                        to leave with a win.
+                        </em>
+                    `;
+
+                }
+
+
+
+                /*
+                ESPN live projections.
+
+                We are intentionally NOT displaying
+                current scores yet because ESPN's
+                schedule feed is currently returning
+                0.0 for active Week 4 scores.
+
+                Once the live scoring feed is solved,
+                we'll add the score back here.
+                */
+
+                const projectionDisplay = `
+
+                    <br>
+
+                    <span class="gold">
+
+                    ESPN Projection:
+
+                    ${Number(
+                        matchup.awayProjection
+                    ).toFixed(1)}
+
+                    —
+
+                    ${Number(
+                        matchup.homeProjection
+                    ).toFixed(1)}
+
+                    </span>
+
                 `;
+
+
+
+                /*
+                Find the correct custom Week 4
+                graphic by TEAM IDs.
+
+                This fixes the mixed-up graphics.
+                */
+
+                let graphic = "";
+
+
+                if (
+                    data.currentWeek === 4 &&
+                    week4Graphics[
+                        matchupKey
+                    ]
+                ) {
+
+
+                    const graphicFile =
+                        week4Graphics[
+                            matchupKey
+                        ];
+
+
+                    graphic = `
+
+                        <img
+                        src="${graphicFile}"
+                        alt="Week 4 Matchup ${matchupNumber}">
+
+                    `;
+
+                }
+
+
+
+                /*
+                Create matchup card.
+                */
+
+                const card =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                card.className =
+                    "matchup";
+
+
+                card.innerHTML = `
+
+                    <strong>
+                    ${specialTitle}
+                    </strong>
+
+                    <br><br>
+
+
+                    <strong>
+
+                    ${awayEmoji}
+                    ${away.name}
+                    (${awayRecord})
+
+                    ⚔️
+
+                    ${homeEmoji}
+                    ${home.name}
+                    (${homeRecord})
+
+                    </strong>
+
+
+                    ${projectionDisplay}
+
+
+                    ${specialMessage}
+
+
+                    ${graphic}
+
+                `;
+
+
+
+                container.appendChild(
+                    card
+                );
+
+
             }
 
-
-            card.innerHTML = `
-
-                <strong>
-                ${specialTitle}
-                </strong>
-
-                <br><br>
-
-                <strong>
-                ${awayEmoji}
-                ${away.name}
-                (${awayRecord})
-
-                ⚔️
-
-                ${homeEmoji}
-                ${home.name}
-                (${homeRecord})
-                </strong>
-
-                ${scoreDisplay}
-
-                ${projectionDisplay}
-
-                ${specialMessage}
-
-                ${graphic}
-            `;
+        );
 
 
-            container.appendChild(card);
 
-        });
+        /*
+        Safety message if ESPN ever returns
+        an empty matchup list.
+        */
 
+        if (
+            data.matchups.length === 0
+        ) {
 
-        if (data.matchups.length === 0) {
 
             container.innerHTML = `
+
                 <div class="matchup">
-                No ESPN matchups are currently available.
+
+                No ESPN matchups are currently
+                available.
+
                 </div>
+
             `;
 
         }
 
+
     }
 
+
     catch (error) {
+
 
         console.error(
             "MSA ESPN matchup error:",
             error
         );
 
+
         status.textContent =
             "Unable to load ESPN matchup data.";
 
+
         container.innerHTML = `
+
             <div class="matchup">
-            ESPN is temporarily refusing to participate
-            in the dysfunction.
+
+            ESPN is temporarily refusing
+            to participate in the dysfunction.
+
             </div>
+
         `;
 
+
     }
+
 
 }
 
 
 loadMatchups();
+
 
 </script>
 
