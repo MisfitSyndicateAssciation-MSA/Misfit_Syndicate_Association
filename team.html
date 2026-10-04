@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Team | Misfit Syndicate Association</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* Individual MSA Team Page */
+
+.team-headquarters {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+}
+
+.team-profile {
+    text-align: center;
+}
+
+.team-logo-large {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+    margin: 10px auto 20px auto;
+    border-radius: 15px;
+}
+
+.team-name {
+    margin-bottom: 8px;
+}
+
+.team-owner {
+    margin-top: 0;
+}
+
+.team-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.team-stat {
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.05);
+}
+
+.roster-section {
+    max-width: 900px;
+    margin: 35px auto;
+}
+
+.roster-title {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.roster-table-wrapper {
+    overflow-x: auto;
+}
+
+.roster-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.roster-table th,
+.roster-table td {
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.roster-table th {
+    color: #f5b642;
+}
+
+.player-name {
+    font-weight: bold;
+}
+
+.injury-active {
+    opacity: 0.7;
+}
+
+.injury-questionable {
+    font-weight: bold;
+}
+
+.injury-out,
+.injury-ir {
+    font-weight: bold;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="hero">
+
+<img
+src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
+alt="Misfit Syndicate Association Logo"
+class="logo">
+
+<h1>Misfit Syndicate Association</h1>
+
+<div class="tagline">
+Fantasy Football for the Beautifully Dysfunctional
+</div>
+
+<div class="season">
+🏈 2026 MSA Season
+</div>
+
+</div>
+
+</header>
+
+
+<nav>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="matchups.html">
+Matchups
+</a>
+
+<a href="standings.html">
+Standings
+</a>
+
+<a href="teams.html" class="active">
+Teams
+</a>
+
+<a href="syndicate-report.html">
+Syndicate Report
+</a>
+
+<a href="league-history.html">
+League History
+</a>
+
+</div>
+
+</nav>
+
+
+<main>
+
+
+<div class="team-headquarters">
+
+<a
+href="teams.html"
+class="back-button">
+
+← Back to All Misfits
+
+</a>
+
+
+<div
+class="card team-profile"
+id="team-profile">
+
+<h2>
+Loading Misfit Headquarters...
+</h2>
+
+</div>
+
+</div>
+
+
+
+<div
+id="roster-container">
+</div>
+
+
+</main>
+
+
+<footer>
+
+© 2026 Misfit Syndicate Association • Built by Misfits, for Misfits
+
+</footer>
+
+
+
+<script>
+
+
+/*
+MSA team emojis matched to ESPN team IDs.
+*/
+
+const teamEmojis = {
+
+    1: "🧀",
+    3: "🐏",
+    4: "🔮",
+    5: "🏴‍☠️",
+    6: "🐕",
+    8: "⚡",
+    9: "😵",
+    10: "🦷",
+    11: "🐦",
+    12: "💋"
+
+};
+
+
+
+/*
+Read the team ID from the URL.
+
+Example:
+
+team.html?id=1
+
+becomes team ID 1.
+*/
+
+const urlParams =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+const teamId =
+    Number(
+        urlParams.get("id")
+    );
+
+
+
+function getRecord(team) {
+
+    let record =
+        team.wins +
+        "-" +
+        team.losses;
+
+
+    if (team.ties > 0) {
+
+        record +=
+            "-" +
+            team.ties;
+
+    }
+
+
+    return record;
+
+}
+
+
+
+function getStreak(team) {
+
+
+    if (
+        !team.streakType ||
+        team.streakType === "NONE" ||
+        !team.streakLength
+    ) {
+
+        return "—";
+
+    }
+
+
+    if (
+        team.streakType === "WIN"
+    ) {
+
+        return "🔥 W" +
+            team.streakLength;
+
+    }
+
+
+    if (
+        team.streakType === "LOSS"
+    ) {
+
+        return "💀 L" +
+            team.streakLength;
+
+    }
+
+
+    return (
+        team.streakType +
+        team.streakLength
+    );
+
+}
+
+
+
+/*
+Turn ESPN injury statuses into cleaner
+MSA-friendly labels.
+*/
+
+function getInjuryDisplay(status) {
+
+
+    if (
+        !status ||
+        status === "ACTIVE"
+    ) {
+
+        return {
+            text: "Active",
+            className: "injury-active"
+        };
+
+    }
+
+
+    if (
+        status === "QUESTIONABLE"
+    ) {
+
+        return {
+            text: "⚠️ Questionable",
+            className:
+                "injury-questionable"
+        };
+
+    }
+
+
+    if (
+        status === "DOUBTFUL"
+    ) {
+
+        return {
+            text: "⚠️ Doubtful",
+            className:
+                "injury-questionable"
+        };
+
+    }
+
+
+    if (
+        status === "OUT"
+    ) {
+
+        return {
+            text: "🚑 Out",
+            className:
+                "injury-out"
+        };
+
+    }
+
+
+    if (
+        status === "INJURY_RESERVE"
+    ) {
+
+        return {
+            text: "🏥 IR",
+            className:
+                "injury-ir"
+        };
+
+    }
+
+
+    if (
+        status === "DAY_TO_DAY"
+    ) {
+
+        return {
+            text: "⚠️ Day-to-Day",
+            className:
+                "injury-questionable"
+        };
+
+    }
+
+
+    return {
+        text:
+            status.replaceAll(
+                "_",
+                " "
+            ),
+
+        className: ""
+    };
+
+}
+
+
+
+/*
+Build one roster table.
+*/
+
+function buildRosterTable(
+    title,
+    icon,
+    players
+) {
+
+
+    if (
+        players.length === 0
+    ) {
+
+        return "";
+
+    }
+
+
+    let rows = "";
+
+
+    players.forEach(player => {
+
+
+        const injury =
+            getInjuryDisplay(
+                player.injuryStatus
+            );
+
+
+        rows += `
+
+            <tr>
+
+                <td>
+                    <strong>
+                    ${player.lineupSlot}
+                    </strong>
+                </td>
+
+
+                <td class="player-name">
+                    ${player.name}
+                </td>
+
+
+                <td>
+                    ${player.position}
+                </td>
+
+
+                <td>
+                    ${player.nflTeam}
+                </td>
+
+
+                <td class="${injury.className}">
+                    ${injury.text}
+                </td>
+
+            </tr>
+
+        `;
+
+    });
+
+
+
+    return `
+
+        <section class="roster-section">
+
+            <h2 class="roster-title">
+
+                ${icon}
+                ${title}
+
+            </h2>
+
+
+            <div class="card roster-table-wrapper">
+
+                <table class="roster-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                            Slot
+                            </th>
+
+                            <th>
+                            Player
+                            </th>
+
+                            <th>
+                            Pos
+                            </th>
+
+                            <th>
+                            NFL
+                            </th>
+
+                            <th>
+                            Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        ${rows}
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    `;
+
+}
+
+
+
+/*
+Sort starting players into normal
+fantasy lineup order.
+*/
+
+function starterSort(a, b) {
+
+
+    const order = {
+
+        0: 1,
+        2: 2,
+        4: 3,
+        6: 4,
+        23: 5,
+        16: 6,
+        17: 7
+
+    };
+
+
+    return (
+        order[a.lineupSlotId] || 99
+    ) - (
+        order[b.lineupSlotId] || 99
+    );
+
+}
+
+
+
+/*
+Load ESPN league data.
+*/
+
+async function loadTeam() {
+
+
+    const profile =
+        document.getElementById(
+            "team-profile"
+        );
+
+
+    const rosterContainer =
+        document.getElementById(
+            "roster-container"
+        );
+
+
+    try {
+
+
+        if (!teamId) {
+
+            throw new Error(
+                "No team ID supplied."
+            );
+
+        }
+
+
+
+        const response =
+            await fetch(
+
+                "data/league.json?t=" +
+                Date.now()
+
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Could not load league.json"
+            );
+
+        }
+
+
+
+        const data =
+            await response.json();
+
+
+
+        /*
+        Find this team in the standings.
+        */
+
+        const team =
+            data.standings.find(
+
+                item =>
+                    Number(item.id) ===
+                    teamId
+
+            );
+
+
+
+        if (!team) {
+
+            throw new Error(
+                "Team not found."
+            );
+
+        }
+
+
+
+        /*
+        Get this team's roster.
+        JSON object keys are strings.
+        */
+
+        const roster =
+            data.rosters[
+                String(teamId)
+            ] || [];
+
+
+
+        const emoji =
+            teamEmojis[team.id]
+            || "🏈";
+
+
+        const record =
+            getRecord(team);
+
+
+        const streak =
+            getStreak(team);
+
+
+
+        /*
+        Change browser tab title.
+        */
+
+        document.title =
+            team.name +
+            " | Misfit Syndicate Association";
+
+
+
+        /*
+        Build team headquarters.
+        */
+
+        let logoHTML = "";
+
+
+        if (team.logo) {
+
+            logoHTML = `
+
+                <img
+                src="${team.logo}"
+                alt="${team.name} logo"
+                class="team-logo-large">
+
+            `;
+
+        }
+
+
+
+        profile.innerHTML = `
+
+            ${logoHTML}
+
+
+            <h2 class="team-name">
+
+                ${emoji}
+                ${team.name}
+
+            </h2>
+
+
+            <p class="team-owner">
+
+                <strong>
+                Owner:
+                </strong>
+
+                ${team.owner}
+
+            </p>
+
+
+            <div class="team-stats">
+
+
+                <div class="team-stat">
+
+                    <strong>
+                    Record
+                    </strong>
+
+                    <br>
+
+                    ${record}
+
+                </div>
+
+
+                <div class="team-stat">
+
+                    <strong>
+                    Standing
+                    </strong>
+
+                    <br>
+
+                    #${team.rank}
+
+                </div>
+
+
+                <div class="team-stat">
+
+                    <strong>
+                    Points For
+                    </strong>
+
+                    <br>
+
+                    ${Number(
+                        team.pointsFor
+                    ).toFixed(1)}
+
+                </div>
+
+
+                <div class="team-stat">
+
+                    <strong>
+                    Points Against
+                    </strong>
+
+                    <br>
+
+                    ${Number(
+                        team.pointsAgainst
+                    ).toFixed(1)}
+
+                </div>
+
+
+                <div class="team-stat">
+
+                    <strong>
+                    Playoff Odds
+                    </strong>
+
+                    <br>
+
+                    ${Number(
+                        team.playoffPct
+                    ).toFixed(1)}%
+
+                </div>
+
+
+                <div class="team-stat">
+
+                    <strong>
+                    Streak
+                    </strong>
+
+                    <br>
+
+                    ${streak}
+
+                </div>
+
+
+            </div>
+
+
+            <p
+            style="
+                margin-top:20px;
+                opacity:.75;
+            ">
+
+            ESPN roster • Updated automatically
+
+            </p>
+
+        `;
+
+
+
+        /*
+        Separate starters, bench and IR.
+        */
+
+        const starters =
+            roster.filter(
+
+                player =>
+                    player.lineupSlotId !== 20 &&
+                    player.lineupSlotId !== 21
+
+            );
+
+
+        const bench =
+            roster.filter(
+
+                player =>
+                    player.lineupSlotId === 20
+
+            );
+
+
+        const injuredReserve =
+            roster.filter(
+
+                player =>
+                    player.lineupSlotId === 21
+
+            );
+
+
+
+        starters.sort(
+            starterSort
+        );
+
+
+
+        /*
+        Build roster sections.
+        */
+
+        rosterContainer.innerHTML =
+
+            buildRosterTable(
+                "STARTING LINEUP",
+                "🏈",
+                starters
+            )
+
+            +
+
+            buildRosterTable(
+                "BENCH",
+                "🪑",
+                bench
+            )
+
+            +
+
+            buildRosterTable(
+                "INJURED RESERVE",
+                "🏥",
+                injuredReserve
+            );
+
+
+
+        /*
+        If ESPN somehow returns no players.
+        */
+
+        if (
+            roster.length === 0
+        ) {
+
+            rosterContainer.innerHTML = `
+
+                <div
+                class="card center"
+                style="
+                    max-width:900px;
+                    margin:auto;
+                ">
+
+                No roster information
+                is currently available.
+
+                </div>
+
+            `;
+
+        }
+
+
+    }
+
+
+    catch (error) {
+
+
+        console.error(
+            "MSA team page error:",
+            error
+        );
+
+
+        profile.innerHTML = `
+
+            <h2>
+            ☠️ MISFIT NOT FOUND
+            </h2>
+
+            <p>
+            This team headquarters could
+            not be loaded.
+            </p>
+
+            <p>
+            <a href="teams.html">
+            Return to the Teams page
+            </a>
+            </p>
+
+        `;
+
+
+        rosterContainer.innerHTML = "";
+
+    }
+
+
+}
+
+
+
+loadTeam();
+
+
+</script>
+
+
+</body>
+
+</html>
