@@ -1,18 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Misfit Syndicate Association</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Misfit Syndicate Association | Fantasy Football</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #0b0b0b;
+            color: #f4f4f4;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+            background:
+                radial-gradient(circle at center, #292929 0%, #111 45%, #050505 100%);
+            border-bottom: 3px solid #b88a3b;
+        }
+
+        .hero {
+            max-width: 1000px;
+        }
+
+        .logo {
+            width: min(330px, 75vw);
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 8px 18px rgba(0,0,0,.7));
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 4.5rem);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .tagline {
+            color: #d6aa55;
+            font-size: clamp(1rem, 3vw, 1.45rem);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .season {
+            margin-top: 20px;
+            color: #aaa;
+            font-size: 1rem;
+        }
+
+        nav {
+            background: #111;
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav-links {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 18px 16px;
+            font-size: .85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: #d6aa55;
+            background: #1c1c1c;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .welcome {
+            text-align: center;
+            padding: 45px 25px;
+            background: #141414;
+            border: 1px solid #292929;
+            border-radius: 12px;
+        }
+
+        .welcome h2 {
+            color: #d6aa55;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .welcome p {
+            color: #ccc;
+            line-height: 1.7;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            color: #777;
+            border-top: 1px solid #222;
+            font-size: .85rem;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Misfit Syndicate Association</h1>
+    <header>
+        <div class="hero">
 
-    <h2>Fantasy Football for the Beautifully Dysfunctional</h2>
+            <img
+                src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
+                alt="Misfit Syndicate Association Logo"
+                class="logo"
+            >
 
-    <p>Welcome to the official home of the Misfit Syndicate Association Fantasy Football League.</p>
+            <h1>Misfit Syndicate Association</h1>
 
-    <p>🏈 MSA 2026 Season</p>
+            <div class="tagline">
+                Fantasy Football for the Beautifully Dysfunctional
+            </div>
+
+            <div class="season">
+                🏈 2026 MSA Season
+            </div>
+
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Matchups</a>
+            <a href="#">Standings</a>
+            <a href="#">Teams</a>
+            <a href="#">Syndicate Report</a>
+            <a href="#">League History</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="welcome">
+
+            <h2>Welcome to the Syndicate</h2>
+
+            <p>
+                Welcome to the official home of the Misfit Syndicate Association.
+                Ten teams. One championship. Questionable trades, terrible decisions,
+                endless shit talking, and an entire season to prove who actually knows
+                football.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 Misfit Syndicate Association • Built by Misfits, for Misfits
+    </footer>
 
 </body>
+
 </html>
