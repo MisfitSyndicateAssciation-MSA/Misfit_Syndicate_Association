@@ -1,8 +1,477 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Teams | Misfit Syndicate Association</title><link rel="stylesheet" href="style.css"></head>
-<body><header><div class="hero"><img src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png" alt="Misfit Syndicate Association Logo" class="logo">
-<h1>Misfit Syndicate Association</h1><div class="tagline">Fantasy Football for the Beautifully Dysfunctional</div><div class="season">🏈 2026 MSA Season</div></div></header>
-<nav><div class="nav-links">
-<a href="index.html">Home</a><a href="matchups.html">Matchups</a><a href="standings.html">Standings</a><a href="teams.html" class="active">Teams</a><a href="syndicate-report.html">Syndicate Report</a><a href="league-history.html">League History</a>
-</div></nav><main><h2 class="section-title">☠️ MEET THE MISFITS</h2><p class="section-sub">Ten teams. Ten questionable decision-makers. One Syndicate.</p><div class="grid"><div class="card center"><h3>🧀 Big Papi Queso</h3><p>Owner: Steve Perez</p><p>Record: 1-2</p></div><div class="card center"><h3>🐕 Double Dookie Dawgs</h3><p>Owner: Sai Kappagantula</p><p>Record: 1-2</p></div><div class="card center"><h3>💋 Ladiboyz</h3><p>Owner: Steven Fisher</p><p>Record: 1-2</p></div><div class="card center"><h3>🔮 Nabershood Cookout</h3><p>Owner: Colin Brazee</p><p>Record: 2-1</p></div><div class="card center"><h3>😵 Apukalypse Now, Skattebo Later</h3><p>Owner: Dion Will</p><p>Record: 2-1</p></div><div class="card center"><h3>🐏 Team Ramrod</h3><p>Owner: Mark Torres</p><p>Record: 0-3</p></div><div class="card center"><h3>⚡ Big Pickens Energy</h3><p>Owner: Adam Hadlock</p><p>Record: 0-3</p></div><div class="card center"><h3>🏴‍☠️ Pitts Creek</h3><p>Owner: Jeri Armijo</p><p>Record: 2-1</p></div><div class="card center"><h3>🐦 Red Zone Redbirds</h3><p>Owner: Juan Loredo</p><p>Record: 3-0</p></div><div class="card center"><h3>🦷 Db.EAtERs</h3><p>Owner: AJ Jackson</p><p>Record: 3-0</p></div></div></main><footer>© 2026 Misfit Syndicate Association • Built by Misfits, for Misfits</footer></body></html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Teams | Misfit Syndicate Association</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<img
+src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
+alt="Misfit Syndicate Association Logo"
+class="logo">
+
+<h1>Misfit Syndicate Association</h1>
+
+<div class="tagline">
+Fantasy Football for the Beautifully Dysfunctional
+</div>
+
+<div class="season">
+🏈 2026 MSA Season
+</div>
+
+</div>
+
+</header>
+
+
+<nav>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="matchups.html">
+Matchups
+</a>
+
+<a href="standings.html">
+Standings
+</a>
+
+<a href="teams.html" class="active">
+Teams
+</a>
+
+<a href="syndicate-report.html">
+Syndicate Report
+</a>
+
+<a href="league-history.html">
+League History
+</a>
+
+</div>
+
+</nav>
+
+
+<main>
+
+<h2 class="section-title">
+☠️ MEET THE MISFITS
+</h2>
+
+<p class="section-sub" id="teams-status">
+Ten teams. Ten questionable decision-makers. One Syndicate.
+</p>
+
+
+<div
+class="grid"
+id="teams-container">
+
+<div class="card center">
+Loading the Misfits...
+</div>
+
+</div>
+
+</main>
+
+
+<footer>
+© 2026 Misfit Syndicate Association • Built by Misfits, for Misfits
+</footer>
+
+
+<script>
+
+
+/*
+MSA team emojis matched to ESPN team IDs.
+*/
+
+const teamEmojis = {
+
+    1: "🧀",
+    3: "🐏",
+    4: "🔮",
+    5: "🏴‍☠️",
+    6: "🐕",
+    8: "⚡",
+    9: "😵",
+    10: "🦷",
+    11: "🐦",
+    12: "💋"
+
+};
+
+
+/*
+This controls the order teams appear on
+the Teams page.
+
+That means the page doesn't suddenly
+rearrange itself every time the standings change.
+*/
+
+const teamDisplayOrder = [
+
+    1,
+    6,
+    12,
+    4,
+    9,
+    3,
+    8,
+    5,
+    11,
+    10
+
+];
+
+
+
+function getRecord(team) {
+
+    let record =
+        team.wins +
+        "-" +
+        team.losses;
+
+    if (team.ties > 0) {
+
+        record +=
+            "-" +
+            team.ties;
+
+    }
+
+    return record;
+
+}
+
+
+
+function getStreak(team) {
+
+    if (
+        !team.streakType ||
+        team.streakType === "NONE" ||
+        !team.streakLength
+    ) {
+
+        return "—";
+
+    }
+
+
+    if (team.streakType === "WIN") {
+
+        return "🔥 W" +
+            team.streakLength;
+
+    }
+
+
+    if (team.streakType === "LOSS") {
+
+        return "💀 L" +
+            team.streakLength;
+
+    }
+
+
+    return team.streakType +
+        team.streakLength;
+
+}
+
+
+
+async function loadTeams() {
+
+
+    const container =
+        document.getElementById(
+            "teams-container"
+        );
+
+
+    const status =
+        document.getElementById(
+            "teams-status"
+        );
+
+
+    try {
+
+
+        /*
+        Timestamp prevents the browser from
+        displaying an old cached league.json.
+        */
+
+        const response = await fetch(
+
+            "data/league.json?t=" +
+            Date.now()
+
+        );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Could not load league.json"
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+
+        /*
+        Create a lookup table using ESPN team IDs.
+        */
+
+        const teamsById = {};
+
+
+        data.standings.forEach(team => {
+
+            teamsById[team.id] = team;
+
+        });
+
+
+
+        /*
+        Clear loading message.
+        */
+
+        container.innerHTML = "";
+
+
+
+        /*
+        Display teams in the official MSA
+        Teams-page order.
+        */
+
+        teamDisplayOrder.forEach(teamId => {
+
+
+            const team =
+                teamsById[teamId];
+
+
+            if (!team) {
+
+                return;
+
+            }
+
+
+            const emoji =
+                teamEmojis[team.id]
+                || "🏈";
+
+
+            const record =
+                getRecord(team);
+
+
+            const streak =
+                getStreak(team);
+
+
+
+            /*
+            Create team card.
+            */
+
+            const card =
+                document.createElement(
+                    "div"
+                );
+
+
+            card.className =
+                "card center";
+
+
+
+            /*
+            Team logo.
+
+            ESPN custom logos and ESPN default
+            logos both come through league.json.
+            */
+
+            let logoHTML = "";
+
+
+            if (team.logo) {
+
+                logoHTML = `
+
+                    <img
+                    src="${team.logo}"
+                    alt="${team.name} logo"
+                    style="
+                        width:100px;
+                        height:100px;
+                        object-fit:contain;
+                        margin:10px auto 15px auto;
+                        display:block;
+                        border-radius:12px;
+                    ">
+
+                `;
+
+            }
+
+
+
+            card.innerHTML = `
+
+                ${logoHTML}
+
+
+                <h3>
+                ${emoji}
+                ${team.name}
+                </h3>
+
+
+                <p>
+                <strong>Owner:</strong>
+                ${team.owner}
+                </p>
+
+
+                <p>
+                <strong>Record:</strong>
+                ${record}
+                </p>
+
+
+                <p>
+                <strong>Standing:</strong>
+                #${team.rank}
+                </p>
+
+
+                <p>
+                <strong>Points For:</strong>
+                ${Number(
+                    team.pointsFor
+                ).toFixed(1)}
+                </p>
+
+
+                <p>
+                <strong>Points Against:</strong>
+                ${Number(
+                    team.pointsAgainst
+                ).toFixed(1)}
+                </p>
+
+
+                <p>
+                <strong>Playoff Odds:</strong>
+                ${Number(
+                    team.playoffPct
+                ).toFixed(1)}%
+                </p>
+
+
+                <p>
+                <strong>Current Streak:</strong>
+                ${streak}
+                </p>
+
+            `;
+
+
+            container.appendChild(
+                card
+            );
+
+
+        });
+
+
+
+        /*
+        Update page status.
+        */
+
+        status.textContent =
+            "10 teams • ESPN stats updated automatically • Through Week " +
+            Math.max(
+                0,
+                data.currentWeek - 1
+            );
+
+
+    }
+
+
+    catch (error) {
+
+
+        console.error(
+            "MSA ESPN teams error:",
+            error
+        );
+
+
+        status.textContent =
+            "Unable to load ESPN team data.";
+
+
+        container.innerHTML = `
+
+            <div class="card center">
+
+            ESPN is temporarily refusing
+            to identify the Misfits.
+
+            </div>
+
+        `;
+
+
+    }
+
+
+}
+
+
+loadTeams();
+
+
+</script>
+
+
+</body>
+
+</html>
