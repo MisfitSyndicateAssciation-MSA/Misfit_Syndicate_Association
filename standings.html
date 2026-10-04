@@ -1,8 +1,232 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Standings | Misfit Syndicate Association</title><link rel="stylesheet" href="style.css"></head>
-<body><header><div class="hero"><img src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png" alt="Misfit Syndicate Association Logo" class="logo">
-<h1>Misfit Syndicate Association</h1><div class="tagline">Fantasy Football for the Beautifully Dysfunctional</div><div class="season">🏈 2026 MSA Season</div></div></header>
-<nav><div class="nav-links">
-<a href="index.html">Home</a><a href="matchups.html">Matchups</a><a href="standings.html" class="active">Standings</a><a href="teams.html">Teams</a><a href="syndicate-report.html">Syndicate Report</a><a href="league-history.html">League History</a>
-</div></nav><main><h2 class="section-title">🏆 MSA 2026 STANDINGS</h2><p class="section-sub">Updated After Week 3</p><div style="overflow-x:auto"><table><tr><th>RANK</th><th>TEAM</th><th>RECORD</th><th>PLAYOFF ODDS</th></tr><tr><td>👑 1</td><td>Red Zone Redbirds</td><td>3-0-0</td><td>83%</td></tr><tr><td>🔥 2</td><td>Db.EAtERs🦷</td><td>3-0-0</td><td>80%</td></tr><tr><td>3</td><td>Apukalypse Now, Skattebo Later</td><td>2-1-0</td><td>82%</td></tr><tr><td>4</td><td>Pitts Creek</td><td>2-1-0</td><td>76%</td></tr><tr><td>5</td><td>Nabershood Cookout</td><td>2-1-0</td><td>62%</td></tr><tr><td>6</td><td>Ladiboyz</td><td>1-2-0</td><td>56%</td></tr><tr><td>7</td><td>Double Dookie Dawgs</td><td>1-2-0</td><td>52%</td></tr><tr><td>8</td><td>Big Papi Queso</td><td>1-2-0</td><td>57%</td></tr><tr><td>9</td><td>Big Pickens Energy</td><td>0-3-0</td><td>24%</td></tr><tr><td>💀 10</td><td>Team Ramrod</td><td>0-3-0</td><td>28%</td></tr></table></div></main><footer>© 2026 Misfit Syndicate Association • Built by Misfits, for Misfits</footer></body></html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Standings | Misfit Syndicate Association</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="hero">
+
+<img
+src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
+alt="Misfit Syndicate Association Logo"
+class="logo">
+
+<h1>Misfit Syndicate Association</h1>
+
+<div class="tagline">
+Fantasy Football for the Beautifully Dysfunctional
+</div>
+
+<div class="season">
+🏈 2026 MSA Season
+</div>
+
+</div>
+</header>
+
+
+<nav>
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="matchups.html">Matchups</a>
+<a href="standings.html" class="active">Standings</a>
+<a href="teams.html">Teams</a>
+<a href="syndicate-report.html">Syndicate Report</a>
+<a href="league-history.html">League History</a>
+
+</div>
+</nav>
+
+
+<main>
+
+<h2 class="section-title">
+🏆 MSA 2026 STANDINGS
+</h2>
+
+<p class="section-sub" id="standings-status">
+Loading latest standings from ESPN...
+</p>
+
+
+<div style="overflow-x:auto">
+
+<table>
+
+<thead>
+<tr>
+<th>RANK</th>
+<th>TEAM</th>
+<th>RECORD</th>
+<th>POINTS FOR</th>
+<th>PLAYOFF ODDS</th>
+</tr>
+</thead>
+
+<tbody id="standings-body">
+
+<tr>
+<td colspan="5">
+Loading the latest MSA chaos...
+</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</main>
+
+
+<footer>
+© 2026 Misfit Syndicate Association • Built by Misfits, for Misfits
+</footer>
+
+
+<script>
+
+async function loadStandings() {
+
+    const standingsBody =
+        document.getElementById("standings-body");
+
+    const status =
+        document.getElementById("standings-status");
+
+    try {
+
+        /*
+        The timestamp prevents the browser from showing
+        an old cached copy of the ESPN data.
+        */
+
+        const response = await fetch(
+            "data/league.json?t=" + Date.now()
+        );
+
+        if (!response.ok) {
+            throw new Error(
+                "Could not load league.json"
+            );
+        }
+
+        const data = await response.json();
+
+        standingsBody.innerHTML = "";
+
+        data.standings.forEach((team, index) => {
+
+            const row =
+                document.createElement("tr");
+
+            let rankDisplay = team.rank;
+
+            /*
+            Give first place the crown
+            and last place the skull.
+            */
+
+            if (index === 0) {
+                rankDisplay =
+                    "👑 " + team.rank;
+            }
+
+            if (
+                index ===
+                data.standings.length - 1
+            ) {
+                rankDisplay =
+                    "💀 " + team.rank;
+            }
+
+
+            const record =
+                team.wins +
+                "-" +
+                team.losses +
+                "-" +
+                team.ties;
+
+
+            const playoffOdds =
+                team.playoffPct.toFixed(1) +
+                "%";
+
+
+            row.innerHTML = `
+                <td>${rankDisplay}</td>
+
+                <td>${team.name}</td>
+
+                <td>${record}</td>
+
+                <td>
+                    ${team.pointsFor.toFixed(1)}
+                </td>
+
+                <td>${playoffOdds}</td>
+            `;
+
+            standingsBody.appendChild(row);
+
+        });
+
+
+        /*
+        ESPN reports the current scoring week.
+        If we're currently in Week 4,
+        completed standings are through Week 3.
+        */
+
+        const completedWeek =
+            Math.max(
+                0,
+                data.currentWeek - 1
+            );
+
+        status.textContent =
+            "Updated automatically from ESPN • Through Week " +
+            completedWeek;
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "MSA ESPN data error:",
+            error
+        );
+
+        status.textContent =
+            "Unable to load ESPN standings.";
+
+        standingsBody.innerHTML = `
+            <tr>
+                <td colspan="5">
+                    ESPN data temporarily unavailable.
+                </td>
+            </tr>
+        `;
+
+    }
+
+}
+
+loadStandings();
+
+</script>
+
+
+</body>
+</html>
