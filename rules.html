@@ -1,1 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Rules | Misfit Syndicate Association
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
+
+<style>
+
+/* =========================================================
+   MSA RULES HQ
+   ========================================================= */
+
+.rules-page {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.rules-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.rules-intro h2 {
+    margin-bottom: 8px;
+}
+
+.rules-intro p {
+    max-width: 760px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   QUICK NAVIGATION
+   ========================================================= */
+
+.rules-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.rules-nav a {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid rgba(245,182,66,.35);
+    border-radius: 8px;
+    background: rgba(255,255,255,.03);
+    color: #f5b642;
+    text-decoration: none;
+    font-size: .78rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.rules-nav a:hover {
+    background: #f5b642;
+    color: #111;
+}
+
+
+/* =========================================================
+   SECTION TITLES
+   ========================================================= */
+
+.rules-section {
+    margin-bottom: 40px;
+    scroll-margin-top: 90px;
+}
+
+.rules-section-title {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.rules-section-subtitle {
+    text-align: center;
+    opacity: .65;
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   LEAGUE INFORMATION
+   ========================================================= */
+
+.rules-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.rule-stat {
+    text-align: center;
+    padding: 22px 15px;
+}
+
+.rule-stat-icon {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.rule-stat-label {
+    display: block;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: .55;
+    margin-bottom: 7px;
+}
+
+.rule-stat-value {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: #f5b642;
+}
+
+
+/* =========================================================
+   PAYOUTS
+   ========================================================= */
+
+.payout-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 15px;
+}
+
+.payout-card {
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.payout-place {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.payout-title {
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.payout-money {
+    font-size: 1.5rem;
+    color: #f5b642;
+    font-weight: 900;
+}
+
+.payout-description {
+    margin-top: 10px;
+    font-size: .82rem;
+    opacity: .7;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   DEADLINE WARNING
+   ========================================================= */
+
+.payment-warning {
+    text-align: center;
+    padding: 25px;
+    margin-top: 18px;
+    border: 1px solid rgba(220,38,38,.5);
+}
+
+.payment-warning strong {
+    color: #ef4444;
+}
+
+.payment-warning-title {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   HOUSE RULES
+   ========================================================= */
+
+.house-rules {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.house-rule {
+    padding: 20px;
+}
+
+.house-rule h3 {
+    margin: 0 0 8px 0;
+    color: #f5b642;
+}
+
+.house-rule p {
+    margin: 0;
+    line-height: 1.6;
+    opacity: .8;
+}
+
+
+/* =========================================================
+   SCORING
+   ========================================================= */
+
+.scoring-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+}
+
+.scoring-card {
+    padding: 22px;
+}
+
+.scoring-card h3 {
+    color: #f5b642;
+    margin-top: 0;
+    border-bottom: 1px solid rgba(245,182,66,.25);
+    padding-bottom: 10px;
+}
+
+.scoring-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.scoring-points {
+    color: #f5b642;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.negative {
+    color: #ef4444;
+}
+
+
+/* =========================================================
+   GRAPHIC ARCHIVE
+   ========================================================= */
+
+.rules-graphics {
+    display: grid;
+    gap: 20px;
+}
+
+.rules-graphic-card {
+    padding: 18px;
+}
+
+.rules-graphic-card summary {
+    cursor: pointer;
+    font-weight: 900;
+    color: #f5b642;
+    padding: 5px;
+    list-style-position: inside;
+}
+
+.rules-graphic-card summary:hover {
+    color: #ffd166;
+}
+
+.rules-graphic {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 18px auto 0 auto;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   COMMISSIONER
+   ========================================================= */
+
+.commissioner-box {
+    text-align: center;
+    padding: 28px;
+}
+
+.commissioner-box h3 {
+    color: #f5b642;
+}
+
+.commissioner-box p {
+    max-width: 700px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FINAL WARNING
+   ========================================================= */
+
+.final-warning {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 35px;
+}
+
+.final-warning h2 {
+    color: #f5b642;
+}
+
+.final-warning p {
+    max-width: 700px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .payout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rules-nav {
+        gap: 7px;
+    }
+
+    .rules-nav a {
+        font-size: .68rem;
+        padding: 8px 11px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="hero">
+
+<img
+src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
+alt="Misfit Syndicate Association Logo"
+class="logo">
+
+<h1>
+Misfit Syndicate Association
+</h1>
+
+<div class="tagline">
+Fantasy Football for the Beautifully Dysfunctional
+</div>
+
+<div class="season">
+🏈 2026 MSA Season
+</div>
+
+</div>
+
+</header>
+
+
+<nav>
+
+<div class="nav-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="matchups.html">
+Matchups
+</a>
+
+<a href="standings.html">
+Standings
+</a>
+
+<a href="teams.html">
+Teams
+</a>
+
+<a href="syndicate-report.html">
+Syndicate Report
+</a>
+
+<a href="league-history.html">
+League History
+</a>
+
+<a
+href="rules.html"
+class="active">
+Rules
+</a>
+
+</div>
+
+</nav>
+
+
+<main>
+
+<div class="rules-page">
+
+
+<!-- =====================================================
+     INTRODUCTION
+     ===================================================== -->
+
+<section class="panel rules-intro">
+
+<h2>
+📕 MSA CONSTITUTION & RULEBOOK
+</h2>
+
+<p class="muted">
+
+The official laws governing the Misfit Syndicate Association.
+
+Read them. Know them. Live them.
+
+Or completely ignore them and complain to the commissioner later.
+
+</p>
+
+</section>
+
+
+<!-- =====================================================
+     QUICK NAVIGATION
+     ===================================================== -->
+
+<div class="rules-nav">
+
+<a href="#league">
+League Setup
+</a>
+
+<a href="#money">
+Pot & Payouts
+</a>
+
+<a href="#house-rules">
+House Rules
+</a>
+
+<a href="#scoring">
+Scoring
+</a>
+
+<a href="#graphics">
+Official Graphics
+</a>
+
+</div>
+
+
+<!-- =====================================================
+     LEAGUE SETUP
+     ===================================================== -->
+
+<section
+class="rules-section"
+id="league">
+
+<h2 class="rules-section-title">
+🏈 LEAGUE SETUP
+</h2>
+
+<p class="rules-section-subtitle">
+Ten teams. One champion. Countless excuses.
+</p>
+
+
+<div class="rules-grid">
+
+
+<div class="card rule-stat">
+
+<div class="rule-stat-icon">
+👥
+</div>
+
+<span class="rule-stat-label">
+League Size
+</span>
+
+<span class="rule-stat-value">
+10 Teams
+</span>
+
+</div>
+
+
+<div class="card rule-stat">
+
+<div class="rule-stat-icon">
+🏈
+</div>
+
+<span class="rule-stat-label">
+League Format
+</span>
+
+<span class="rule-stat-value">
+Head-to-Head Points
+</span>
+
+</div>
+
+
+<div class="card rule-stat">
+
+<div class="rule-stat-icon">
+🎯
+</div>
+
+<span class="rule-stat-label">
+Scoring Format
+</span>
+
+<span class="rule-stat-value">
+PPR
+</span>
+
+</div>
+
+
+<div class="card rule-stat">
+
+<div class="rule-stat-icon">
+🐍
+</div>
+
+<span class="rule-stat-label">
+Draft
+</span>
+
+<span class="rule-stat-value">
+Snake Draft
+</span>
+
+</div>
+
+
+<div class="card rule-stat">
+
+<div class="rule-stat-icon">
+💰
+</div>
+
+<span class="rule-stat-label">
+Buy-In
+</span>
+
+<span class="rule-stat-value">
+$50
+</span>
+
+</div>
+
+
+<div class="card rule-stat">
+
+<div class="rule-stat-icon">
+👑
+</div>
+
+<span class="rule-stat-label">
+Commissioner
+</span>
+
+<span class="rule-stat-value">
+Steve OG
+</span>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     MONEY & PAYOUTS
+     ===================================================== -->
+
+<section
+class="rules-section"
+id="money">
+
+<h2 class="rules-section-title">
+💰 THE POT & PAYOUTS
+</h2>
+
+<p class="rules-section-subtitle">
+
+10 teams × $50 = $500 total prize pool.
+
+</p>
+
+
+<div class="payout-grid">
+
+
+<div class="card payout-card">
+
+<div class="payout-place">
+🥇
+</div>
+
+<div class="payout-title">
+MSA CHAMPION
+</div>
+
+<div class="payout-money">
+GETS THE REST
+</div>
+
+<div class="payout-description">
+
+After second and third place are paid,
+the champion takes everything remaining.
+
+Take the throne. Take the cash.
+Take the glory.
+
+</div>
+
+</div>
+
+
+<div class="card payout-card">
+
+<div class="payout-place">
+🥈
+</div>
+
+<div class="payout-title">
+SECOND PLACE
+</div>
+
+<div class="payout-money">
+$100
+</div>
+
+<div class="payout-description">
+
+Close, but not close enough.
+
+At least the emotional damage comes
+with some cash.
+
+</div>
+
+</div>
+
+
+<div class="card payout-card">
+
+<div class="payout-place">
+🥉
+</div>
+
+<div class="payout-title">
+THIRD PLACE
+</div>
+
+<div class="payout-money">
+$50
+</div>
+
+<div class="payout-description">
+
+You get your entry fee back.
+
+Congratulations on basically breaking even.
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="card payment-warning">
+
+<div class="payment-warning-title">
+🚨 PAYMENT DEADLINE — END OF WEEK 4
+</div>
+
+<p>
+
+Every team's <strong>$50 buy-in</strong>
+must be received by the end of Week 4.
+
+</p>
+
+<p>
+
+<strong>NO PAY = NO PLAY.</strong>
+
+If payment isn't received by the deadline,
+the team may be locked out of the league
+and all money distributions.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     HOUSE RULES
+     ===================================================== -->
+
+<section
+class="rules-section"
+id="house-rules">
+
+<h2 class="rules-section-title">
+💀 HOUSE RULES
+</h2>
+
+<p class="rules-section-subtitle">
+The Book of Bad Decisions.
+</p>
+
+
+<div class="house-rules">
+
+
+<div class="card house-rule">
+
+<h3>
+🚮 NO EXCUSES
+</h3>
+
+<p>
+
+Injuries, bye weeks, life — we don't care.
+
+Set your lineup.
+
+</p>
+
+</div>
+
+
+<div class="card house-rule">
+
+<h3>
+🤝 TRADES ARE ENCOURAGED
+</h3>
+
+<p>
+
+Make moves. Take risks.
+
+Fortune favors the bold — or the drunk.
+
+</p>
+
+</div>
+
+
+<div class="card house-rule">
+
+<h3>
+🖕 NO COLLUSION
+</h3>
+
+<p>
+
+Don't be a scumbag.
+
+Play fair.
+
+This ain't that kind of Syndicate.
+
+</p>
+
+</div>
+
+
+<div class="card house-rule">
+
+<h3>
+☠️ LAST PLACE ISN'T A CRIME
+</h3>
+
+<p>
+
+But it is embarrassing.
+
+Own that shame like a maniac.
+
+</p>
+
+</div>
+
+
+<div class="card house-rule">
+
+<h3>
+🏆 THE CHAMP GETS GLORY
+</h3>
+
+<p>
+
+First gets the championship and the biggest payout.
+
+Second gets cash.
+
+Third gets the entry fee back.
+
+Everyone else gets memes.
+
+</p>
+
+</div>
+
+
+<div class="card house-rule">
+
+<h3>
+🍺 BEER. WEED. FANTASY FOOTBALL.
+</h3>
+
+<p>
+
+The three pillars of bad decisions.
+
+Respect the pillars.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SCORING
+     ===================================================== -->
+
+<section
+class="rules-section"
+id="scoring">
+
+<h2 class="rules-section-title">
+📊 MSA SCORING SYSTEM
+</h2>
+
+<p class="rules-section-subtitle">
+
+Points add up. Excuses don't.
+
+</p>
+
+
+<div class="scoring-grid">
+
+
+<!-- PASSING -->
+
+<div class="card scoring-card">
+
+<h3>
+🏈 Passing
+</h3>
+
+<div class="scoring-row">
+<span>Passing Yards</span>
+<span class="scoring-points">0.1 / yard</span>
+</div>
+
+<div class="scoring-row">
+<span>TD Pass</span>
+<span class="scoring-points">6 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>40+ Yard TD Pass Bonus</span>
+<span class="scoring-points">1 pt</span>
+</div>
+
+<div class="scoring-row">
+<span>50+ Yard TD Pass Bonus</span>
+<span class="scoring-points">2 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Passing First Down</span>
+<span class="scoring-points">1 pt</span>
+</div>
+
+<div class="scoring-row">
+<span>2-Point Passing Conversion</span>
+<span class="scoring-points">2 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Interception Thrown</span>
+<span class="scoring-points negative">-2 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Sacked</span>
+<span class="scoring-points negative">-1 pt</span>
+</div>
+
+</div>
+
+
+<!-- RUSHING -->
+
+<div class="card scoring-card">
+
+<h3>
+🏃 Rushing
+</h3>
+
+<div class="scoring-row">
+<span>Rushing Yards</span>
+<span class="scoring-points">0.1 / yard</span>
+</div>
+
+<div class="scoring-row">
+<span>Rushing TD</span>
+<span class="scoring-points">6 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>40+ Yard TD Rush Bonus</span>
+<span class="scoring-points">1 pt</span>
+</div>
+
+<div class="scoring-row">
+<span>50+ Yard TD Rush Bonus</span>
+<span class="scoring-points">2 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Rushing First Down</span>
+<span class="scoring-points">1 pt</span>
+</div>
+
+<div class="scoring-row">
+<span>2-Point Rushing Conversion</span>
+<span class="scoring-points">2 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>100–199 Yard Rushing Game</span>
+<span class="scoring-points">1 pt</span>
+</div>
+
+<div class="scoring-row">
+<span>200+ Yard Rushing Game</span>
+<span class="scoring-points">2 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Fumble Lost</span>
+<span class="scoring-points negative">-2 pts</span>
+</div>
+
+</div>
+
+
+<!-- RECEIVING -->
+
+<div class="card scoring-card">
+
+<h3>
+🙌 Receiving
+</h3>
+
+<div class="scoring-row">
+<span>Reception (PPR)</span>
+<span class="scoring-points">1 pt</span>
+</div>
+
+<div class="scoring-row">
+<span>Receiving Yards</span>
+<span class="scoring-points">0.1 / yard</span>
+</div>
+
+<div class="scoring-row">
+<span>Receiving TD</span>
+<span class="scoring-points">6 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>2-Point Receiving Conversion</span>
+<span class="scoring-points">2 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Fumble Lost</span>
+<span class="scoring-points negative">-2 pts</span>
+</div>
+
+</div>
+
+
+<!-- KICKING -->
+
+<div class="card scoring-card">
+
+<h3>
+🥅 Kicking
+</h3>
+
+<div class="scoring-row">
+<span>PAT Made</span>
+<span class="scoring-points">1 pt</span>
+</div>
+
+<div class="scoring-row">
+<span>Total FG Missed</span>
+<span class="scoring-points negative">-1 pt</span>
+</div>
+
+<div class="scoring-row">
+<span>FG Made (0–39 Yards)</span>
+<span class="scoring-points">3 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>FG Made (40–49 Yards)</span>
+<span class="scoring-points">4 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>FG Made (50–59 Yards)</span>
+<span class="scoring-points">5 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>FG Made (60+ Yards)</span>
+<span class="scoring-points">6 pts</span>
+</div>
+
+</div>
+
+
+<!-- OFFENSIVE RETURNS -->
+
+<div class="card scoring-card">
+
+<h3>
+⚡ Offensive Returns & Misc.
+</h3>
+
+<div class="scoring-row">
+<span>Kickoff Return TD</span>
+<span class="scoring-points">6 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Punt Return TD</span>
+<span class="scoring-points">6 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Fumble Recovered for TD</span>
+<span class="scoring-points">6 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Fumble Lost</span>
+<span class="scoring-points negative">-2 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>2-Point Return</span>
+<span class="scoring-points">2 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>1-Point Safety</span>
+<span class="scoring-points">1 pt</span>
+</div>
+
+</div>
+
+
+<!-- DEFENSE -->
+
+<div class="card scoring-card">
+
+<h3>
+🛡️ Team Defense / Special Teams
+</h3>
+
+<div class="scoring-row">
+<span>Sack</span>
+<span class="scoring-points">1 pt</span>
+</div>
+
+<div class="scoring-row">
+<span>Interception Return TD</span>
+<span class="scoring-points">6 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Fumble Return TD</span>
+<span class="scoring-points">6 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Kickoff Return TD</span>
+<span class="scoring-points">6 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Punt Return TD</span>
+<span class="scoring-points">6 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Blocked Punt/FG Return TD</span>
+<span class="scoring-points">6 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Blocked Punt, PAT or FG</span>
+<span class="scoring-points">2 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Interception</span>
+<span class="scoring-points">2 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Fumble Recovered</span>
+<span class="scoring-points">2 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>Safety</span>
+<span class="scoring-points">2 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>0 Points Allowed</span>
+<span class="scoring-points">5 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>1–6 Points Allowed</span>
+<span class="scoring-points">4 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>7–13 Points Allowed</span>
+<span class="scoring-points">3 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>14–17 Points Allowed</span>
+<span class="scoring-points">1 pt</span>
+</div>
+
+<div class="scoring-row">
+<span>28–34 Points Allowed</span>
+<span class="scoring-points negative">-1 pt</span>
+</div>
+
+<div class="scoring-row">
+<span>35–45 Points Allowed</span>
+<span class="scoring-points negative">-3 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>46+ Points Allowed</span>
+<span class="scoring-points negative">-5 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>&lt;100 Total Yards Allowed</span>
+<span class="scoring-points">5 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>100–199 Total Yards Allowed</span>
+<span class="scoring-points">3 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>200–299 Total Yards Allowed</span>
+<span class="scoring-points">2 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>350–399 Total Yards Allowed</span>
+<span class="scoring-points negative">-1 pt</span>
+</div>
+
+<div class="scoring-row">
+<span>400–449 Total Yards Allowed</span>
+<span class="scoring-points negative">-3 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>450–499 Total Yards Allowed</span>
+<span class="scoring-points negative">-5 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>500–549 Total Yards Allowed</span>
+<span class="scoring-points negative">-6 pts</span>
+</div>
+
+<div class="scoring-row">
+<span>550+ Total Yards Allowed</span>
+<span class="scoring-points negative">-7 pts</span>
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     COMMISSIONER
+     ===================================================== -->
+
+<section class="card commissioner-box">
+
+<h3>
+⚖️ COMMISSIONER AUTHORITY
+</h3>
+
+<p>
+
+League disputes and situations not specifically
+covered by the rules are subject to a final
+commissioner decision.
+
+</p>
+
+<p>
+
+The commissioner may consider league integrity,
+fairness, ESPN settings, precedent and the
+general principle of:
+
+<strong>
+“Don't be a dick.”
+</strong>
+
+</p>
+
+</section>
+
+
+<!-- =====================================================
+     OFFICIAL GRAPHICS
+     ===================================================== -->
+
+<section
+class="rules-section"
+id="graphics">
+
+<h2 class="rules-section-title">
+🎨 OFFICIAL MSA RULEBOOK GRAPHICS
+</h2>
+
+<p class="rules-section-subtitle">
+
+The original Syndicate propaganda, preserved for posterity.
+
+</p>
+
+
+<div class="rules-graphics">
+
+
+<details class="card rules-graphic-card">
+
+<summary>
+💰 View Pot & Payout Graphic
+</summary>
+
+<img
+src="Prize system.png"
+alt="MSA Pot and Payouts"
+class="rules-graphic">
+
+</details>
+
+
+<details class="card rules-graphic-card">
+
+<summary>
+📊 View Official Scoring Graphics
+</summary>
+
+<img
+src="Points system.png"
+alt="MSA Scoring Settings"
+class="rules-graphic">
+
+</details>
+
+
+<details class="card rules-graphic-card">
+
+<summary>
+💀 View MSA Constitution & House Rules
+</summary>
+
+<img
+src="House Rules.png"
+alt="MSA Constitution and Rulebook"
+class="rules-graphic">
+
+</details>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL MESSAGE
+     ===================================================== -->
+
+<section class="card final-warning">
+
+<h2>
+☠️ WELCOME TO THE SYNDICATE
+</h2>
+
+<p>
+
+Set your lineup.
+
+Make your trades.
+
+Talk your shit.
+
+Take your lumps.
+
+</p>
+
+<p>
+
+<strong>
+No excuses. No mercy. Just bad decisions.
+</strong>
+
+</p>
+
+</section>
+
+
+</div>
+
+</main>
+
+
+<footer>
+
+© 2026 Misfit Syndicate Association • Built by Misfits, for Misfits
+
+</footer>
+
+
+</body>
+
+</html>
