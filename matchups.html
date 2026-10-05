@@ -248,18 +248,6 @@ href="style.css">
 }
 
 
-/* Custom weekly matchup graphic */
-
-.matchup-graphic {
-    display: block;
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    margin: 25px auto 0 auto;
-    border-radius: 12px;
-}
-
-
 /* =========================================================
    MOBILE
    ========================================================= */
@@ -537,64 +525,6 @@ const teamDisplayNames = {
 
 
 /* =========================================================
-   WEEK 4 CUSTOM GRAPHICS
-   ========================================================= */
-
-const week4Graphics = {
-
-    "1-10":
-        "WK4 Match Up 1.png",
-
-    "6-12":
-        "WK4 Match Up 2.png",
-
-    "4-9":
-        "WK4 Match Up 3.png",
-
-    "3-8":
-        "WK4 Match Up 4.png",
-
-    "5-11":
-        "WK4 Match Up 5.png"
-
-};
-
-
-const week4MatchupNumbers = {
-
-    "1-10": 1,
-
-    "6-12": 2,
-
-    "4-9": 3,
-
-    "3-8": 4,
-
-    "5-11": 5
-
-};
-
-
-/* =========================================================
-   MATCHUP KEY
-   ========================================================= */
-
-function getMatchupKey(teamA, teamB) {
-
-    return [
-        teamA,
-        teamB
-    ]
-    .sort(
-        (a, b) =>
-        a - b
-    )
-    .join("-");
-
-}
-
-
-/* =========================================================
    TEAM RECORD
    ========================================================= */
 
@@ -629,6 +559,7 @@ function safeNumber(value) {
     const number =
         Number(value);
 
+
     if (
         Number.isNaN(number)
     ) {
@@ -636,6 +567,7 @@ function safeNumber(value) {
         return 0;
 
     }
+
 
     return number;
 
@@ -671,7 +603,8 @@ function buildTeamDisplay(
         getRecord(team);
 
 
-    let logoHTML = "";
+    let logoHTML =
+        "";
 
 
     if (logo) {
@@ -703,6 +636,7 @@ function buildTeamDisplay(
             class="matchup-team-link">
 
                 ${logoHTML}
+
 
                 <span
                 class="matchup-team-name">
@@ -749,7 +683,10 @@ function buildTeamDisplay(
    UPDATE REFRESH STATUS
    ========================================================= */
 
-function updateRefreshStatus(success = true) {
+function updateRefreshStatus(
+    success = true
+) {
+
 
     const refreshStatus =
         document.getElementById(
@@ -842,7 +779,7 @@ async function loadMatchups() {
 
         /*
         Timestamp prevents browser caching
-        of the ESPN-generated JSON.
+        of the GitHub-generated ESPN JSON.
         */
 
         const response =
@@ -872,8 +809,11 @@ async function loadMatchups() {
 
 
         /*
-        Automatically display the
-        current ESPN fantasy week.
+        Automatically display the current
+        ESPN fantasy week.
+
+        When ESPN moves from Week 4 to Week 5,
+        this title changes automatically.
         */
 
         weekTitle.textContent =
@@ -888,15 +828,16 @@ async function loadMatchups() {
             "Live scores & ESPN projections • Updated automatically";
 
 
-        container.innerHTML = "";
+        container.innerHTML =
+            "";
 
 
         /*
-        Build team lookup using
-        ESPN team IDs.
+        Build team lookup using ESPN team IDs.
         */
 
-        const teams = {};
+        const teams =
+            {};
 
 
         data.standings.forEach(
@@ -910,7 +851,10 @@ async function loadMatchups() {
 
 
         /*
-        Build each matchup card.
+        Build every matchup directly from ESPN.
+
+        There are no manually uploaded weekly
+        matchup graphics or Week 4 mappings here.
         */
 
         data.matchups.forEach(
@@ -940,37 +884,13 @@ async function loadMatchups() {
 
 
                 /*
-                Identify matchup by ESPN team IDs.
+                Matchup number is generated
+                automatically from ESPN's
+                current matchup list.
                 */
 
-                const matchupKey =
-                    getMatchupKey(
-                        away.id,
-                        home.id
-                    );
-
-
-                /*
-                Determine matchup number.
-                */
-
-                let matchupNumber =
+                const matchupNumber =
                     index + 1;
-
-
-                if (
-                    data.currentWeek === 4 &&
-                    week4MatchupNumbers[
-                        matchupKey
-                    ]
-                ) {
-
-                    matchupNumber =
-                        week4MatchupNumbers[
-                            matchupKey
-                        ];
-
-                }
 
 
                 /*
@@ -988,7 +908,12 @@ async function loadMatchups() {
 
 
                 /*
-                THE WINLESS BOWL
+                Automatic Winless Bowl detection.
+
+                This can work in ANY week.
+                If two 0-win teams face each other,
+                the website automatically gives
+                them the appropriate shame.
                 */
 
                 if (
@@ -1065,7 +990,8 @@ async function loadMatchups() {
                         <span
                         class="matchup-score-difference">
 
-                        MARGIN ${scoreDifference.toFixed(1)}
+                        MARGIN
+                        ${scoreDifference.toFixed(1)}
 
                         </span>
 
@@ -1140,41 +1066,8 @@ async function loadMatchups() {
 
 
                 /*
-                Custom Week 4 graphic.
-                */
-
-                let graphic =
-                    "";
-
-
-                if (
-                    data.currentWeek === 4 &&
-                    week4Graphics[
-                        matchupKey
-                    ]
-                ) {
-
-
-                    const graphicFile =
-                        week4Graphics[
-                            matchupKey
-                        ];
-
-
-                    graphic = `
-
-                        <img
-                        src="${encodeURI(graphicFile)}"
-                        alt="Week 4 Matchup ${matchupNumber}"
-                        class="matchup-graphic">
-
-                    `;
-
-                }
-
-
-                /*
-                Create matchup card.
+                Create completely automatic
+                matchup card.
                 */
 
                 const card =
@@ -1252,9 +1145,6 @@ async function loadMatchups() {
                     ${specialMessage}
 
 
-                    ${graphic}
-
-
                 `;
 
 
@@ -1290,11 +1180,9 @@ async function loadMatchups() {
         }
 
 
-        /*
-        Update the small live-refresh indicator.
-        */
-
-        updateRefreshStatus(true);
+        updateRefreshStatus(
+            true
+        );
 
 
     }
@@ -1318,12 +1206,8 @@ async function loadMatchups() {
 
 
         /*
-        IMPORTANT:
-        We do NOT erase the existing matchup cards
-        during an automatic refresh failure.
-
-        If the page has never successfully loaded,
-        show the error message.
+        Do not erase successfully loaded cards
+        because of one temporary refresh failure.
         */
 
         if (
@@ -1347,7 +1231,9 @@ async function loadMatchups() {
         }
 
 
-        updateRefreshStatus(false);
+        updateRefreshStatus(
+            false
+        );
 
 
     }
@@ -1369,11 +1255,12 @@ loadMatchups();
 
 
 /*
-Then check the GitHub-generated ESPN JSON
+Check GitHub's ESPN-generated league.json
 every 60 seconds.
 
-This does NOT reload the browser page.
-It quietly refreshes the matchup cards.
+The GitHub Action handles retrieving fresh
+ESPN information upstream. This page simply
+checks the latest generated JSON.
 */
 
 const matchupRefreshInterval =
@@ -1387,11 +1274,9 @@ const matchupRefreshInterval =
 
 
 /*
-If someone leaves the tab open in the
-background, browsers can slow timers down.
-
-When they return to the tab, immediately
-check for fresh ESPN data again.
+When someone returns to a background tab,
+check immediately instead of waiting for
+the next 60-second interval.
 */
 
 document.addEventListener(
