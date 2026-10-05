@@ -2,45 +2,722 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Teams | Misfit Syndicate Association</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+<title>
+Teams | Misfit Syndicate Association
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
 
 <style>
 
-/*
-View Team button
-*/
+/* =========================================================
+   MSA TEAM HEADQUARTERS
+   ========================================================= */
+
+.teams-page {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* =========================================================
+   PAGE INTRO
+   ========================================================= */
+
+.teams-intro {
+    text-align: center;
+
+    margin-bottom: 35px;
+
+    padding: 30px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(18,18,18,.94),
+            rgba(8,8,8,.90)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.28);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.45);
+
+    position: relative;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+
+.teams-intro::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 10%;
+    right: 10%;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #7bb800,
+            #f5b642,
+            #d9272e,
+            transparent
+        );
+}
+
+
+.teams-intro-label {
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-size: .72rem;
+
+    opacity: .7;
+
+    margin-bottom: 7px;
+}
+
+
+.teams-intro .section-title {
+    color: #f5b642;
+
+    font-size:
+        clamp(1.6rem,4vw,2.2rem);
+
+    margin-bottom: 8px;
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,.85);
+}
+
+
+.teams-intro .section-sub {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TEAM GRID
+   ========================================================= */
+
+#teams-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0,1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   TEAM CARD
+   ========================================================= */
+
+.team-card {
+    text-align: center;
+
+    padding:
+        28px 22px 24px 22px;
+
+    min-height: 100%;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20,20,20,.96),
+            rgba(7,7,7,.94)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.10);
+
+    border-top:
+        3px solid #f5b642;
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.45);
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform .22s ease,
+        border-color .22s ease,
+        box-shadow .22s ease;
+
+    backdrop-filter:
+        blur(2px);
+
+    -webkit-backdrop-filter:
+        blur(2px);
+}
+
+
+/* MSA punk stripe */
+
+.team-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            #7bb800,
+            #f5b642,
+            #d9272e
+        );
+
+    opacity: .75;
+}
+
+
+.team-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(245,182,66,.50);
+
+    box-shadow:
+        0 17px 42px rgba(0,0,0,.60);
+}
+
+
+/* Alternate accents */
+
+.team-card:nth-child(3n+2) {
+    border-top-color: #7bb800;
+}
+
+
+.team-card:nth-child(3n+3) {
+    border-top-color: #d9272e;
+}
+
+
+/* =========================================================
+   STANDING BADGE
+   ========================================================= */
+
+.team-rank-badge {
+    position: absolute;
+
+    top: 13px;
+    right: 13px;
+
+    min-width: 42px;
+
+    padding:
+        6px 8px;
+
+    background:
+        rgba(0,0,0,.72);
+
+    border:
+        1px solid rgba(245,182,66,.30);
+
+    border-radius: 20px;
+
+    color: #f5b642;
+
+    font-size: .68rem;
+
+    font-weight: 900;
+
+    letter-spacing: .5px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.35);
+}
+
+
+/* First place */
+
+.team-card.first-place {
+    border-top-color:
+        #f5b642;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(245,182,66,.10),
+            rgba(18,18,18,.96) 45%,
+            rgba(7,7,7,.95)
+        );
+}
+
+
+.team-card.first-place
+.team-rank-badge {
+    background:
+        rgba(245,182,66,.14);
+
+    color:
+        #ffd166;
+
+    border-color:
+        rgba(245,182,66,.55);
+}
+
+
+/* Last place */
+
+.team-card.last-place {
+    border-top-color:
+        #d9272e;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(217,39,46,.10),
+            rgba(18,18,18,.96) 45%,
+            rgba(7,7,7,.95)
+        );
+}
+
+
+.team-card.last-place
+.team-rank-badge {
+    color:
+        #ef555b;
+
+    border-color:
+        rgba(217,39,46,.45);
+}
+
+
+/* =========================================================
+   OFFICIAL TEAM LOGOS
+   ========================================================= */
+
+.team-logo {
+    width: 155px;
+
+    height: 155px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin:
+        8px auto 18px auto;
+
+    border-radius: 18px;
+
+    filter:
+        drop-shadow(
+            0 8px 14px rgba(0,0,0,.75)
+        );
+
+    transition:
+        transform .22s ease,
+        filter .22s ease;
+}
+
+
+.team-card:hover
+.team-logo {
+    transform:
+        scale(1.05);
+
+    filter:
+        drop-shadow(
+            0 10px 17px rgba(0,0,0,.80)
+        );
+}
+
+
+/* =========================================================
+   TEAM NAME
+   ========================================================= */
+
+.team-card h3 {
+    color: #f5b642;
+
+    font-size: 1.2rem;
+
+    line-height: 1.25;
+
+    min-height: 48px;
+
+    margin-bottom: 7px;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.75);
+}
+
+
+/* =========================================================
+   OWNER
+   ========================================================= */
+
+.team-owner {
+    margin-bottom: 18px;
+
+    color: #ccc;
+
+    font-size: .86rem;
+}
+
+
+.team-owner strong {
+    color: #fff;
+}
+
+
+/* =========================================================
+   TEAM STAT GRID
+   ========================================================= */
+
+.team-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 9px;
+
+    margin:
+        18px 0;
+}
+
+
+.team-stat {
+    padding:
+        11px 8px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid rgba(255,255,255,.065);
+
+    border-radius: 8px;
+}
+
+
+.team-stat-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #aaa;
+
+    font-size: .58rem;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.team-stat-value {
+    display: block;
+
+    color: #fff;
+
+    font-size: .95rem;
+
+    font-weight: 900;
+}
+
+
+/* Record */
+
+.record-stat
+.team-stat-value {
+    color: #f5b642;
+
+    font-size: 1.1rem;
+}
+
+
+/* Playoff odds */
+
+.playoff-stat
+.team-stat-value {
+    color: #8fd000;
+}
+
+
+/* =========================================================
+   STREAK
+   ========================================================= */
+
+.team-streak {
+    margin:
+        14px auto 5px auto;
+
+    padding:
+        8px 12px;
+
+    width:
+        fit-content;
+
+    max-width: 100%;
+
+    background:
+        rgba(0,0,0,.40);
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    border-radius: 20px;
+
+    font-size: .72rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.team-streak strong {
+    color: #f5b642;
+}
+
+
+/* =========================================================
+   VIEW TEAM BUTTON
+   ========================================================= */
 
 .view-team-button {
     display: inline-block;
-    margin-top: 12px;
-    padding: 10px 18px;
+
+    margin-top: 17px;
+
+    padding:
+        11px 20px;
+
     border-radius: 8px;
+
     text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.2s ease;
+
+    font-size: .78rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    color: #f5b642;
+
+    background:
+        rgba(0,0,0,.45);
+
+    border:
+        1px solid rgba(245,182,66,.45);
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        color .2s ease,
+        box-shadow .2s ease;
 }
+
 
 .view-team-button:hover {
-    transform: scale(1.05);
+    transform:
+        translateY(-2px);
+
+    background:
+        #f5b642;
+
+    color:
+        #0b0b0b;
+
+    box-shadow:
+        0 6px 18px rgba(245,182,66,.20);
 }
 
 
-/*
-Official MSA team logos
-*/
+/* =========================================================
+   FIRST PLACE SPECIAL ACCENT
+   ========================================================= */
 
-.team-logo {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
+.team-card.first-place::after {
+    content: "👑 KING OF THE SYNDICATE";
+
     display: block;
-    margin: 5px auto 18px auto;
-    border-radius: 18px;
+
+    margin-top: 16px;
+
+    color: #ffd166;
+
+    font-size: .62rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.4px;
+}
+
+
+/* =========================================================
+   LAST PLACE SPECIAL ACCENT
+   ========================================================= */
+
+.team-card.last-place::after {
+    content: "💀 BASEMENT DWELLER";
+
+    display: block;
+
+    margin-top: 16px;
+
+    color: #ef555b;
+
+    font-size: .62rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.4px;
+}
+
+
+/* =========================================================
+   DATA STATUS
+   ========================================================= */
+
+.teams-data-status {
+    text-align: center;
+
+    margin:
+        -12px auto 30px auto;
+
+    padding:
+        8px 12px;
+
+    max-width: 750px;
+
+    background:
+        rgba(8,8,8,.72);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-radius: 7px;
+
+    font-size: .68rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.2px;
+
+    color: #ccc;
+}
+
+
+.teams-data-status
+.live-dot {
+    color: #78cf00;
+
+    font-weight: 900;
+
+    text-shadow:
+        0 0 8px rgba(120,207,0,.45);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    #teams-container {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .teams-intro {
+        padding:
+            23px 14px;
+    }
+
+
+    .team-card {
+        padding:
+            25px 16px 22px 16px;
+    }
+
+
+    .team-logo {
+        width: 135px;
+
+        height: 135px;
+    }
+
+
+    .team-card h3 {
+        min-height: 0;
+
+        font-size: 1.1rem;
+    }
+
+
+    .team-stats {
+        gap: 7px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .team-logo {
+        width: 120px;
+
+        height: 120px;
+    }
+
+
+    .team-stat {
+        padding:
+            9px 5px;
+    }
+
+
+    .team-stat-value {
+        font-size: .85rem;
+    }
+
 }
 
 </style>
@@ -49,6 +726,7 @@ Official MSA team logos
 
 
 <body>
+
 
 <header>
 
@@ -59,7 +737,9 @@ src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
 alt="Misfit Syndicate Association Logo"
 class="logo">
 
-<h1>Misfit Syndicate Association</h1>
+<h1>
+Misfit Syndicate Association
+</h1>
 
 <div class="tagline">
 Fantasy Football for the Beautifully Dysfunctional
@@ -115,8 +795,21 @@ League History
 
 <main>
 
+<div class="teams-page">
+
+
+<!-- =====================================================
+     TEAM HEADQUARTERS INTRO
+     ===================================================== -->
+
+<section class="teams-intro">
+
+<div class="teams-intro-label">
+☠️ MSA TEAM HEADQUARTERS ☠️
+</div>
+
 <h2 class="section-title">
-☠️ MEET THE MISFITS
+MEET THE MISFITS
 </h2>
 
 <p
@@ -127,14 +820,39 @@ Ten teams. Ten questionable decision-makers. One Syndicate.
 
 </p>
 
+</section>
+
+
+<!-- =====================================================
+     ESPN STATUS
+     ===================================================== -->
+
+<div class="teams-data-status">
+
+<span class="live-dot">
+● LIVE
+</span>
+
+&nbsp;•&nbsp;
+
+TEAM RECORDS & STATS POWERED BY ESPN
+
+</div>
+
+
+<!-- =====================================================
+     TEAM CARDS
+     ===================================================== -->
 
 <div
-class="grid"
 id="teams-container">
 
-<div class="card center">
+<div class="team-card center">
 Loading the Misfits...
 </div>
+
+</div>
+
 
 </div>
 
@@ -152,9 +870,9 @@ Loading the Misfits...
 <script>
 
 
-/*
-MSA team emojis matched to ESPN team IDs.
-*/
+/* =========================================================
+   MSA TEAM EMOJIS
+   ========================================================= */
 
 const teamEmojis = {
 
@@ -173,14 +891,9 @@ const teamEmojis = {
 
 
 
-/*
-Official MSA team logos.
-
-These files are stored in the main/root
-folder of the GitHub repository.
-
-The numbers are ESPN team IDs.
-*/
+/* =========================================================
+   OFFICIAL MSA TEAM LOGOS
+   ========================================================= */
 
 const teamLogos = {
 
@@ -208,12 +921,9 @@ const teamLogos = {
 
 
 
-/*
-Clean official MSA display names.
-
-This also prevents ESPN naming quirks
-such as the extra tooth emoji.
-*/
+/* =========================================================
+   CLEAN OFFICIAL MSA DISPLAY NAMES
+   ========================================================= */
 
 const teamDisplayNames = {
 
@@ -241,9 +951,9 @@ const teamDisplayNames = {
 
 
 
-/*
-Official MSA Teams-page order.
-*/
+/* =========================================================
+   OFFICIAL TEAM PAGE DISPLAY ORDER
+   ========================================================= */
 
 const teamDisplayOrder = [
 
@@ -261,6 +971,10 @@ const teamDisplayOrder = [
 ];
 
 
+
+/* =========================================================
+   RECORD HELPER
+   ========================================================= */
 
 function getRecord(team) {
 
@@ -285,6 +999,10 @@ function getRecord(team) {
 }
 
 
+
+/* =========================================================
+   STREAK HELPER
+   ========================================================= */
 
 function getStreak(team) {
 
@@ -329,6 +1047,40 @@ function getStreak(team) {
 
 
 
+/* =========================================================
+   SAFE NUMBER FORMATTER
+   ========================================================= */
+
+function formatNumber(
+    value,
+    decimals = 1
+) {
+
+    const number =
+        Number(value);
+
+
+    if (
+        !Number.isFinite(number)
+    ) {
+
+        return "—";
+
+    }
+
+
+    return number.toFixed(
+        decimals
+    );
+
+}
+
+
+
+/* =========================================================
+   LOAD TEAMS
+   ========================================================= */
+
 async function loadTeams() {
 
 
@@ -356,7 +1108,11 @@ async function loadTeams() {
             await fetch(
 
                 "data/league.json?t=" +
-                Date.now()
+                Date.now(),
+
+                {
+                    cache: "no-store"
+                }
 
             );
 
@@ -384,7 +1140,8 @@ async function loadTeams() {
 
         data.standings.forEach(team => {
 
-            teamsById[team.id] = team;
+            teamsById[team.id] =
+                team;
 
         });
 
@@ -451,7 +1208,35 @@ async function loadTeams() {
 
 
                 card.className =
-                    "card center";
+                    "team-card";
+
+
+                /*
+                Highlight current first and last
+                place teams automatically.
+                */
+
+                if (
+                    Number(team.rank) === 1
+                ) {
+
+                    card.classList.add(
+                        "first-place"
+                    );
+
+                }
+
+
+                if (
+                    Number(team.rank) ===
+                    data.standings.length
+                ) {
+
+                    card.classList.add(
+                        "last-place"
+                    );
+
+                }
 
 
 
@@ -478,10 +1263,52 @@ async function loadTeams() {
 
 
                 /*
+                Rank badge.
+                */
+
+                let rankBadge =
+
+                    "#" +
+                    team.rank;
+
+
+                if (
+                    Number(team.rank) === 1
+                ) {
+
+                    rankBadge =
+                        "👑 #1";
+
+                }
+
+
+                if (
+                    Number(team.rank) ===
+                    data.standings.length
+                ) {
+
+                    rankBadge =
+                        "💀 #" +
+                        team.rank;
+
+                }
+
+
+
+                /*
                 Build card content.
                 */
 
                 card.innerHTML = `
+
+
+                    <div
+                    class="team-rank-badge">
+
+                    ${rankBadge}
+
+                    </div>
+
 
                     ${logoHTML}
 
@@ -494,7 +1321,8 @@ async function loadTeams() {
                     </h3>
 
 
-                    <p>
+                    <div
+                    class="team-owner">
 
                     <strong>
                     Owner:
@@ -502,88 +1330,163 @@ async function loadTeams() {
 
                     ${team.owner}
 
-                    </p>
+                    </div>
 
 
-                    <p>
-
-                    <strong>
-                    Record:
-                    </strong>
-
-                    ${record}
-
-                    </p>
+                    <div
+                    class="team-stats">
 
 
-                    <p>
+                        <div
+                        class="team-stat record-stat">
 
-                    <strong>
-                    Standing:
-                    </strong>
+                            <span
+                            class="team-stat-label">
 
-                    #${team.rank}
+                            Record
 
-                    </p>
+                            </span>
 
+                            <span
+                            class="team-stat-value">
 
-                    <p>
+                            ${record}
 
-                    <strong>
-                    Points For:
-                    </strong>
+                            </span>
 
-                    ${Number(
-                        team.pointsFor
-                    ).toFixed(1)}
-
-                    </p>
+                        </div>
 
 
-                    <p>
+                        <div
+                        class="team-stat">
 
-                    <strong>
-                    Points Against:
-                    </strong>
+                            <span
+                            class="team-stat-label">
 
-                    ${Number(
-                        team.pointsAgainst
-                    ).toFixed(1)}
+                            Standing
 
-                    </p>
+                            </span>
 
+                            <span
+                            class="team-stat-value">
 
-                    <p>
+                            #${team.rank}
 
-                    <strong>
-                    Playoff Odds:
-                    </strong>
+                            </span>
 
-                    ${Number(
-                        team.playoffPct
-                    ).toFixed(1)}%
-
-                    </p>
+                        </div>
 
 
-                    <p>
+                        <div
+                        class="team-stat">
 
-                    <strong>
+                            <span
+                            class="team-stat-label">
+
+                            Points For
+
+                            </span>
+
+                            <span
+                            class="team-stat-value">
+
+                            ${formatNumber(
+                                team.pointsFor
+                            )}
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                        class="team-stat">
+
+                            <span
+                            class="team-stat-label">
+
+                            Points Against
+
+                            </span>
+
+                            <span
+                            class="team-stat-value">
+
+                            ${formatNumber(
+                                team.pointsAgainst
+                            )}
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                        class="team-stat playoff-stat">
+
+                            <span
+                            class="team-stat-label">
+
+                            Playoff Odds
+
+                            </span>
+
+                            <span
+                            class="team-stat-value">
+
+                            ${formatNumber(
+                                team.playoffPct
+                            )}%
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                        class="team-stat">
+
+                            <span
+                            class="team-stat-label">
+
+                            Syndicate Rank
+
+                            </span>
+
+                            <span
+                            class="team-stat-value">
+
+                            ${rankBadge}
+
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div
+                    class="team-streak">
+
                     Current Streak:
-                    </strong>
+                    <strong>
 
                     ${streak}
 
-                    </p>
+                    </strong>
+
+                    </div>
 
 
                     <a
                     href="team.html?id=${team.id}"
                     class="view-team-button">
 
-                    VIEW TEAM →
+                    ENTER TEAM HQ →
 
                     </a>
+
 
                 `;
 
@@ -631,7 +1534,7 @@ async function loadTeams() {
 
         container.innerHTML = `
 
-            <div class="card center">
+            <div class="team-card center">
 
             ESPN is temporarily refusing
             to identify the Misfits.
