@@ -2,17 +2,25 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Team Headquarters | Misfit Syndicate Association</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+<title>
+Team Headquarters | Misfit Syndicate Association
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
 
 <style>
 
 /* =========================================================
-   MSA TEAM HEADQUARTERS
+   MSA INDIVIDUAL TEAM HEADQUARTERS
    ========================================================= */
 
 .team-page {
@@ -20,211 +28,481 @@
     margin: auto;
 }
 
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
 .back-button {
     display: inline-block;
-    margin: 0 0 20px 0;
-    padding: 9px 14px;
-    border: 1px solid rgba(245,182,66,.45);
+
+    margin:
+        0 0 22px 0;
+
+    padding:
+        10px 16px;
+
+    border:
+        1px solid rgba(245,182,66,.45);
+
     border-radius: 8px;
+
+    background:
+        rgba(8,8,8,.72);
+
+    color: #f5b642;
+
     text-decoration: none;
-    font-weight: bold;
+
+    font-size: .78rem;
+
+    font-weight: 900;
+
+    letter-spacing: .8px;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.25);
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        color .2s ease;
 }
 
-.headquarters-label {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: .8rem;
-    opacity: .65;
-    margin-bottom: 8px;
-}
 
-.team-profile {
-    text-align: center;
-    padding: 30px 20px;
-    position: relative;
-    overflow: hidden;
-}
+.back-button:hover {
+    transform:
+        translateX(-3px);
 
-.team-profile::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 4px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        #f5b642,
-        transparent
-    );
-}
+    background:
+        #f5b642;
 
-.team-logo-large {
-    width: 180px;
-    height: 180px;
-    object-fit: contain;
-    display: block;
-    margin: 5px auto 18px auto;
-    border-radius: 18px;
-}
-
-.team-name {
-    font-size: 2rem;
-    margin: 5px 0 8px 0;
-}
-
-.team-owner {
-    font-size: 1.05rem;
-    margin: 0 0 20px 0;
-    opacity: .9;
-}
-
-.team-record-banner {
-    display: inline-block;
-    margin-bottom: 20px;
-    padding: 8px 18px;
-    border-radius: 999px;
-    border: 1px solid rgba(245,182,66,.5);
-    font-weight: bold;
-}
-
-.team-stats {
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(125px, 1fr));
-    gap: 12px;
-    margin: 15px auto 0 auto;
-    max-width: 850px;
-}
-
-.team-stat {
-    padding: 14px 10px;
-    border-radius: 10px;
-    background: rgba(255,255,255,.05);
-    border: 1px solid rgba(255,255,255,.08);
-}
-
-.stat-label {
-    display: block;
-    font-size: .72rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: .65;
-    margin-bottom: 5px;
-}
-
-.stat-value {
-    display: block;
-    font-size: 1.15rem;
-    font-weight: bold;
-}
-
-.espn-update {
-    margin-top: 20px;
-    font-size: .8rem;
-    opacity: .55;
+    color:
+        #0b0b0b;
 }
 
 
 /* =========================================================
-   ROSTER
+   HEADQUARTERS LABEL
    ========================================================= */
 
-.roster-section {
-    margin: 38px auto;
-}
-
-.roster-title {
+.headquarters-label {
     text-align: center;
-    margin-bottom: 5px;
-}
 
-.roster-subtitle {
-    text-align: center;
-    opacity: .55;
-    margin: 0 0 16px 0;
-    font-size: .85rem;
-}
-
-.roster-table-wrapper {
-    overflow-x: auto;
-    padding: 0;
-}
-
-.roster-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 650px;
-}
-
-.roster-table th {
-    padding: 12px 14px;
-    text-align: left;
-    color: #f5b642;
-    font-size: .75rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1px solid rgba(245,182,66,.35);
+
+    letter-spacing: 3px;
+
+    font-size: .72rem;
+
+    opacity: .72;
+
+    margin-bottom: 10px;
 }
 
-.roster-table td {
-    padding: 14px;
-    text-align: left;
-    border-bottom: 1px solid rgba(255,255,255,.08);
-}
 
-.roster-table tbody tr:last-child td {
-    border-bottom: none;
-}
+/* =========================================================
+   TEAM PROFILE
+   ========================================================= */
 
-.roster-table tbody tr:hover {
-    background: rgba(255,255,255,.035);
-}
-
-.slot-badge {
-    display: inline-block;
-    min-width: 45px;
+.team-profile {
     text-align: center;
-    padding: 5px 8px;
-    border-radius: 6px;
-    background: rgba(245,182,66,.12);
-    border: 1px solid rgba(245,182,66,.25);
-    font-weight: bold;
-    font-size: .78rem;
+
+    padding:
+        35px 24px 30px 24px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(245,182,66,.08),
+            rgba(18,18,18,.96) 42%,
+            rgba(7,7,7,.95)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.25);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 15px 42px rgba(0,0,0,.55);
+
+    backdrop-filter:
+        blur(2px);
+
+    -webkit-backdrop-filter:
+        blur(2px);
 }
 
-.player-name {
-    font-weight: bold;
+
+/* MSA top stripe */
+
+.team-profile::before {
+    content: "";
+
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+    top: 0;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #7bb800,
+            #f5b642,
+            #d9272e,
+            transparent
+        );
 }
 
-.player-meta {
-    opacity: .7;
+
+/* Punk side stripe */
+
+.team-profile::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            #7bb800,
+            #f5b642,
+            #d9272e
+        );
+
+    opacity: .8;
 }
 
-.status-badge {
+
+/* =========================================================
+   SPECIAL RANK PROFILES
+   ========================================================= */
+
+.team-profile.first-place-profile {
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(245,182,66,.15),
+            rgba(18,18,18,.96) 43%,
+            rgba(7,7,7,.95)
+        );
+
+    border-color:
+        rgba(245,182,66,.50);
+}
+
+
+.team-profile.last-place-profile {
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(217,39,46,.13),
+            rgba(18,18,18,.96) 43%,
+            rgba(7,7,7,.95)
+        );
+
+    border-color:
+        rgba(217,39,46,.38);
+}
+
+
+/* =========================================================
+   FRANCHISE STATUS
+   ========================================================= */
+
+.franchise-status {
     display: inline-block;
-    padding: 5px 8px;
-    border-radius: 6px;
-    font-size: .75rem;
-    font-weight: bold;
+
+    margin-bottom: 13px;
+
+    padding:
+        6px 12px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(0,0,0,.45);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    color: #bbb;
+
+    font-size: .62rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
 }
 
-.injury-active {
-    opacity: .6;
+
+.franchise-status.king {
+    color: #ffd166;
+
+    border-color:
+        rgba(245,182,66,.45);
+
+    background:
+        rgba(245,182,66,.08);
 }
 
-.injury-questionable {
-    background: rgba(255,193,7,.12);
+
+.franchise-status.basement {
+    color: #ef555b;
+
+    border-color:
+        rgba(217,39,46,.40);
+
+    background:
+        rgba(217,39,46,.08);
 }
 
-.injury-out {
-    background: rgba(255,80,80,.12);
+
+/* =========================================================
+   TEAM LOGO
+   ========================================================= */
+
+.team-logo-large {
+    width: 190px;
+
+    height: 190px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin:
+        5px auto 18px auto;
+
+    border-radius: 20px;
+
+    filter:
+        drop-shadow(
+            0 10px 18px rgba(0,0,0,.78)
+        );
+
+    transition:
+        transform .25s ease,
+        filter .25s ease;
 }
 
-.injury-ir {
-    background: rgba(255,80,80,.18);
+
+.team-profile:hover
+.team-logo-large {
+    transform:
+        scale(1.035);
+
+    filter:
+        drop-shadow(
+            0 12px 20px rgba(0,0,0,.85)
+        );
+}
+
+
+/* =========================================================
+   TEAM NAME
+   ========================================================= */
+
+.team-name {
+    color: #f5b642;
+
+    font-size:
+        clamp(1.6rem,5vw,2.35rem);
+
+    line-height: 1.15;
+
+    margin:
+        5px 0 9px 0;
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,.85);
+}
+
+
+/* =========================================================
+   TEAM OWNER
+   ========================================================= */
+
+.team-owner {
+    font-size: 1rem;
+
+    margin:
+        0 0 20px 0;
+
+    color: #ccc;
+}
+
+
+.team-owner strong {
+    color: #fff;
+}
+
+
+/* =========================================================
+   RECORD BANNER
+   ========================================================= */
+
+.team-record-banner {
+    display: inline-block;
+
+    margin-bottom: 22px;
+
+    padding:
+        9px 19px;
+
+    border-radius: 999px;
+
+    border:
+        1px solid rgba(245,182,66,.50);
+
+    background:
+        rgba(0,0,0,.38);
+
+    color: #f5b642;
+
+    font-weight: 900;
+
+    letter-spacing: .5px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.25);
+}
+
+
+/* =========================================================
+   TEAM STATS
+   ========================================================= */
+
+.team-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 12px;
+
+    margin:
+        15px auto 0 auto;
+
+    max-width: 850px;
+}
+
+
+.team-stat {
+    padding:
+        15px 10px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,.04);
+
+    border:
+        1px solid rgba(255,255,255,.075);
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease;
+}
+
+
+.team-stat:hover {
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(245,182,66,.24);
+
+    background:
+        rgba(245,182,66,.045);
+}
+
+
+.stat-label {
+    display: block;
+
+    font-size: .62rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.1px;
+
+    color: #999;
+
+    margin-bottom: 6px;
+}
+
+
+.stat-value {
+    display: block;
+
+    font-size: 1.12rem;
+
+    font-weight: 900;
+
+    color: #fff;
+}
+
+
+.record-stat
+.stat-value {
+    color: #f5b642;
+}
+
+
+.playoff-stat
+.stat-value {
+    color: #8fd000;
+}
+
+
+.rank-stat
+.stat-value {
+    color: #f5b642;
+}
+
+
+/* =========================================================
+   ESPN UPDATE
+   ========================================================= */
+
+.espn-update {
+    margin-top: 20px;
+
+    font-size: .72rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: #999;
+}
+
+
+.espn-live-dot {
+    color: #78cf00;
+
+    font-weight: 900;
+
+    text-shadow:
+        0 0 8px rgba(120,207,0,.45);
 }
 
 
@@ -234,17 +512,333 @@
 
 .roster-summary {
     display: flex;
+
     justify-content: center;
+
     flex-wrap: wrap;
-    gap: 10px;
-    margin: 25px 0 5px 0;
+
+    gap: 9px;
+
+    margin:
+        24px 0 5px 0;
 }
 
+
 .roster-summary-item {
-    padding: 7px 12px;
+    padding:
+        7px 12px;
+
     border-radius: 999px;
-    background: rgba(255,255,255,.05);
-    font-size: .8rem;
+
+    background:
+        rgba(0,0,0,.42);
+
+    border:
+        1px solid rgba(255,255,255,.075);
+
+    color: #ccc;
+
+    font-size: .72rem;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   ROSTER SECTION
+   ========================================================= */
+
+.roster-section {
+    margin:
+        42px auto;
+}
+
+
+.roster-title {
+    text-align: center;
+
+    margin-bottom: 6px;
+
+    color: #f5b642;
+
+    font-size: 1.45rem;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 3px 10px rgba(0,0,0,.75);
+}
+
+
+.roster-subtitle {
+    text-align: center;
+
+    color: #aaa;
+
+    margin:
+        0 auto 17px auto;
+
+    font-size: .82rem;
+
+    max-width: 650px;
+}
+
+
+/* =========================================================
+   ROSTER TABLE WRAPPER
+   ========================================================= */
+
+.roster-table-wrapper {
+    overflow-x: auto;
+
+    padding: 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.96),
+            rgba(7,7,7,.95)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.20);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.42);
+
+    backdrop-filter:
+        blur(2px);
+
+    -webkit-backdrop-filter:
+        blur(2px);
+}
+
+
+/* =========================================================
+   ROSTER TABLE
+   ========================================================= */
+
+.roster-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 650px;
+
+    background: transparent;
+}
+
+
+.roster-table th {
+    padding:
+        13px 14px;
+
+    text-align: left;
+
+    color: #0b0b0b;
+
+    background:
+        linear-gradient(
+            90deg,
+            #c88c28,
+            #f5b642
+        );
+
+    font-size: .7rem;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    border-bottom:
+        2px solid rgba(0,0,0,.25);
+}
+
+
+.roster-table td {
+    padding:
+        14px;
+
+    text-align: left;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.07);
+
+    vertical-align: middle;
+}
+
+
+.roster-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+.roster-table tbody tr {
+    transition:
+        background .18s ease;
+}
+
+
+.roster-table tbody tr:hover {
+    background:
+        rgba(245,182,66,.045);
+}
+
+
+/* =========================================================
+   SLOT BADGES
+   ========================================================= */
+
+.slot-badge {
+    display: inline-block;
+
+    min-width: 47px;
+
+    text-align: center;
+
+    padding:
+        5px 8px;
+
+    border-radius: 6px;
+
+    background:
+        rgba(245,182,66,.11);
+
+    border:
+        1px solid rgba(245,182,66,.28);
+
+    color: #f5b642;
+
+    font-weight: 900;
+
+    font-size: .75rem;
+}
+
+
+/* =========================================================
+   PLAYER INFORMATION
+   ========================================================= */
+
+.player-name {
+    font-weight: 900;
+
+    color: #fff;
+}
+
+
+.player-meta {
+    color: #bbb;
+}
+
+
+/* =========================================================
+   PLAYER STATUS
+   ========================================================= */
+
+.status-badge {
+    display: inline-block;
+
+    padding:
+        5px 8px;
+
+    border-radius: 6px;
+
+    font-size: .7rem;
+
+    font-weight: bold;
+}
+
+
+.injury-active {
+    color: #8fd000;
+
+    opacity: .8;
+}
+
+
+.injury-questionable {
+    color: #ffd166;
+
+    background:
+        rgba(255,193,7,.10);
+
+    border:
+        1px solid rgba(255,193,7,.15);
+}
+
+
+.injury-out {
+    color: #ff777b;
+
+    background:
+        rgba(255,80,80,.10);
+
+    border:
+        1px solid rgba(255,80,80,.15);
+}
+
+
+.injury-ir {
+    color: #ff777b;
+
+    background:
+        rgba(255,80,80,.15);
+
+    border:
+        1px solid rgba(255,80,80,.22);
+}
+
+
+/* =========================================================
+   STARTERS / BENCH / IR ACCENTS
+   ========================================================= */
+
+.roster-section:nth-of-type(1)
+.roster-table-wrapper {
+    border-top:
+        3px solid #7bb800;
+}
+
+
+.roster-section:nth-of-type(2)
+.roster-table-wrapper {
+    border-top:
+        3px solid #f5b642;
+}
+
+
+.roster-section:nth-of-type(3)
+.roster-table-wrapper {
+    border-top:
+        3px solid #d9272e;
+}
+
+
+/* =========================================================
+   ERROR CARD
+   ========================================================= */
+
+.team-error {
+    max-width: 900px;
+
+    margin:
+        35px auto;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background:
+        rgba(10,10,10,.90);
+
+    border:
+        1px solid rgba(217,39,46,.30);
+
+    border-radius: 12px;
 }
 
 
@@ -258,18 +852,60 @@
         font-size: 1.55rem;
     }
 
+
     .team-logo-large {
-        width: 140px;
-        height: 140px;
+        width: 145px;
+
+        height: 145px;
     }
+
 
     .team-stats {
         grid-template-columns:
-            repeat(2, 1fr);
+            repeat(2,1fr);
     }
 
+
     .team-profile {
-        padding: 24px 14px;
+        padding:
+            28px 14px 24px 14px;
+    }
+
+
+    .roster-title {
+        font-size: 1.25rem;
+    }
+
+
+    .back-button {
+        font-size: .7rem;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .team-stats {
+        gap: 7px;
+    }
+
+
+    .team-stat {
+        padding:
+            12px 6px;
+    }
+
+
+    .stat-value {
+        font-size: .95rem;
+    }
+
+
+    .team-logo-large {
+        width: 130px;
+
+        height: 130px;
     }
 
 }
@@ -280,6 +916,7 @@
 
 
 <body>
+
 
 <header>
 
@@ -323,7 +960,9 @@ Matchups
 Standings
 </a>
 
-<a href="teams.html" class="active">
+<a
+href="teams.html"
+class="active">
 Teams
 </a>
 
@@ -348,22 +987,25 @@ League History
 
 <div class="team-page">
 
+
 <a
 href="teams.html"
 class="back-button">
 
-← Back to All Misfits
+← BACK TO ALL MISFITS
 
 </a>
 
 
 <div class="headquarters-label">
-☠ MSA TEAM HEADQUARTERS ☠
+
+☠️ MSA FRANCHISE HEADQUARTERS ☠️
+
 </div>
 
 
 <div
-class="card team-profile"
+class="team-profile"
 id="team-profile">
 
 <h2>
@@ -375,6 +1017,7 @@ Loading Misfit Headquarters...
 
 <div id="roster-container">
 </div>
+
 
 </div>
 
@@ -389,6 +1032,7 @@ Loading Misfit Headquarters...
 
 
 <script>
+
 
 /* =========================================================
    TEAM INFORMATION
@@ -410,9 +1054,9 @@ const teamEmojis = {
 };
 
 
-/*
-Official MSA display names.
-*/
+/* =========================================================
+   OFFICIAL MSA DISPLAY NAMES
+   ========================================================= */
 
 const teamDisplayNames = {
 
@@ -430,12 +1074,9 @@ const teamDisplayNames = {
 };
 
 
-/*
-Official custom MSA team logos.
-
-These image files are stored in the
-main/root folder of the GitHub repository.
-*/
+/* =========================================================
+   OFFICIAL CUSTOM MSA TEAM LOGOS
+   ========================================================= */
 
 const teamLogos = {
 
@@ -462,17 +1103,18 @@ const teamLogos = {
 };
 
 
-/*
-Read team ID from URL.
+/* =========================================================
+   READ TEAM ID FROM URL
 
-Example:
-team.html?id=1
-*/
+   Example:
+   team.html?id=1
+   ========================================================= */
 
 const urlParams =
     new URLSearchParams(
         window.location.search
     );
+
 
 const teamId =
     Number(
@@ -480,12 +1122,17 @@ const teamId =
     );
 
 
+/* =========================================================
+   RECORD
+   ========================================================= */
+
 function getRecord(team) {
 
     let record =
         team.wins +
         "-" +
         team.losses;
+
 
     if (team.ties > 0) {
 
@@ -495,10 +1142,15 @@ function getRecord(team) {
 
     }
 
+
     return record;
 
 }
 
+
+/* =========================================================
+   STREAK
+   ========================================================= */
 
 function getStreak(team) {
 
@@ -512,23 +1164,59 @@ function getStreak(team) {
 
     }
 
-    if (team.streakType === "WIN") {
+
+    if (
+        team.streakType === "WIN"
+    ) {
 
         return "🔥 W" +
             team.streakLength;
 
     }
 
-    if (team.streakType === "LOSS") {
+
+    if (
+        team.streakType === "LOSS"
+    ) {
 
         return "💀 L" +
             team.streakLength;
 
     }
 
+
     return (
         team.streakType +
         team.streakLength
+    );
+
+}
+
+
+/* =========================================================
+   SAFE NUMBER FORMATTER
+   ========================================================= */
+
+function formatNumber(
+    value,
+    decimals = 1
+) {
+
+    const number =
+        Number(value);
+
+
+    if (
+        !Number.isFinite(number)
+    ) {
+
+        return "—";
+
+    }
+
+
+    return number.toFixed(
+        decimals
     );
 
 }
@@ -552,6 +1240,7 @@ function getInjuryDisplay(status) {
 
     }
 
+
     if (
         status === "QUESTIONABLE"
     ) {
@@ -562,6 +1251,7 @@ function getInjuryDisplay(status) {
         };
 
     }
+
 
     if (
         status === "DOUBTFUL"
@@ -574,6 +1264,7 @@ function getInjuryDisplay(status) {
 
     }
 
+
     if (
         status === "OUT"
     ) {
@@ -584,6 +1275,7 @@ function getInjuryDisplay(status) {
         };
 
     }
+
 
     if (
         status === "INJURY_RESERVE"
@@ -596,6 +1288,7 @@ function getInjuryDisplay(status) {
 
     }
 
+
     if (
         status === "DAY_TO_DAY"
     ) {
@@ -606,6 +1299,7 @@ function getInjuryDisplay(status) {
         };
 
     }
+
 
     return {
 
@@ -633,97 +1327,119 @@ function buildRosterTable(
     players
 ) {
 
-    if (players.length === 0) {
+    if (
+        players.length === 0
+    ) {
 
         return "";
 
     }
 
+
     let rows = "";
 
-    players.forEach(player => {
 
-        const injury =
-            getInjuryDisplay(
-                player.injuryStatus
-            );
-
-        rows += `
-
-            <tr>
-
-                <td>
-
-                    <span class="slot-badge">
-
-                    ${player.lineupSlot}
-
-                    </span>
-
-                </td>
+    players.forEach(
+        player => {
 
 
-                <td class="player-name">
+            const injury =
+                getInjuryDisplay(
+                    player.injuryStatus
+                );
+
+
+            rows += `
+
+                <tr>
+
+
+                    <td>
+
+                        <span
+                        class="slot-badge">
+
+                        ${player.lineupSlot}
+
+                        </span>
+
+                    </td>
+
+
+                    <td
+                    class="player-name">
 
                     ${player.name}
 
-                </td>
+                    </td>
 
 
-                <td class="player-meta">
+                    <td
+                    class="player-meta">
 
                     ${player.position}
 
-                </td>
+                    </td>
 
 
-                <td class="player-meta">
+                    <td
+                    class="player-meta">
 
                     ${player.nflTeam}
 
-                </td>
+                    </td>
 
 
-                <td>
+                    <td>
 
-                    <span
-                    class="status-badge ${injury.className}">
+                        <span
+                        class="status-badge ${injury.className}">
 
-                    ${injury.text}
+                        ${injury.text}
 
-                    </span>
+                        </span>
 
-                </td>
+                    </td>
 
-            </tr>
 
-        `;
+                </tr>
 
-    });
+            `;
+
+        }
+    );
 
 
     return `
 
-        <section class="roster-section">
+        <section
+        class="roster-section">
 
-            <h2 class="roster-title">
 
-                ${icon}
-                ${title}
+            <h2
+            class="roster-title">
+
+            ${icon}
+            ${title}
 
             </h2>
 
 
-            <p class="roster-subtitle">
+            <p
+            class="roster-subtitle">
 
-                ${subtitle}
+            ${subtitle}
 
             </p>
 
 
-            <div class="card roster-table-wrapper">
+            <div
+            class="roster-table-wrapper">
 
-                <table class="roster-table">
+
+                <table
+                class="roster-table">
+
 
                     <thead>
 
@@ -756,13 +1472,16 @@ function buildRosterTable(
 
                     <tbody>
 
-                        ${rows}
+                    ${rows}
 
                     </tbody>
 
+
                 </table>
 
+
             </div>
+
 
         </section>
 
@@ -775,7 +1494,10 @@ function buildRosterTable(
    STARTING LINEUP ORDER
    ========================================================= */
 
-function starterSort(a, b) {
+function starterSort(
+    a,
+    b
+) {
 
     const order = {
 
@@ -789,9 +1511,12 @@ function starterSort(a, b) {
 
     };
 
+
     return (
         order[a.lineupSlotId] || 99
-    ) - (
+    )
+    -
+    (
         order[b.lineupSlotId] || 99
     );
 
@@ -804,10 +1529,12 @@ function starterSort(a, b) {
 
 async function loadTeam() {
 
+
     const profile =
         document.getElementById(
             "team-profile"
         );
+
 
     const rosterContainer =
         document.getElementById(
@@ -816,6 +1543,7 @@ async function loadTeam() {
 
 
     try {
+
 
         if (!teamId) {
 
@@ -830,7 +1558,11 @@ async function loadTeam() {
             await fetch(
 
                 "data/league.json?t=" +
-                Date.now()
+                Date.now(),
+
+                {
+                    cache: "no-store"
+                }
 
             );
 
@@ -897,10 +1629,58 @@ async function loadTeam() {
 
 
         /* =================================================
+           SPECIAL FRANCHISE STATUS
+           ================================================= */
+
+        let franchiseStatus =
+            "☠️ SYNDICATE FRANCHISE";
+
+
+        let franchiseClass =
+            "";
+
+
+        if (
+            Number(team.rank) === 1
+        ) {
+
+            franchiseStatus =
+                "👑 KING OF THE SYNDICATE";
+
+            franchiseClass =
+                "king";
+
+            profile.classList.add(
+                "first-place-profile"
+            );
+
+        }
+
+
+        if (
+            Number(team.rank) ===
+            data.standings.length
+        ) {
+
+            franchiseStatus =
+                "💀 BASEMENT DWELLER";
+
+            franchiseClass =
+                "basement";
+
+            profile.classList.add(
+                "last-place-profile"
+            );
+
+        }
+
+
+        /* =================================================
            OFFICIAL MSA TEAM LOGO
            ================================================= */
 
         let logoHTML = "";
+
 
         const officialLogo =
             teamLogos[team.id];
@@ -926,124 +1706,175 @@ async function loadTeam() {
 
         profile.innerHTML = `
 
+
+            <div
+            class="franchise-status ${franchiseClass}">
+
+            ${franchiseStatus}
+
+            </div>
+
+
             ${logoHTML}
 
 
-            <h2 class="team-name">
+            <h2
+            class="team-name">
 
-                ${emoji}
-                ${displayName}
+            ${emoji}
+            ${displayName}
 
             </h2>
 
 
-            <p class="team-owner">
+            <p
+            class="team-owner">
 
-                Managed by
-                <strong>
-                ${team.owner}
-                </strong>
+            Managed by
+
+            <strong>
+            ${team.owner}
+            </strong>
 
             </p>
 
 
-            <div class="team-record-banner">
+            <div
+            class="team-record-banner">
 
-                ${record}
-                •
-                #${team.rank} in the Syndicate
+            ${record}
+            &nbsp;•&nbsp;
+            #${team.rank}
+            in the Syndicate
 
             </div>
 
 
-            <div class="team-stats">
+            <div
+            class="team-stats">
 
 
-                <div class="team-stat">
+                <div
+                class="team-stat record-stat">
 
-                    <span class="stat-label">
+                    <span
+                    class="stat-label">
+
                     Record
+
                     </span>
 
-                    <span class="stat-value">
+                    <span
+                    class="stat-value">
+
                     ${record}
+
                     </span>
 
                 </div>
 
 
-                <div class="team-stat">
+                <div
+                class="team-stat rank-stat">
 
-                    <span class="stat-label">
+                    <span
+                    class="stat-label">
+
                     Standing
+
                     </span>
 
-                    <span class="stat-value">
+                    <span
+                    class="stat-value">
+
                     #${team.rank}
+
                     </span>
 
                 </div>
 
 
-                <div class="team-stat">
+                <div
+                class="team-stat">
 
-                    <span class="stat-label">
+                    <span
+                    class="stat-label">
+
                     Points For
+
                     </span>
 
-                    <span class="stat-value">
+                    <span
+                    class="stat-value">
 
-                    ${Number(
+                    ${formatNumber(
                         team.pointsFor
-                    ).toFixed(1)}
+                    )}
 
                     </span>
 
                 </div>
 
 
-                <div class="team-stat">
+                <div
+                class="team-stat">
 
-                    <span class="stat-label">
+                    <span
+                    class="stat-label">
+
                     Points Against
+
                     </span>
 
-                    <span class="stat-value">
+                    <span
+                    class="stat-value">
 
-                    ${Number(
+                    ${formatNumber(
                         team.pointsAgainst
-                    ).toFixed(1)}
+                    )}
 
                     </span>
 
                 </div>
 
 
-                <div class="team-stat">
+                <div
+                class="team-stat playoff-stat">
 
-                    <span class="stat-label">
+                    <span
+                    class="stat-label">
+
                     Playoff Odds
+
                     </span>
 
-                    <span class="stat-value">
+                    <span
+                    class="stat-value">
 
-                    ${Number(
+                    ${formatNumber(
                         team.playoffPct
-                    ).toFixed(1)}%
+                    )}%
 
                     </span>
 
                 </div>
 
 
-                <div class="team-stat">
+                <div
+                class="team-stat">
 
-                    <span class="stat-label">
+                    <span
+                    class="stat-label">
+
                     Current Streak
+
                     </span>
 
-                    <span class="stat-value">
+                    <span
+                    class="stat-value">
+
                     ${streak}
+
                     </span>
 
                 </div>
@@ -1052,9 +1883,12 @@ async function loadTeam() {
             </div>
 
 
-            <div class="roster-summary">
+            <div
+            class="roster-summary">
 
-                <span class="roster-summary-item">
+
+                <span
+                class="roster-summary-item">
 
                 🏈
                 ${roster.length}
@@ -1062,27 +1896,44 @@ async function loadTeam() {
 
                 </span>
 
-                <span class="roster-summary-item">
+
+                <span
+                class="roster-summary-item">
 
                 📊 ESPN Automated
 
                 </span>
 
-                <span class="roster-summary-item">
 
-                Week ${data.currentWeek}
+                <span
+                class="roster-summary-item">
+
+                🗓️ Week
+                ${data.currentWeek}
 
                 </span>
 
+
             </div>
 
 
-            <div class="espn-update">
+            <div
+            class="espn-update">
+
+            <span
+            class="espn-live-dot">
+
+            ● LIVE
+
+            </span>
+
+            &nbsp;•&nbsp;
 
             Roster and league statistics
-            update automatically from ESPN.
+            update automatically from ESPN
 
             </div>
+
 
         `;
 
@@ -1163,11 +2014,7 @@ async function loadTeam() {
             rosterContainer.innerHTML = `
 
                 <div
-                class="card center"
-                style="
-                    max-width:900px;
-                    margin:35px auto;
-                ">
+                class="team-error">
 
                 ESPN has temporarily misplaced
                 this Misfit's roster.
@@ -1178,10 +2025,12 @@ async function loadTeam() {
 
         }
 
+
     }
 
 
     catch (error) {
+
 
         console.error(
             "MSA team page error:",
@@ -1202,11 +2051,14 @@ async function loadTeam() {
 
             </p>
 
-            <p>
+            <p
+            style="margin-top:15px;">
 
-                <a href="teams.html">
+                <a
+                href="teams.html"
+                class="back-button">
 
-                ← Return to the Teams page
+                ← RETURN TO ALL MISFITS
 
                 </a>
 
@@ -1215,14 +2067,18 @@ async function loadTeam() {
         `;
 
 
-        rosterContainer.innerHTML = "";
+        rosterContainer.innerHTML =
+            "";
+
 
     }
+
 
 }
 
 
 loadTeam();
+
 
 </script>
 
