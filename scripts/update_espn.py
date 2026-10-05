@@ -1586,33 +1586,70 @@ def main():
         fetch_espn()
     )
 
-        # TEMPORARY BENCHWARMER DIAGNOSTIC
-    print("=== BENCHWARMER ESPN DIAGNOSTIC ===")
+       # TEMPORARY WEEK-SPECIFIC BOXSCORE DIAGNOSTIC
+    print("=== WEEK 1 BOXSCORE DIAGNOSTIC ===")
 
-    for team in raw.get("teams", []):
-        roster_entries = team.get("roster", {}).get("entries", [])
+    week_url = (
+        f"https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/"
+        f"seasons/{SEASON}/segments/0/leagues/{LEAGUE_ID}"
+        "?view=mBoxscore"
+        "&view=mRoster"
+        "&scoringPeriodId=1"
+    )
 
-        if roster_entries:
-            sample_entry = roster_entries[0]
-            sample_player = (
-                sample_entry
-                .get("playerPoolEntry", {})
+    week_request = urllib.request.Request(
+        week_url,
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/json",
+        },
+    )
+
+    with urllib.request.urlopen(
+        week_request,
+        timeout=30
+    ) as response:
+
+        week_raw = json.loads(
+            response.read().decode("utf-8")
+        )
+
+    for team in week_raw.get("teams", []):
+
+        entries = (
+            team.get("roster", {})
+            .get("entries", [])
+        )
+
+        print(
+            "WEEK 1 TEAM:",
+            team.get("id")
+        )
+
+        for entry in entries[:3]:
+
+            player = (
+                entry.get("playerPoolEntry", {})
                 .get("player", {})
             )
 
-            print("TEAM ID:", team.get("id"))
-            print("ENTRY KEYS:", list(sample_entry.keys()))
-            print("PLAYER KEYS:", list(sample_player.keys()))
-            print(
-                "PLAYER STATS:",
-                json.dumps(
-                    sample_player.get("stats", []),
-                    indent=2
-                )
-            )
-            break
+            print({
+                "player": player.get("fullName"),
+                "lineupSlotId": entry.get("lineupSlotId"),
+                "stats": [
+                    {
+                        "scoringPeriodId": stat.get("scoringPeriodId"),
+                        "statSourceId": stat.get("statSourceId"),
+                        "appliedTotal": stat.get("appliedTotal"),
+                    }
+                    for stat in player.get("stats", [])
+                    if stat.get("scoringPeriodId") == 1
+                ],
+            })
 
-    print("=== END BENCHWARMER DIAGNOSTIC ===")
+        break
+
+    print("=== END WEEK 1 BOXSCORE DIAGNOSTIC ===")
 
 
     clean = (
