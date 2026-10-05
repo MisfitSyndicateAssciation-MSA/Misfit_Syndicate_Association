@@ -20,7 +20,7 @@ href="style.css">
 <style>
 
 /* =========================================================
-   MSA RULES HQ
+   MSA RULEBOOK — THE BOOK OF BAD DECISIONS
    ========================================================= */
 
 .rules-page {
@@ -35,17 +35,151 @@ href="style.css">
 
 .rules-intro {
     text-align: center;
-    margin-bottom: 30px;
+
+    margin-bottom: 25px;
+
+    padding: 32px 22px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(245,182,66,.11),
+            rgba(18,18,18,.96) 45%,
+            rgba(7,7,7,.95)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.28);
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 14px 40px rgba(0,0,0,.48);
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
-.rules-intro h2 {
-    margin-bottom: 8px;
+
+.rules-intro::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 8%;
+    right: 8%;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d9272e,
+            #f5b642,
+            #7bb800,
+            transparent
+        );
 }
+
+
+.rules-intro-label {
+    margin-bottom: 7px;
+
+    color: #aaa;
+
+    font-size: .68rem;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.rules-intro h2 {
+    margin-bottom: 9px;
+
+    color: #f5b642;
+
+    font-size:
+        clamp(1.6rem,4vw,2.25rem);
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,.85);
+}
+
 
 .rules-intro p {
     max-width: 760px;
+
     margin: auto;
-    line-height: 1.6;
+
+    color: #bbb;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   RULEBOOK STATUS
+   ========================================================= */
+
+.rulebook-status {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    max-width: 750px;
+
+    margin:
+        -8px auto 28px auto;
+
+    padding:
+        9px 14px;
+
+    background:
+        rgba(8,8,8,.78);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-radius: 8px;
+
+    color: #aaa;
+
+    font-size: .65rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.1px;
+
+    text-transform: uppercase;
+}
+
+
+.rulebook-status-live {
+    color: #78cf00;
+
+    text-shadow:
+        0 0 8px rgba(120,207,0,.45);
+}
+
+
+.rulebook-divider {
+    opacity: .35;
 }
 
 
@@ -55,50 +189,141 @@ href="style.css">
 
 .rules-nav {
     display: flex;
+
     flex-wrap: wrap;
+
     justify-content: center;
+
     gap: 10px;
-    margin-bottom: 35px;
+
+    margin-bottom: 42px;
 }
+
 
 .rules-nav a {
     display: inline-block;
-    padding: 10px 16px;
-    border: 1px solid rgba(245,182,66,.35);
+
+    padding:
+        10px 16px;
+
+    border:
+        1px solid rgba(245,182,66,.32);
+
     border-radius: 8px;
-    background: rgba(255,255,255,.03);
+
+    background:
+        rgba(8,8,8,.72);
+
     color: #f5b642;
+
     text-decoration: none;
-    font-size: .78rem;
-    font-weight: bold;
+
+    font-size: .7rem;
+
+    font-weight: 900;
+
     letter-spacing: 1px;
+
     text-transform: uppercase;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.20);
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
 }
 
+
 .rules-nav a:hover {
+    transform:
+        translateY(-2px);
+
     background: #f5b642;
+
     color: #111;
+
+    border-color: #f5b642;
 }
 
 
 /* =========================================================
-   SECTION TITLES
+   SECTIONS
    ========================================================= */
 
 .rules-section {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+
     scroll-margin-top: 90px;
 }
 
+
+.rules-section-header {
+    max-width: 800px;
+
+    margin:
+        0 auto 23px auto;
+
+    padding:
+        19px 16px;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        rgba(9,9,9,.74);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-radius: 10px;
+}
+
+
+.rules-section-header::before {
+    content: "";
+
+    position: absolute;
+
+    left: 22%;
+    right: 22%;
+    top: 0;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #f5b642,
+            transparent
+        );
+}
+
+
 .rules-section-title {
     text-align: center;
+
     margin-bottom: 5px;
+
+    color: #f5b642;
+
+    text-shadow:
+        0 3px 10px rgba(0,0,0,.75);
 }
+
 
 .rules-section-subtitle {
     text-align: center;
-    opacity: .65;
-    margin-bottom: 22px;
+
+    color: #aaa;
+
+    margin-bottom: 0;
+
+    font-size: .84rem;
 }
 
 
@@ -108,34 +333,97 @@ href="style.css">
 
 .rules-grid {
     display: grid;
+
     grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
+        repeat(3,1fr);
+
     gap: 15px;
 }
 
+
 .rule-stat {
     text-align: center;
-    padding: 22px 15px;
+
+    padding:
+        24px 15px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.96),
+            rgba(7,7,7,.95)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.075);
+
+    border-top:
+        3px solid #f5b642;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.38);
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease;
 }
 
+
+.rule-stat:nth-child(3n+2) {
+    border-top-color: #7bb800;
+}
+
+
+.rule-stat:nth-child(3n+3) {
+    border-top-color: #d9272e;
+}
+
+
+.rule-stat:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(245,182,66,.35);
+}
+
+
 .rule-stat-icon {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+
     margin-bottom: 8px;
 }
 
+
 .rule-stat-label {
     display: block;
-    font-size: .7rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    opacity: .55;
+
     margin-bottom: 7px;
+
+    color: #999;
+
+    font-size: .62rem;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
 }
 
+
 .rule-stat-value {
-    font-size: 1.15rem;
-    font-weight: 900;
     color: #f5b642;
+
+    font-size: 1.08rem;
+
+    font-weight: 900;
 }
 
 
@@ -145,59 +433,181 @@ href="style.css">
 
 .payout-grid {
     display: grid;
+
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3,1fr);
+
     gap: 15px;
 }
 
+
 .payout-card {
     text-align: center;
-    padding: 25px 15px;
+
+    padding:
+        27px 16px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.96),
+            rgba(7,7,7,.95)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 11px 32px rgba(0,0,0,.40);
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease;
 }
+
+
+.payout-card:hover {
+    transform:
+        translateY(-4px);
+}
+
+
+.payout-card:nth-child(1) {
+    border-top:
+        3px solid #f5b642;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(245,182,66,.12),
+            rgba(18,18,18,.96) 48%,
+            rgba(7,7,7,.95)
+        );
+}
+
+
+.payout-card:nth-child(2) {
+    border-top:
+        3px solid #aaa;
+}
+
+
+.payout-card:nth-child(3) {
+    border-top:
+        3px solid #b87333;
+}
+
 
 .payout-place {
-    font-size: 2rem;
+    font-size: 2.2rem;
+
     margin-bottom: 8px;
 }
+
 
 .payout-title {
-    font-weight: 900;
     margin-bottom: 8px;
+
+    color: #ddd;
+
+    font-size: .78rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
 }
+
 
 .payout-money {
-    font-size: 1.5rem;
     color: #f5b642;
+
+    font-size: 1.7rem;
+
     font-weight: 900;
+
+    text-shadow:
+        0 2px 10px rgba(245,182,66,.15);
 }
 
+
 .payout-description {
-    margin-top: 10px;
-    font-size: .82rem;
-    opacity: .7;
-    line-height: 1.5;
+    margin-top: 11px;
+
+    color: #aaa;
+
+    font-size: .8rem;
+
+    line-height: 1.55;
 }
 
 
 /* =========================================================
-   DEADLINE WARNING
+   PAYMENT DEADLINE
    ========================================================= */
 
 .payment-warning {
     text-align: center;
-    padding: 25px;
-    margin-top: 18px;
-    border: 1px solid rgba(220,38,38,.5);
+
+    padding:
+        26px 20px;
+
+    margin-top: 19px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(60,8,8,.28),
+            rgba(12,8,8,.92)
+        );
+
+    border:
+        1px solid rgba(220,38,38,.42);
+
+    border-left:
+        5px solid #d9272e;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.35);
 }
+
 
 .payment-warning strong {
-    color: #ef4444;
+    color: #ff6268;
 }
 
+
 .payment-warning-title {
-    font-size: 1.2rem;
+    color: #ff6268;
+
+    font-size: 1.1rem;
+
     font-weight: 900;
-    margin-bottom: 8px;
+
+    letter-spacing: .6px;
+
+    margin-bottom: 9px;
+}
+
+
+.payment-warning p {
+    max-width: 800px;
+
+    margin:
+        7px auto;
+
+    color: #ccc;
+
+    line-height: 1.55;
 }
 
 
@@ -207,24 +617,80 @@ href="style.css">
 
 .house-rules {
     display: grid;
+
     grid-template-columns:
-        repeat(auto-fit, minmax(280px, 1fr));
+        repeat(2,1fr);
+
     gap: 15px;
 }
 
+
 .house-rule {
-    padding: 20px;
+    padding:
+        22px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.96),
+            rgba(7,7,7,.95)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.075);
+
+    border-left:
+        4px solid #f5b642;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 9px 28px rgba(0,0,0,.35);
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease;
 }
 
-.house-rule h3 {
-    margin: 0 0 8px 0;
-    color: #f5b642;
+
+.house-rule:nth-child(3n+2) {
+    border-left-color: #7bb800;
 }
+
+
+.house-rule:nth-child(3n+3) {
+    border-left-color: #d9272e;
+}
+
+
+.house-rule:hover {
+    transform:
+        translateY(-3px);
+}
+
+
+.house-rule h3 {
+    margin:
+        0 0 8px 0;
+
+    color: #f5b642;
+
+    font-size: .98rem;
+}
+
 
 .house-rule p {
     margin: 0;
+
+    color: #bbb;
+
     line-height: 1.6;
-    opacity: .8;
+
+    font-size: .88rem;
 }
 
 
@@ -234,72 +700,99 @@ href="style.css">
 
 .scoring-grid {
     display: grid;
+
     grid-template-columns:
-        repeat(auto-fit, minmax(280px, 1fr));
+        repeat(2,1fr);
+
     gap: 18px;
 }
 
+
 .scoring-card {
-    padding: 22px;
+    padding:
+        22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.96),
+            rgba(7,7,7,.95)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.075);
+
+    border-top:
+        3px solid #f5b642;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.38);
 }
+
+
+.scoring-card:nth-child(3n+2) {
+    border-top-color: #7bb800;
+}
+
+
+.scoring-card:nth-child(3n+3) {
+    border-top-color: #d9272e;
+}
+
 
 .scoring-card h3 {
     color: #f5b642;
+
     margin-top: 0;
-    border-bottom: 1px solid rgba(245,182,66,.25);
+
+    border-bottom:
+        1px solid rgba(245,182,66,.20);
+
     padding-bottom: 10px;
+
+    font-size: 1rem;
 }
+
 
 .scoring-row {
     display: flex;
+
     justify-content: space-between;
+
+    align-items: center;
+
     gap: 20px;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255,255,255,.06);
+
+    padding:
+        9px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.055);
+
+    color: #ccc;
+
+    font-size: .84rem;
 }
 
+
+.scoring-row:last-child {
+    border-bottom: none;
+}
+
+
 .scoring-points {
-    color: #f5b642;
-    font-weight: bold;
+    color: #8fd000;
+
+    font-weight: 900;
+
     white-space: nowrap;
 }
 
+
 .negative {
-    color: #ef4444;
-}
-
-
-/* =========================================================
-   GRAPHIC ARCHIVE
-   ========================================================= */
-
-.rules-graphics {
-    display: grid;
-    gap: 20px;
-}
-
-.rules-graphic-card {
-    padding: 18px;
-}
-
-.rules-graphic-card summary {
-    cursor: pointer;
-    font-weight: 900;
-    color: #f5b642;
-    padding: 5px;
-    list-style-position: inside;
-}
-
-.rules-graphic-card summary:hover {
-    color: #ffd166;
-}
-
-.rules-graphic {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 18px auto 0 auto;
-    border-radius: 10px;
+    color: #ef555b;
 }
 
 
@@ -309,17 +802,135 @@ href="style.css">
 
 .commissioner-box {
     text-align: center;
-    padding: 28px;
+
+    padding:
+        29px 22px;
+
+    margin-bottom: 50px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(245,182,66,.08),
+            rgba(15,15,15,.95)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.24);
+
+    border-left:
+        4px solid #f5b642;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 11px 32px rgba(0,0,0,.38);
 }
+
 
 .commissioner-box h3 {
     color: #f5b642;
+
+    margin-bottom: 10px;
 }
+
 
 .commissioner-box p {
     max-width: 700px;
-    margin: 10px auto;
-    line-height: 1.6;
+
+    margin:
+        9px auto;
+
+    color: #bbb;
+
+    line-height: 1.65;
+}
+
+
+.commissioner-box strong {
+    color: #fff;
+}
+
+
+/* =========================================================
+   OFFICIAL GRAPHICS
+   ========================================================= */
+
+.rules-graphics {
+    display: grid;
+
+    gap: 16px;
+
+    max-width: 950px;
+
+    margin: auto;
+}
+
+
+.rules-graphic-card {
+    padding:
+        17px 19px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.96),
+            rgba(7,7,7,.95)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.18);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 9px 28px rgba(0,0,0,.35);
+}
+
+
+.rules-graphic-card summary {
+    cursor: pointer;
+
+    color: #f5b642;
+
+    padding: 6px;
+
+    font-size: .83rem;
+
+    font-weight: 900;
+
+    letter-spacing: .5px;
+
+    list-style-position: inside;
+}
+
+
+.rules-graphic-card summary:hover {
+    color: #ffd166;
+}
+
+
+.rules-graphic {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    margin:
+        18px auto 0 auto;
+
+    border-radius: 10px;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.45);
 }
 
 
@@ -329,18 +940,95 @@ href="style.css">
 
 .final-warning {
     text-align: center;
-    padding: 30px 20px;
-    margin-top: 35px;
+
+    padding:
+        32px 20px;
+
+    margin-top: 40px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(217,39,46,.08),
+            rgba(15,15,15,.95)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.22);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.40);
 }
+
+
+.final-warning::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 12%;
+    right: 12%;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #7bb800,
+            #f5b642,
+            #d9272e,
+            transparent
+        );
+}
+
 
 .final-warning h2 {
     color: #f5b642;
 }
 
+
 .final-warning p {
     max-width: 700px;
-    margin: 10px auto;
+
+    margin:
+        10px auto;
+
+    color: #bbb;
+
     line-height: 1.6;
+}
+
+
+.final-warning strong {
+    color: #fff;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .rules-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+
+    .scoring-grid {
+        grid-template-columns:
+            1fr;
+    }
+
 }
 
 
@@ -351,16 +1039,56 @@ href="style.css">
 @media (max-width: 700px) {
 
     .payout-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
+
+
+    .house-rules {
+        grid-template-columns:
+            1fr;
+    }
+
 
     .rules-nav {
         gap: 7px;
     }
 
+
     .rules-nav a {
-        font-size: .68rem;
-        padding: 8px 11px;
+        font-size: .62rem;
+
+        padding:
+            8px 10px;
+    }
+
+
+    .rules-intro {
+        padding:
+            25px 14px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .rules-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .scoring-card {
+        padding:
+            18px 14px;
+    }
+
+
+    .scoring-row {
+        gap: 10px;
+
+        font-size: .78rem;
     }
 
 }
@@ -423,14 +1151,14 @@ Teams
 Syndicate Report
 </a>
 
-<a href="league-history.html">
-League History
-</a>
-
 <a
 href="rules.html"
 class="active">
 Rules
+</a>
+
+<a href="league-history.html">
+League History
 </a>
 
 </div>
@@ -447,23 +1175,66 @@ Rules
      INTRODUCTION
      ===================================================== -->
 
-<section class="panel rules-intro">
+<section class="rules-intro">
+
+<div class="rules-intro-label">
+☠️ THE BOOK OF BAD DECISIONS ☠️
+</div>
 
 <h2>
 📕 MSA CONSTITUTION & RULEBOOK
 </h2>
 
-<p class="muted">
+<p>
 
-The official laws governing the Misfit Syndicate Association.
+The official laws governing the
+Misfit Syndicate Association.
 
 Read them. Know them. Live them.
 
-Or completely ignore them and complain to the commissioner later.
+Or completely ignore them and complain
+to the commissioner later.
 
 </p>
 
 </section>
+
+
+<!-- =====================================================
+     RULEBOOK STATUS
+     ===================================================== -->
+
+<div class="rulebook-status">
+
+<span class="rulebook-status-live">
+● OFFICIAL
+</span>
+
+<span class="rulebook-divider">
+•
+</span>
+
+<span>
+2026 MSA RULEBOOK
+</span>
+
+<span class="rulebook-divider">
+•
+</span>
+
+<span>
+10 MISFITS
+</span>
+
+<span class="rulebook-divider">
+•
+</span>
+
+<span>
+ZERO EXCUSES
+</span>
+
+</div>
 
 
 <!-- =====================================================
@@ -503,6 +1274,9 @@ Official Graphics
 class="rules-section"
 id="league">
 
+
+<div class="rules-section-header">
+
 <h2 class="rules-section-title">
 🏈 LEAGUE SETUP
 </h2>
@@ -511,11 +1285,13 @@ id="league">
 Ten teams. One champion. Countless excuses.
 </p>
 
+</div>
+
 
 <div class="rules-grid">
 
 
-<div class="card rule-stat">
+<div class="rule-stat">
 
 <div class="rule-stat-icon">
 👥
@@ -532,7 +1308,7 @@ League Size
 </div>
 
 
-<div class="card rule-stat">
+<div class="rule-stat">
 
 <div class="rule-stat-icon">
 🏈
@@ -549,7 +1325,7 @@ Head-to-Head Points
 </div>
 
 
-<div class="card rule-stat">
+<div class="rule-stat">
 
 <div class="rule-stat-icon">
 🎯
@@ -566,7 +1342,7 @@ PPR
 </div>
 
 
-<div class="card rule-stat">
+<div class="rule-stat">
 
 <div class="rule-stat-icon">
 🐍
@@ -583,7 +1359,7 @@ Snake Draft
 </div>
 
 
-<div class="card rule-stat">
+<div class="rule-stat">
 
 <div class="rule-stat-icon">
 💰
@@ -600,7 +1376,7 @@ $50
 </div>
 
 
-<div class="card rule-stat">
+<div class="rule-stat">
 
 <div class="rule-stat-icon">
 👑
@@ -630,28 +1406,31 @@ Steve OG
 class="rules-section"
 id="money">
 
+
+<div class="rules-section-header">
+
 <h2 class="rules-section-title">
 💰 THE POT & PAYOUTS
 </h2>
 
 <p class="rules-section-subtitle">
-
 10 teams × $50 = $500 total prize pool.
-
 </p>
+
+</div>
 
 
 <div class="payout-grid">
 
 
-<div class="card payout-card">
+<div class="payout-card">
 
 <div class="payout-place">
 🥇
 </div>
 
 <div class="payout-title">
-MSA CHAMPION
+MSA Champion
 </div>
 
 <div class="payout-money">
@@ -671,14 +1450,14 @@ Take the glory.
 </div>
 
 
-<div class="card payout-card">
+<div class="payout-card">
 
 <div class="payout-place">
 🥈
 </div>
 
 <div class="payout-title">
-SECOND PLACE
+Second Place
 </div>
 
 <div class="payout-money">
@@ -697,14 +1476,14 @@ with some cash.
 </div>
 
 
-<div class="card payout-card">
+<div class="payout-card">
 
 <div class="payout-place">
 🥉
 </div>
 
 <div class="payout-title">
-THIRD PLACE
+Third Place
 </div>
 
 <div class="payout-money">
@@ -725,7 +1504,7 @@ Congratulations on basically breaking even.
 </div>
 
 
-<div class="card payment-warning">
+<div class="payment-warning">
 
 <div class="payment-warning-title">
 🚨 PAYMENT DEADLINE — END OF WEEK 4
@@ -750,6 +1529,7 @@ and all money distributions.
 
 </div>
 
+
 </section>
 
 
@@ -761,6 +1541,9 @@ and all money distributions.
 class="rules-section"
 id="house-rules">
 
+
+<div class="rules-section-header">
+
 <h2 class="rules-section-title">
 💀 HOUSE RULES
 </h2>
@@ -769,11 +1552,13 @@ id="house-rules">
 The Book of Bad Decisions.
 </p>
 
+</div>
+
 
 <div class="house-rules">
 
 
-<div class="card house-rule">
+<div class="house-rule">
 
 <h3>
 🚮 NO EXCUSES
@@ -790,7 +1575,7 @@ Set your lineup.
 </div>
 
 
-<div class="card house-rule">
+<div class="house-rule">
 
 <h3>
 🤝 TRADES ARE ENCOURAGED
@@ -807,7 +1592,7 @@ Fortune favors the bold — or the drunk.
 </div>
 
 
-<div class="card house-rule">
+<div class="house-rule">
 
 <h3>
 🖕 NO COLLUSION
@@ -826,7 +1611,7 @@ This ain't that kind of Syndicate.
 </div>
 
 
-<div class="card house-rule">
+<div class="house-rule">
 
 <h3>
 ☠️ LAST PLACE ISN'T A CRIME
@@ -843,7 +1628,7 @@ Own that shame like a maniac.
 </div>
 
 
-<div class="card house-rule">
+<div class="house-rule">
 
 <h3>
 🏆 THE CHAMP GETS GLORY
@@ -865,7 +1650,7 @@ Everyone else gets memes.
 </div>
 
 
-<div class="card house-rule">
+<div class="house-rule">
 
 <h3>
 🍺 BEER. WEED. FANTASY FOOTBALL.
@@ -895,15 +1680,18 @@ Respect the pillars.
 class="rules-section"
 id="scoring">
 
+
+<div class="rules-section-header">
+
 <h2 class="rules-section-title">
 📊 MSA SCORING SYSTEM
 </h2>
 
 <p class="rules-section-subtitle">
-
 Points add up. Excuses don't.
-
 </p>
+
+</div>
 
 
 <div class="scoring-grid">
@@ -911,7 +1699,7 @@ Points add up. Excuses don't.
 
 <!-- PASSING -->
 
-<div class="card scoring-card">
+<div class="scoring-card">
 
 <h3>
 🏈 Passing
@@ -938,11 +1726,6 @@ Points add up. Excuses don't.
 </div>
 
 <div class="scoring-row">
-<span>Passing First Down</span>
-<span class="scoring-points">1 pt</span>
-</div>
-
-<div class="scoring-row">
 <span>2-Point Passing Conversion</span>
 <span class="scoring-points">2 pts</span>
 </div>
@@ -962,7 +1745,7 @@ Points add up. Excuses don't.
 
 <!-- RUSHING -->
 
-<div class="card scoring-card">
+<div class="scoring-card">
 
 <h3>
 🏃 Rushing
@@ -1018,7 +1801,7 @@ Points add up. Excuses don't.
 
 <!-- RECEIVING -->
 
-<div class="card scoring-card">
+<div class="scoring-card">
 
 <h3>
 🙌 Receiving
@@ -1054,7 +1837,7 @@ Points add up. Excuses don't.
 
 <!-- KICKING -->
 
-<div class="card scoring-card">
+<div class="scoring-card">
 
 <h3>
 🥅 Kicking
@@ -1095,7 +1878,7 @@ Points add up. Excuses don't.
 
 <!-- OFFENSIVE RETURNS -->
 
-<div class="card scoring-card">
+<div class="scoring-card">
 
 <h3>
 ⚡ Offensive Returns & Misc.
@@ -1136,7 +1919,7 @@ Points add up. Excuses don't.
 
 <!-- DEFENSE -->
 
-<div class="card scoring-card">
+<div class="scoring-card">
 
 <h3>
 🛡️ Team Defense / Special Teams
@@ -1276,10 +2059,10 @@ Points add up. Excuses don't.
 
 
 <!-- =====================================================
-     COMMISSIONER
+     COMMISSIONER AUTHORITY
      ===================================================== -->
 
-<section class="card commissioner-box">
+<section class="commissioner-box">
 
 <h3>
 ⚖️ COMMISSIONER AUTHORITY
@@ -1316,24 +2099,27 @@ general principle of:
 class="rules-section"
 id="graphics">
 
+
+<div class="rules-section-header">
+
 <h2 class="rules-section-title">
 🎨 OFFICIAL MSA RULEBOOK GRAPHICS
 </h2>
 
 <p class="rules-section-subtitle">
-
 The original Syndicate propaganda, preserved for posterity.
-
 </p>
+
+</div>
 
 
 <div class="rules-graphics">
 
 
-<details class="card rules-graphic-card">
+<details class="rules-graphic-card">
 
 <summary>
-💰 View Pot & Payout Graphic
+💰 VIEW POT & PAYOUT GRAPHIC
 </summary>
 
 <img
@@ -1344,10 +2130,10 @@ class="rules-graphic">
 </details>
 
 
-<details class="card rules-graphic-card">
+<details class="rules-graphic-card">
 
 <summary>
-📊 View Official Scoring Graphics
+📊 VIEW OFFICIAL SCORING GRAPHIC
 </summary>
 
 <img
@@ -1358,10 +2144,10 @@ class="rules-graphic">
 </details>
 
 
-<details class="card rules-graphic-card">
+<details class="rules-graphic-card">
 
 <summary>
-💀 View MSA Constitution & House Rules
+💀 VIEW MSA CONSTITUTION & HOUSE RULES
 </summary>
 
 <img
@@ -1381,7 +2167,7 @@ class="rules-graphic">
      FINAL MESSAGE
      ===================================================== -->
 
-<section class="card final-warning">
+<section class="final-warning">
 
 <h2>
 ☠️ WELCOME TO THE SYNDICATE
