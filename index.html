@@ -13,7 +13,7 @@
 <style>
 
 /* =========================================================
-   MSA CENTRAL DASHBOARD
+   MSA CENTRAL — PUNK / GRUNGE HOMEPAGE
    ========================================================= */
 
 .dashboard {
@@ -23,12 +23,42 @@
 
 .welcome-panel {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    background: linear-gradient(
+        135deg,
+        rgba(18,18,18,.94),
+        rgba(10,10,10,.90)
+    );
+    border: 1px solid rgba(245,182,66,.30);
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.45),
+        inset 0 0 35px rgba(245,182,66,.025);
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 12%;
+    right: 12%;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #7bb800,
+        #f5b642,
+        #d9272e,
+        transparent
+    );
 }
 
 .welcome-panel h2 {
     font-size: 2rem;
     margin-bottom: 10px;
+    color: #f5b642;
+    text-shadow: 0 2px 10px rgba(0,0,0,.8);
 }
 
 .dashboard-label {
@@ -36,7 +66,7 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: .8rem;
-    opacity: .6;
+    opacity: .75;
     margin-bottom: 8px;
 }
 
@@ -48,15 +78,21 @@
 .live-update-bar {
     text-align: center;
     margin: 15px 0 30px 0;
+    padding: 9px 12px;
     font-size: .72rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    opacity: .8;
+    background: rgba(8,8,8,.72);
+    border-top: 1px solid rgba(255,255,255,.05);
+    border-bottom: 1px solid rgba(255,255,255,.05);
+    border-radius: 7px;
+    opacity: .9;
 }
 
 .live-dot {
-    color: #22c55e;
+    color: #70d000;
     font-weight: bold;
+    text-shadow: 0 0 8px rgba(112,208,0,.65);
 }
 
 .live-time {
@@ -74,12 +110,47 @@
     grid-template-columns:
         repeat(auto-fit, minmax(180px, 1fr));
     gap: 15px;
-    margin: 25px 0 35px 0;
+    margin: 25px 0 40px 0;
 }
 
 .status-card {
     text-align: center;
-    padding: 20px 12px;
+    padding: 22px 12px;
+    background: linear-gradient(
+        145deg,
+        rgba(20,20,20,.94),
+        rgba(8,8,8,.94)
+    );
+    border: 1px solid rgba(245,182,66,.18);
+    box-shadow: 0 8px 25px rgba(0,0,0,.35);
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.status-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(245,182,66,.50);
+    box-shadow: 0 12px 30px rgba(0,0,0,.50);
+}
+
+.status-card:nth-child(1) {
+    border-top: 3px solid #f5b642;
+}
+
+.status-card:nth-child(2) {
+    border-top: 3px solid #7bb800;
+}
+
+.status-card:nth-child(3) {
+    border-top: 3px solid #d9272e;
+}
+
+.status-card:nth-child(4) {
+    border-top: 3px solid #f5b642;
 }
 
 .status-label {
@@ -87,8 +158,8 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: .7rem;
-    opacity: .6;
-    margin-bottom: 7px;
+    opacity: .65;
+    margin-bottom: 9px;
 }
 
 .status-value {
@@ -112,8 +183,9 @@
     height: 80px;
     object-fit: contain;
     display: block;
-    margin: 5px auto 10px auto;
+    margin: 7px auto 11px auto;
     border-radius: 12px;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.7));
 }
 
 
@@ -122,17 +194,19 @@
    ========================================================= */
 
 .dashboard-section {
-    margin: 40px 0;
+    margin: 55px 0;
 }
 
 .section-heading {
     text-align: center;
     margin-bottom: 5px;
+    color: #f5b642;
+    text-shadow: 0 3px 12px rgba(0,0,0,.8);
 }
 
 .section-description {
     text-align: center;
-    opacity: .6;
+    opacity: .75;
     margin-bottom: 10px;
 }
 
@@ -145,12 +219,47 @@
     display: grid;
     grid-template-columns:
         repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
+    gap: 18px;
 }
 
 .home-matchup {
     text-align: center;
     padding: 20px;
+    background: linear-gradient(
+        145deg,
+        rgba(19,19,19,.96),
+        rgba(7,7,7,.95)
+    );
+    border: 1px solid rgba(255,255,255,.10);
+    border-top: 2px solid rgba(245,182,66,.45);
+    box-shadow: 0 10px 30px rgba(0,0,0,.42);
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform .22s ease,
+        border-color .22s ease,
+        box-shadow .22s ease;
+}
+
+.home-matchup::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(
+        #7bb800,
+        #f5b642,
+        #d9272e
+    );
+    opacity: .65;
+}
+
+.home-matchup:hover {
+    transform: translateY(-4px);
+    border-color: rgba(245,182,66,.50);
+    box-shadow: 0 14px 35px rgba(0,0,0,.58);
 }
 
 .home-matchup-header {
@@ -158,12 +267,12 @@
     font-size: .72rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    opacity: .65;
+    opacity: .8;
 }
 
 .espn-live-badge {
     display: inline-block;
-    background: #d9272e;
+    background: linear-gradient(135deg,#b81820,#e53036);
     color: white;
     font-size: .58rem;
     padding: 4px 7px;
@@ -171,6 +280,7 @@
     margin-left: 5px;
     letter-spacing: .5px;
     font-weight: bold;
+    box-shadow: 0 0 10px rgba(217,39,46,.35);
 }
 
 .home-matchup-teams {
@@ -201,6 +311,12 @@
     display: block;
     margin: 0 auto 8px auto;
     border-radius: 10px;
+    filter: drop-shadow(0 5px 8px rgba(0,0,0,.75));
+    transition: transform .2s ease;
+}
+
+.home-matchup-link:hover .home-matchup-logo {
+    transform: scale(1.06);
 }
 
 .home-matchup-name {
@@ -219,16 +335,17 @@
 }
 
 .matchup-vs {
-    font-size: 1rem;
-    opacity: .55;
+    font-size: 1.15rem;
+    opacity: .75;
     margin: 5px;
     font-weight: bold;
+    color: #d9272e;
 }
 
 .home-score {
     margin-top: 10px;
     color: #f5b642;
-    font-size: 1.5rem;
+    font-size: 1.55rem;
     font-weight: bold;
 }
 
@@ -258,7 +375,7 @@
 }
 
 .matchup-projection strong {
-    color: #f5b642;
+    color: #7fc800;
 }
 
 
@@ -269,16 +386,41 @@
 .standings-snapshot {
     max-width: 800px;
     margin: auto;
+    overflow: hidden;
+    padding: 0;
+    background: linear-gradient(
+        145deg,
+        rgba(19,19,19,.96),
+        rgba(8,8,8,.96)
+    );
+    border: 1px solid rgba(245,182,66,.22);
+    box-shadow: 0 12px 35px rgba(0,0,0,.45);
 }
 
 .snapshot-row {
     display: grid;
-    grid-template-columns:
-        45px 52px 1fr auto;
+    grid-template-columns: 45px 52px 1fr auto;
     align-items: center;
     gap: 10px;
     padding: 13px 15px;
     border-bottom: 1px solid rgba(255,255,255,.08);
+    transition:
+        background .2s ease,
+        padding-left .2s ease;
+}
+
+.snapshot-row:hover {
+    background: rgba(245,182,66,.055);
+    padding-left: 19px;
+}
+
+.snapshot-row:first-child {
+    background: linear-gradient(
+        90deg,
+        rgba(115,185,0,.11),
+        transparent
+    );
+    border-left: 3px solid #7bb800;
 }
 
 .snapshot-row:last-child {
@@ -288,6 +430,7 @@
 .snapshot-rank {
     font-weight: bold;
     text-align: center;
+    color: #f5b642;
 }
 
 .snapshot-logo {
@@ -311,8 +454,9 @@
 }
 
 .snapshot-record {
-    opacity: .7;
+    opacity: .75;
     font-weight: bold;
+    color: #f5b642;
 }
 
 
@@ -326,14 +470,42 @@
 
 .quick-links .card {
     text-decoration: none;
+    color: inherit;
+    min-height: 135px;
+    background: linear-gradient(
+        145deg,
+        rgba(20,20,20,.95),
+        rgba(8,8,8,.94)
+    );
+    border: 1px solid rgba(255,255,255,.10);
+    border-left: 3px solid #f5b642;
+    box-shadow: 0 9px 25px rgba(0,0,0,.35);
     transition:
         transform .2s ease,
-        border-color .2s ease;
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.quick-links .card:nth-child(2n) {
+    border-left-color: #7bb800;
+}
+
+.quick-links .card:nth-child(3n) {
+    border-left-color: #d9272e;
 }
 
 .quick-links .card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(245,182,66,.45);
+    transform: translateY(-5px);
+    border-color: rgba(245,182,66,.55);
+    box-shadow: 0 14px 32px rgba(0,0,0,.55);
+}
+
+.quick-links .card h3 {
+    color: #f5b642;
+}
+
+.quick-links .card:hover h3 {
+    color: #8bd000;
 }
 
 
@@ -343,21 +515,89 @@
 
 .report-feature {
     text-align: center;
-    padding: 25px 20px;
+    padding: 35px 25px;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(
+        circle at center,
+        rgba(75,100,0,.12),
+        rgba(18,18,18,.96) 50%,
+        rgba(7,7,7,.96) 100%
+    );
+    border: 1px solid rgba(245,182,66,.28);
+    box-shadow: 0 12px 35px rgba(0,0,0,.45);
+}
+
+.report-feature::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        #d9272e,
+        #f5b642,
+        #7bb800,
+        #f5b642,
+        #d9272e
+    );
 }
 
 .report-feature h3 {
     margin-top: 0;
+    color: #f5b642;
+    font-size: 1.35rem;
+}
+
+.report-feature p {
+    max-width: 700px;
+    margin: 10px auto;
+    color: #ddd;
 }
 
 .report-button {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 18px;
+    margin-top: 15px;
+    padding: 11px 20px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-    border: 1px solid rgba(245,182,66,.4);
+    color: #f5b642;
+    background: rgba(0,0,0,.45);
+    border: 1px solid rgba(245,182,66,.45);
+    transition:
+        transform .2s ease,
+        color .2s ease,
+        background .2s ease;
+}
+
+.report-button:hover {
+    transform: translateY(-2px);
+    color: #111;
+    background: #f5b642;
+}
+
+
+/* =========================================================
+   HOMEPAGE LINKS
+   ========================================================= */
+
+.dashboard-section > p a {
+    color: #f5b642;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dashboard-section > p a:hover {
+    color: #8bd000;
+}
+
+.dashboard .card,
+.dashboard .panel {
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 
@@ -412,6 +652,10 @@
 
     .home-score {
         font-size: 1.25rem;
+    }
+
+    .home-matchups {
+        grid-template-columns: 1fr;
     }
 
 }
@@ -739,6 +983,19 @@ Rosters, owners, records and all ten Misfits.
 
 <p>
 Watch the latest episode and full archive.
+</p>
+
+</a>
+
+
+<a class="card" href="rules.html">
+
+<h3>
+📖 MSA Rules
+</h3>
+
+<p>
+The Book of Bad Decisions: rules, scoring and payouts.
 </p>
 
 </a>
