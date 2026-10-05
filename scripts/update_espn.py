@@ -1586,6 +1586,34 @@ def main():
         fetch_espn()
     )
 
+        # TEMPORARY BENCHWARMER DIAGNOSTIC
+    print("=== BENCHWARMER ESPN DIAGNOSTIC ===")
+
+    for team in raw.get("teams", []):
+        roster_entries = team.get("roster", {}).get("entries", [])
+
+        if roster_entries:
+            sample_entry = roster_entries[0]
+            sample_player = (
+                sample_entry
+                .get("playerPoolEntry", {})
+                .get("player", {})
+            )
+
+            print("TEAM ID:", team.get("id"))
+            print("ENTRY KEYS:", list(sample_entry.keys()))
+            print("PLAYER KEYS:", list(sample_player.keys()))
+            print(
+                "PLAYER STATS:",
+                json.dumps(
+                    sample_player.get("stats", []),
+                    indent=2
+                )
+            )
+            break
+
+    print("=== END BENCHWARMER DIAGNOSTIC ===")
+
 
     clean = (
         build_clean_data(
