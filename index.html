@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -72,6 +73,25 @@
     font-weight: bold;
 }
 
+.status-team-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.status-team-link:hover {
+    color: #f5b642;
+}
+
+.status-team-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+    margin: 5px auto 10px auto;
+    border-radius: 12px;
+}
+
 
 /* =========================================================
    DASHBOARD SECTIONS
@@ -109,21 +129,58 @@
     padding: 18px;
 }
 
-.matchup-team {
+.home-matchup-teams {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+}
+
+.home-matchup-team {
+    text-align: center;
+}
+
+.home-matchup-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.home-matchup-link:hover .home-matchup-name {
+    color: #f5b642;
+}
+
+.home-matchup-logo {
+    width: 82px;
+    height: 82px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 8px auto;
+    border-radius: 10px;
+}
+
+.home-matchup-name {
+    display: block;
     font-weight: bold;
-    margin: 6px 0;
+    font-size: .85rem;
+    line-height: 1.2;
 }
 
 .matchup-vs {
     font-size: .75rem;
     opacity: .5;
     margin: 5px;
+    font-weight: bold;
 }
 
 .matchup-projection {
-    margin-top: 10px;
+    margin-top: 12px;
     font-size: .8rem;
-    opacity: .65;
+    opacity: .75;
+}
+
+.matchup-projection strong {
+    color: #f5b642;
 }
 
 
@@ -139,7 +196,7 @@
 .snapshot-row {
     display: grid;
     grid-template-columns:
-        45px 1fr auto;
+        45px 52px 1fr auto;
     align-items: center;
     gap: 10px;
     padding: 13px 15px;
@@ -155,12 +212,29 @@
     text-align: center;
 }
 
+.snapshot-logo {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
 .snapshot-team {
     font-weight: bold;
 }
 
+.snapshot-team a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.snapshot-team a:hover {
+    color: #f5b642;
+}
+
 .snapshot-record {
     opacity: .7;
+    font-weight: bold;
 }
 
 
@@ -224,9 +298,38 @@
             repeat(2, 1fr);
     }
 
+    .status-team-logo {
+        width: 65px;
+        height: 65px;
+    }
+
     .snapshot-row {
         grid-template-columns:
-            35px 1fr auto;
+            35px 42px 1fr auto;
+        gap: 7px;
+        padding: 11px 8px;
+    }
+
+    .snapshot-logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .snapshot-team {
+        font-size: .85rem;
+    }
+
+    .snapshot-record {
+        font-size: .8rem;
+    }
+
+    .home-matchup-logo {
+        width: 68px;
+        height: 68px;
+    }
+
+    .home-matchup-name {
+        font-size: .75rem;
     }
 
 }
@@ -237,6 +340,7 @@
 
 
 <body>
+
 
 <header>
 
@@ -333,7 +437,6 @@ to prove who actually knows football.
 </section>
 
 
-
 <!-- =====================================================
      LIVE LEAGUE STATUS
      ===================================================== -->
@@ -355,7 +458,6 @@ Loading...
 </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -397,7 +499,6 @@ View Full Matchup Headquarters →
 </section>
 
 
-
 <!-- =====================================================
      STANDINGS SNAPSHOT
      ===================================================== -->
@@ -432,7 +533,6 @@ View Full Standings →
 </p>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -475,7 +575,6 @@ WATCH THE REPORT →
 </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -587,8 +686,8 @@ Champions, failures and permanent MSA lore.
 </footer>
 
 
-
 <script>
+
 
 /* =========================================================
    MSA TEAM EMOJIS
@@ -610,12 +709,38 @@ const teamEmojis = {
 };
 
 
-/*
-Official display names.
+/* =========================================================
+   OFFICIAL MSA TEAM LOGOS
+   ========================================================= */
 
-This also prevents the ESPN Db.EAtERs
-name from producing a double tooth emoji.
-*/
+const teamLogos = {
+
+    1: "Big Papi Queso Logo.png",
+
+    3: "Team Ramrod Logo.png",
+
+    4: "Nabershood Cookout logo.png",
+
+    5: "Pitts Creek Logo.png",
+
+    6: "Double Dookies logo.jpeg",
+
+    8: "Big Pickens Energy logo.png",
+
+    9: "Apukalypse Now Logo.png",
+
+    10: "DB EATERS LOGO.png",
+
+    11: "Red Zone Redbirds.png",
+
+    12: "Ladiboyz Logo.png"
+
+};
+
+
+/* =========================================================
+   OFFICIAL DISPLAY NAMES
+   ========================================================= */
 
 const teamDisplayNames = {
 
@@ -643,6 +768,16 @@ function getTeamName(team) {
 }
 
 
+function getTeamLogo(team) {
+
+    return (
+        teamLogos[team.id]
+        || ""
+    );
+
+}
+
+
 function getRecord(team) {
 
     let record =
@@ -659,6 +794,71 @@ function getRecord(team) {
     }
 
     return record;
+
+}
+
+
+/* =========================================================
+   SMALL TEAM LOGO
+   ========================================================= */
+
+function buildLogo(
+    team,
+    className
+) {
+
+    const logo =
+        getTeamLogo(team);
+
+    if (!logo) {
+
+        return "";
+
+    }
+
+    return `
+
+        <img
+        src="${encodeURI(logo)}"
+        alt="${getTeamName(team)} logo"
+        class="${className}">
+
+    `;
+
+}
+
+
+/* =========================================================
+   HOME MATCHUP TEAM
+   ========================================================= */
+
+function buildHomeMatchupTeam(team) {
+
+    return `
+
+        <div class="home-matchup-team">
+
+            <a
+            href="team.html?id=${team.id}"
+            class="home-matchup-link">
+
+                ${buildLogo(
+                    team,
+                    "home-matchup-logo"
+                )}
+
+                <span class="home-matchup-name">
+
+                ${teamEmojis[team.id] || "🏈"}
+                ${getTeamName(team)}
+
+                </span>
+
+            </a>
+
+        </div>
+
+    `;
 
 }
 
@@ -734,6 +934,7 @@ async function loadDashboard() {
 
         statusContainer.innerHTML = `
 
+
             <div class="card status-card">
 
                 <span class="status-label">
@@ -753,12 +954,23 @@ async function loadDashboard() {
                 👑 League Leader
                 </span>
 
-                <span class="status-value">
+                <a
+                href="team.html?id=${leader.id}"
+                class="status-team-link">
 
-                ${teamEmojis[leader.id] || "🏈"}
-                ${getTeamName(leader)}
+                    ${buildLogo(
+                        leader,
+                        "status-team-logo"
+                    )}
 
-                </span>
+                    <span class="status-value">
+
+                    ${teamEmojis[leader.id] || "🏈"}
+                    ${getTeamName(leader)}
+
+                    </span>
+
+                </a>
 
             </div>
 
@@ -769,12 +981,23 @@ async function loadDashboard() {
                 💀 Basement Dweller
                 </span>
 
-                <span class="status-value">
+                <a
+                href="team.html?id=${basement.id}"
+                class="status-team-link">
 
-                ${teamEmojis[basement.id] || "🏈"}
-                ${getTeamName(basement)}
+                    ${buildLogo(
+                        basement,
+                        "status-team-logo"
+                    )}
 
-                </span>
+                    <span class="status-value">
+
+                    ${teamEmojis[basement.id] || "🏈"}
+                    ${getTeamName(basement)}
+
+                    </span>
+
+                </a>
 
             </div>
 
@@ -791,6 +1014,7 @@ async function loadDashboard() {
 
             </div>
 
+
         `;
 
 
@@ -803,7 +1027,8 @@ async function loadDashboard() {
 
         standings.forEach(team => {
 
-            teamsById[team.id] = team;
+            teamsById[team.id] =
+                team;
 
         });
 
@@ -837,6 +1062,7 @@ async function loadDashboard() {
 
         matchups.forEach(matchup => {
 
+
             const homeTeam =
                 teamsById[
                     matchup.homeTeamId
@@ -869,19 +1095,37 @@ async function loadDashboard() {
                 "card home-matchup";
 
 
+            /*
+            Support either projection field
+            naming convention in league.json.
+            */
+
             const homeProjection =
                 Number(
-                    matchup.homeProjected || 0
+
+                    matchup.homeProjection ??
+
+                    matchup.homeProjected ??
+
+                    0
+
                 );
 
 
             const awayProjection =
                 Number(
-                    matchup.awayProjected || 0
+
+                    matchup.awayProjection ??
+
+                    matchup.awayProjected ??
+
+                    0
+
                 );
 
 
-            let projectionHTML = "";
+            let projectionHTML =
+                "";
 
 
             if (
@@ -893,13 +1137,16 @@ async function loadDashboard() {
 
                     <div class="matchup-projection">
 
-                    Projection:
+                    ESPN Projection:
+                    <strong>
 
                     ${awayProjection.toFixed(1)}
 
                     —
 
                     ${homeProjection.toFixed(1)}
+
+                    </strong>
 
                     </div>
 
@@ -910,28 +1157,32 @@ async function loadDashboard() {
 
             card.innerHTML = `
 
-                <div class="matchup-team">
 
-                ${teamEmojis[awayTeam.id] || "🏈"}
-                ${getTeamName(awayTeam)}
-
-                </div>
+                <div class="home-matchup-teams">
 
 
-                <div class="matchup-vs">
-                VS
-                </div>
+                    ${buildHomeMatchupTeam(
+                        awayTeam
+                    )}
 
 
-                <div class="matchup-team">
+                    <div class="matchup-vs">
 
-                ${teamEmojis[homeTeam.id] || "🏈"}
-                ${getTeamName(homeTeam)}
+                    ⚔️
+
+                    </div>
+
+
+                    ${buildHomeMatchupTeam(
+                        homeTeam
+                    )}
+
 
                 </div>
 
 
                 ${projectionHTML}
+
 
             `;
 
@@ -954,7 +1205,8 @@ async function loadDashboard() {
            STANDINGS SNAPSHOT
            ================================================= */
 
-        standingsContainer.innerHTML = "";
+        standingsContainer.innerHTML =
+            "";
 
 
         standings
@@ -976,14 +1228,18 @@ async function loadDashboard() {
                     "#" + team.rank;
 
 
-                if (team.rank === 1) {
+                if (
+                    team.rank === 1
+                ) {
 
-                    rankIcon = "👑";
+                    rankIcon =
+                        "👑";
 
                 }
 
 
                 row.innerHTML = `
+
 
                     <div class="snapshot-rank">
 
@@ -992,16 +1248,25 @@ async function loadDashboard() {
                     </div>
 
 
+                    <div>
+
+                    ${buildLogo(
+                        team,
+                        "snapshot-logo"
+                    )}
+
+                    </div>
+
+
                     <div class="snapshot-team">
 
-                    ${teamEmojis[team.id] || "🏈"}
+                        <a
+                        href="team.html?id=${team.id}">
 
-                    <a
-                    href="team.html?id=${team.id}">
+                        ${teamEmojis[team.id] || "🏈"}
+                        ${getTeamName(team)}
 
-                    ${getTeamName(team)}
-
-                    </a>
+                        </a>
 
                     </div>
 
@@ -1011,6 +1276,7 @@ async function loadDashboard() {
                     ${getRecord(team)}
 
                     </div>
+
 
                 `;
 
@@ -1027,9 +1293,13 @@ async function loadDashboard() {
 
     catch (error) {
 
+
         console.error(
+
             "MSA dashboard error:",
+
             error
+
         );
 
 
@@ -1046,6 +1316,7 @@ async function loadDashboard() {
 
 
         matchupStatus.textContent =
+
             "Unable to load current matchup data.";
 
 
@@ -1062,7 +1333,11 @@ async function loadDashboard() {
 
         standingsContainer.innerHTML = `
 
-            <div style="padding:20px; text-align:center;">
+            <div
+            style="
+                padding:20px;
+                text-align:center;
+            ">
 
             Unable to load the standings snapshot.
 
@@ -1076,6 +1351,7 @@ async function loadDashboard() {
 
 
 loadDashboard();
+
 
 </script>
 
