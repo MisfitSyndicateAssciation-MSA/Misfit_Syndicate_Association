@@ -62,8 +62,8 @@
 }
 
 .team-logo-large {
-    width: 155px;
-    height: 155px;
+    width: 180px;
+    height: 180px;
     object-fit: contain;
     display: block;
     margin: 5px auto 18px auto;
@@ -259,8 +259,8 @@
     }
 
     .team-logo-large {
-        width: 125px;
-        height: 125px;
+        width: 140px;
+        height: 140px;
     }
 
     .team-stats {
@@ -369,8 +369,7 @@ Loading Misfit Headquarters...
 </div>
 
 
-<div
-id="roster-container">
+<div id="roster-container">
 </div>
 
 </div>
@@ -408,13 +407,7 @@ const teamEmojis = {
 
 
 /*
-Official display names.
-
-This lets us clean up names without changing
-anything inside ESPN.
-
-Most importantly, it prevents Db.EAtERs from
-getting two tooth emojis.
+Official MSA display names.
 */
 
 const teamDisplayNames = {
@@ -429,6 +422,38 @@ const teamDisplayNames = {
     10: "Db.EAtERs",
     11: "Red Zone Redbirds",
     12: "Ladiboyz"
+
+};
+
+
+/*
+Official custom MSA team logos.
+
+These image files are stored in the
+main/root folder of the GitHub repository.
+*/
+
+const teamLogos = {
+
+    1: "Big Papi Queso Logo.png",
+
+    3: "Team Ramrod Logo.png",
+
+    4: "Nabershood Cookout logo.png",
+
+    5: "Pitts Creek Logo.png",
+
+    6: "Double Dookies logo.jpeg",
+
+    8: "Big Pickens Energy logo.png",
+
+    9: "Apukalypse Now Logo.png",
+
+    10: "DB EATERS LOGO.png",
+
+    11: "Red Zone Redbirds.png",
+
+    12: "Ladiboyz Logo.png"
 
 };
 
@@ -868,18 +893,21 @@ async function loadTeam() {
 
 
         /* =================================================
-           TEAM LOGO
+           OFFICIAL MSA TEAM LOGO
            ================================================= */
 
         let logoHTML = "";
 
+        const officialLogo =
+            teamLogos[team.id];
 
-        if (team.logo) {
+
+        if (officialLogo) {
 
             logoHTML = `
 
                 <img
-                src="${team.logo}"
+                src="${encodeURI(officialLogo)}"
                 alt="${displayName} logo"
                 class="team-logo-large">
 
