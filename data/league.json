@@ -1,1562 +1,1723 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>League History | Misfit Syndicate Association</title>
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-
-/* =========================================================
-   MSA LEAGUE HISTORY
-   ========================================================= */
-
-.history-page {
-    max-width: 1050px;
-    margin: auto;
-}
-
-.history-intro {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.history-intro h2 {
-    margin-bottom: 8px;
-}
-
-.history-intro p {
-    max-width: 750px;
-    margin: auto;
-}
-
-
-/* =========================================================
-   INAUGURAL SEASON
-   ========================================================= */
-
-.season-banner {
-    text-align: center;
-    padding: 30px 20px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-
-.season-banner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-
-    background: linear-gradient(
-        90deg,
-        transparent,
-        #f5b642,
-        transparent
-    );
-}
-
-.season-year {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.season-label {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: .8rem;
-    opacity: .65;
-}
-
-
-/* =========================================================
-   HISTORY GRID
-   ========================================================= */
-
-.history-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(280px, 1fr));
-
-    gap: 20px;
-    margin-bottom: 35px;
-}
-
-.history-card {
-    position: relative;
-}
-
-.history-card h3 {
-    margin-top: 0;
-}
-
-.history-card p {
-    line-height: 1.6;
-}
-
-
-/* =========================================================
-   PODIUM
-   ========================================================= */
-
-.podium {
-    text-align: center;
-}
-
-.podium-place {
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
-    background: rgba(255,255,255,.04);
-}
-
-.pending {
-    opacity: .55;
-    font-style: italic;
-}
-
-
-/* =========================================================
-   HALL OF INFAMY
-   ========================================================= */
-
-.infamy-card {
-    border: 1px solid rgba(245,182,66,.2);
-}
-
-.infamy-warning {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 8px;
-}
-
-
-/* =========================================================
-   WEEKLY RESULTS ARCHIVE
-   ========================================================= */
-
-.weekly-history-section {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.history-status {
-    text-align: center;
-    font-size: .8rem;
-    opacity: .65;
-    margin: 12px 0 25px 0;
-}
-
-.history-status.live {
-    color: #f5b642;
-    opacity: 1;
-}
-
-.week-history {
-    margin-bottom: 28px;
-    overflow: hidden;
-}
-
-.week-history-header {
-    text-align: center;
-    padding: 20px;
-    border-bottom: 1px solid rgba(245,182,66,.18);
-}
-
-.week-history-header h3 {
-    margin: 0 0 5px 0;
-    color: #f5b642;
-}
-
-.week-history-header p {
-    margin: 0;
-    opacity: .65;
-    font-size: .85rem;
-}
-
-
-/* =========================================================
-   WEEKLY SUPERLATIVES
-   ========================================================= */
-
-.week-awards {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 10px;
-    padding: 18px;
-}
-
-.week-award {
-    text-align: center;
-    padding: 14px 8px;
-    border-radius: 8px;
-    background: rgba(255,255,255,.035);
-}
-
-.week-award-icon {
-    font-size: 1.35rem;
-    margin-bottom: 4px;
-}
-
-.week-award-label {
-    font-size: .7rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    opacity: .55;
-    margin-bottom: 5px;
-}
-
-.week-award-team {
-    font-weight: bold;
-    font-size: .9rem;
-}
-
-.week-award-score {
-    color: #f5b642;
-    font-weight: bold;
-    margin-top: 3px;
-}
-
-
-/* =========================================================
-   WEEK MATCHUPS
-   ========================================================= */
-
-.week-matchups {
-    padding: 0 18px 18px 18px;
-}
-
-.history-matchup {
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        auto
-        minmax(0, 1fr);
-
-    align-items: center;
-    gap: 14px;
-
-    padding: 13px 10px;
-
-    border-top:
-        1px solid rgba(255,255,255,.06);
-}
-
-.history-team {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    min-width: 0;
-}
-
-.history-team.away {
-    justify-content: flex-end;
-    text-align: right;
-}
-
-.history-team.home {
-    justify-content: flex-start;
-    text-align: left;
-}
-
-.history-team-logo {
-    width: 42px;
-    height: 42px;
-    object-fit: contain;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.history-team-name {
-    font-weight: bold;
-    line-height: 1.2;
-}
-
-.history-team.winner
-.history-team-name {
-    color: #f5b642;
-}
-
-.history-score {
-    text-align: center;
-    white-space: nowrap;
-    font-weight: bold;
-    font-size: 1.05rem;
-}
-
-.history-score .winner-score {
-    color: #f5b642;
-}
-
-.history-score-vs {
-    font-size: .65rem;
-    opacity: .45;
-    margin: 0 5px;
-}
-
-
-/* =========================================================
-   LEAGUE LORE
-   ========================================================= */
-
-.lore-section {
-    margin-top: 35px;
-}
-
-.lore-title {
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-.lore-subtitle {
-    text-align: center;
-    opacity: .6;
-    margin-bottom: 20px;
-}
-
-.lore-entry {
-    margin-bottom: 15px;
-    padding: 18px;
-}
-
-.lore-entry h4 {
-    margin: 0 0 8px 0;
-}
-
-.lore-entry p {
-    margin: 0;
-    line-height: 1.6;
-}
-
-
-/* =========================================================
-   FUTURE ARCHIVES
-   ========================================================= */
-
-.archive-note {
-    text-align: center;
-    padding: 25px;
-    margin-top: 35px;
-}
-
-.archive-note p {
-    max-width: 700px;
-    margin: 10px auto 0 auto;
-}
-
-
-/* =========================================================
-   ERROR
-   ========================================================= */
-
-.history-error {
-    text-align: center;
-    padding: 25px;
-}
-
-.history-error strong {
-    color: #f5b642;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 750px) {
-
-    .week-awards {
-        grid-template-columns:
-            repeat(2, 1fr);
+{
+  "leagueId": 398889101,
+  "season": 2026,
+  "currentWeek": 4,
+  "updatedAt": "2026-10-05T02:31:52.774406+00:00",
+  "standings": [
+    {
+      "rank": 1,
+      "id": 11,
+      "name": "Red Zone Redbirds",
+      "abbrev": "RZR",
+      "owner": "Juan Loredo",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/fd6984d0-9dad-11f1-ac91-bfb4f119dcb9",
+      "wins": 3,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 405.5,
+      "pointsAgainst": 314.1,
+      "streakType": "WIN",
+      "streakLength": 3,
+      "playoffPct": 83.0,
+      "waiverRank": 5
+    },
+    {
+      "rank": 2,
+      "id": 10,
+      "name": "Db.EAtERs🦷",
+      "abbrev": "DBE",
+      "owner": "AJ Jackson",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/f39c9d90-99af-11f1-b6a6-d3f17ad2e960",
+      "wins": 3,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 367.1,
+      "pointsAgainst": 310.8,
+      "streakType": "WIN",
+      "streakLength": 3,
+      "playoffPct": 80.4,
+      "waiverRank": 10
+    },
+    {
+      "rank": 3,
+      "id": 9,
+      "name": "Apukalypse Now, Skattebo Later",
+      "abbrev": "ANSL",
+      "owner": "Dion Will",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/16464720-9e9b-11f1-bf02-4fad1e4a2328",
+      "wins": 2,
+      "losses": 1,
+      "ties": 0,
+      "pointsFor": 472.9,
+      "pointsAgainst": 381.6,
+      "streakType": "LOSS",
+      "streakLength": 1,
+      "playoffPct": 82.3,
+      "waiverRank": 4
+    },
+    {
+      "rank": 4,
+      "id": 5,
+      "name": "Pitts Creek",
+      "abbrev": "PC",
+      "owner": "Jeri Armijo",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/377e3680-9457-11f1-b14d-954a95a4c3ad",
+      "wins": 2,
+      "losses": 1,
+      "ties": 0,
+      "pointsFor": 383.7,
+      "pointsAgainst": 374.1,
+      "streakType": "WIN",
+      "streakLength": 1,
+      "playoffPct": 76.4,
+      "waiverRank": 3
+    },
+    {
+      "rank": 5,
+      "id": 4,
+      "name": "Nabershood Cookout",
+      "abbrev": "CCT",
+      "owner": "Colin Brazee",
+      "logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/12.svg",
+      "wins": 2,
+      "losses": 1,
+      "ties": 0,
+      "pointsFor": 357.7,
+      "pointsAgainst": 349.7,
+      "streakType": "WIN",
+      "streakLength": 2,
+      "playoffPct": 61.8,
+      "waiverRank": 9
+    },
+    {
+      "rank": 6,
+      "id": 12,
+      "name": "Ladiboyz",
+      "abbrev": "LDB",
+      "owner": "Steven Fisher",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/a1e45db0-a50a-11f1-bc05-dd37ff031f6c",
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "pointsFor": 391.9,
+      "pointsAgainst": 340.5,
+      "streakType": "LOSS",
+      "streakLength": 1,
+      "playoffPct": 55.8,
+      "waiverRank": 2
+    },
+    {
+      "rank": 7,
+      "id": 6,
+      "name": "Double Dookie Dawgs",
+      "abbrev": "DDD",
+      "owner": "Sai Kappagantula",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/2374ab50-b0af-11f1-8384-b729bc54b1a7",
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "pointsFor": 336.8,
+      "pointsAgainst": 371.9,
+      "streakType": "WIN",
+      "streakLength": 1,
+      "playoffPct": 51.9,
+      "waiverRank": 8
+    },
+    {
+      "rank": 8,
+      "id": 1,
+      "name": "Big Papi Queso",
+      "abbrev": "G420",
+      "owner": "Steve Perez",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/06be24f0-945d-11f1-a52e-2f1b19f5c061",
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "pointsFor": 321.8,
+      "pointsAgainst": 375.8,
+      "streakType": "LOSS",
+      "streakLength": 2,
+      "playoffPct": 56.8,
+      "waiverRank": 7
+    },
+    {
+      "rank": 9,
+      "id": 8,
+      "name": "Big Pickens Energy",
+      "abbrev": "MS13",
+      "owner": "Adam Hadlock",
+      "logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/16.svg",
+      "wins": 0,
+      "losses": 3,
+      "ties": 0,
+      "pointsFor": 366.6,
+      "pointsAgainst": 485.7,
+      "streakType": "LOSS",
+      "streakLength": 3,
+      "playoffPct": 23.6,
+      "waiverRank": 6
+    },
+    {
+      "rank": 10,
+      "id": 3,
+      "name": "Team Ramrod",
+      "abbrev": "RR",
+      "owner": "Mark Torres",
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/8bitHeros-JoeyEllis/8bit_football-02.svg",
+      "wins": 0,
+      "losses": 3,
+      "ties": 0,
+      "pointsFor": 334.8,
+      "pointsAgainst": 434.6,
+      "streakType": "LOSS",
+      "streakLength": 3,
+      "playoffPct": 28.1,
+      "waiverRank": 1
     }
-
+  ],
+  "matchups": [
+    {
+      "week": 4,
+      "awayTeamId": 6,
+      "homeTeamId": 12,
+      "awayScore": 109.2,
+      "homeScore": 108.5,
+      "awayProjection": 131.55,
+      "homeProjection": 129.83
+    },
+    {
+      "week": 4,
+      "awayTeamId": 4,
+      "homeTeamId": 9,
+      "awayScore": 95.1,
+      "homeScore": 136.8,
+      "awayProjection": 102.05,
+      "homeProjection": 155.08
+    },
+    {
+      "week": 4,
+      "awayTeamId": 3,
+      "homeTeamId": 8,
+      "awayScore": 107.9,
+      "homeScore": 82.5,
+      "awayProjection": 159.24,
+      "homeProjection": 89.05
+    },
+    {
+      "week": 4,
+      "awayTeamId": 5,
+      "homeTeamId": 11,
+      "awayScore": 65.1,
+      "homeScore": 111.4,
+      "awayProjection": 65.1,
+      "homeProjection": 114.78
+    },
+    {
+      "week": 4,
+      "awayTeamId": 10,
+      "homeTeamId": 1,
+      "awayScore": 124.2,
+      "homeScore": 137.2,
+      "awayProjection": 134.8,
+      "homeProjection": 140.49
+    }
+  ],
+  "rosters": {
+    "1": [
+      {
+        "playerId": 4242335,
+        "name": "Jonathan Taylor",
+        "position": "RB",
+        "nflTeam": "IND",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3117251,
+        "name": "Christian McCaffrey",
+        "position": "RB",
+        "nflTeam": "SF",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4258173,
+        "name": "Nico Collins",
+        "position": "WR",
+        "nflTeam": "HOU",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4567750,
+        "name": "Emeka Egbuka",
+        "position": "WR",
+        "nflTeam": "TB",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4685702,
+        "name": "Quinshon Judkins",
+        "position": "RB",
+        "nflTeam": "CLE",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4431299,
+        "name": "Rome Odunze",
+        "position": "WR",
+        "nflTeam": "CHI",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4040715,
+        "name": "Jalen Hurts",
+        "position": "QB",
+        "nflTeam": "PHI",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3915511,
+        "name": "Joe Burrow",
+        "position": "QB",
+        "nflTeam": "CIN",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16014,
+        "name": "Rams D/ST",
+        "position": "D/ST",
+        "nflTeam": "LAR",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3042519,
+        "name": "Aaron Jones Sr.",
+        "position": "RB",
+        "nflTeam": "MIN",
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3126486,
+        "name": "Deebo Samuel Sr.",
+        "position": "WR",
+        "nflTeam": "SF",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4869461,
+        "name": "Trey Smack",
+        "position": "K",
+        "nflTeam": "GB",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4572680,
+        "name": "Tucker Kraft",
+        "position": "TE",
+        "nflTeam": "GB",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4832800,
+        "name": "Denzel Boston",
+        "position": "WR",
+        "nflTeam": "CLE",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4688813,
+        "name": "Josh Downs",
+        "position": "WR",
+        "nflTeam": "IND",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 2576925,
+        "name": "Darren Waller",
+        "position": "TE",
+        "nflTeam": "CAR",
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
+        "injuryStatus": "ACTIVE"
+      }
+    ],
+    "3": [
+      {
+        "playerId": 4430807,
+        "name": "Bijan Robinson",
+        "position": "RB",
+        "nflTeam": "ATL",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4426502,
+        "name": "Drake London",
+        "position": "WR",
+        "nflTeam": "ATL",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4428331,
+        "name": "Rashee Rice",
+        "position": "WR",
+        "nflTeam": "KC",
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "QUESTIONABLE"
+      },
+      {
+        "playerId": 4685472,
+        "name": "Tetairoa McMillan",
+        "position": "WR",
+        "nflTeam": "CAR",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4239996,
+        "name": "Travis Etienne Jr.",
+        "position": "RB",
+        "nflTeam": "NO",
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
+        "injuryStatus": "INJURY_RESERVE"
+      },
+      {
+        "playerId": 4426348,
+        "name": "Jayden Daniels",
+        "position": "QB",
+        "nflTeam": "WAS",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "OUT"
+      },
+      {
+        "playerId": 5083076,
+        "name": "Harold Fannin Jr.",
+        "position": "TE",
+        "nflTeam": "CLE",
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4047650,
+        "name": "DK Metcalf",
+        "position": "WR",
+        "nflTeam": "PIT",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3121023,
+        "name": "Dallas Goedert",
+        "position": "TE",
+        "nflTeam": "PHI",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "OUT"
+      },
+      {
+        "playerId": -16033,
+        "name": "Ravens D/ST",
+        "position": "D/ST",
+        "nflTeam": "BAL",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4697815,
+        "name": "Rachaad White",
+        "position": "RB",
+        "nflTeam": "WAS",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "OUT"
+      },
+      {
+        "playerId": 2473037,
+        "name": "Jason Myers",
+        "position": "K",
+        "nflTeam": "SEA",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16017,
+        "name": "Patriots D/ST",
+        "position": "D/ST",
+        "nflTeam": "NE",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4685720,
+        "name": "Bryce Young",
+        "position": "QB",
+        "nflTeam": "CAR",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4597500,
+        "name": "Adonai Mitchell",
+        "position": "WR",
+        "nflTeam": "NYJ",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "OUT"
+      },
+      {
+        "playerId": 4568490,
+        "name": "RJ Harvey",
+        "position": "RB",
+        "nflTeam": "DEN",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3054850,
+        "name": "Alvin Kamara",
+        "position": "RB",
+        "nflTeam": "NO",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      }
+    ],
+    "4": [
+      {
+        "playerId": 4379399,
+        "name": "James Cook III",
+        "position": "RB",
+        "nflTeam": "BUF",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4595348,
+        "name": "Malik Nabers",
+        "position": "WR",
+        "nflTeam": "NYG",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4427366,
+        "name": "Breece Hall",
+        "position": "RB",
+        "nflTeam": "NYJ",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "OUT"
+      },
+      {
+        "playerId": 3121422,
+        "name": "Terry McLaurin",
+        "position": "WR",
+        "nflTeam": "WAS",
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "OUT"
+      },
+      {
+        "playerId": 4239993,
+        "name": "Tee Higgins",
+        "position": "WR",
+        "nflTeam": "CIN",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "QUESTIONABLE"
+      },
+      {
+        "playerId": 4430027,
+        "name": "Sam LaPorta",
+        "position": "TE",
+        "nflTeam": "DET",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4248528,
+        "name": "Christian Watson",
+        "position": "WR",
+        "nflTeam": "GB",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4432773,
+        "name": "Brian Thomas Jr.",
+        "position": "WR",
+        "nflTeam": "JAX",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4038815,
+        "name": "Rico Dowdle",
+        "position": "RB",
+        "nflTeam": "PIT",
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
+        "injuryStatus": "OUT"
+      },
+      {
+        "playerId": 4385690,
+        "name": "Dalton Kincaid",
+        "position": "TE",
+        "nflTeam": "BUF",
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3046779,
+        "name": "Jared Goff",
+        "position": "QB",
+        "nflTeam": "DET",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4242512,
+        "name": "Malik Willis",
+        "position": "QB",
+        "nflTeam": "MIA",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4686361,
+        "name": "Cam Little",
+        "position": "K",
+        "nflTeam": "JAX",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16016,
+        "name": "Vikings D/ST",
+        "position": "D/ST",
+        "nflTeam": "MIN",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16009,
+        "name": "Packers D/ST",
+        "position": "D/ST",
+        "nflTeam": "GB",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3068267,
+        "name": "Austin Ekeler",
+        "position": "RB",
+        "nflTeam": "WAS",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4685247,
+        "name": "Braelon Allen",
+        "position": "RB",
+        "nflTeam": "NYJ",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      }
+    ],
+    "5": [
+      {
+        "playerId": 4430878,
+        "name": "Jaxon Smith-Njigba",
+        "position": "WR",
+        "nflTeam": "SEA",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3043078,
+        "name": "Derrick Henry",
+        "position": "RB",
+        "nflTeam": "BAL",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4569618,
+        "name": "Garrett Wilson",
+        "position": "WR",
+        "nflTeam": "NYJ",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4596448,
+        "name": "Bucky Irving",
+        "position": "RB",
+        "nflTeam": "TB",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4723086,
+        "name": "Colston Loveland",
+        "position": "TE",
+        "nflTeam": "CHI",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3915416,
+        "name": "DJ Moore",
+        "position": "WR",
+        "nflTeam": "BUF",
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "QUESTIONABLE"
+      },
+      {
+        "playerId": 12483,
+        "name": "Matthew Stafford",
+        "position": "QB",
+        "nflTeam": "LAR",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4569173,
+        "name": "Rhamondre Stevenson",
+        "position": "RB",
+        "nflTeam": "NE",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4431611,
+        "name": "Caleb Williams",
+        "position": "QB",
+        "nflTeam": "CHI",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "OUT"
+      },
+      {
+        "playerId": 3916148,
+        "name": "Tony Pollard",
+        "position": "RB",
+        "nflTeam": "TEN",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3916433,
+        "name": "Jakobi Meyers",
+        "position": "WR",
+        "nflTeam": "JAX",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4242355,
+        "name": "Jake Ferguson",
+        "position": "TE",
+        "nflTeam": "DAL",
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3046439,
+        "name": "Hunter Henry",
+        "position": "TE",
+        "nflTeam": "NE",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3116165,
+        "name": "Chris Godwin Jr.",
+        "position": "WR",
+        "nflTeam": "TB",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3055899,
+        "name": "Harrison Butker",
+        "position": "K",
+        "nflTeam": "KC",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16012,
+        "name": "Chiefs D/ST",
+        "position": "D/ST",
+        "nflTeam": "KC",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      }
+    ],
+    "6": [
+      {
+        "playerId": 4362628,
+        "name": "Ja'Marr Chase",
+        "position": "WR",
+        "nflTeam": "CIN",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "QUESTIONABLE"
+      },
+      {
+        "playerId": 4890973,
+        "name": "Ashton Jeanty",
+        "position": "RB",
+        "nflTeam": "LV",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4432665,
+        "name": "Brock Bowers",
+        "position": "TE",
+        "nflTeam": "LV",
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4361579,
+        "name": "Javonte Williams",
+        "position": "RB",
+        "nflTeam": "DAL",
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4612826,
+        "name": "Ladd McConkey",
+        "position": "WR",
+        "nflTeam": "LAC",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "QUESTIONABLE"
+      },
+      {
+        "playerId": 4685278,
+        "name": "Luther Burden III",
+        "position": "WR",
+        "nflTeam": "CHI",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4431452,
+        "name": "Drake Maye",
+        "position": "QB",
+        "nflTeam": "NE",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4035687,
+        "name": "Michael Pittman Jr.",
+        "position": "WR",
+        "nflTeam": "PIT",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4569987,
+        "name": "Jaylen Warren",
+        "position": "RB",
+        "nflTeam": "PIT",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4608686,
+        "name": "Kyle Monangai",
+        "position": "RB",
+        "nflTeam": "CHI",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "QUESTIONABLE"
+      },
+      {
+        "playerId": 4695883,
+        "name": "Jalen Coker",
+        "position": "WR",
+        "nflTeam": "CAR",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "OUT"
+      },
+      {
+        "playerId": 4360689,
+        "name": "Tyler Shough",
+        "position": "QB",
+        "nflTeam": "NO",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4360234,
+        "name": "Evan McPherson",
+        "position": "K",
+        "nflTeam": "CIN",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 15818,
+        "name": "Keenan Allen",
+        "position": "WR",
+        "nflTeam": "IND",
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
+        "injuryStatus": "OUT"
+      },
+      {
+        "playerId": -16002,
+        "name": "Bills D/ST",
+        "position": "D/ST",
+        "nflTeam": "BUF",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4870795,
+        "name": "Makai Lemon",
+        "position": "WR",
+        "nflTeam": "PHI",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3116164,
+        "name": "Mike Gesicki",
+        "position": "TE",
+        "nflTeam": "CIN",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      }
+    ],
+    "8": [
+      {
+        "playerId": 4374302,
+        "name": "Amon-Ra St. Brown",
+        "position": "WR",
+        "nflTeam": "DET",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4262921,
+        "name": "Justin Jefferson",
+        "position": "WR",
+        "nflTeam": "MIN",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "OUT"
+      },
+      {
+        "playerId": 4426354,
+        "name": "George Pickens",
+        "position": "WR",
+        "nflTeam": "DAL",
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4047365,
+        "name": "Josh Jacobs",
+        "position": "RB",
+        "nflTeam": "GB",
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
+        "injuryStatus": "DAY_TO_DAY"
+      },
+      {
+        "playerId": 4432710,
+        "name": "TreVeyon Henderson",
+        "position": "RB",
+        "nflTeam": "NE",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4038941,
+        "name": "Justin Herbert",
+        "position": "QB",
+        "nflTeam": "LAC",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3040151,
+        "name": "George Kittle",
+        "position": "TE",
+        "nflTeam": "SF",
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4426338,
+        "name": "Bo Nix",
+        "position": "QB",
+        "nflTeam": "DEN",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4575131,
+        "name": "Jacory Croskey-Merritt",
+        "position": "RB",
+        "nflTeam": "WAS",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 2976212,
+        "name": "Stefon Diggs",
+        "position": "WR",
+        "nflTeam": "WAS",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4697745,
+        "name": "Tyler Loop",
+        "position": "K",
+        "nflTeam": "BAL",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16030,
+        "name": "Jaguars D/ST",
+        "position": "D/ST",
+        "nflTeam": "JAX",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4361432,
+        "name": "Romeo Doubs",
+        "position": "WR",
+        "nflTeam": "NE",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4432620,
+        "name": "Parker Washington",
+        "position": "WR",
+        "nflTeam": "JAX",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4882093,
+        "name": "Bhayshul Tuten",
+        "position": "RB",
+        "nflTeam": "JAX",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 15847,
+        "name": "Travis Kelce",
+        "position": "TE",
+        "nflTeam": "KC",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4711533,
+        "name": "Ollie Gordon II",
+        "position": "RB",
+        "nflTeam": "MIA",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      }
+    ],
+    "9": [
+      {
+        "playerId": 4426515,
+        "name": "Puka Nacua",
+        "position": "WR",
+        "nflTeam": "LAR",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4362238,
+        "name": "Chase Brown",
+        "position": "RB",
+        "nflTeam": "CIN",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4567048,
+        "name": "Kenneth Walker III",
+        "position": "RB",
+        "nflTeam": "KC",
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4361370,
+        "name": "Chris Olave",
+        "position": "WR",
+        "nflTeam": "NO",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4696981,
+        "name": "Cam Skattebo",
+        "position": "RB",
+        "nflTeam": "NYG",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4871023,
+        "name": "Carnell Tate",
+        "position": "WR",
+        "nflTeam": "TEN",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4360310,
+        "name": "Trevor Lawrence",
+        "position": "QB",
+        "nflTeam": "JAX",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4361050,
+        "name": "Isaiah Likely",
+        "position": "TE",
+        "nflTeam": "NYG",
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4361741,
+        "name": "Brock Purdy",
+        "position": "QB",
+        "nflTeam": "SF",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16023,
+        "name": "Steelers D/ST",
+        "position": "D/ST",
+        "nflTeam": "PIT",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4036378,
+        "name": "Jordan Love",
+        "position": "QB",
+        "nflTeam": "GB",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4034949,
+        "name": "Eddy Pineiro",
+        "position": "K",
+        "nflTeam": "SF",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4429096,
+        "name": "Blake Corum",
+        "position": "RB",
+        "nflTeam": "LAR",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4372016,
+        "name": "Jaylen Waddle",
+        "position": "WR",
+        "nflTeam": "DEN",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3117256,
+        "name": "Dalton Schultz",
+        "position": "TE",
+        "nflTeam": "HOU",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16004,
+        "name": "Bengals D/ST",
+        "position": "D/ST",
+        "nflTeam": "CIN",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      }
+    ],
+    "10": [
+      {
+        "playerId": 4241389,
+        "name": "CeeDee Lamb",
+        "position": "WR",
+        "nflTeam": "DAL",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3929630,
+        "name": "Saquon Barkley",
+        "position": "RB",
+        "nflTeam": "PHI",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "QUESTIONABLE"
+      },
+      {
+        "playerId": 4047646,
+        "name": "A.J. Brown",
+        "position": "WR",
+        "nflTeam": "NE",
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
+        "injuryStatus": "INJURY_RESERVE"
+      },
+      {
+        "playerId": 4431459,
+        "name": "Tyler Warren",
+        "position": "TE",
+        "nflTeam": "IND",
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3916387,
+        "name": "Lamar Jackson",
+        "position": "QB",
+        "nflTeam": "BAL",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
+        "injuryStatus": "QUESTIONABLE"
+      },
+      {
+        "playerId": 4685512,
+        "name": "Jadarian Price",
+        "position": "RB",
+        "nflTeam": "SEA",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "INJURY_RESERVE"
+      },
+      {
+        "playerId": 3128429,
+        "name": "Courtland Sutton",
+        "position": "WR",
+        "nflTeam": "DEN",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4035538,
+        "name": "David Montgomery",
+        "position": "RB",
+        "nflTeam": "HOU",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4360761,
+        "name": "Michael Wilson",
+        "position": "WR",
+        "nflTeam": "ARI",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16026,
+        "name": "Seahawks D/ST",
+        "position": "D/ST",
+        "nflTeam": "SEA",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3929645,
+        "name": "Juwan Johnson",
+        "position": "TE",
+        "nflTeam": "NO",
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 2973405,
+        "name": "Kalif Raymond",
+        "position": "WR",
+        "nflTeam": "CHI",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16029,
+        "name": "Panthers D/ST",
+        "position": "D/ST",
+        "nflTeam": "CAR",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 2578570,
+        "name": "Jacoby Brissett",
+        "position": "QB",
+        "nflTeam": "ARI",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4571557,
+        "name": "Spencer Shrader",
+        "position": "K",
+        "nflTeam": "IND",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4599739,
+        "name": "Kendre Miller",
+        "position": "RB",
+        "nflTeam": "NO",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      }
+    ],
+    "11": [
+      {
+        "playerId": 3918298,
+        "name": "Josh Allen",
+        "position": "QB",
+        "nflTeam": "BUF",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4361307,
+        "name": "Trey McBride",
+        "position": "TE",
+        "nflTeam": "ARI",
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4430737,
+        "name": "Kyren Williams",
+        "position": "RB",
+        "nflTeam": "LAR",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 16800,
+        "name": "Davante Adams",
+        "position": "WR",
+        "nflTeam": "LAR",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4259545,
+        "name": "D'Andre Swift",
+        "position": "RB",
+        "nflTeam": "CHI",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4432708,
+        "name": "Marvin Harrison Jr.",
+        "position": "WR",
+        "nflTeam": "ARI",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4426388,
+        "name": "Jameson Williams",
+        "position": "WR",
+        "nflTeam": "DET",
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16034,
+        "name": "Texans D/ST",
+        "position": "D/ST",
+        "nflTeam": "HOU",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4429205,
+        "name": "Jordan Addison",
+        "position": "WR",
+        "nflTeam": "MIN",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3116365,
+        "name": "Mark Andrews",
+        "position": "TE",
+        "nflTeam": "BAL",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4678008,
+        "name": "Jonathon Brooks",
+        "position": "RB",
+        "nflTeam": "CAR",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "INJURY_RESERVE"
+      },
+      {
+        "playerId": 4429025,
+        "name": "Quentin Johnston",
+        "position": "WR",
+        "nflTeam": "LAC",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3912547,
+        "name": "Sam Darnold",
+        "position": "QB",
+        "nflTeam": "SEA",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4574716,
+        "name": "Harrison Mevis",
+        "position": "K",
+        "nflTeam": "LAR",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4360569,
+        "name": "Jordan Mason",
+        "position": "RB",
+        "nflTeam": "MIN",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "INJURY_RESERVE"
+      },
+      {
+        "playerId": 4430539,
+        "name": "Brenton Strange",
+        "position": "TE",
+        "nflTeam": "JAX",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      }
+    ],
+    "12": [
+      {
+        "playerId": 4429795,
+        "name": "Jahmyr Gibbs",
+        "position": "RB",
+        "nflTeam": "DET",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4870808,
+        "name": "Jeremiyah Love",
+        "position": "RB",
+        "nflTeam": "ARI",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4685382,
+        "name": "Omarion Hampton",
+        "position": "RB",
+        "nflTeam": "LAC",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4429615,
+        "name": "Zay Flowers",
+        "position": "WR",
+        "nflTeam": "BAL",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4241478,
+        "name": "DeVonta Smith",
+        "position": "WR",
+        "nflTeam": "PHI",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "OUT"
+      },
+      {
+        "playerId": 2577417,
+        "name": "Dak Prescott",
+        "position": "QB",
+        "nflTeam": "DAL",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4360248,
+        "name": "Kyle Pitts Sr.",
+        "position": "TE",
+        "nflTeam": "ATL",
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 16737,
+        "name": "Mike Evans",
+        "position": "WR",
+        "nflTeam": "SF",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3953687,
+        "name": "Brandon Aubrey",
+        "position": "K",
+        "nflTeam": "DAL",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4701936,
+        "name": "Matthew Golden",
+        "position": "WR",
+        "nflTeam": "GB",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3139477,
+        "name": "Patrick Mahomes",
+        "position": "QB",
+        "nflTeam": "KC",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4241416,
+        "name": "Chuba Hubbard",
+        "position": "RB",
+        "nflTeam": "CAR",
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16021,
+        "name": "Eagles D/ST",
+        "position": "D/ST",
+        "nflTeam": "PHI",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 5083315,
+        "name": "Kenyon Sadiq",
+        "position": "TE",
+        "nflTeam": "NYJ",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4570037,
+        "name": "Terrance Ferguson",
+        "position": "TE",
+        "nflTeam": "LAR",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "INJURY_RESERVE"
+      },
+      {
+        "playerId": -16003,
+        "name": "Bears D/ST",
+        "position": "D/ST",
+        "nflTeam": "CHI",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      }
+    ]
+  }
 }
-
-
-@media (max-width: 650px) {
-
-    .season-year {
-        font-size: 1.6rem;
-    }
-
-    .history-matchup {
-        gap: 7px;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .history-team-logo {
-        width: 32px;
-        height: 32px;
-    }
-
-    .history-team-name {
-        font-size: .78rem;
-    }
-
-    .history-score {
-        font-size: .9rem;
-    }
-
-}
-
-
-@media (max-width: 420px) {
-
-    .week-awards {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-<header>
-
-<div class="hero">
-
-<img
-src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
-alt="Misfit Syndicate Association Logo"
-class="logo">
-
-<h1>
-Misfit Syndicate Association
-</h1>
-
-<div class="tagline">
-Fantasy Football for the Beautifully Dysfunctional
-</div>
-
-<div class="season">
-🏈 2026 MSA Season
-</div>
-
-</div>
-
-</header>
-
-
-<nav>
-
-<div class="nav-links">
-
-<a href="index.html">
-Home
-</a>
-
-<a href="matchups.html">
-Matchups
-</a>
-
-<a href="standings.html">
-Standings
-</a>
-
-<a href="teams.html">
-Teams
-</a>
-
-<a href="syndicate-report.html">
-Syndicate Report
-</a>
-
-<a
-href="league-history.html"
-class="active">
-League History
-</a>
-
-</div>
-
-</nav>
-
-
-<main>
-
-<div class="history-page">
-
-
-<!-- =====================================================
-     INTRO
-     ===================================================== -->
-
-<section class="panel history-intro">
-
-<h2>
-📜 LEAGUE HISTORY
-</h2>
-
-<p class="muted">
-
-The permanent record of the Misfit Syndicate Association.
-Champions will be immortalized. Losers will be publicly
-documented. Bad decisions will never be allowed to die.
-
-</p>
-
-</section>
-
-
-
-<!-- =====================================================
-     INAUGURAL SEASON
-     ===================================================== -->
-
-<section class="card season-banner">
-
-<div class="season-label">
-The Beginning of the Dysfunction
-</div>
-
-<div class="season-year">
-🏈 2026 — INAUGURAL SEASON
-</div>
-
-<p>
-
-Ten teams entered the Syndicate for the first time.
-One will become the first MSA Champion.
-
-The other nine will spend the offseason explaining
-what the hell happened.
-
-</p>
-
-</section>
-
-
-
-<!-- =====================================================
-     CHAMPIONSHIP / AWARDS / INFAMY
-     ===================================================== -->
-
-<div class="history-grid">
-
-
-<!-- CHAMPIONSHIP PODIUM -->
-
-<div class="card history-card podium">
-
-<h3>
-🏆 2026 Championship Podium
-</h3>
-
-<div class="podium-place">
-
-🥇 <strong>MSA Champion</strong>
-
-<br>
-
-<span class="pending">
-To Be Determined
-</span>
-
-</div>
-
-
-<div class="podium-place">
-
-🥈 <strong>Second Place</strong>
-
-<br>
-
-<span class="pending">
-To Be Determined
-</span>
-
-</div>
-
-
-<div class="podium-place">
-
-🥉 <strong>Third Place</strong>
-
-<br>
-
-<span class="pending">
-To Be Determined
-</span>
-
-</div>
-
-<p class="pending">
-
-The first names in MSA championship history
-will be written here when the 2026 war is over.
-
-</p>
-
-</div>
-
-
-
-<!-- SEASON AWARDS -->
-
-<div class="card history-card">
-
-<h3>
-🏅 2026 Season Awards
-</h3>
-
-<p>
-<strong>Best Regular Season Record:</strong>
-<span class="pending">TBD</span>
-</p>
-
-<p>
-<strong>Most Points Scored:</strong>
-<span class="pending">TBD</span>
-</p>
-
-<p>
-<strong>Biggest Upset:</strong>
-<span class="pending">TBD</span>
-</p>
-
-<p>
-<strong>Trade of the Year:</strong>
-<span class="pending">TBD</span>
-</p>
-
-<p>
-<strong>Worst Decision of the Year:</strong>
-<span class="pending">TBD</span>
-</p>
-
-<p>
-<strong>Commissioner's Choice:</strong>
-<span class="pending">TBD</span>
-</p>
-
-</div>
-
-
-
-<!-- HALL OF INFAMY -->
-
-<div class="card history-card infamy-card">
-
-<div class="infamy-warning">
-💀
-</div>
-
-<h3 style="text-align:center;">
-Hall of Infamy
-</h3>
-
-<p>
-
-Championships deserve recognition.
-
-Absolute fantasy-football disasters deserve
-documentation.
-
-</p>
-
-<p>
-
-<strong>2026 Last Place:</strong>
-
-<span class="pending">
-Still fighting for the dishonor.
-</span>
-
-</p>
-
-<p>
-
-<strong>2026 Loser Punishment:</strong>
-
-<span class="pending">
-To Be Determined
-</span>
-
-</p>
-
-</div>
-
-
-
-<!-- SYNDICATE REPORT -->
-
-<div class="card history-card">
-
-<h3>
-🎙️ The Syndicate Report
-</h3>
-
-<p>
-
-The inaugural season also launched the official
-voice of the league:
-
-<strong>The Syndicate Report.</strong>
-
-</p>
-
-<p>
-
-Weekly reviews, matchup previews, questionable
-analysis, commissioner propaganda and the kind
-of shit talking that probably should not have
-been broadcast.
-
-</p>
-
-<p>
-
-<a href="syndicate-report.html">
-View the Syndicate Report Archive →
-</a>
-
-</p>
-
-</div>
-
-
-</div>
-
-
-
-<!-- =====================================================
-     AUTOMATED WEEKLY HISTORY
-     ===================================================== -->
-
-<section class="weekly-history-section">
-
-<h2 class="section-title">
-🏈 2026 WEEKLY RESULTS ARCHIVE
-</h2>
-
-<p class="section-sub">
-
-Every completed matchup.
-Every beatdown.
-Every embarrassing point total.
-
-Once ESPN closes the week, the Syndicate remembers it.
-
-</p>
-
-
-<div
-class="history-status"
-id="history-status">
-
-Loading the MSA archives...
-
-</div>
-
-
-<div id="weekly-history">
-
-<div class="card history-error">
-
-Loading completed weeks from
-<strong>MSA Headquarters...</strong>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     LEAGUE LORE
-     ===================================================== -->
-
-<section class="lore-section">
-
-<h2 class="lore-title">
-🤡 MSA LEAGUE LORE
-</h2>
-
-<p class="lore-subtitle">
-
-Some moments are too stupid to be forgotten.
-
-</p>
-
-
-<div class="card lore-entry">
-
-<h4>
-🧀 The Kelce Trade
-</h4>
-
-<p>
-
-Early in the inaugural season, commissioner
-Steve OG traded away Travis Kelce.
-
-Kelce then proceeded to remind the commissioner
-why fantasy football decisions have consequences.
-
-The regret became Syndicate Report material
-almost immediately.
-
-</p>
-
-</div>
-
-
-<div class="card lore-entry">
-
-<h4>
-🏈 The Winless Bowl
-</h4>
-
-<p>
-
-Week 4 brought together Team Ramrod and
-Big Pickens Energy with both franchises
-still searching for their first victory.
-
-One team would finally escape the basement.
-
-The other would discover an entirely new level
-of fantasy football misery.
-
-</p>
-
-</div>
-
-
-<div class="card lore-entry">
-
-<h4>
-☠️ Ten Misfits Enter the Syndicate
-</h4>
-
-<p>
-
-2026 marked the official beginning of the
-Misfit Syndicate Association:
-
-ten teams, a $50 buy-in, one championship,
-a weekly show and enough questionable
-decision-making to create an entire website
-documenting it.
-
-</p>
-
-</div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     FUTURE HISTORY
-     ===================================================== -->
-
-<section class="card archive-note">
-
-<h3>
-📚 THE ARCHIVES HAVE ONLY JUST BEGUN
-</h3>
-
-<p>
-
-Every MSA season will be added to this record.
-
-Future champions, standings, awards, rivalries,
-punishments, legendary trades and spectacular
-failures will remain here permanently.
-
-</p>
-
-<p>
-
-<strong>
-
-Because ESPN eventually forgets.
-
-The Syndicate doesn't.
-
-</strong>
-
-</p>
-
-</section>
-
-
-</div>
-
-</main>
-
-
-<footer>
-
-© 2026 Misfit Syndicate Association • Built by Misfits, for Misfits
-
-</footer>
-
-
-
-<script>
-
-/* =========================================================
-   OFFICIAL MSA TEAM LOGOS
-   ========================================================= */
-
-const teamLogos = {
-
-    1:
-        "Big Papi Queso Logo.png",
-
-    3:
-        "Team Ramrod Logo.png",
-
-    4:
-        "Nabershood Cookout logo.png",
-
-    5:
-        "Pitts Creek Logo.png",
-
-    6:
-        "Double Dookies logo.jpeg",
-
-    8:
-        "Big Pickens Energy logo.png",
-
-    9:
-        "Apukalypse Now Logo.png",
-
-    10:
-        "DB EATERS LOGO.png",
-
-    11:
-        "Red Zone Redbirds.png",
-
-    12:
-        "Ladiboyz Logo.png"
-
-};
-
-
-/* =========================================================
-   LOGO HELPER
-   ========================================================= */
-
-function getTeamLogo(teamId) {
-
-    const logo =
-        teamLogos[
-            Number(teamId)
-        ];
-
-
-    if (!logo) {
-
-        return "";
-
-    }
-
-
-    return encodeURI(
-        logo
-    );
-
-}
-
-
-/* =========================================================
-   TEAM DISPLAY
-   ========================================================= */
-
-function teamDisplay(
-    teamId,
-    teamName,
-    side,
-    winnerTeamId
-) {
-
-    const winner =
-        Number(teamId) ===
-        Number(winnerTeamId);
-
-
-    const logo =
-        getTeamLogo(
-            teamId
-        );
-
-
-    let logoHTML = "";
-
-
-    if (logo) {
-
-        logoHTML = `
-
-            <img
-            src="${logo}"
-            alt="${teamName} Logo"
-            class="history-team-logo">
-
-        `;
-
-    }
-
-
-    if (
-        side === "away"
-    ) {
-
-        return `
-
-            <div class="
-                history-team
-                away
-                ${winner ? "winner" : ""}
-            ">
-
-                <div class="history-team-name">
-
-                    ${teamName}
-
-                </div>
-
-                ${logoHTML}
-
-            </div>
-
-        `;
-
-    }
-
-
-    return `
-
-        <div class="
-            history-team
-            home
-            ${winner ? "winner" : ""}
-        ">
-
-            ${logoHTML}
-
-            <div class="history-team-name">
-
-                ${teamName}
-
-            </div>
-
-        </div>
-
-    `;
-
-}
-
-
-/* =========================================================
-   MATCHUP
-   ========================================================= */
-
-function buildMatchup(
-    matchup
-) {
-
-    const awayWinner =
-        Number(
-            matchup.winnerTeamId
-        ) ===
-        Number(
-            matchup.awayTeamId
-        );
-
-
-    const homeWinner =
-        Number(
-            matchup.winnerTeamId
-        ) ===
-        Number(
-            matchup.homeTeamId
-        );
-
-
-    return `
-
-        <div class="history-matchup">
-
-
-            ${teamDisplay(
-                matchup.awayTeamId,
-                matchup.awayTeamName,
-                "away",
-                matchup.winnerTeamId
-            )}
-
-
-            <div class="history-score">
-
-                <span class="
-                    ${awayWinner
-                        ? "winner-score"
-                        : ""}
-                ">
-
-                    ${Number(
-                        matchup.awayScore
-                    ).toFixed(1)}
-
-                </span>
-
-                <span class="history-score-vs">
-                    —
-                </span>
-
-                <span class="
-                    ${homeWinner
-                        ? "winner-score"
-                        : ""}
-                ">
-
-                    ${Number(
-                        matchup.homeScore
-                    ).toFixed(1)}
-
-                </span>
-
-            </div>
-
-
-            ${teamDisplay(
-                matchup.homeTeamId,
-                matchup.homeTeamName,
-                "home",
-                matchup.winnerTeamId
-            )}
-
-
-        </div>
-
-    `;
-
-}
-
-
-/* =========================================================
-   CLOSEST GAME TEXT
-   ========================================================= */
-
-function closestGameText(
-    week
-) {
-
-    const game =
-        week.closestGame;
-
-
-    if (!game) {
-
-        return "N/A";
-
-    }
-
-
-    return `
-
-        ${game.awayTeamName}
-        vs
-        ${game.homeTeamName}
-
-    `;
-
-}
-
-
-/* =========================================================
-   BIGGEST BLOWOUT TEXT
-   ========================================================= */
-
-function biggestBlowoutText(
-    week
-) {
-
-    const game =
-        week.biggestBlowout;
-
-
-    if (!game) {
-
-        return "N/A";
-
-    }
-
-
-    let winnerName =
-        game.awayTeamName;
-
-
-    if (
-        Number(
-            game.homeScore
-        ) >
-        Number(
-            game.awayScore
-        )
-    ) {
-
-        winnerName =
-            game.homeTeamName;
-
-    }
-
-
-    return winnerName;
-
-}
-
-
-/* =========================================================
-   BUILD WEEK
-   ========================================================= */
-
-function buildWeek(
-    week
-) {
-
-    const matchupsHTML =
-        week.matchups
-            .map(
-                matchup =>
-                    buildMatchup(
-                        matchup
-                    )
-            )
-            .join("");
-
-
-    return `
-
-        <div class="card week-history">
-
-
-            <div class="week-history-header">
-
-                <h3>
-
-                    🏈 WEEK ${week.week}
-
-                </h3>
-
-                <p>
-
-                    FINAL • OFFICIAL MSA ARCHIVE
-
-                </p>
-
-            </div>
-
-
-            <div class="week-awards">
-
-
-                <div class="week-award">
-
-                    <div class="week-award-icon">
-                        🔥
-                    </div>
-
-                    <div class="week-award-label">
-                        High Score
-                    </div>
-
-                    <div class="week-award-team">
-
-                        ${week.highestScore.teamName}
-
-                    </div>
-
-                    <div class="week-award-score">
-
-                        ${Number(
-                            week.highestScore.score
-                        ).toFixed(1)}
-
-                    </div>
-
-                </div>
-
-
-                <div class="week-award">
-
-                    <div class="week-award-icon">
-                        🧊
-                    </div>
-
-                    <div class="week-award-label">
-                        Low Score
-                    </div>
-
-                    <div class="week-award-team">
-
-                        ${week.lowestScore.teamName}
-
-                    </div>
-
-                    <div class="week-award-score">
-
-                        ${Number(
-                            week.lowestScore.score
-                        ).toFixed(1)}
-
-                    </div>
-
-                </div>
-
-
-                <div class="week-award">
-
-                    <div class="week-award-icon">
-                        ⚔️
-                    </div>
-
-                    <div class="week-award-label">
-                        Closest Game
-                    </div>
-
-                    <div class="week-award-team">
-
-                        ${closestGameText(
-                            week
-                        )}
-
-                    </div>
-
-                    <div class="week-award-score">
-
-                        ${Number(
-                            week.closestGame.margin
-                        ).toFixed(1)}
-                        pts
-
-                    </div>
-
-                </div>
-
-
-                <div class="week-award">
-
-                    <div class="week-award-icon">
-                        💀
-                    </div>
-
-                    <div class="week-award-label">
-                        Biggest Ass-Kicking
-                    </div>
-
-                    <div class="week-award-team">
-
-                        ${biggestBlowoutText(
-                            week
-                        )}
-
-                    </div>
-
-                    <div class="week-award-score">
-
-                        ${Number(
-                            week.biggestBlowout.margin
-                        ).toFixed(1)}
-                        pts
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-            <div class="week-matchups">
-
-                ${matchupsHTML}
-
-            </div>
-
-
-        </div>
-
-    `;
-
-}
-
-
-/* =========================================================
-   LOAD HISTORY
-   ========================================================= */
-
-async function loadHistory() {
-
-    const container =
-        document.getElementById(
-            "weekly-history"
-        );
-
-
-    const status =
-        document.getElementById(
-            "history-status"
-        );
-
-
-    try {
-
-        const response =
-            await fetch(
-                "data/history.json?t=" +
-                Date.now(),
-                {
-                    cache: "no-store"
-                }
-            );
-
-
-        if (
-            !response.ok
-        ) {
-
-            throw new Error(
-                "Unable to load history.json"
-            );
-
-        }
-
-
-        const history =
-            await response.json();
-
-
-        if (
-            !history.weeks ||
-            history.weeks.length === 0
-        ) {
-
-            container.innerHTML = `
-
-                <div class="card history-error">
-
-                    No completed weeks have been
-                    archived yet.
-
-                </div>
-
-            `;
-
-
-            status.textContent =
-                "WAITING FOR THE FIRST COMPLETED WEEK";
-
-
-            return;
-
-        }
-
-
-        /*
-        Newest completed week first.
-        */
-
-        const weeks =
-            [...history.weeks]
-                .sort(
-                    (a, b) =>
-                        b.week -
-                        a.week
-                );
-
-
-        container.innerHTML =
-            weeks
-                .map(
-                    week =>
-                        buildWeek(
-                            week
-                        )
-                )
-                .join("");
-
-
-        status.className =
-            "history-status live";
-
-
-        status.textContent =
-            "● PERMANENT ARCHIVE • " +
-            "COMPLETED THROUGH WEEK " +
-            history.completedThroughWeek;
-
-
-    }
-
-    catch (error) {
-
-        console.error(
-            "MSA history error:",
-            error
-        );
-
-
-        container.innerHTML = `
-
-            <div class="card history-error">
-
-                💀 The Syndicate archives are
-                temporarily refusing to cooperate.
-
-                <br><br>
-
-                <strong>
-                history.json could not be loaded.
-                </strong>
-
-            </div>
-
-        `;
-
-
-        status.textContent =
-            "ARCHIVE DATA UNAVAILABLE";
-
-    }
-
-}
-
-
-/* =========================================================
-   START
-   ========================================================= */
-
-loadHistory();
-
-</script>
-
-
-</body>
-
-</html>
