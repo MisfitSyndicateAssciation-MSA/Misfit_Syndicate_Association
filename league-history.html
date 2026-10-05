@@ -138,6 +138,172 @@
 
 
 /* =========================================================
+   WEEKLY RESULTS ARCHIVE
+   ========================================================= */
+
+.weekly-history-section {
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.history-status {
+    text-align: center;
+    font-size: .78rem;
+    letter-spacing: 1px;
+    opacity: .65;
+    margin: 12px 0 25px 0;
+}
+
+.history-status.live {
+    color: #f5b642;
+    opacity: 1;
+}
+
+.week-history {
+    margin-bottom: 28px;
+    overflow: hidden;
+}
+
+.week-history-header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(245,182,66,.18);
+}
+
+.week-history-header h3 {
+    margin: 0 0 5px 0;
+    color: #f5b642;
+}
+
+.week-history-header p {
+    margin: 0;
+    opacity: .65;
+    font-size: .82rem;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   WEEKLY AWARDS
+   ========================================================= */
+
+.week-awards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 18px;
+}
+
+.week-award {
+    text-align: center;
+    padding: 14px 8px;
+    border-radius: 8px;
+    background: rgba(255,255,255,.035);
+}
+
+.week-award-icon {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+}
+
+.week-award-label {
+    font-size: .68rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: .55;
+    margin-bottom: 6px;
+}
+
+.week-award-team {
+    font-weight: bold;
+    font-size: .88rem;
+    line-height: 1.3;
+}
+
+.week-award-score {
+    color: #f5b642;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   WEEKLY MATCHUPS
+   ========================================================= */
+
+.week-matchups {
+    padding: 0 18px 18px 18px;
+}
+
+.history-matchup {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1fr);
+
+    align-items: center;
+    gap: 14px;
+
+    padding: 13px 10px;
+
+    border-top:
+        1px solid rgba(255,255,255,.06);
+}
+
+.history-team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.history-team.away {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.history-team.home {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.history-team-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.history-team-name {
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.history-team.winner .history-team-name {
+    color: #f5b642;
+}
+
+.history-score {
+    text-align: center;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.winner-score {
+    color: #f5b642;
+}
+
+.history-score-vs {
+    font-size: .65rem;
+    opacity: .45;
+    margin: 0 5px;
+}
+
+
+/* =========================================================
    LEAGUE LORE
    ========================================================= */
 
@@ -188,13 +354,59 @@
 
 
 /* =========================================================
+   ARCHIVE ERROR
+   ========================================================= */
+
+.history-error {
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* =========================================================
    MOBILE
    ========================================================= */
+
+@media (max-width: 750px) {
+
+    .week-awards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
 
 @media (max-width: 650px) {
 
     .season-year {
         font-size: 1.6rem;
+    }
+
+    .history-matchup {
+        gap: 6px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .history-team-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .history-team-name {
+        font-size: .76rem;
+    }
+
+    .history-score {
+        font-size: .86rem;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .week-awards {
+        grid-template-columns: 1fr;
     }
 
 }
@@ -272,6 +484,10 @@ League History
 <div class="history-page">
 
 
+<!-- =====================================================
+     INTRO
+     ===================================================== -->
+
 <section class="panel history-intro">
 
 <h2>
@@ -289,6 +505,9 @@ documented. Bad decisions will never be allowed to die.
 </section>
 
 
+<!-- =====================================================
+     INAUGURAL SEASON
+     ===================================================== -->
 
 <section class="card season-banner">
 
@@ -313,11 +532,12 @@ what the hell happened.
 </section>
 
 
+<!-- =====================================================
+     CHAMPIONSHIP / AWARDS / INFAMY
+     ===================================================== -->
 
 <div class="history-grid">
 
-
-<!-- CHAMPIONSHIP PODIUM -->
 
 <div class="card history-card podium">
 
@@ -337,7 +557,6 @@ To Be Determined
 
 </div>
 
-
 <div class="podium-place">
 
 🥈 <strong>Second Place</strong>
@@ -349,7 +568,6 @@ To Be Determined
 </span>
 
 </div>
-
 
 <div class="podium-place">
 
@@ -372,9 +590,6 @@ will be written here when the 2026 war is over.
 
 </div>
 
-
-
-<!-- SEASON AWARDS -->
 
 <div class="card history-card">
 
@@ -414,9 +629,6 @@ will be written here when the 2026 war is over.
 
 </div>
 
-
-
-<!-- HALL OF INFAMY -->
 
 <div class="card history-card infamy-card">
 
@@ -460,9 +672,6 @@ To Be Determined
 </div>
 
 
-
-<!-- SYNDICATE REPORT -->
-
 <div class="card history-card">
 
 <h3>
@@ -501,8 +710,52 @@ View the Syndicate Report Archive →
 </div>
 
 
+<!-- =====================================================
+     AUTOMATED WEEKLY RESULTS
+     ===================================================== -->
 
-<!-- LEAGUE LORE -->
+<section class="weekly-history-section">
+
+<h2 class="section-title">
+🏈 2026 WEEKLY RESULTS ARCHIVE
+</h2>
+
+<p class="section-sub">
+
+Every completed matchup.
+Every beatdown.
+Every embarrassing point total.
+
+Once ESPN closes the week, the Syndicate remembers it.
+
+</p>
+
+
+<div
+class="history-status"
+id="history-status">
+
+Loading the MSA archives...
+
+</div>
+
+
+<div id="weekly-history">
+
+<div class="card history-error">
+
+Loading completed weeks from MSA Headquarters...
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     LEAGUE LORE
+     ===================================================== -->
 
 <section class="lore-section">
 
@@ -581,12 +834,12 @@ documenting it.
 
 </div>
 
-
 </section>
 
 
-
-<!-- FUTURE HISTORY -->
+<!-- =====================================================
+     FUTURE HISTORY
+     ===================================================== -->
 
 <section class="card archive-note">
 
@@ -629,6 +882,587 @@ The Syndicate doesn't.
 © 2026 Misfit Syndicate Association • Built by Misfits, for Misfits
 
 </footer>
+
+
+<script>
+
+/* =========================================================
+   OFFICIAL MSA TEAM LOGOS
+   ========================================================= */
+
+const teamLogos = {
+
+    1: "Big Papi Queso Logo.png",
+    3: "Team Ramrod Logo.png",
+    4: "Nabershood Cookout logo.png",
+    5: "Pitts Creek Logo.png",
+    6: "Double Dookies logo.jpeg",
+    8: "Big Pickens Energy logo.png",
+    9: "Apukalypse Now Logo.png",
+    10: "DB EATERS LOGO.png",
+    11: "Red Zone Redbirds.png",
+    12: "Ladiboyz Logo.png"
+
+};
+
+
+/* =========================================================
+   LOGO HELPER
+   ========================================================= */
+
+function getTeamLogo(teamId) {
+
+    const logo =
+        teamLogos[
+            Number(teamId)
+        ];
+
+
+    if (!logo) {
+        return "";
+    }
+
+
+    return encodeURI(
+        logo
+    );
+
+}
+
+
+/* =========================================================
+   TEAM DISPLAY
+   ========================================================= */
+
+function teamDisplay(
+    teamId,
+    teamName,
+    side,
+    winnerTeamId
+) {
+
+    const winner =
+        Number(teamId) ===
+        Number(winnerTeamId);
+
+
+    const logo =
+        getTeamLogo(
+            teamId
+        );
+
+
+    let logoHTML = "";
+
+
+    if (logo) {
+
+        logoHTML = `
+
+            <img
+            src="${logo}"
+            alt="${teamName} Logo"
+            class="history-team-logo">
+
+        `;
+
+    }
+
+
+    if (side === "away") {
+
+        return `
+
+            <div class="
+                history-team
+                away
+                ${winner ? "winner" : ""}
+            ">
+
+                <div class="history-team-name">
+                    ${teamName}
+                </div>
+
+                ${logoHTML}
+
+            </div>
+
+        `;
+
+    }
+
+
+    return `
+
+        <div class="
+            history-team
+            home
+            ${winner ? "winner" : ""}
+        ">
+
+            ${logoHTML}
+
+            <div class="history-team-name">
+                ${teamName}
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+   BUILD MATCHUP
+   ========================================================= */
+
+function buildMatchup(matchup) {
+
+    const awayWinner =
+        Number(matchup.winnerTeamId) ===
+        Number(matchup.awayTeamId);
+
+
+    const homeWinner =
+        Number(matchup.winnerTeamId) ===
+        Number(matchup.homeTeamId);
+
+
+    return `
+
+        <div class="history-matchup">
+
+
+            ${teamDisplay(
+                matchup.awayTeamId,
+                matchup.awayTeamName,
+                "away",
+                matchup.winnerTeamId
+            )}
+
+
+            <div class="history-score">
+
+                <span class="
+                    ${awayWinner
+                        ? "winner-score"
+                        : ""}
+                ">
+
+                    ${Number(
+                        matchup.awayScore
+                    ).toFixed(1)}
+
+                </span>
+
+                <span class="history-score-vs">
+                    —
+                </span>
+
+                <span class="
+                    ${homeWinner
+                        ? "winner-score"
+                        : ""}
+                ">
+
+                    ${Number(
+                        matchup.homeScore
+                    ).toFixed(1)}
+
+                </span>
+
+            </div>
+
+
+            ${teamDisplay(
+                matchup.homeTeamId,
+                matchup.homeTeamName,
+                "home",
+                matchup.winnerTeamId
+            )}
+
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+   CLOSEST GAME
+   ========================================================= */
+
+function closestGameText(week) {
+
+    const game =
+        week.closestGame;
+
+
+    if (!game) {
+        return "N/A";
+    }
+
+
+    return (
+        game.awayTeamName +
+        " vs " +
+        game.homeTeamName
+    );
+
+}
+
+
+/* =========================================================
+   BIGGEST BLOWOUT WINNER
+   ========================================================= */
+
+function biggestBlowoutText(week) {
+
+    const game =
+        week.biggestBlowout;
+
+
+    if (!game) {
+        return "N/A";
+    }
+
+
+    if (
+        Number(game.homeScore) >
+        Number(game.awayScore)
+    ) {
+
+        return game.homeTeamName;
+
+    }
+
+
+    if (
+        Number(game.awayScore) >
+        Number(game.homeScore)
+    ) {
+
+        return game.awayTeamName;
+
+    }
+
+
+    return "Tie";
+
+}
+
+
+/* =========================================================
+   BUILD COMPLETED WEEK
+   ========================================================= */
+
+function buildWeek(week) {
+
+    const matchupsHTML =
+        week.matchups
+            .map(
+                matchup =>
+                    buildMatchup(
+                        matchup
+                    )
+            )
+            .join("");
+
+
+    return `
+
+        <div class="card week-history">
+
+
+            <div class="week-history-header">
+
+                <h3>
+                    🏈 WEEK ${week.week}
+                </h3>
+
+                <p>
+                    FINAL • OFFICIAL MSA ARCHIVE
+                </p>
+
+            </div>
+
+
+            <div class="week-awards">
+
+
+                <div class="week-award">
+
+                    <div class="week-award-icon">
+                        🔥
+                    </div>
+
+                    <div class="week-award-label">
+                        High Score
+                    </div>
+
+                    <div class="week-award-team">
+                        ${week.highestScore.teamName}
+                    </div>
+
+                    <div class="week-award-score">
+
+                        ${Number(
+                            week.highestScore.score
+                        ).toFixed(1)}
+
+                    </div>
+
+                </div>
+
+
+                <div class="week-award">
+
+                    <div class="week-award-icon">
+                        🧊
+                    </div>
+
+                    <div class="week-award-label">
+                        Low Score
+                    </div>
+
+                    <div class="week-award-team">
+                        ${week.lowestScore.teamName}
+                    </div>
+
+                    <div class="week-award-score">
+
+                        ${Number(
+                            week.lowestScore.score
+                        ).toFixed(1)}
+
+                    </div>
+
+                </div>
+
+
+                <div class="week-award">
+
+                    <div class="week-award-icon">
+                        ⚔️
+                    </div>
+
+                    <div class="week-award-label">
+                        Closest Game
+                    </div>
+
+                    <div class="week-award-team">
+
+                        ${closestGameText(
+                            week
+                        )}
+
+                    </div>
+
+                    <div class="week-award-score">
+
+                        ${Number(
+                            week.closestGame.margin
+                        ).toFixed(1)}
+                        pts
+
+                    </div>
+
+                </div>
+
+
+                <div class="week-award">
+
+                    <div class="week-award-icon">
+                        💀
+                    </div>
+
+                    <div class="week-award-label">
+                        Biggest Ass-Kicking
+                    </div>
+
+                    <div class="week-award-team">
+
+                        ${biggestBlowoutText(
+                            week
+                        )}
+
+                    </div>
+
+                    <div class="week-award-score">
+
+                        ${Number(
+                            week.biggestBlowout.margin
+                        ).toFixed(1)}
+                        pts
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="week-matchups">
+
+                ${matchupsHTML}
+
+            </div>
+
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+   LOAD PERMANENT HISTORY
+   ========================================================= */
+
+async function loadHistory() {
+
+    const container =
+        document.getElementById(
+            "weekly-history"
+        );
+
+
+    const status =
+        document.getElementById(
+            "history-status"
+        );
+
+
+    try {
+
+        const response =
+            await fetch(
+                "data/history.json?t=" +
+                Date.now(),
+                {
+                    cache: "no-store"
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Unable to load history.json"
+            );
+
+        }
+
+
+        const history =
+            await response.json();
+
+
+        if (
+            !history.weeks ||
+            history.weeks.length === 0
+        ) {
+
+            container.innerHTML = `
+
+                <div class="card history-error">
+
+                    No completed weeks have been
+                    archived yet.
+
+                </div>
+
+            `;
+
+
+            status.textContent =
+                "WAITING FOR THE FIRST COMPLETED WEEK";
+
+
+            return;
+
+        }
+
+
+        /*
+        Newest completed week appears first.
+        */
+
+        const weeks =
+            [...history.weeks]
+                .sort(
+                    (a, b) =>
+                        b.week - a.week
+                );
+
+
+        container.innerHTML =
+            weeks
+                .map(
+                    week =>
+                        buildWeek(
+                            week
+                        )
+                )
+                .join("");
+
+
+        status.className =
+            "history-status live";
+
+
+        status.textContent =
+            "● PERMANENT ARCHIVE • " +
+            "COMPLETED THROUGH WEEK " +
+            history.completedThroughWeek;
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "MSA history error:",
+            error
+        );
+
+
+        container.innerHTML = `
+
+            <div class="card history-error">
+
+                💀 The Syndicate archives are
+                temporarily refusing to cooperate.
+
+                <br><br>
+
+                <strong>
+                    history.json could not be loaded.
+                </strong>
+
+            </div>
+
+        `;
+
+
+        status.textContent =
+            "ARCHIVE DATA UNAVAILABLE";
+
+    }
+
+}
+
+
+/* =========================================================
+   START
+   ========================================================= */
+
+loadHistory();
+
+</script>
 
 
 </body>
