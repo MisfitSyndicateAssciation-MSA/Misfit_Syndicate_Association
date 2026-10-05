@@ -29,9 +29,7 @@ href="style.css">
 }
 
 
-/*
-Individual matchup card
-*/
+/* Individual matchup card */
 
 .matchup {
     text-align: center;
@@ -40,9 +38,7 @@ Individual matchup card
 }
 
 
-/*
-Matchup title
-*/
+/* Matchup title */
 
 .matchup-title {
     font-size: 1.05rem;
@@ -52,9 +48,23 @@ Matchup title
 }
 
 
-/*
-Head-to-head team area
-*/
+/* Live badge */
+
+.live-badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    background: #b91c1c;
+    color: white;
+    font-size: .65rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    vertical-align: middle;
+}
+
+
+/* Head-to-head team area */
 
 .matchup-teams {
     display: grid;
@@ -66,18 +76,14 @@ Head-to-head team area
 }
 
 
-/*
-Individual team
-*/
+/* Individual team */
 
 .matchup-team {
     text-align: center;
 }
 
 
-/*
-Clickable team area
-*/
+/* Clickable team area */
 
 .matchup-team-link {
     display: block;
@@ -90,9 +96,7 @@ Clickable team area
 }
 
 
-/*
-Official MSA logos
-*/
+/* Official MSA logos */
 
 .matchup-team-logo {
     width: 135px;
@@ -104,9 +108,7 @@ Official MSA logos
 }
 
 
-/*
-Team name
-*/
+/* Team name */
 
 .matchup-team-name {
     display: block;
@@ -116,9 +118,7 @@ Team name
 }
 
 
-/*
-Team record
-*/
+/* Team record */
 
 .matchup-team-record {
     display: block;
@@ -128,19 +128,62 @@ Team record
 }
 
 
-/*
-VS area
-*/
+/* =========================================================
+   LIVE SCORE
+   ========================================================= */
+
+.matchup-team-score {
+    display: block;
+    margin-top: 12px;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 900;
+    color: #f5b642;
+}
+
+.matchup-team-score-label {
+    display: block;
+    margin-top: 5px;
+    font-size: .65rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: .55;
+}
+
+
+/* Winning team */
+
+.matchup-team.leading .matchup-team-score {
+    color: #ffd166;
+}
+
+.matchup-team.leading .matchup-team-name {
+    color: #f5b642;
+}
+
+
+/* VS area */
 
 .matchup-vs {
     font-size: 1.6rem;
     font-weight: bold;
 }
 
+.matchup-vs-label {
+    display: block;
+}
 
-/*
-Projection
-*/
+.matchup-score-difference {
+    display: block;
+    margin-top: 8px;
+    font-size: .65rem;
+    opacity: .55;
+    letter-spacing: 1px;
+}
+
+
+/* Projection */
 
 .matchup-projection {
     margin-top: 22px;
@@ -162,9 +205,18 @@ Projection
 }
 
 
-/*
-Special matchup message
-*/
+/* Score status */
+
+.score-status {
+    margin-top: 16px;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    opacity: .65;
+}
+
+
+/* Special matchup message */
 
 .special-message {
     margin-top: 14px;
@@ -173,9 +225,7 @@ Special matchup message
 }
 
 
-/*
-Custom weekly matchup graphic
-*/
+/* Custom weekly matchup graphic */
 
 .matchup-graphic {
     display: block;
@@ -215,11 +265,16 @@ Custom weekly matchup graphic
         font-size: .75rem;
     }
 
+    .matchup-team-score {
+        font-size: 1.6rem;
+    }
+
     .matchup-vs {
         font-size: 1.1rem;
     }
 
 }
+
 
 @media (max-width: 430px) {
 
@@ -234,6 +289,10 @@ Custom weekly matchup graphic
 
     .matchup-team-name {
         font-size: .8rem;
+    }
+
+    .matchup-team-score {
+        font-size: 1.4rem;
     }
 
 }
@@ -441,13 +500,6 @@ const teamDisplayNames = {
 
 /* =========================================================
    WEEK 4 CUSTOM GRAPHICS
-   =========================================================
-
-   Graphics are matched using the TWO ESPN
-   team IDs instead of ESPN matchup order.
-
-   This protects the graphics if ESPN changes
-   the order of the schedule.
    ========================================================= */
 
 const week4Graphics = {
@@ -470,10 +522,6 @@ const week4Graphics = {
 };
 
 
-/*
-Original Week 4 MSA matchup numbering.
-*/
-
 const week4MatchupNumbers = {
 
     "1-10": 1,
@@ -493,21 +541,16 @@ const week4MatchupNumbers = {
    MATCHUP KEY
    ========================================================= */
 
-function getMatchupKey(
-    teamA,
-    teamB
-) {
+function getMatchupKey(teamA, teamB) {
 
     return [
         teamA,
         teamB
     ]
-
     .sort(
         (a, b) =>
             a - b
     )
-
     .join("-");
 
 }
@@ -540,10 +583,36 @@ function getRecord(team) {
 
 
 /* =========================================================
+   SAFE NUMBER
+   ========================================================= */
+
+function safeNumber(value) {
+
+    const number =
+        Number(value);
+
+    if (
+        Number.isNaN(number)
+    ) {
+
+        return 0;
+
+    }
+
+    return number;
+
+}
+
+
+/* =========================================================
    TEAM DISPLAY
    ========================================================= */
 
-function buildTeamDisplay(team) {
+function buildTeamDisplay(
+    team,
+    score,
+    isLeading
+) {
 
 
     const emoji =
@@ -581,9 +650,15 @@ function buildTeamDisplay(team) {
     }
 
 
+    const leadingClass =
+        isLeading
+            ? " leading"
+            : "";
+
+
     return `
 
-        <div class="matchup-team">
+        <div class="matchup-team${leadingClass}">
 
             <a
             href="team.html?id=${team.id}"
@@ -604,6 +679,22 @@ function buildTeamDisplay(team) {
                 class="matchup-team-record">
 
                 ${record}
+
+                </span>
+
+
+                <span
+                class="matchup-team-score">
+
+                ${score.toFixed(1)}
+
+                </span>
+
+
+                <span
+                class="matchup-team-score-label">
+
+                Current Score
 
                 </span>
 
@@ -645,8 +736,8 @@ async function loadMatchups() {
 
 
         /*
-        Timestamp prevents the browser
-        from displaying cached ESPN data.
+        Timestamp prevents browser caching
+        of the ESPN-generated JSON.
         */
 
         const response =
@@ -685,7 +776,7 @@ async function loadMatchups() {
 
         status.textContent =
 
-            "ESPN projections • Updated automatically";
+            "Live scores & ESPN projections • Updated automatically";
 
 
         container.innerHTML = "";
@@ -740,8 +831,7 @@ async function loadMatchups() {
 
 
                 /*
-                Identify matchup by
-                ESPN team IDs.
+                Identify matchup by ESPN team IDs.
                 */
 
                 const matchupKey =
@@ -790,10 +880,6 @@ async function loadMatchups() {
 
                 /*
                 THE WINLESS BOWL
-
-                Automatically activates
-                when both teams enter the
-                matchup without a win.
                 */
 
                 if (
@@ -823,22 +909,74 @@ async function loadMatchups() {
                 }
 
 
+                /* =================================================
+                   LIVE ESPN SCORES
+                   ================================================= */
+
+                const awayScore =
+                    safeNumber(
+                        matchup.awayScore
+                    );
+
+
+                const homeScore =
+                    safeNumber(
+                        matchup.homeScore
+                    );
+
+
+                const awayLeading =
+                    awayScore >
+                    homeScore;
+
+
+                const homeLeading =
+                    homeScore >
+                    awayScore;
+
+
+                const scoreDifference =
+                    Math.abs(
+                        awayScore -
+                        homeScore
+                    );
+
+
+                let differenceDisplay =
+                    "";
+
+
+                if (
+                    awayScore > 0 ||
+                    homeScore > 0
+                ) {
+
+                    differenceDisplay = `
+
+                        <span
+                        class="matchup-score-difference">
+
+                        MARGIN ${scoreDifference.toFixed(1)}
+
+                        </span>
+
+                    `;
+
+                }
+
+
                 /*
                 ESPN projections.
-
-                Current scores remain intentionally
-                hidden until ESPN's live-score feed
-                can be trusted.
                 */
 
                 const awayProjection =
-                    Number(
+                    safeNumber(
                         matchup.awayProjection
                     ).toFixed(1);
 
 
                 const homeProjection =
-                    Number(
+                    safeNumber(
                         matchup.homeProjection
                     ).toFixed(1);
 
@@ -851,7 +989,7 @@ async function loadMatchups() {
                         <span
                         class="matchup-projection-label">
 
-                        ESPN PROJECTION
+                        ESPN PROJECTED FINAL
 
                         </span>
 
@@ -870,6 +1008,26 @@ async function loadMatchups() {
                     </div>
 
                 `;
+
+
+                /*
+                Current score status.
+                */
+
+                let scoreStatus =
+
+                    "🏈 CURRENT ESPN SCORE";
+
+
+                if (
+                    awayScore === 0 &&
+                    homeScore === 0
+                ) {
+
+                    scoreStatus =
+                        "⏳ GAME NOT STARTED";
+
+                }
 
 
                 /*
@@ -928,6 +1086,10 @@ async function loadMatchups() {
 
                     ${specialTitle}
 
+                    <span class="live-badge">
+                    ESPN LIVE
+                    </span>
+
                     </div>
 
 
@@ -936,22 +1098,41 @@ async function loadMatchups() {
 
 
                         ${buildTeamDisplay(
-                            away
+                            away,
+                            awayScore,
+                            awayLeading
                         )}
 
 
                         <div
                         class="matchup-vs">
 
-                        ⚔️
+                            <span
+                            class="matchup-vs-label">
+
+                            ⚔️
+
+                            </span>
+
+                            ${differenceDisplay}
 
                         </div>
 
 
                         ${buildTeamDisplay(
-                            home
+                            home,
+                            homeScore,
+                            homeLeading
                         )}
 
+
+                    </div>
+
+
+                    <div
+                    class="score-status">
+
+                    ${scoreStatus}
 
                     </div>
 
