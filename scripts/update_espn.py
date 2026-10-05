@@ -10,6 +10,13 @@ SEASON = "2026"
 
 # =========================================================
 # ESPN API
+#
+# Includes the views used by the MSA website for:
+# - standings
+# - live/current matchup scores
+# - projections
+# - rosters
+# - completed matchup history
 # =========================================================
 
 ESPN_URL = (
@@ -28,6 +35,9 @@ ESPN_URL = (
 
 # =========================================================
 # OFFICIAL MSA OWNERS
+#
+# We use our official owner names instead of relying on
+# ESPN's member/account names.
 # =========================================================
 
 OWNER_OVERRIDES = {
@@ -47,8 +57,8 @@ OWNER_OVERRIDES = {
 # =========================================================
 # OFFICIAL MSA TEAM NAMES
 #
-# We preserve our official MSA names in history.json instead
-# of depending on future ESPN name changes.
+# History uses these names so a future ESPN team-name
+# change does not rewrite old MSA history.
 # =========================================================
 
 TEAM_NAMES = {
@@ -185,8 +195,9 @@ def safe_score(value):
 # =========================================================
 # SCORE FOR A SPECIFIC WEEK
 #
-# This is used by both the live scoreboard and the permanent
-# history archive.
+# ESPN exposes weekly points in pointsByScoringPeriod.
+#
+# totalPoints remains as a fallback.
 # =========================================================
 
 def get_score_for_week(
@@ -259,7 +270,9 @@ def build_rosters(raw):
         []
     ):
 
-        team_id = team.get("id")
+        team_id = team.get(
+            "id"
+        )
 
         roster_entries = (
             team.get(
@@ -294,7 +307,9 @@ def build_rosters(raw):
 
 
             player_id = (
-                player.get("id")
+                player.get(
+                    "id"
+                )
             )
 
 
@@ -395,14 +410,15 @@ def build_rosters(raw):
 
 
 # =========================================================
-# BUILD COMPLETED WEEK HISTORY
+# BUILD COMPLETED-WEEK HISTORY
 #
 # IMPORTANT:
 #
-# If ESPN says currentWeek = 4, only Weeks 1-3 are eligible
-# for permanent history.
+# If ESPN reports currentWeek = 4, this function only
+# archives Weeks 1, 2 and 3.
 #
-# Week 4 remains live and is NOT archived.
+# The active/current week is NEVER written into permanent
+# history.
 # =========================================================
 
 def build_history(
@@ -485,7 +501,10 @@ def build_history(
             )
 
 
-            if away_score > home_score:
+            if (
+                away_score >
+                home_score
+            ):
 
                 winner_team_id = (
                     away_team_id
@@ -495,7 +514,11 @@ def build_history(
                     home_team_id
                 )
 
-            elif home_score > away_score:
+
+            elif (
+                home_score >
+                away_score
+            ):
 
                 winner_team_id = (
                     home_team_id
@@ -504,6 +527,7 @@ def build_history(
                 loser_team_id = (
                     away_team_id
                 )
+
 
             else:
 
@@ -556,15 +580,18 @@ def build_history(
 
 
         # -------------------------------------------------
-        # We expect five matchups in the 10-team MSA.
+        # MSA has 10 teams, therefore five matchups.
         #
-        # If ESPN does not give us a complete week, we do
-        # not pretend that week is safely archived.
+        # If ESPN returns an incomplete completed week,
+        # don't archive partial history.
         # -------------------------------------------------
 
-        if len(
-            week_matchups
-        ) != 5:
+        if (
+            len(
+                week_matchups
+            )
+            != 5
+        ):
 
             print(
                 f"HISTORY WARNING: "
@@ -577,7 +604,7 @@ def build_history(
 
 
         # -------------------------------------------------
-        # WEEK STATISTICS
+        # COLLECT ALL 10 TEAM SCORES
         # -------------------------------------------------
 
         team_scores = []
@@ -625,37 +652,41 @@ def build_history(
             })
 
 
-        highest =
-            max(
-                team_scores,
-                key=lambda item:
-                    item["score"]
-            )
+        # -------------------------------------------------
+        # WEEKLY SUPERLATIVES
+        # -------------------------------------------------
+
+        highest = max(
+            team_scores,
+            key=lambda item:
+                item["score"]
+        )
 
 
-        lowest =
-            min(
-                team_scores,
-                key=lambda item:
-                    item["score"]
-            )
+        lowest = min(
+            team_scores,
+            key=lambda item:
+                item["score"]
+        )
 
 
-        closest_game =
-            min(
-                week_matchups,
-                key=lambda item:
-                    item["margin"]
-            )
+        closest_game = min(
+            week_matchups,
+            key=lambda item:
+                item["margin"]
+        )
 
 
-        biggest_blowout =
-            max(
-                week_matchups,
-                key=lambda item:
-                    item["margin"]
-            )
+        biggest_blowout = max(
+            week_matchups,
+            key=lambda item:
+                item["margin"]
+        )
 
+
+        # -------------------------------------------------
+        # SAVE COMPLETED WEEK
+        # -------------------------------------------------
 
         weeks.append({
 
@@ -710,9 +741,29 @@ def build_history(
                         "awayTeamId"
                     ],
 
+                "awayTeamName":
+                    closest_game[
+                        "awayTeamName"
+                    ],
+
                 "homeTeamId":
                     closest_game[
                         "homeTeamId"
+                    ],
+
+                "homeTeamName":
+                    closest_game[
+                        "homeTeamName"
+                    ],
+
+                "awayScore":
+                    closest_game[
+                        "awayScore"
+                    ],
+
+                "homeScore":
+                    closest_game[
+                        "homeScore"
                     ],
 
                 "margin":
@@ -729,9 +780,29 @@ def build_history(
                         "awayTeamId"
                     ],
 
+                "awayTeamName":
+                    biggest_blowout[
+                        "awayTeamName"
+                    ],
+
                 "homeTeamId":
                     biggest_blowout[
                         "homeTeamId"
+                    ],
+
+                "homeTeamName":
+                    biggest_blowout[
+                        "homeTeamName"
+                    ],
+
+                "awayScore":
+                    biggest_blowout[
+                        "awayScore"
+                    ],
+
+                "homeScore":
+                    biggest_blowout[
+                        "homeScore"
                     ],
 
                 "margin":
@@ -747,15 +818,23 @@ def build_history(
     return {
 
         "leagueId":
-            raw.get("id"),
+            raw.get(
+                "id"
+            ),
 
         "season":
-            raw.get("seasonId"),
+            raw.get(
+                "seasonId"
+            ),
 
         "completedThroughWeek":
-            max(
-                0,
-                current_week - 1
+            (
+                max(
+                    week_data["week"]
+                    for week_data in weeks
+                )
+                if weeks
+                else 0
             ),
 
         "weeks":
@@ -796,7 +875,9 @@ def build_clean_data(raw):
         teams.append({
 
             "id":
-                team.get("id"),
+                team.get(
+                    "id"
+                ),
 
             "name":
                 team.get(
@@ -812,12 +893,16 @@ def build_clean_data(raw):
 
             "owner":
                 OWNER_OVERRIDES.get(
-                    team.get("id"),
+                    team.get(
+                        "id"
+                    ),
                     "Unknown"
                 ),
 
             "logo":
-                team.get("logo"),
+                team.get(
+                    "logo"
+                ),
 
             "wins":
                 record.get(
@@ -846,7 +931,7 @@ def build_clean_data(raw):
                             0
                         )
                     ),
-                    2,
+                    2
                 ),
 
             "pointsAgainst":
@@ -855,7 +940,7 @@ def build_clean_data(raw):
                         "pointsAgainst",
                         0
                     ),
-                    2,
+                    2
                 ),
 
             "streakType":
@@ -879,7 +964,7 @@ def build_clean_data(raw):
                         "playoffPct",
                         0
                     ) * 100,
-                    1,
+                    1
                 ),
 
             "waiverRank":
@@ -891,10 +976,16 @@ def build_clean_data(raw):
 
 
     teams.sort(
-        key=lambda t: (
-            -t["wins"],
-            t["losses"],
-            -t["pointsFor"],
+        key=lambda team: (
+            -team[
+                "wins"
+            ],
+            team[
+                "losses"
+            ],
+            -team[
+                "pointsFor"
+            ],
         )
     )
 
@@ -929,7 +1020,7 @@ def build_clean_data(raw):
         ).get(
             "currentMatchupPeriod",
             1
-        ),
+        )
     )
 
 
@@ -973,6 +1064,7 @@ def build_clean_data(raw):
             )
         )
 
+
         home_score = (
             get_current_score(
                 home,
@@ -1011,7 +1103,7 @@ def build_clean_data(raw):
                             0
                         )
                     ),
-                    2,
+                    2
                 ),
 
             "homeProjection":
@@ -1023,7 +1115,7 @@ def build_clean_data(raw):
                             0
                         )
                     ),
-                    2,
+                    2
                 ),
 
         })
@@ -1034,7 +1126,9 @@ def build_clean_data(raw):
     # -----------------------------------------------------
 
     rosters = (
-        build_rosters(raw)
+        build_rosters(
+            raw
+        )
     )
 
 
@@ -1045,10 +1139,14 @@ def build_clean_data(raw):
     return {
 
         "leagueId":
-            raw.get("id"),
+            raw.get(
+                "id"
+            ),
 
         "season":
-            raw.get("seasonId"),
+            raw.get(
+                "seasonId"
+            ),
 
         "currentWeek":
             current_week,
@@ -1093,9 +1191,13 @@ def write_json_if_changed(
                 output_file,
                 "r",
                 encoding="utf-8"
-            ) as f:
+            ) as file:
 
-                existing = json.load(f)
+                existing = (
+                    json.load(
+                        file
+                    )
+                )
 
         except (
             json.JSONDecodeError,
@@ -1105,16 +1207,23 @@ def write_json_if_changed(
             existing = None
 
 
-    new_compare = dict(data)
-
-    existing_compare = (
-        dict(existing)
-        if isinstance(
-            existing,
-            dict
-        )
-        else None
+    new_compare = dict(
+        data
     )
+
+
+    if isinstance(
+        existing,
+        dict
+    ):
+
+        existing_compare = dict(
+            existing
+        )
+
+    else:
+
+        existing_compare = None
 
 
     if ignore_updated_at:
@@ -1123,6 +1232,7 @@ def write_json_if_changed(
             "updatedAt",
             None
         )
+
 
         if (
             existing_compare
@@ -1164,18 +1274,19 @@ def write_json_if_changed(
         output_file,
         "w",
         encoding="utf-8"
-    ) as f:
+    ) as file:
 
         json.dump(
             data,
-            f,
+            file,
             indent=2,
             ensure_ascii=False
         )
 
 
     print(
-        f"SUCCESS: Updated {output_file}"
+        f"SUCCESS: Updated "
+        f"{output_file}"
     )
 
 
@@ -1193,19 +1304,25 @@ def main():
     )
 
 
-    raw = fetch_espn()
-
-
-    clean = build_clean_data(
-        raw
+    raw = (
+        fetch_espn()
     )
 
 
-    history = build_history(
-        raw,
-        clean[
-            "currentWeek"
-        ]
+    clean = (
+        build_clean_data(
+            raw
+        )
+    )
+
+
+    history = (
+        build_history(
+            raw,
+            clean[
+                "currentWeek"
+            ]
+        )
     )
 
 
@@ -1251,27 +1368,33 @@ def main():
     # -----------------------------------------------------
 
     print(
-        f"Week: {clean['currentWeek']}"
+        f"Week: "
+        f"{clean['currentWeek']}"
     )
 
 
     print(
-        f"Teams: {len(clean['standings'])}"
+        f"Teams: "
+        f"{len(clean['standings'])}"
     )
 
 
     print(
-        f"Current Matchups: {len(clean['matchups'])}"
+        f"Current Matchups: "
+        f"{len(clean['matchups'])}"
     )
 
 
     print(
-        f"Rosters: {len(clean['rosters'])}"
+        f"Rosters: "
+        f"{len(clean['rosters'])}"
     )
 
 
     total_players = sum(
-        len(roster)
+        len(
+            roster
+        )
         for roster
         in clean[
             "rosters"
@@ -1280,9 +1403,14 @@ def main():
 
 
     print(
-        f"Rostered Players: {total_players}"
+        f"Rostered Players: "
+        f"{total_players}"
     )
 
+
+    # -----------------------------------------------------
+    # CURRENT LIVE SCORE DEBUG
+    # -----------------------------------------------------
 
     print(
         "Current matchup scores:"
@@ -1294,30 +1422,66 @@ def main():
     ]:
 
         print(
-            f"Team {matchup['awayTeamId']}: "
+            f"Team "
+            f"{matchup['awayTeamId']}: "
             f"{matchup['awayScore']} "
             f"vs "
-            f"Team {matchup['homeTeamId']}: "
+            f"Team "
+            f"{matchup['homeTeamId']}: "
             f"{matchup['homeScore']}"
         )
 
+
+    # -----------------------------------------------------
+    # HISTORY DEBUG
+    # -----------------------------------------------------
 
     print(
         "Completed weeks eligible for history:"
     )
 
 
-    if history["weeks"]:
+    if history[
+        "weeks"
+    ]:
 
         for week_data in history[
             "weeks"
         ]:
 
             print(
-                f"Week {week_data['week']}: "
+                f"Week "
+                f"{week_data['week']}: "
                 f"{len(week_data['matchups'])} "
                 f"final matchups archived"
             )
+
+
+            print(
+                f"  Highest: "
+                f"{week_data['highestScore']['teamName']} "
+                f"({week_data['highestScore']['score']})"
+            )
+
+
+            print(
+                f"  Lowest: "
+                f"{week_data['lowestScore']['teamName']} "
+                f"({week_data['lowestScore']['score']})"
+            )
+
+
+            print(
+                f"  Closest game margin: "
+                f"{week_data['closestGame']['margin']}"
+            )
+
+
+            print(
+                f"  Biggest blowout margin: "
+                f"{week_data['biggestBlowout']['margin']}"
+            )
+
 
     else:
 
@@ -1331,6 +1495,10 @@ def main():
         f"{history['completedThroughWeek']}"
     )
 
+
+# =========================================================
+# RUN
+# =========================================================
 
 if __name__ == "__main__":
 
