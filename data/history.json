@@ -121,7 +121,9 @@
           "opponentId": 9,
           "opponentName": "Apukalypse Now, Skattebo Later",
           "margin": 72.1
-        }
+        },
+        "giantKiller": null,
+        "stockRising": null
       }
     },
     {
@@ -242,6 +244,24 @@
           "opponentId": 12,
           "opponentName": "Ladiboyz",
           "margin": 72.3
+        },
+        "giantKiller": {
+          "teamId": 4,
+          "teamName": "Nabershood Cookout",
+          "opponentId": 5,
+          "opponentName": "Pitts Creek",
+          "enteringRank": 10,
+          "opponentEnteringRank": 2,
+          "rankGap": 8,
+          "margin": 19.2
+        },
+        "stockRising": {
+          "teamId": 12,
+          "teamName": "Ladiboyz",
+          "score": 153.6,
+          "previousAverage": 118.6,
+          "improvement": 35.0,
+          "weeksCompared": 1
         }
       }
     },
@@ -363,6 +383,24 @@
           "opponentId": 11,
           "opponentName": "Red Zone Redbirds",
           "margin": 38.1
+        },
+        "giantKiller": {
+          "teamId": 5,
+          "teamName": "Pitts Creek",
+          "opponentId": 9,
+          "opponentName": "Apukalypse Now, Skattebo Later",
+          "enteringRank": 5,
+          "opponentEnteringRank": 1,
+          "rankGap": 4,
+          "margin": 11.8
+        },
+        "stockRising": {
+          "teamId": 6,
+          "teamName": "Double Dookie Dawgs",
+          "score": 150.0,
+          "previousAverage": 93.4,
+          "improvement": 56.6,
+          "weeksCompared": 2
         }
       }
     }
