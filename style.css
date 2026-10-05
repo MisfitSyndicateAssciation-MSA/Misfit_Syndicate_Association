@@ -23,63 +23,50 @@ body{
 
 
 /* =========================================================
-   HEADER
+   NEW MSA HERO BANNER
    ========================================================= */
 
 header{
-    min-height:420px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:45px 20px;
+    width:100%;
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(30,30,30,.55) 0%,
-            rgba(10,10,10,.62) 50%,
-            rgba(0,0,0,.72) 100%
-        );
+    aspect-ratio:2 / 1;
+
+    min-height:0;
+
+    display:block;
+
+    padding:0;
+
+    position:relative;
+
+    background-color:#050505;
+    background-image:url("msa-hero-banner.png");
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
 
     border-bottom:3px solid #b88a3b;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.65);
+
+    overflow:hidden;
 }
 
-.hero{
-    max-width:1000px;
-}
 
-.logo{
-    width:min(330px,75vw);
-    height:auto;
-    margin-bottom:20px;
+/*
+The new banner artwork already contains:
+- MSA logo
+- league name
+- tagline
+- season
 
-    filter:
-        drop-shadow(
-            0 8px 18px rgba(0,0,0,.7)
-        );
-}
+The original HTML remains in place,
+but is hidden so we do not have duplicate text.
+*/
 
-h1{
-    font-size:clamp(2rem,6vw,4.5rem);
-    letter-spacing:3px;
-    text-transform:uppercase;
-    margin-bottom:12px;
-    text-shadow:0 3px 10px rgba(0,0,0,.9);
-}
-
-.tagline{
-    color:#d6aa55;
-    font-size:clamp(1rem,3vw,1.45rem);
-    font-weight:bold;
-    letter-spacing:1px;
-    text-shadow:0 2px 8px rgba(0,0,0,.9);
-}
-
-.season{
-    margin-top:20px;
-    color:#ccc;
-    text-shadow:0 2px 8px rgba(0,0,0,.9);
+header .hero{
+    display:none;
 }
 
 
@@ -119,6 +106,10 @@ nav{
 
     text-transform:uppercase;
     letter-spacing:1px;
+
+    transition:
+        color .2s ease,
+        background .2s ease;
 }
 
 .nav-links a:hover,
@@ -400,6 +391,22 @@ footer{
 
 
 /* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:900px){
+
+    header{
+        aspect-ratio:2 / 1;
+
+        background-size:cover;
+        background-position:center center;
+    }
+
+}
+
+
+/* =========================================================
    MOBILE
    ========================================================= */
 
@@ -412,23 +419,51 @@ footer{
         background-attachment:scroll;
     }
 
+
+    /*
+    Keep the complete center portion of the MSA banner
+    visible on smaller screens.
+    */
+
     header{
-        min-height:350px;
+        aspect-ratio:16 / 10;
+
+        background-size:cover;
+        background-position:center center;
     }
+
 
     .nav-links a{
         padding:14px 9px;
         font-size:.72rem;
     }
 
+
     main{
         padding:40px 15px;
     }
+
 
     th,
     td{
         padding:10px;
         font-size:.85rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media(max-width:420px){
+
+    header{
+        aspect-ratio:4 / 3;
+
+        background-size:cover;
+        background-position:center center;
     }
 
 }
