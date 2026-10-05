@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 4,
-  "updatedAt": "2026-10-05T03:46:52.366524+00:00",
+  "updatedAt": "2026-10-05T07:33:06.008228+00:00",
   "standings": [
     {
       "rank": 1,
@@ -18,7 +18,7 @@
       "pointsAgainst": 314.1,
       "streakType": "WIN",
       "streakLength": 3,
-      "playoffPct": 83.0,
+      "playoffPct": 86.9,
       "waiverRank": 5
     },
     {
@@ -35,7 +35,7 @@
       "pointsAgainst": 310.8,
       "streakType": "WIN",
       "streakLength": 3,
-      "playoffPct": 80.4,
+      "playoffPct": 82.8,
       "waiverRank": 10
     },
     {
@@ -52,7 +52,7 @@
       "pointsAgainst": 381.6,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 82.3,
+      "playoffPct": 84.4,
       "waiverRank": 4
     },
     {
@@ -69,7 +69,7 @@
       "pointsAgainst": 374.1,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 76.4,
+      "playoffPct": 70.8,
       "waiverRank": 3
     },
     {
@@ -86,7 +86,7 @@
       "pointsAgainst": 349.7,
       "streakType": "WIN",
       "streakLength": 2,
-      "playoffPct": 61.8,
+      "playoffPct": 57.8,
       "waiverRank": 9
     },
     {
@@ -103,7 +103,7 @@
       "pointsAgainst": 340.5,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 55.8,
+      "playoffPct": 57.9,
       "waiverRank": 2
     },
     {
@@ -120,7 +120,7 @@
       "pointsAgainst": 371.9,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 51.9,
+      "playoffPct": 51.0,
       "waiverRank": 8
     },
     {
@@ -137,7 +137,7 @@
       "pointsAgainst": 375.8,
       "streakType": "LOSS",
       "streakLength": 2,
-      "playoffPct": 56.8,
+      "playoffPct": 54.6,
       "waiverRank": 7
     },
     {
@@ -154,7 +154,7 @@
       "pointsAgainst": 485.7,
       "streakType": "LOSS",
       "streakLength": 3,
-      "playoffPct": 23.6,
+      "playoffPct": 21.5,
       "waiverRank": 6
     },
     {
@@ -171,7 +171,7 @@
       "pointsAgainst": 434.6,
       "streakType": "LOSS",
       "streakLength": 3,
-      "playoffPct": 28.1,
+      "playoffPct": 32.4,
       "waiverRank": 1
     }
   ],
