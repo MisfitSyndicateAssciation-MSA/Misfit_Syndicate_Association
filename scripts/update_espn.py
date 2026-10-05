@@ -685,6 +685,201 @@ def build_history(
 
 
         # -------------------------------------------------
+        # MSA WEEKLY AWARDS - PHASE 2
+        # -------------------------------------------------
+
+        # Reconstruct standings ENTERING this week using only
+        # completed matchups from earlier weeks.
+        entering_records = {
+            team_id: {
+                "teamId": team_id,
+                "teamName": team_name,
+                "wins": 0,
+                "losses": 0,
+                "ties": 0,
+                "pointsFor": 0.0,
+            }
+            for team_id, team_name in TEAM_NAMES.items()
+        }
+
+        for prior_week_data in weeks:
+
+            for prior_matchup in prior_week_data["matchups"]:
+
+                away_id = prior_matchup["awayTeamId"]
+                home_id = prior_matchup["homeTeamId"]
+
+                entering_records[away_id]["pointsFor"] += (
+                    prior_matchup["awayScore"]
+                )
+
+                entering_records[home_id]["pointsFor"] += (
+                    prior_matchup["homeScore"]
+                )
+
+                winner_id = prior_matchup["winnerTeamId"]
+                loser_id = prior_matchup["loserTeamId"]
+
+                if winner_id is None:
+
+                    entering_records[away_id]["ties"] += 1
+                    entering_records[home_id]["ties"] += 1
+
+                else:
+
+                    entering_records[winner_id]["wins"] += 1
+                    entering_records[loser_id]["losses"] += 1
+
+        entering_standings = sorted(
+            entering_records.values(),
+            key=lambda team: (
+                -team["wins"],
+                team["losses"],
+                -team["pointsFor"],
+                team["teamId"],
+            )
+        )
+
+        entering_rank = {
+            team["teamId"]: rank
+            for rank, team in enumerate(
+                entering_standings,
+                start=1
+            )
+        }
+
+        # Week 1 has no prior standings, so Giant Killer
+        # begins in Week 2.
+        giant_killer = None
+
+        if week > 1:
+
+            upset_candidates = []
+
+            for matchup in week_matchups:
+
+                winner_id = matchup["winnerTeamId"]
+                loser_id = matchup["loserTeamId"]
+
+                if (
+                    winner_id is None
+                    or loser_id is None
+                ):
+                    continue
+
+                winner_rank = entering_rank[winner_id]
+                loser_rank = entering_rank[loser_id]
+
+                # An upset only counts when the winner entered
+                # the week ranked lower than the team it beat.
+                rank_gap = winner_rank - loser_rank
+
+                if rank_gap <= 0:
+                    continue
+
+                upset_candidates.append({
+                    "teamId": winner_id,
+                    "teamName": TEAM_NAMES.get(
+                        winner_id,
+                        f"Team {winner_id}"
+                    ),
+                    "opponentId": loser_id,
+                    "opponentName": TEAM_NAMES.get(
+                        loser_id,
+                        f"Team {loser_id}"
+                    ),
+                    "enteringRank": winner_rank,
+                    "opponentEnteringRank": loser_rank,
+                    "rankGap": rank_gap,
+                    "margin": matchup["margin"],
+                })
+
+            if upset_candidates:
+
+                giant_killer = max(
+                    upset_candidates,
+                    key=lambda item: (
+                        item["rankGap"],
+                        item["margin"],
+                    )
+                )
+
+        # Stock Rising measures the largest scoring improvement
+        # against a team's recent completed-week average.
+        stock_rising = None
+
+        if week > 1:
+
+            stock_candidates = []
+
+            for team_score in team_scores:
+
+                team_id = team_score["teamId"]
+                recent_scores = []
+
+                # Use up to the previous two completed weeks.
+                for prior_week_data in weeks[-2:]:
+
+                    for prior_matchup in prior_week_data["matchups"]:
+
+                        if prior_matchup["awayTeamId"] == team_id:
+                            recent_scores.append(
+                                prior_matchup["awayScore"]
+                            )
+                            break
+
+                        if prior_matchup["homeTeamId"] == team_id:
+                            recent_scores.append(
+                                prior_matchup["homeScore"]
+                            )
+                            break
+
+                if not recent_scores:
+                    continue
+
+                previous_average = (
+                    sum(recent_scores) /
+                    len(recent_scores)
+                )
+
+                improvement = (
+                    team_score["score"] -
+                    previous_average
+                )
+
+                stock_candidates.append({
+                    "teamId": team_id,
+                    "teamName": team_score["teamName"],
+                    "score": team_score["score"],
+                    "previousAverage": round(
+                        previous_average,
+                        2
+                    ),
+                    "improvement": round(
+                        improvement,
+                        2
+                    ),
+                    "weeksCompared": len(recent_scores),
+                })
+
+            positive_stock = [
+                item
+                for item in stock_candidates
+                if item["improvement"] > 0
+            ]
+
+            if positive_stock:
+
+                stock_rising = max(
+                    positive_stock,
+                    key=lambda item: (
+                        item["improvement"],
+                        item["score"],
+                    )
+                )
+
+
+        # -------------------------------------------------
         # MSA WEEKLY AWARDS - PHASE 1
         # -------------------------------------------------
 
@@ -755,6 +950,12 @@ def build_history(
                 ),
                 "margin": biggest_blowout["margin"],
             },
+
+            "giantKiller":
+                giant_killer,
+
+            "stockRising":
+                stock_rising,
         }
 
 
