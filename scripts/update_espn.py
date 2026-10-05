@@ -8,19 +8,32 @@ LEAGUE_ID = "398889101"
 SEASON = "2026"
 
 
+# =========================================================
+# ESPN API
+#
+# mMatchupScore + mScoreboard are included because ESPN's
+# live Scoreboard page uses these views for current-week
+# matchup scoring.
+# =========================================================
+
 ESPN_URL = (
     f"https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/"
     f"seasons/{SEASON}/segments/0/leagues/{LEAGUE_ID}"
     "?view=mTeam"
     "&view=mStandings"
     "&view=mMatchup"
+    "&view=mMatchupScore"
+    "&view=mScoreboard"
     "&view=mBoxscore"
     "&view=mLiveScoring"
     "&view=mRoster"
 )
 
 
-# Commissioner-approved MSA owner names.
+# =========================================================
+# OFFICIAL MSA OWNERS
+# =========================================================
+
 OWNER_OVERRIDES = {
     1: "Steve Perez",
     3: "Mark Torres",
@@ -35,7 +48,10 @@ OWNER_OVERRIDES = {
 }
 
 
-# ESPN lineup slot IDs.
+# =========================================================
+# ESPN LINEUP SLOT IDS
+# =========================================================
+
 LINEUP_SLOTS = {
     0: "QB",
     2: "RB",
@@ -49,7 +65,10 @@ LINEUP_SLOTS = {
 }
 
 
-# ESPN default position IDs.
+# =========================================================
+# ESPN PLAYER POSITION IDS
+# =========================================================
+
 PLAYER_POSITIONS = {
     1: "QB",
     2: "RB",
@@ -60,7 +79,10 @@ PLAYER_POSITIONS = {
 }
 
 
-# NFL pro team IDs used by ESPN.
+# =========================================================
+# ESPN NFL TEAM IDS
+# =========================================================
+
 NFL_TEAMS = {
     0: "FA",
     1: "ATL",
@@ -98,6 +120,10 @@ NFL_TEAMS = {
 }
 
 
+# =========================================================
+# FETCH ESPN
+# =========================================================
+
 def fetch_espn():
 
     request = urllib.request.Request(
@@ -118,18 +144,109 @@ def fetch_espn():
         )
 
 
+# =========================================================
+# CURRENT SCORE HELPER
+#
+# ESPN's live scoreboard exposes team scores through
+# pointsByScoringPeriod.
+#
+# Example:
+#
+# "pointsByScoringPeriod": {
+#     "4": 132.5
+# }
+#
+# We use that first.
+#
+# totalPoints remains as a fallback so the site does not
+# break if ESPN changes the response for another week.
+# =========================================================
+
+def get_current_score(
+    matchup_side,
+    current_week
+):
+
+    points_by_period = (
+        matchup_side.get(
+            "pointsByScoringPeriod",
+            {}
+        )
+    )
+
+    week_key = str(current_week)
+
+    if week_key in points_by_period:
+
+        try:
+
+            return round(
+                float(
+                    points_by_period[
+                        week_key
+                    ]
+                ),
+                2,
+            )
+
+        except (
+            TypeError,
+            ValueError
+        ):
+
+            pass
+
+
+    total_points = (
+        matchup_side.get(
+            "totalPoints"
+        )
+    )
+
+    if total_points is not None:
+
+        try:
+
+            return round(
+                float(total_points),
+                2,
+            )
+
+        except (
+            TypeError,
+            ValueError
+        ):
+
+            pass
+
+
+    return 0.0
+
+
+# =========================================================
+# BUILD ROSTERS
+# =========================================================
+
 def build_rosters(raw):
 
     rosters = {}
 
 
-    for team in raw.get("teams", []):
+    for team in raw.get(
+        "teams",
+        []
+    ):
 
         team_id = team.get("id")
 
         roster_entries = (
-            team.get("roster", {})
-            .get("entries", [])
+            team.get(
+                "roster",
+                {}
+            ).get(
+                "entries",
+                []
+            )
         )
 
 
@@ -154,7 +271,10 @@ def build_rosters(raw):
             )
 
 
-            player_id = player.get("id")
+            player_id = (
+                player.get("id")
+            )
+
 
             player_name = (
                 player.get(
@@ -219,28 +339,56 @@ def build_rosters(raw):
 
 
             players.append({
-                "playerId": player_id,
-                "name": player_name,
-                "position": position,
-                "nflTeam": nfl_team,
-                "lineupSlot": lineup_slot,
-                "lineupSlotId": lineup_slot_id,
-                "injuryStatus": injury_status,
+
+                "playerId":
+                    player_id,
+
+                "name":
+                    player_name,
+
+                "position":
+                    position,
+
+                "nflTeam":
+                    nfl_team,
+
+                "lineupSlot":
+                    lineup_slot,
+
+                "lineupSlotId":
+                    lineup_slot_id,
+
+                "injuryStatus":
+                    injury_status,
+
             })
 
 
-        rosters[str(team_id)] = players
+        rosters[
+            str(team_id)
+        ] = players
 
 
     return rosters
 
+
+# =========================================================
+# BUILD CLEAN DATA
+# =========================================================
 
 def build_clean_data(raw):
 
     teams = []
 
 
-    for team in raw.get("teams", []):
+    # -----------------------------------------------------
+    # TEAMS / STANDINGS
+    # -----------------------------------------------------
+
+    for team in raw.get(
+        "teams",
+        []
+    ):
 
         record = (
             team.get(
@@ -368,10 +516,18 @@ def build_clean_data(raw):
     ):
 
         standings.append({
-            "rank": position,
+
+            "rank":
+                position,
+
             **team,
+
         })
 
+
+    # -----------------------------------------------------
+    # CURRENT WEEK
+    # -----------------------------------------------------
 
     current_week = raw.get(
         "scoringPeriodId",
@@ -384,6 +540,10 @@ def build_clean_data(raw):
         ),
     )
 
+
+    # -----------------------------------------------------
+    # CURRENT MATCHUPS
+    # -----------------------------------------------------
 
     matchups = []
 
@@ -414,6 +574,21 @@ def build_clean_data(raw):
         )
 
 
+        away_score = (
+            get_current_score(
+                away,
+                current_week
+            )
+        )
+
+        home_score = (
+            get_current_score(
+                home,
+                current_week
+            )
+        )
+
+
         matchups.append({
 
             "week":
@@ -430,22 +605,10 @@ def build_clean_data(raw):
                 ),
 
             "awayScore":
-                round(
-                    away.get(
-                        "totalPoints",
-                        0
-                    ),
-                    2,
-                ),
+                away_score,
 
             "homeScore":
-                round(
-                    home.get(
-                        "totalPoints",
-                        0
-                    ),
-                    2,
-                ),
+                home_score,
 
             "awayProjection":
                 round(
@@ -474,8 +637,18 @@ def build_clean_data(raw):
         })
 
 
-    rosters = build_rosters(raw)
+    # -----------------------------------------------------
+    # ROSTERS
+    # -----------------------------------------------------
 
+    rosters = (
+        build_rosters(raw)
+    )
+
+
+    # -----------------------------------------------------
+    # FINAL JSON
+    # -----------------------------------------------------
 
     return {
 
@@ -504,6 +677,10 @@ def build_clean_data(raw):
 
     }
 
+
+# =========================================================
+# MAIN
+# =========================================================
 
 def main():
 
@@ -576,6 +753,31 @@ def main():
     print(
         f"Rostered Players: {total_players}"
     )
+
+
+    # -----------------------------------------------------
+    # SCORE DEBUG
+    #
+    # This lets us verify the ESPN live scores directly
+    # inside the GitHub Actions log before touching HTML.
+    # -----------------------------------------------------
+
+    print(
+        "Current matchup scores:"
+    )
+
+
+    for matchup in clean[
+        "matchups"
+    ]:
+
+        print(
+            f"Team {matchup['awayTeamId']}: "
+            f"{matchup['awayScore']} "
+            f"vs "
+            f"Team {matchup['homeTeamId']}: "
+            f"{matchup['homeScore']}"
+        )
 
 
 if __name__ == "__main__":
