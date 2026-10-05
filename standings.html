@@ -1,17 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Standings | Misfit Syndicate Association</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+<title>
+Standings | Misfit Syndicate Association
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
+
+<style>
+
+/* =========================================================
+   MSA STANDINGS
+   ========================================================= */
+
+.standings-wrapper {
+    overflow-x: auto;
+}
+
+
+/*
+Team column
+*/
+
+.standings-team-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+}
+
+.standings-team-link:hover {
+    color: #f5b642;
+}
+
+
+/*
+Official MSA team logos
+*/
+
+.standings-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+
+/*
+Team name
+*/
+
+.standings-team-name {
+    line-height: 1.2;
+}
+
+
+/*
+Rank styling
+*/
+
+.rank-cell {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/*
+Record
+*/
+
+.record-cell {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/*
+Points
+*/
+
+.points-cell {
+    white-space: nowrap;
+}
+
+
+/*
+Playoff odds
+*/
+
+.playoff-cell {
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .standings-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .standings-team-link {
+        gap: 8px;
+    }
+
+    .standings-team-name {
+        min-width: 130px;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
 <header>
+
 <div class="hero">
 
 <img
@@ -19,65 +145,124 @@ src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
 alt="Misfit Syndicate Association Logo"
 class="logo">
 
-<h1>Misfit Syndicate Association</h1>
+<h1>
+Misfit Syndicate Association
+</h1>
 
 <div class="tagline">
+
 Fantasy Football for the Beautifully Dysfunctional
+
 </div>
 
 <div class="season">
+
 🏈 2026 MSA Season
+
 </div>
 
 </div>
+
 </header>
 
 
 <nav>
+
 <div class="nav-links">
 
-<a href="index.html">Home</a>
-<a href="matchups.html">Matchups</a>
-<a href="standings.html" class="active">Standings</a>
-<a href="teams.html">Teams</a>
-<a href="syndicate-report.html">Syndicate Report</a>
-<a href="league-history.html">League History</a>
+<a href="index.html">
+Home
+</a>
+
+<a href="matchups.html">
+Matchups
+</a>
+
+<a
+href="standings.html"
+class="active">
+Standings
+</a>
+
+<a href="teams.html">
+Teams
+</a>
+
+<a href="syndicate-report.html">
+Syndicate Report
+</a>
+
+<a href="league-history.html">
+League History
+</a>
 
 </div>
+
 </nav>
 
 
 <main>
 
+
 <h2 class="section-title">
+
 🏆 MSA 2026 STANDINGS
+
 </h2>
 
-<p class="section-sub" id="standings-status">
+
+<p
+class="section-sub"
+id="standings-status">
+
 Loading latest standings from ESPN...
+
 </p>
 
 
-<div style="overflow-x:auto">
+<div class="standings-wrapper">
 
 <table>
 
 <thead>
+
 <tr>
-<th>RANK</th>
-<th>TEAM</th>
-<th>RECORD</th>
-<th>POINTS FOR</th>
-<th>PLAYOFF ODDS</th>
+
+<th>
+RANK
+</th>
+
+<th>
+TEAM
+</th>
+
+<th>
+RECORD
+</th>
+
+<th>
+POINTS FOR
+</th>
+
+<th>
+PLAYOFF ODDS
+</th>
+
 </tr>
+
 </thead>
+
 
 <tbody id="standings-body">
 
 <tr>
+
 <td colspan="5">
+
 Loading the latest MSA chaos...
+
 </td>
+
 </tr>
 
 </tbody>
@@ -86,147 +271,402 @@ Loading the latest MSA chaos...
 
 </div>
 
+
 </main>
 
 
 <footer>
+
 © 2026 Misfit Syndicate Association • Built by Misfits, for Misfits
+
 </footer>
 
 
 <script>
 
-async function loadStandings() {
 
-    const standingsBody =
-        document.getElementById("standings-body");
+/* =========================================================
+   OFFICIAL MSA TEAM LOGOS
+   ========================================================= */
 
-    const status =
-        document.getElementById("standings-status");
+const teamLogos = {
 
-    try {
+    1: "Big Papi Queso Logo.png",
 
-        /*
-        The timestamp prevents the browser from showing
-        an old cached copy of the ESPN data.
-        */
+    3: "Team Ramrod Logo.png",
 
-        const response = await fetch(
-            "data/league.json?t=" + Date.now()
-        );
+    4: "Nabershood Cookout logo.png",
 
-        if (!response.ok) {
-            throw new Error(
-                "Could not load league.json"
-            );
-        }
+    5: "Pitts Creek Logo.png",
 
-        const data = await response.json();
+    6: "Double Dookies logo.jpeg",
 
-        standingsBody.innerHTML = "";
+    8: "Big Pickens Energy logo.png",
 
-        data.standings.forEach((team, index) => {
+    9: "Apukalypse Now Logo.png",
 
-            const row =
-                document.createElement("tr");
+    10: "DB EATERS LOGO.png",
 
-            let rankDisplay = team.rank;
+    11: "Red Zone Redbirds.png",
 
-            /*
-            Give first place the crown
-            and last place the skull.
-            */
+    12: "Ladiboyz Logo.png"
 
-            if (index === 0) {
-                rankDisplay =
-                    "👑 " + team.rank;
-            }
-
-            if (
-                index ===
-                data.standings.length - 1
-            ) {
-                rankDisplay =
-                    "💀 " + team.rank;
-            }
+};
 
 
-            const record =
-                team.wins +
-                "-" +
-                team.losses +
-                "-" +
-                team.ties;
+/* =========================================================
+   OFFICIAL MSA DISPLAY NAMES
+   ========================================================= */
+
+const teamDisplayNames = {
+
+    1: "Big Papi Queso",
+
+    3: "Team Ramrod",
+
+    4: "Nabershood Cookout",
+
+    5: "Pitts Creek",
+
+    6: "Double Dookie Dawgs",
+
+    8: "Big Pickens Energy",
+
+    9: "Apukalypse Now, Skattebo Later",
+
+    10: "Db.EAtERs",
+
+    11: "Red Zone Redbirds",
+
+    12: "Ladiboyz"
+
+};
 
 
-            const playoffOdds =
-                team.playoffPct.toFixed(1) +
-                "%";
+/* =========================================================
+   RECORD
+   ========================================================= */
+
+function getRecord(team) {
+
+    let record =
+        team.wins +
+        "-" +
+        team.losses;
 
 
-            row.innerHTML = `
-                <td>${rankDisplay}</td>
+    if (team.ties > 0) {
 
-                <td>${team.name}</td>
-
-                <td>${record}</td>
-
-                <td>
-                    ${team.pointsFor.toFixed(1)}
-                </td>
-
-                <td>${playoffOdds}</td>
-            `;
-
-            standingsBody.appendChild(row);
-
-        });
-
-
-        /*
-        ESPN reports the current scoring week.
-        If we're currently in Week 4,
-        completed standings are through Week 3.
-        */
-
-        const completedWeek =
-            Math.max(
-                0,
-                data.currentWeek - 1
-            );
-
-        status.textContent =
-            "Updated automatically from ESPN • Through Week " +
-            completedWeek;
+        record +=
+            "-" +
+            team.ties;
 
     }
 
-    catch (error) {
 
-        console.error(
-            "MSA ESPN data error:",
-            error
-        );
-
-        status.textContent =
-            "Unable to load ESPN standings.";
-
-        standingsBody.innerHTML = `
-            <tr>
-                <td colspan="5">
-                    ESPN data temporarily unavailable.
-                </td>
-            </tr>
-        `;
-
-    }
+    return record;
 
 }
 
+
+/* =========================================================
+   LOAD STANDINGS
+   ========================================================= */
+
+async function loadStandings() {
+
+
+    const standingsBody =
+        document.getElementById(
+            "standings-body"
+        );
+
+
+    const status =
+        document.getElementById(
+            "standings-status"
+        );
+
+
+    try {
+
+
+        /*
+        Timestamp prevents the browser
+        from showing cached ESPN data.
+        */
+
+        const response =
+            await fetch(
+
+                "data/league.json?t=" +
+                Date.now()
+
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Could not load league.json"
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        standingsBody.innerHTML = "";
+
+
+        /* =================================================
+           BUILD STANDINGS
+           ================================================= */
+
+        data.standings.forEach(
+            (team, index) => {
+
+
+                const row =
+                    document.createElement(
+                        "tr"
+                    );
+
+
+                const displayName =
+                    teamDisplayNames[team.id]
+                    || team.name;
+
+
+                const logo =
+                    teamLogos[team.id];
+
+
+                const record =
+                    getRecord(team);
+
+
+                /*
+                First place gets the crown.
+
+                Last place receives the
+                traditional MSA symbol
+                of shame.
+                */
+
+                let rankDisplay =
+                    team.rank;
+
+
+                if (index === 0) {
+
+                    rankDisplay =
+                        "👑 " +
+                        team.rank;
+
+                }
+
+
+                if (
+                    index ===
+                    data.standings.length - 1
+                ) {
+
+                    rankDisplay =
+                        "💀 " +
+                        team.rank;
+
+                }
+
+
+                /*
+                Playoff odds
+                */
+
+                const playoffOdds =
+
+                    Number(
+                        team.playoffPct
+                    ).toFixed(1)
+
+                    +
+
+                    "%";
+
+
+                /*
+                Team logo
+                */
+
+                let logoHTML = "";
+
+
+                if (logo) {
+
+                    logoHTML = `
+
+                        <img
+                        src="${encodeURI(logo)}"
+                        alt="${displayName} logo"
+                        class="standings-logo">
+
+                    `;
+
+                }
+
+
+                /*
+                Build standings row.
+
+                Clicking the team takes
+                the visitor directly to
+                Team Headquarters.
+                */
+
+                row.innerHTML = `
+
+
+                    <td class="rank-cell">
+
+                    ${rankDisplay}
+
+                    </td>
+
+
+                    <td>
+
+                        <a
+                        href="team.html?id=${team.id}"
+                        class="standings-team-link">
+
+                            ${logoHTML}
+
+
+                            <span
+                            class="standings-team-name">
+
+                            ${displayName}
+
+                            </span>
+
+                        </a>
+
+                    </td>
+
+
+                    <td class="record-cell">
+
+                    ${record}
+
+                    </td>
+
+
+                    <td class="points-cell">
+
+                    ${Number(
+                        team.pointsFor
+                    ).toFixed(1)}
+
+                    </td>
+
+
+                    <td class="playoff-cell">
+
+                    ${playoffOdds}
+
+                    </td>
+
+
+                `;
+
+
+                standingsBody.appendChild(
+                    row
+                );
+
+
+            }
+        );
+
+
+        /* =================================================
+           UPDATE STATUS
+           =================================================
+
+        ESPN reports the current scoring week.
+
+        Example:
+        If ESPN says Week 4 is current,
+        completed standings are through Week 3.
+        ================================================= */
+
+        const completedWeek =
+
+            Math.max(
+
+                0,
+
+                data.currentWeek - 1
+
+            );
+
+
+        status.textContent =
+
+            "Updated automatically from ESPN • Through Week " +
+
+            completedWeek;
+
+
+    }
+
+
+    catch (error) {
+
+
+        console.error(
+
+            "MSA ESPN data error:",
+
+            error
+
+        );
+
+
+        status.textContent =
+
+            "Unable to load ESPN standings.";
+
+
+        standingsBody.innerHTML = `
+
+            <tr>
+
+                <td colspan="5">
+
+                ESPN data temporarily unavailable.
+
+                </td>
+
+            </tr>
+
+        `;
+
+
+    }
+
+
+}
+
+
 loadStandings();
+
 
 </script>
 
 
 </body>
+
 </html>
