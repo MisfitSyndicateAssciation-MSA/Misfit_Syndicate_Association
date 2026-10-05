@@ -1,14 +1,1085 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home | Misfit Syndicate Association</title><link rel="stylesheet" href="style.css"></head>
-<body><header><div class="hero"><img src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png" alt="Misfit Syndicate Association Logo" class="logo">
-<h1>Misfit Syndicate Association</h1><div class="tagline">Fantasy Football for the Beautifully Dysfunctional</div><div class="season">🏈 2026 MSA Season</div></div></header>
-<nav><div class="nav-links">
-<a href="index.html" class="active">Home</a><a href="matchups.html">Matchups</a><a href="standings.html">Standings</a><a href="teams.html">Teams</a><a href="syndicate-report.html">Syndicate Report</a><a href="league-history.html">League History</a>
-</div></nav><main><section class="panel center"><h2>Welcome to the Syndicate</h2><p class="muted">Welcome to the official home of the Misfit Syndicate Association. Ten teams. One championship. Questionable trades, terrible decisions, endless shit talking, and an entire season to prove who actually knows football.</p></section>
-<section class="quick-links grid">
-<a class="card" href="matchups.html"><h3>🏈 Week 4 Matchups</h3><p>Five games. Ten misfits. Zero accountability.</p></a>
-<a class="card" href="standings.html"><h3>🏆 Standings</h3><p>See who is running the Syndicate and who is already in trouble.</p></a>
-<a class="card" href="teams.html"><h3>☠️ Meet the Misfits</h3><p>Ten questionable decision-makers. One league.</p></a>
-<a class="card" href="syndicate-report.html"><h3>🎙️ The Syndicate Report</h3><p>Watch Episode 8 and dig through the full video archive.</p></a>
-</section></main><footer>© 2026 Misfit Syndicate Association • Built by Misfits, for Misfits</footer></body></html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Home | Misfit Syndicate Association</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* =========================================================
+   MSA CENTRAL DASHBOARD
+   ========================================================= */
+
+.dashboard {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.welcome-panel {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.welcome-panel h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.dashboard-label {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: .8rem;
+    opacity: .6;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   LEAGUE STATUS
+   ========================================================= */
+
+.league-status {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 25px 0 35px 0;
+}
+
+.status-card {
+    text-align: center;
+    padding: 20px 12px;
+}
+
+.status-label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .7rem;
+    opacity: .6;
+    margin-bottom: 7px;
+}
+
+.status-value {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   DASHBOARD SECTIONS
+   ========================================================= */
+
+.dashboard-section {
+    margin: 40px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.section-description {
+    text-align: center;
+    opacity: .6;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   MATCHUPS
+   ========================================================= */
+
+.home-matchups {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.home-matchup {
+    text-align: center;
+    padding: 18px;
+}
+
+.matchup-team {
+    font-weight: bold;
+    margin: 6px 0;
+}
+
+.matchup-vs {
+    font-size: .75rem;
+    opacity: .5;
+    margin: 5px;
+}
+
+.matchup-projection {
+    margin-top: 10px;
+    font-size: .8rem;
+    opacity: .65;
+}
+
+
+/* =========================================================
+   STANDINGS SNAPSHOT
+   ========================================================= */
+
+.standings-snapshot {
+    max-width: 800px;
+    margin: auto;
+}
+
+.snapshot-row {
+    display: grid;
+    grid-template-columns:
+        45px 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 15px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.snapshot-row:last-child {
+    border-bottom: none;
+}
+
+.snapshot-rank {
+    font-weight: bold;
+    text-align: center;
+}
+
+.snapshot-team {
+    font-weight: bold;
+}
+
+.snapshot-record {
+    opacity: .7;
+}
+
+
+/* =========================================================
+   QUICK LINKS
+   ========================================================= */
+
+.quick-links {
+    margin-top: 20px;
+}
+
+.quick-links .card {
+    text-decoration: none;
+    transition:
+        transform .2s ease,
+        border-color .2s ease;
+}
+
+.quick-links .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(245,182,66,.45);
+}
+
+
+/* =========================================================
+   SYNDICATE REPORT FEATURE
+   ========================================================= */
+
+.report-feature {
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.report-feature h3 {
+    margin-top: 0;
+}
+
+.report-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid rgba(245,182,66,.4);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .welcome-panel h2 {
+        font-size: 1.6rem;
+    }
+
+    .league-status {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .snapshot-row {
+        grid-template-columns:
+            35px 1fr auto;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<img
+src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
+alt="Misfit Syndicate Association Logo"
+class="logo">
+
+<h1>
+Misfit Syndicate Association
+</h1>
+
+<div class="tagline">
+Fantasy Football for the Beautifully Dysfunctional
+</div>
+
+<div class="season">
+🏈 2026 MSA Season
+</div>
+
+</div>
+
+</header>
+
+
+<nav>
+
+<div class="nav-links">
+
+<a
+href="index.html"
+class="active">
+Home
+</a>
+
+<a href="matchups.html">
+Matchups
+</a>
+
+<a href="standings.html">
+Standings
+</a>
+
+<a href="teams.html">
+Teams
+</a>
+
+<a href="syndicate-report.html">
+Syndicate Report
+</a>
+
+<a href="league-history.html">
+League History
+</a>
+
+</div>
+
+</nav>
+
+
+<main>
+
+<div class="dashboard">
+
+
+<!-- =====================================================
+     WELCOME
+     ===================================================== -->
+
+<section class="panel welcome-panel">
+
+<div class="dashboard-label">
+☠️ MSA CENTRAL ☠️
+</div>
+
+<h2>
+Welcome to the Syndicate
+</h2>
+
+<p class="muted">
+
+Welcome to the official home of the
+Misfit Syndicate Association.
+
+Ten teams. One championship.
+Questionable trades, terrible decisions,
+endless shit talking, and an entire season
+to prove who actually knows football.
+
+</p>
+
+</section>
+
+
+
+<!-- =====================================================
+     LIVE LEAGUE STATUS
+     ===================================================== -->
+
+<section
+class="league-status"
+id="league-status">
+
+<div class="card status-card">
+
+<span class="status-label">
+Current Week
+</span>
+
+<span class="status-value">
+Loading...
+</span>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CURRENT MATCHUPS
+     ===================================================== -->
+
+<section class="dashboard-section">
+
+<h2 class="section-heading">
+🏈 THIS WEEK IN THE SYNDICATE
+</h2>
+
+<p
+class="section-description"
+id="matchup-status">
+
+Loading this week's chaos...
+
+</p>
+
+<div
+class="home-matchups"
+id="home-matchups">
+
+<div class="card center">
+ESPN is locating the Misfits...
+</div>
+
+</div>
+
+<p style="text-align:center; margin-top:20px;">
+
+<a href="matchups.html">
+View Full Matchup Headquarters →
+</a>
+
+</p>
+
+</section>
+
+
+
+<!-- =====================================================
+     STANDINGS SNAPSHOT
+     ===================================================== -->
+
+<section class="dashboard-section">
+
+<h2 class="section-heading">
+🏆 THE PECKING ORDER
+</h2>
+
+<p class="section-description">
+
+Who's running the Syndicate and who's
+already preparing excuses.
+
+</p>
+
+<div
+class="card standings-snapshot"
+id="standings-snapshot">
+
+Loading standings...
+
+</div>
+
+<p style="text-align:center; margin-top:20px;">
+
+<a href="standings.html">
+View Full Standings →
+</a>
+
+</p>
+
+</section>
+
+
+
+<!-- =====================================================
+     SYNDICATE REPORT
+     ===================================================== -->
+
+<section class="dashboard-section">
+
+<div class="card report-feature">
+
+<h3>
+🎙️ THE SYNDICATE REPORT
+</h3>
+
+<p>
+
+Weekly matchup previews, reviews,
+league drama, terrible predictions
+and commissioner propaganda.
+
+</p>
+
+<p>
+
+<strong>
+Episode 8:
+Week 3 Review + Week 4 Preview
+</strong>
+
+</p>
+
+<a
+href="syndicate-report.html"
+class="report-button">
+
+WATCH THE REPORT →
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUICK LINKS
+     ===================================================== -->
+
+<section class="dashboard-section">
+
+<h2 class="section-heading">
+☠️ ENTER THE SYNDICATE
+</h2>
+
+<p class="section-description">
+Everything you need to survive the league.
+</p>
+
+<div class="quick-links grid">
+
+
+<a
+class="card"
+href="matchups.html">
+
+<h3>
+🏈 Matchups
+</h3>
+
+<p>
+See who's fighting who this week.
+</p>
+
+</a>
+
+
+<a
+class="card"
+href="standings.html">
+
+<h3>
+🏆 Standings
+</h3>
+
+<p>
+The official Syndicate pecking order.
+</p>
+
+</a>
+
+
+<a
+class="card"
+href="teams.html">
+
+<h3>
+☠️ Team Headquarters
+</h3>
+
+<p>
+Rosters, owners, records and all ten Misfits.
+</p>
+
+</a>
+
+
+<a
+class="card"
+href="syndicate-report.html">
+
+<h3>
+🎙️ Syndicate Report
+</h3>
+
+<p>
+Watch the latest episode and full archive.
+</p>
+
+</a>
+
+
+<a
+class="card"
+href="league-history.html">
+
+<h3>
+📜 League History
+</h3>
+
+<p>
+Champions, failures and permanent MSA lore.
+</p>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+</div>
+
+</main>
+
+
+<footer>
+
+© 2026 Misfit Syndicate Association • Built by Misfits, for Misfits
+
+</footer>
+
+
+
+<script>
+
+/* =========================================================
+   MSA TEAM EMOJIS
+   ========================================================= */
+
+const teamEmojis = {
+
+    1: "🧀",
+    3: "🐏",
+    4: "🔮",
+    5: "🏴‍☠️",
+    6: "🐕",
+    8: "⚡",
+    9: "😵",
+    10: "🦷",
+    11: "🐦",
+    12: "💋"
+
+};
+
+
+/*
+Official display names.
+
+This also prevents the ESPN Db.EAtERs
+name from producing a double tooth emoji.
+*/
+
+const teamDisplayNames = {
+
+    1: "Big Papi Queso",
+    3: "Team Ramrod",
+    4: "Nabershood Cookout",
+    5: "Pitts Creek",
+    6: "Double Dookie Dawgs",
+    8: "Big Pickens Energy",
+    9: "Apukalypse Now, Skattebo Later",
+    10: "Db.EAtERs",
+    11: "Red Zone Redbirds",
+    12: "Ladiboyz"
+
+};
+
+
+function getTeamName(team) {
+
+    return (
+        teamDisplayNames[team.id]
+        || team.name
+    );
+
+}
+
+
+function getRecord(team) {
+
+    let record =
+        team.wins +
+        "-" +
+        team.losses;
+
+    if (team.ties > 0) {
+
+        record +=
+            "-" +
+            team.ties;
+
+    }
+
+    return record;
+
+}
+
+
+/* =========================================================
+   LOAD DASHBOARD
+   ========================================================= */
+
+async function loadDashboard() {
+
+    const statusContainer =
+        document.getElementById(
+            "league-status"
+        );
+
+    const matchupContainer =
+        document.getElementById(
+            "home-matchups"
+        );
+
+    const matchupStatus =
+        document.getElementById(
+            "matchup-status"
+        );
+
+    const standingsContainer =
+        document.getElementById(
+            "standings-snapshot"
+        );
+
+
+    try {
+
+        const response =
+            await fetch(
+
+                "data/league.json?t=" +
+                Date.now()
+
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Could not load league.json"
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        const standings =
+            [...data.standings];
+
+
+        /* =================================================
+           LEAGUE LEADER / BASEMENT
+           ================================================= */
+
+        const leader =
+            standings[0];
+
+
+        const basement =
+            standings[
+                standings.length - 1
+            ];
+
+
+        statusContainer.innerHTML = `
+
+            <div class="card status-card">
+
+                <span class="status-label">
+                Current Week
+                </span>
+
+                <span class="status-value">
+                Week ${data.currentWeek}
+                </span>
+
+            </div>
+
+
+            <div class="card status-card">
+
+                <span class="status-label">
+                👑 League Leader
+                </span>
+
+                <span class="status-value">
+
+                ${teamEmojis[leader.id] || "🏈"}
+                ${getTeamName(leader)}
+
+                </span>
+
+            </div>
+
+
+            <div class="card status-card">
+
+                <span class="status-label">
+                💀 Basement Dweller
+                </span>
+
+                <span class="status-value">
+
+                ${teamEmojis[basement.id] || "🏈"}
+                ${getTeamName(basement)}
+
+                </span>
+
+            </div>
+
+
+            <div class="card status-card">
+
+                <span class="status-label">
+                Syndicate Size
+                </span>
+
+                <span class="status-value">
+                ${standings.length} Misfits
+                </span>
+
+            </div>
+
+        `;
+
+
+        /* =================================================
+           TEAM LOOKUP
+           ================================================= */
+
+        const teamsById = {};
+
+
+        standings.forEach(team => {
+
+            teamsById[team.id] = team;
+
+        });
+
+
+        /* =================================================
+           CURRENT MATCHUPS
+           ================================================= */
+
+        matchupContainer.innerHTML = "";
+
+
+        const matchups =
+            data.matchups || [];
+
+
+        if (matchups.length === 0) {
+
+            matchupContainer.innerHTML = `
+
+                <div class="card center">
+
+                ESPN hasn't handed us this week's
+                matchup chaos yet.
+
+                </div>
+
+            `;
+
+        }
+
+
+        matchups.forEach(matchup => {
+
+            const homeTeam =
+                teamsById[
+                    matchup.homeTeamId
+                ];
+
+
+            const awayTeam =
+                teamsById[
+                    matchup.awayTeamId
+                ];
+
+
+            if (
+                !homeTeam ||
+                !awayTeam
+            ) {
+
+                return;
+
+            }
+
+
+            const card =
+                document.createElement(
+                    "div"
+                );
+
+
+            card.className =
+                "card home-matchup";
+
+
+            const homeProjection =
+                Number(
+                    matchup.homeProjected || 0
+                );
+
+
+            const awayProjection =
+                Number(
+                    matchup.awayProjected || 0
+                );
+
+
+            let projectionHTML = "";
+
+
+            if (
+                homeProjection > 0 ||
+                awayProjection > 0
+            ) {
+
+                projectionHTML = `
+
+                    <div class="matchup-projection">
+
+                    Projection:
+
+                    ${awayProjection.toFixed(1)}
+
+                    —
+
+                    ${homeProjection.toFixed(1)}
+
+                    </div>
+
+                `;
+
+            }
+
+
+            card.innerHTML = `
+
+                <div class="matchup-team">
+
+                ${teamEmojis[awayTeam.id] || "🏈"}
+                ${getTeamName(awayTeam)}
+
+                </div>
+
+
+                <div class="matchup-vs">
+                VS
+                </div>
+
+
+                <div class="matchup-team">
+
+                ${teamEmojis[homeTeam.id] || "🏈"}
+                ${getTeamName(homeTeam)}
+
+                </div>
+
+
+                ${projectionHTML}
+
+            `;
+
+
+            matchupContainer.appendChild(
+                card
+            );
+
+        });
+
+
+        matchupStatus.textContent =
+
+            "Week " +
+            data.currentWeek +
+            " • Five games • Ten Misfits • Zero accountability.";
+
+
+        /* =================================================
+           STANDINGS SNAPSHOT
+           ================================================= */
+
+        standingsContainer.innerHTML = "";
+
+
+        standings
+            .slice(0, 5)
+            .forEach(team => {
+
+
+                const row =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                row.className =
+                    "snapshot-row";
+
+
+                let rankIcon =
+                    "#" + team.rank;
+
+
+                if (team.rank === 1) {
+
+                    rankIcon = "👑";
+
+                }
+
+
+                row.innerHTML = `
+
+                    <div class="snapshot-rank">
+
+                    ${rankIcon}
+
+                    </div>
+
+
+                    <div class="snapshot-team">
+
+                    ${teamEmojis[team.id] || "🏈"}
+
+                    <a
+                    href="team.html?id=${team.id}">
+
+                    ${getTeamName(team)}
+
+                    </a>
+
+                    </div>
+
+
+                    <div class="snapshot-record">
+
+                    ${getRecord(team)}
+
+                    </div>
+
+                `;
+
+
+                standingsContainer.appendChild(
+                    row
+                );
+
+            });
+
+
+    }
+
+
+    catch (error) {
+
+        console.error(
+            "MSA dashboard error:",
+            error
+        );
+
+
+        statusContainer.innerHTML = `
+
+            <div class="card status-card">
+
+            ESPN is temporarily refusing
+            to cooperate with MSA Central.
+
+            </div>
+
+        `;
+
+
+        matchupStatus.textContent =
+            "Unable to load current matchup data.";
+
+
+        matchupContainer.innerHTML = `
+
+            <div class="card center">
+
+            The chaos is temporarily offline.
+
+            </div>
+
+        `;
+
+
+        standingsContainer.innerHTML = `
+
+            <div style="padding:20px; text-align:center;">
+
+            Unable to load the standings snapshot.
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+loadDashboard();
+
+</script>
+
+
+</body>
+
+</html>
