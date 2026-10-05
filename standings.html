@@ -28,9 +28,45 @@ href="style.css">
 }
 
 
-/*
-Team column
-*/
+/* =========================================================
+   LIVE DATA STATUS
+   ========================================================= */
+
+.live-data-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 12px auto 25px auto;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-size: .68rem;
+    font-weight: bold;
+    opacity: .75;
+}
+
+.live-dot {
+    color: #22c55e;
+}
+
+.live-dot::before {
+    content: "●";
+    margin-right: 5px;
+}
+
+.data-time {
+    color: #f5b642;
+}
+
+.status-divider {
+    opacity: .4;
+}
+
+
+/* =========================================================
+   TEAM COLUMN
+   ========================================================= */
 
 .standings-team-link {
     display: flex;
@@ -46,9 +82,9 @@ Team column
 }
 
 
-/*
-Official MSA team logos
-*/
+/* =========================================================
+   OFFICIAL MSA TEAM LOGOS
+   ========================================================= */
 
 .standings-logo {
     width: 52px;
@@ -59,18 +95,18 @@ Official MSA team logos
 }
 
 
-/*
-Team name
-*/
+/* =========================================================
+   TEAM NAME
+   ========================================================= */
 
 .standings-team-name {
     line-height: 1.2;
 }
 
 
-/*
-Rank styling
-*/
+/* =========================================================
+   RANK
+   ========================================================= */
 
 .rank-cell {
     font-weight: bold;
@@ -78,9 +114,9 @@ Rank styling
 }
 
 
-/*
-Record
-*/
+/* =========================================================
+   RECORD
+   ========================================================= */
 
 .record-cell {
     font-weight: bold;
@@ -88,22 +124,45 @@ Record
 }
 
 
-/*
-Points
-*/
+/* =========================================================
+   POINTS
+   ========================================================= */
 
 .points-cell {
     white-space: nowrap;
 }
 
 
-/*
-Playoff odds
-*/
+/* =========================================================
+   PLAYOFF ODDS
+   ========================================================= */
 
 .playoff-cell {
     white-space: nowrap;
     font-weight: bold;
+}
+
+
+/* =========================================================
+   TOP / BOTTOM VISUAL ACCENTS
+   ========================================================= */
+
+.first-place-row {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(245,182,66,.08),
+            transparent
+        );
+}
+
+.last-place-row {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(180,30,30,.08),
+            transparent
+        );
 }
 
 
@@ -124,6 +183,12 @@ Playoff odds
 
     .standings-team-name {
         min-width: 130px;
+    }
+
+    .live-data-status {
+        font-size: .58rem;
+        gap: 6px;
+        padding: 0 10px;
     }
 
 }
@@ -220,6 +285,25 @@ Loading latest standings from ESPN...
 </p>
 
 
+<div
+class="live-data-status"
+id="live-data-status">
+
+<span class="live-dot">
+ESPN DATA
+</span>
+
+<span class="status-divider">
+•
+</span>
+
+<span>
+Checking for updates...
+</span>
+
+</div>
+
+
 <div class="standings-wrapper">
 
 <table>
@@ -283,6 +367,14 @@ Loading the latest MSA chaos...
 
 
 <script>
+
+
+/* =========================================================
+   PAGE REFRESH SETTINGS
+   ========================================================= */
+
+const REFRESH_INTERVAL =
+    60000;
 
 
 /* =========================================================
@@ -370,6 +462,23 @@ function getRecord(team) {
 
 
 /* =========================================================
+   FORMAT CHECK TIME
+   ========================================================= */
+
+function formatCheckTime() {
+
+    return new Date().toLocaleTimeString(
+        [],
+        {
+            hour: "numeric",
+            minute: "2-digit"
+        }
+    );
+
+}
+
+
+/* =========================================================
    LOAD STANDINGS
    ========================================================= */
 
@@ -388,19 +497,34 @@ async function loadStandings() {
         );
 
 
+    const liveDataStatus =
+        document.getElementById(
+            "live-data-status"
+        );
+
+
     try {
 
 
         /*
-        Timestamp prevents the browser
-        from showing cached ESPN data.
+        Timestamp prevents browser caching.
+
+        The website checks league.json every
+        60 seconds.
+
+        GitHub Actions remains responsible
+        for fetching fresh ESPN data.
         */
 
         const response =
             await fetch(
 
                 "data/league.json?t=" +
-                Date.now()
+                Date.now(),
+
+                {
+                    cache: "no-store"
+                }
 
             );
 
@@ -448,13 +572,9 @@ async function loadStandings() {
                     getRecord(team);
 
 
-                /*
-                First place gets the crown.
-
-                Last place receives the
-                traditional MSA symbol
-                of shame.
-                */
+                /* =========================================
+                   RANK DISPLAY
+                   ========================================= */
 
                 let rankDisplay =
                     team.rank;
@@ -465,6 +585,10 @@ async function loadStandings() {
                     rankDisplay =
                         "👑 " +
                         team.rank;
+
+                    row.classList.add(
+                        "first-place-row"
+                    );
 
                 }
 
@@ -478,27 +602,41 @@ async function loadStandings() {
                         "💀 " +
                         team.rank;
 
+                    row.classList.add(
+                        "last-place-row"
+                    );
+
                 }
 
 
-                /*
-                Playoff odds
-                */
+                /* =========================================
+                   PLAYOFF ODDS
+                   ========================================= */
 
-                const playoffOdds =
-
+                const playoffNumber =
                     Number(
                         team.playoffPct
-                    ).toFixed(1)
-
-                    +
-
-                    "%";
+                    );
 
 
-                /*
-                Team logo
-                */
+                const playoffOdds =
+                    Number.isFinite(
+                        playoffNumber
+                    )
+
+                    ?
+
+                    playoffNumber.toFixed(1)
+                    + "%"
+
+                    :
+
+                    "—";
+
+
+                /* =========================================
+                   TEAM LOGO
+                   ========================================= */
 
                 let logoHTML = "";
 
@@ -517,13 +655,33 @@ async function loadStandings() {
                 }
 
 
-                /*
-                Build standings row.
+                /* =========================================
+                   POINTS FOR
+                   ========================================= */
 
-                Clicking the team takes
-                the visitor directly to
-                Team Headquarters.
-                */
+                const pointsFor =
+                    Number(
+                        team.pointsFor
+                    );
+
+
+                const pointsDisplay =
+                    Number.isFinite(
+                        pointsFor
+                    )
+
+                    ?
+
+                    pointsFor.toFixed(1)
+
+                    :
+
+                    "—";
+
+
+                /* =========================================
+                   BUILD ROW
+                   ========================================= */
 
                 row.innerHTML = `
 
@@ -565,9 +723,7 @@ async function loadStandings() {
 
                     <td class="points-cell">
 
-                    ${Number(
-                        team.pointsFor
-                    ).toFixed(1)}
+                    ${pointsDisplay}
 
                     </td>
 
@@ -592,14 +748,20 @@ async function loadStandings() {
 
 
         /* =================================================
-           UPDATE STATUS
+           COMPLETED WEEK STATUS
            =================================================
 
-        ESPN reports the current scoring week.
+        IMPORTANT:
 
-        Example:
-        If ESPN says Week 4 is current,
-        completed standings are through Week 3.
+        Standings represent completed games.
+
+        During Week 4 live scoring, the records
+        remain the official completed standings
+        through Week 3.
+
+        Once ESPN finalizes Week 4, the GitHub
+        updater will bring the new standings into
+        league.json automatically.
         ================================================= */
 
         const completedWeek =
@@ -615,9 +777,48 @@ async function loadStandings() {
 
         status.textContent =
 
-            "Updated automatically from ESPN • Through Week " +
+            "Official ESPN standings • Through Week " +
 
             completedWeek;
+
+
+        /* =================================================
+           LIVE DATA CHECK STATUS
+           ================================================= */
+
+        liveDataStatus.innerHTML = `
+
+            <span class="live-dot">
+            ESPN DATA
+            </span>
+
+            <span class="status-divider">
+            •
+            </span>
+
+            <span>
+
+            DATA CHECKED
+
+            <span class="data-time">
+
+            ${formatCheckTime()}
+
+            </span>
+
+            </span>
+
+            <span class="status-divider">
+            •
+            </span>
+
+            <span>
+
+            PAGE CHECKS EVERY 60 SECONDS
+
+            </span>
+
+        `;
 
 
     }
@@ -628,7 +829,7 @@ async function loadStandings() {
 
         console.error(
 
-            "MSA ESPN data error:",
+            "MSA ESPN standings error:",
 
             error
 
@@ -638,6 +839,17 @@ async function loadStandings() {
         status.textContent =
 
             "Unable to load ESPN standings.";
+
+
+        liveDataStatus.innerHTML = `
+
+            <span style="color:#ef4444;">
+
+            ● ESPN DATA TEMPORARILY UNAVAILABLE
+
+            </span>
+
+        `;
 
 
         standingsBody.innerHTML = `
@@ -661,7 +873,29 @@ async function loadStandings() {
 }
 
 
+/* =========================================================
+   INITIAL LOAD
+   ========================================================= */
+
 loadStandings();
+
+
+/* =========================================================
+   AUTOMATIC PAGE DATA CHECK
+
+   This does NOT directly hammer ESPN.
+
+   It checks the league.json file generated
+   by the MSA ESPN GitHub Action.
+   ========================================================= */
+
+setInterval(
+
+    loadStandings,
+
+    REFRESH_INTERVAL
+
+);
 
 
 </script>
