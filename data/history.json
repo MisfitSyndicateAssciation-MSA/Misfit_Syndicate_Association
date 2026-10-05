@@ -1,0 +1,271 @@
+{
+  "leagueId": 398889101,
+  "season": 2026,
+  "completedThroughWeek": 3,
+  "weeks": [
+    {
+      "week": 1,
+      "matchups": [
+        {
+          "awayTeamId": 12,
+          "awayTeamName": "Ladiboyz",
+          "awayScore": 118.6,
+          "homeTeamId": 5,
+          "homeTeamName": "Pitts Creek",
+          "homeScore": 135.6,
+          "winnerTeamId": 5,
+          "loserTeamId": 12,
+          "margin": 17.0
+        },
+        {
+          "awayTeamId": 3,
+          "awayTeamName": "Team Ramrod",
+          "awayScore": 113.2,
+          "homeTeamId": 10,
+          "homeTeamName": "Db.EAtERs",
+          "homeScore": 131.0,
+          "winnerTeamId": 10,
+          "loserTeamId": 3,
+          "margin": 17.8
+        },
+        {
+          "awayTeamId": 4,
+          "awayTeamName": "Nabershood Cookout",
+          "awayScore": 103.6,
+          "homeTeamId": 1,
+          "homeTeamName": "Big Papi Queso",
+          "homeScore": 118.7,
+          "winnerTeamId": 1,
+          "loserTeamId": 4,
+          "margin": 15.1
+        },
+        {
+          "awayTeamId": 6,
+          "awayTeamName": "Double Dookie Dawgs",
+          "awayScore": 110.0,
+          "homeTeamId": 11,
+          "homeTeamName": "Red Zone Redbirds",
+          "homeScore": 129.1,
+          "winnerTeamId": 11,
+          "loserTeamId": 6,
+          "margin": 19.1
+        },
+        {
+          "awayTeamId": 9,
+          "awayTeamName": "Apukalypse Now, Skattebo Later",
+          "awayScore": 202.7,
+          "homeTeamId": 8,
+          "homeTeamName": "Big Pickens Energy",
+          "homeScore": 130.6,
+          "winnerTeamId": 9,
+          "loserTeamId": 8,
+          "margin": 72.1
+        }
+      ],
+      "highestScore": {
+        "teamId": 9,
+        "teamName": "Apukalypse Now, Skattebo Later",
+        "score": 202.7
+      },
+      "lowestScore": {
+        "teamId": 4,
+        "teamName": "Nabershood Cookout",
+        "score": 103.6
+      },
+      "closestGame": {
+        "awayTeamId": 4,
+        "awayTeamName": "Nabershood Cookout",
+        "homeTeamId": 1,
+        "homeTeamName": "Big Papi Queso",
+        "awayScore": 103.6,
+        "homeScore": 118.7,
+        "margin": 15.1
+      },
+      "biggestBlowout": {
+        "awayTeamId": 9,
+        "awayTeamName": "Apukalypse Now, Skattebo Later",
+        "homeTeamId": 8,
+        "homeTeamName": "Big Pickens Energy",
+        "awayScore": 202.7,
+        "homeScore": 130.6,
+        "margin": 72.1
+      }
+    },
+    {
+      "week": 2,
+      "matchups": [
+        {
+          "awayTeamId": 3,
+          "awayTeamName": "Team Ramrod",
+          "awayScore": 81.3,
+          "homeTeamId": 12,
+          "homeTeamName": "Ladiboyz",
+          "homeScore": 153.6,
+          "winnerTeamId": 12,
+          "loserTeamId": 3,
+          "margin": 72.3
+        },
+        {
+          "awayTeamId": 5,
+          "awayTeamName": "Pitts Creek",
+          "awayScore": 111.3,
+          "homeTeamId": 4,
+          "homeTeamName": "Nabershood Cookout",
+          "homeScore": 130.5,
+          "winnerTeamId": 4,
+          "loserTeamId": 5,
+          "margin": 19.2
+        },
+        {
+          "awayTeamId": 10,
+          "awayTeamName": "Db.EAtERs",
+          "awayScore": 102.5,
+          "homeTeamId": 6,
+          "homeTeamName": "Double Dookie Dawgs",
+          "homeScore": 76.8,
+          "winnerTeamId": 10,
+          "loserTeamId": 6,
+          "margin": 25.7
+        },
+        {
+          "awayTeamId": 1,
+          "awayTeamName": "Big Papi Queso",
+          "awayScore": 114.2,
+          "homeTeamId": 9,
+          "homeTeamName": "Apukalypse Now, Skattebo Later",
+          "homeScore": 145.2,
+          "winnerTeamId": 9,
+          "loserTeamId": 1,
+          "margin": 31.0
+        },
+        {
+          "awayTeamId": 11,
+          "awayTeamName": "Red Zone Redbirds",
+          "awayScore": 149.4,
+          "homeTeamId": 8,
+          "homeTeamName": "Big Pickens Energy",
+          "homeScore": 115.2,
+          "winnerTeamId": 11,
+          "loserTeamId": 8,
+          "margin": 34.2
+        }
+      ],
+      "highestScore": {
+        "teamId": 12,
+        "teamName": "Ladiboyz",
+        "score": 153.6
+      },
+      "lowestScore": {
+        "teamId": 6,
+        "teamName": "Double Dookie Dawgs",
+        "score": 76.8
+      },
+      "closestGame": {
+        "awayTeamId": 5,
+        "awayTeamName": "Pitts Creek",
+        "homeTeamId": 4,
+        "homeTeamName": "Nabershood Cookout",
+        "awayScore": 111.3,
+        "homeScore": 130.5,
+        "margin": 19.2
+      },
+      "biggestBlowout": {
+        "awayTeamId": 3,
+        "awayTeamName": "Team Ramrod",
+        "homeTeamId": 12,
+        "homeTeamName": "Ladiboyz",
+        "awayScore": 81.3,
+        "homeScore": 153.6,
+        "margin": 72.3
+      }
+    },
+    {
+      "week": 3,
+      "matchups": [
+        {
+          "awayTeamId": 12,
+          "awayTeamName": "Ladiboyz",
+          "awayScore": 119.7,
+          "homeTeamId": 4,
+          "homeTeamName": "Nabershood Cookout",
+          "homeScore": 123.6,
+          "winnerTeamId": 4,
+          "loserTeamId": 12,
+          "margin": 3.9
+        },
+        {
+          "awayTeamId": 6,
+          "awayTeamName": "Double Dookie Dawgs",
+          "awayScore": 150.0,
+          "homeTeamId": 3,
+          "homeTeamName": "Team Ramrod",
+          "homeScore": 140.3,
+          "winnerTeamId": 6,
+          "loserTeamId": 3,
+          "margin": 9.7
+        },
+        {
+          "awayTeamId": 9,
+          "awayTeamName": "Apukalypse Now, Skattebo Later",
+          "awayScore": 125.0,
+          "homeTeamId": 5,
+          "homeTeamName": "Pitts Creek",
+          "homeScore": 136.8,
+          "winnerTeamId": 5,
+          "loserTeamId": 9,
+          "margin": 11.8
+        },
+        {
+          "awayTeamId": 8,
+          "awayTeamName": "Big Pickens Energy",
+          "awayScore": 120.8,
+          "homeTeamId": 10,
+          "homeTeamName": "Db.EAtERs",
+          "homeScore": 133.6,
+          "winnerTeamId": 10,
+          "loserTeamId": 8,
+          "margin": 12.8
+        },
+        {
+          "awayTeamId": 11,
+          "awayTeamName": "Red Zone Redbirds",
+          "awayScore": 127.0,
+          "homeTeamId": 1,
+          "homeTeamName": "Big Papi Queso",
+          "homeScore": 88.9,
+          "winnerTeamId": 11,
+          "loserTeamId": 1,
+          "margin": 38.1
+        }
+      ],
+      "highestScore": {
+        "teamId": 6,
+        "teamName": "Double Dookie Dawgs",
+        "score": 150.0
+      },
+      "lowestScore": {
+        "teamId": 1,
+        "teamName": "Big Papi Queso",
+        "score": 88.9
+      },
+      "closestGame": {
+        "awayTeamId": 12,
+        "awayTeamName": "Ladiboyz",
+        "homeTeamId": 4,
+        "homeTeamName": "Nabershood Cookout",
+        "awayScore": 119.7,
+        "homeScore": 123.6,
+        "margin": 3.9
+      },
+      "biggestBlowout": {
+        "awayTeamId": 11,
+        "awayTeamName": "Red Zone Redbirds",
+        "homeTeamId": 1,
+        "homeTeamName": "Big Papi Queso",
+        "awayScore": 127.0,
+        "homeScore": 88.9,
+        "margin": 38.1
+      }
+    }
+  ]
+}
