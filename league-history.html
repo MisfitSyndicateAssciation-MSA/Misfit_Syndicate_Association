@@ -2,17 +2,25 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>League History | Misfit Syndicate Association</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+<title>
+League History | Misfit Syndicate Association
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
 
 <style>
 
 /* =========================================================
-   MSA LEAGUE HISTORY
+   MSA LEAGUE HISTORY — HALL OF RECORDS
    ========================================================= */
 
 .history-page {
@@ -20,59 +28,256 @@
     margin: auto;
 }
 
+
+/* =========================================================
+   HISTORY INTRO
+   ========================================================= */
+
 .history-intro {
     text-align: center;
-    margin-bottom: 35px;
+
+    margin-bottom: 25px;
+
+    padding: 32px 22px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(245,182,66,.11),
+            rgba(18,18,18,.96) 45%,
+            rgba(7,7,7,.95)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.28);
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 14px 40px rgba(0,0,0,.48);
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
-.history-intro h2 {
-    margin-bottom: 8px;
+
+.history-intro::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 8%;
+    right: 8%;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #7bb800,
+            #f5b642,
+            #d9272e,
+            transparent
+        );
 }
+
+
+.history-intro-label {
+    margin-bottom: 7px;
+
+    color: #aaa;
+
+    font-size: .68rem;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.history-intro h2 {
+    margin-bottom: 9px;
+
+    color: #f5b642;
+
+    font-size:
+        clamp(1.7rem,4vw,2.3rem);
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,.85);
+}
+
 
 .history-intro p {
     max-width: 750px;
+
     margin: auto;
+
+    color: #bbb;
+
+    line-height: 1.65;
 }
 
 
 /* =========================================================
-   INAUGURAL SEASON
+   ARCHIVE STATUS BAR
+   ========================================================= */
+
+.archive-status-bar {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    max-width: 780px;
+
+    margin:
+        -8px auto 30px auto;
+
+    padding:
+        9px 14px;
+
+    background:
+        rgba(8,8,8,.78);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-radius: 8px;
+
+    color: #aaa;
+
+    font-size: .64rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.1px;
+
+    text-transform: uppercase;
+}
+
+
+.archive-status-live {
+    color: #78cf00;
+
+    text-shadow:
+        0 0 8px rgba(120,207,0,.45);
+}
+
+
+.archive-status-divider {
+    opacity: .35;
+}
+
+
+/* =========================================================
+   INAUGURAL SEASON BANNER
    ========================================================= */
 
 .season-banner {
     text-align: center;
-    padding: 30px 20px;
-    margin-bottom: 30px;
+
+    padding:
+        34px 22px;
+
+    margin-bottom: 35px;
+
     position: relative;
+
     overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(245,182,66,.10),
+            rgba(16,16,16,.96) 50%,
+            rgba(6,6,6,.95)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.25);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.42);
 }
+
 
 .season-banner::before {
     content: "";
+
     position: absolute;
+
     top: 0;
-    left: 0;
-    right: 0;
+    left: 10%;
+    right: 10%;
+
     height: 4px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        #f5b642,
-        transparent
-    );
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d9272e,
+            #f5b642,
+            #7bb800,
+            transparent
+        );
 }
 
-.season-year {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
 
 .season-label {
+    color: #999;
+
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: .8rem;
-    opacity: .65;
+
+    letter-spacing: 2.5px;
+
+    font-size: .66rem;
+
+    font-weight: 900;
+
+    margin-bottom: 7px;
+}
+
+
+.season-year {
+    color: #f5b642;
+
+    font-size:
+        clamp(1.55rem,4vw,2.2rem);
+
+    font-weight: 900;
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,.85);
+}
+
+
+.season-banner p {
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #bbb;
+
+    line-height: 1.65;
 }
 
 
@@ -82,42 +287,152 @@
 
 .history-grid {
     display: grid;
+
     grid-template-columns:
-        repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-bottom: 35px;
+        repeat(2,1fr);
+
+    gap: 18px;
+
+    margin-bottom: 45px;
 }
+
 
 .history-card {
     position: relative;
+
+    overflow: hidden;
+
+    padding: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.96),
+            rgba(7,7,7,.95)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.075);
+
+    border-top:
+        3px solid #f5b642;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.38);
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease;
 }
+
+
+.history-card:nth-child(2) {
+    border-top-color: #7bb800;
+}
+
+
+.history-card:nth-child(3) {
+    border-top-color: #d9272e;
+}
+
+
+.history-card:nth-child(4) {
+    border-top-color: #f5b642;
+}
+
+
+.history-card:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(245,182,66,.35);
+}
+
 
 .history-card h3 {
-    margin-top: 0;
+    margin:
+        0 0 14px 0;
+
+    color: #f5b642;
 }
 
+
 .history-card p {
+    color: #bbb;
+
     line-height: 1.6;
+
+    font-size: .88rem;
+
+    margin:
+        10px 0;
+}
+
+
+.history-card a {
+    color: #f5b642;
+
+    font-weight: 900;
+
+    text-decoration: none;
+}
+
+
+.history-card a:hover {
+    color: #ffd166;
 }
 
 
 /* =========================================================
-   PODIUM
+   CHAMPIONSHIP PODIUM
    ========================================================= */
 
 .podium {
     text-align: center;
 }
 
+
 .podium-place {
-    padding: 12px;
-    margin: 10px 0;
+    padding:
+        12px;
+
+    margin:
+        10px 0;
+
     border-radius: 8px;
-    background: rgba(255,255,255,.04);
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid rgba(255,255,255,.055);
 }
 
+
+.podium-place:nth-of-type(1) {
+    border-left:
+        3px solid #f5b642;
+}
+
+
+.podium-place:nth-of-type(2) {
+    border-left:
+        3px solid #aaa;
+}
+
+
+.podium-place:nth-of-type(3) {
+    border-left:
+        3px solid #b87333;
+}
+
+
 .pending {
-    opacity: .55;
+    color: #888;
+
     font-style: italic;
 }
 
@@ -127,13 +442,22 @@
    ========================================================= */
 
 .infamy-card {
-    border: 1px solid rgba(245,182,66,.2);
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(217,39,46,.10),
+            rgba(18,18,18,.96) 50%,
+            rgba(7,7,7,.95)
+        );
 }
+
 
 .infamy-warning {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 8px;
+
+    font-size: 2.2rem;
+
+    margin-bottom: 5px;
 }
 
 
@@ -142,44 +466,190 @@
    ========================================================= */
 
 .weekly-history-section {
-    margin-top: 55px;
-    margin-bottom: 55px;
+    margin-top: 60px;
+
+    margin-bottom: 60px;
 }
+
+
+.weekly-history-header {
+    max-width: 850px;
+
+    margin:
+        0 auto 18px auto;
+
+    padding:
+        23px 18px;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        rgba(9,9,9,.78);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-radius: 11px;
+}
+
+
+.weekly-history-header::before {
+    content: "";
+
+    position: absolute;
+
+    left: 20%;
+    right: 20%;
+    top: 0;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #f5b642,
+            transparent
+        );
+}
+
+
+.weekly-history-header .section-title {
+    color: #f5b642;
+
+    margin-bottom: 7px;
+}
+
+
+.weekly-history-header .section-sub {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   HISTORY STATUS
+   ========================================================= */
 
 .history-status {
+    width: fit-content;
+
+    max-width: 95%;
+
+    margin:
+        12px auto 26px auto;
+
+    padding:
+        8px 13px;
+
     text-align: center;
-    font-size: .78rem;
+
+    color: #999;
+
+    background:
+        rgba(8,8,8,.72);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-radius: 999px;
+
+    font-size: .66rem;
+
+    font-weight: 900;
+
     letter-spacing: 1px;
-    opacity: .65;
-    margin: 12px 0 25px 0;
+
+    text-transform: uppercase;
 }
+
 
 .history-status.live {
-    color: #f5b642;
-    opacity: 1;
+    color: #78cf00;
+
+    border-color:
+        rgba(120,207,0,.20);
+
+    text-shadow:
+        0 0 8px rgba(120,207,0,.30);
 }
 
+
+/* =========================================================
+   WEEK HISTORY
+   ========================================================= */
+
 .week-history {
-    margin-bottom: 28px;
+    margin-bottom: 30px;
+
     overflow: hidden;
+
+    padding: 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.97),
+            rgba(7,7,7,.96)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.20);
+
+    border-top:
+        3px solid #f5b642;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.42);
 }
+
 
 .week-history-header {
     text-align: center;
-    padding: 20px;
-    border-bottom: 1px solid rgba(245,182,66,.18);
+
+    padding:
+        21px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(245,182,66,.07),
+            rgba(255,255,255,.025),
+            rgba(245,182,66,.07)
+        );
+
+    border-bottom:
+        1px solid rgba(245,182,66,.16);
 }
 
+
 .week-history-header h3 {
-    margin: 0 0 5px 0;
+    margin:
+        0 0 5px 0;
+
     color: #f5b642;
+
+    font-size: 1.25rem;
+
+    letter-spacing: 1px;
 }
+
 
 .week-history-header p {
     margin: 0;
-    opacity: .65;
-    font-size: .82rem;
-    letter-spacing: 1px;
+
+    color: #999;
+
+    font-size: .65rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
 }
 
 
@@ -189,41 +659,110 @@
 
 .week-awards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4,1fr);
+
     gap: 10px;
+
     padding: 18px;
 }
 
+
 .week-award {
     text-align: center;
-    padding: 14px 8px;
+
+    padding:
+        15px 8px;
+
     border-radius: 8px;
-    background: rgba(255,255,255,.035);
+
+    background:
+        rgba(255,255,255,.032);
+
+    border:
+        1px solid rgba(255,255,255,.055);
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease;
 }
 
+
+.week-award:hover {
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(245,182,66,.20);
+}
+
+
+.week-award:nth-child(1) {
+    border-top:
+        2px solid #7bb800;
+}
+
+
+.week-award:nth-child(2) {
+    border-top:
+        2px solid #6fa8dc;
+}
+
+
+.week-award:nth-child(3) {
+    border-top:
+        2px solid #f5b642;
+}
+
+
+.week-award:nth-child(4) {
+    border-top:
+        2px solid #d9272e;
+}
+
+
 .week-award-icon {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
+
     margin-bottom: 4px;
 }
 
+
 .week-award-label {
-    font-size: .68rem;
+    color: #888;
+
+    font-size: .61rem;
+
+    font-weight: 900;
+
     letter-spacing: 1px;
+
     text-transform: uppercase;
-    opacity: .55;
+
     margin-bottom: 6px;
 }
 
+
 .week-award-team {
-    font-weight: bold;
-    font-size: .88rem;
+    color: #eee;
+
+    font-weight: 900;
+
+    font-size: .82rem;
+
     line-height: 1.3;
 }
 
+
 .week-award-score {
     color: #f5b642;
-    font-weight: bold;
-    margin-top: 5px;
+
+    font-weight: 900;
+
+    margin-top: 6px;
+
+    font-size: .9rem;
 }
 
 
@@ -232,74 +771,136 @@
    ========================================================= */
 
 .week-matchups {
-    padding: 0 18px 18px 18px;
+    padding:
+        0 18px 20px 18px;
 }
+
 
 .history-matchup {
     display: grid;
+
     grid-template-columns:
-        minmax(0, 1fr)
+        minmax(0,1fr)
         auto
-        minmax(0, 1fr);
+        minmax(0,1fr);
 
     align-items: center;
+
     gap: 14px;
 
-    padding: 13px 10px;
+    padding:
+        14px 10px;
 
     border-top:
         1px solid rgba(255,255,255,.06);
+
+    transition:
+        background .18s ease;
 }
+
+
+.history-matchup:hover {
+    background:
+        rgba(245,182,66,.035);
+}
+
 
 .history-team {
     display: flex;
+
     align-items: center;
+
     gap: 10px;
+
     min-width: 0;
 }
 
+
 .history-team.away {
     justify-content: flex-end;
+
     text-align: right;
 }
 
+
 .history-team.home {
     justify-content: flex-start;
+
     text-align: left;
 }
 
+
 .history-team-logo {
-    width: 42px;
-    height: 42px;
+    width: 46px;
+
+    height: 46px;
+
     object-fit: contain;
+
     border-radius: 50%;
+
     flex-shrink: 0;
+
+    filter:
+        drop-shadow(
+            0 5px 8px rgba(0,0,0,.55)
+        );
 }
 
+
 .history-team-name {
-    font-weight: bold;
+    color: #ccc;
+
+    font-weight: 900;
+
     line-height: 1.2;
 }
 
-.history-team.winner .history-team-name {
+
+.history-team.winner
+.history-team-name {
     color: #f5b642;
 }
+
 
 .history-score {
+    min-width: 120px;
+
+    padding:
+        7px 9px;
+
     text-align: center;
+
     white-space: nowrap;
-    font-weight: bold;
-    font-size: 1.05rem;
+
+    color: #bbb;
+
+    background:
+        rgba(0,0,0,.34);
+
+    border:
+        1px solid rgba(255,255,255,.055);
+
+    border-radius: 7px;
+
+    font-weight: 900;
+
+    font-size: 1rem;
 }
+
 
 .winner-score {
-    color: #f5b642;
+    color: #8fd000;
 }
 
+
 .history-score-vs {
+    color: #777;
+
     font-size: .65rem;
-    opacity: .45;
-    margin: 0 5px;
+
+    margin:
+        0 5px;
 }
 
 
@@ -308,32 +909,129 @@
    ========================================================= */
 
 .lore-section {
-    margin-top: 35px;
+    margin-top: 45px;
 }
+
+
+.lore-header {
+    max-width: 800px;
+
+    margin:
+        0 auto 22px auto;
+
+    padding:
+        20px 16px;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        rgba(9,9,9,.76);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-radius: 10px;
+}
+
+
+.lore-header::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 25%;
+    right: 25%;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d9272e,
+            #f5b642,
+            transparent
+        );
+}
+
 
 .lore-title {
     text-align: center;
+
+    color: #f5b642;
+
     margin-bottom: 5px;
 }
 
+
 .lore-subtitle {
     text-align: center;
-    opacity: .6;
-    margin-bottom: 20px;
+
+    color: #999;
+
+    margin-bottom: 0;
+
+    font-size: .84rem;
 }
+
 
 .lore-entry {
     margin-bottom: 15px;
-    padding: 18px;
+
+    padding:
+        20px 21px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.95),
+            rgba(7,7,7,.94)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    border-left:
+        4px solid #f5b642;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 9px 28px rgba(0,0,0,.32);
 }
 
-.lore-entry h4 {
-    margin: 0 0 8px 0;
+
+.lore-entry:nth-of-type(2) {
+    border-left-color: #d9272e;
 }
+
+
+.lore-entry:nth-of-type(3) {
+    border-left-color: #7bb800;
+}
+
+
+.lore-entry h4 {
+    margin:
+        0 0 8px 0;
+
+    color: #f5b642;
+}
+
 
 .lore-entry p {
     margin: 0;
-    line-height: 1.6;
+
+    color: #bbb;
+
+    line-height: 1.65;
+
+    font-size: .88rem;
 }
 
 
@@ -343,13 +1041,75 @@
 
 .archive-note {
     text-align: center;
-    padding: 25px;
-    margin-top: 35px;
+
+    padding:
+        30px 22px;
+
+    margin-top: 42px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(245,182,66,.08),
+            rgba(15,15,15,.95)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.22);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.38);
 }
+
+
+.archive-note::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 12%;
+    right: 12%;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #7bb800,
+            #f5b642,
+            #d9272e,
+            transparent
+        );
+}
+
+
+.archive-note h3 {
+    color: #f5b642;
+}
+
 
 .archive-note p {
     max-width: 700px;
-    margin: 10px auto 0 auto;
+
+    margin:
+        10px auto 0 auto;
+
+    color: #bbb;
+
+    line-height: 1.65;
+}
+
+
+.archive-note strong {
+    color: #fff;
 }
 
 
@@ -359,7 +1119,36 @@
 
 .history-error {
     text-align: center;
-    padding: 25px;
+
+    padding: 27px;
+
+    background:
+        rgba(10,10,10,.90);
+
+    border:
+        1px solid rgba(217,39,46,.25);
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .history-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .week-awards {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
 }
 
 
@@ -367,46 +1156,92 @@
    MOBILE
    ========================================================= */
 
-@media (max-width: 750px) {
-
-    .week-awards {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-}
-
 @media (max-width: 650px) {
 
-    .season-year {
-        font-size: 1.6rem;
+    .history-intro {
+        padding:
+            25px 14px;
     }
 
+
+    .season-year {
+        font-size: 1.5rem;
+    }
+
+
     .history-matchup {
-        gap: 6px;
+        gap: 5px;
+
         padding-left: 0;
+
         padding-right: 0;
     }
 
+
+    .history-team {
+        gap: 5px;
+    }
+
+
     .history-team-logo {
         width: 32px;
+
         height: 32px;
     }
 
+
     .history-team-name {
-        font-size: .76rem;
+        font-size: .7rem;
     }
 
+
     .history-score {
-        font-size: .86rem;
+        min-width: 88px;
+
+        padding:
+            6px 4px;
+
+        font-size: .78rem;
+    }
+
+
+    .week-matchups {
+        padding:
+            0 8px 14px 8px;
+    }
+
+
+    .archive-status-bar {
+        font-size: .56rem;
     }
 
 }
+
 
 @media (max-width: 420px) {
 
     .week-awards {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .history-team-logo {
+        width: 28px;
+
+        height: 28px;
+    }
+
+
+    .history-team-name {
+        font-size: .62rem;
+    }
+
+
+    .history-score {
+        min-width: 75px;
+
+        font-size: .7rem;
     }
 
 }
@@ -417,6 +1252,7 @@
 
 
 <body>
+
 
 <header>
 
@@ -492,13 +1328,17 @@ League History
      INTRO
      ===================================================== -->
 
-<section class="panel history-intro">
+<section class="history-intro">
+
+<div class="history-intro-label">
+☠️ MSA HALL OF RECORDS ☠️
+</div>
 
 <h2>
 📜 LEAGUE HISTORY
 </h2>
 
-<p class="muted">
+<p>
 
 The permanent record of the Misfit Syndicate Association.
 Champions will be immortalized. Losers will be publicly
@@ -510,10 +1350,39 @@ documented. Bad decisions will never be allowed to die.
 
 
 <!-- =====================================================
+     ARCHIVE STATUS BAR
+     ===================================================== -->
+
+<div class="archive-status-bar">
+
+<span class="archive-status-live">
+● ARCHIVE ACTIVE
+</span>
+
+<span class="archive-status-divider">
+•
+</span>
+
+<span>
+EST. 2026
+</span>
+
+<span class="archive-status-divider">
+•
+</span>
+
+<span>
+HISTORY IS PERMANENT
+</span>
+
+</div>
+
+
+<!-- =====================================================
      INAUGURAL SEASON
      ===================================================== -->
 
-<section class="card season-banner">
+<section class="season-banner">
 
 <div class="season-label">
 The Beginning of the Dysfunction
@@ -543,11 +1412,12 @@ what the hell happened.
 <div class="history-grid">
 
 
-<div class="card history-card podium">
+<div class="history-card podium">
 
 <h3>
 🏆 2026 Championship Podium
 </h3>
+
 
 <div class="podium-place">
 
@@ -561,6 +1431,7 @@ To Be Determined
 
 </div>
 
+
 <div class="podium-place">
 
 🥈 <strong>Second Place</strong>
@@ -572,6 +1443,7 @@ To Be Determined
 </span>
 
 </div>
+
 
 <div class="podium-place">
 
@@ -585,6 +1457,7 @@ To Be Determined
 
 </div>
 
+
 <p class="pending">
 
 The first names in MSA championship history
@@ -595,7 +1468,7 @@ will be written here when the 2026 war is over.
 </div>
 
 
-<div class="card history-card">
+<div class="history-card">
 
 <h3>
 🏅 2026 Season Awards
@@ -634,7 +1507,7 @@ will be written here when the 2026 war is over.
 </div>
 
 
-<div class="card history-card infamy-card">
+<div class="history-card infamy-card">
 
 <div class="infamy-warning">
 💀
@@ -676,7 +1549,7 @@ To Be Determined
 </div>
 
 
-<div class="card history-card">
+<div class="history-card">
 
 <h3>
 🎙️ The Syndicate Report
@@ -703,7 +1576,7 @@ been broadcast.
 <p>
 
 <a href="syndicate-report.html">
-View the Syndicate Report Archive →
+VIEW THE SYNDICATE REPORT ARCHIVE →
 </a>
 
 </p>
@@ -720,6 +1593,9 @@ View the Syndicate Report Archive →
 
 <section class="weekly-history-section">
 
+
+<div class="weekly-history-header">
+
 <h2 class="section-title">
 🏈 2026 WEEKLY RESULTS ARCHIVE
 </h2>
@@ -730,9 +1606,12 @@ Every completed matchup.
 Every beatdown.
 Every embarrassing point total.
 
-Once ESPN closes the week, the Syndicate remembers it.
+Once ESPN closes the week,
+the Syndicate remembers it.
 
 </p>
+
+</div>
 
 
 <div
@@ -746,13 +1625,14 @@ Loading the MSA archives...
 
 <div id="weekly-history">
 
-<div class="card history-error">
+<div class="history-error">
 
 Loading completed weeks from MSA Headquarters...
 
 </div>
 
 </div>
+
 
 </section>
 
@@ -763,18 +1643,21 @@ Loading completed weeks from MSA Headquarters...
 
 <section class="lore-section">
 
+
+<div class="lore-header">
+
 <h2 class="lore-title">
 🤡 MSA LEAGUE LORE
 </h2>
 
 <p class="lore-subtitle">
-
 Some moments are too stupid to be forgotten.
-
 </p>
 
+</div>
 
-<div class="card lore-entry">
+
+<div class="lore-entry">
 
 <h4>
 🧀 The Kelce Trade
@@ -796,7 +1679,7 @@ almost immediately.
 </div>
 
 
-<div class="card lore-entry">
+<div class="lore-entry">
 
 <h4>
 🏈 The Winless Bowl
@@ -818,7 +1701,7 @@ of fantasy football misery.
 </div>
 
 
-<div class="card lore-entry">
+<div class="lore-entry">
 
 <h4>
 ☠️ Ten Misfits Enter the Syndicate
@@ -838,6 +1721,7 @@ documenting it.
 
 </div>
 
+
 </section>
 
 
@@ -845,7 +1729,7 @@ documenting it.
      FUTURE HISTORY
      ===================================================== -->
 
-<section class="card archive-note">
+<section class="archive-note">
 
 <h3>
 📚 THE ARCHIVES HAVE ONLY JUST BEGUN
@@ -890,6 +1774,7 @@ The Syndicate doesn't.
 
 <script>
 
+
 /* =========================================================
    OFFICIAL MSA TEAM LOGOS
    ========================================================= */
@@ -923,7 +1808,9 @@ function getTeamLogo(teamId) {
 
 
     if (!logo) {
+
         return "";
+
     }
 
 
@@ -945,6 +1832,7 @@ function teamDisplay(
     winnerTeamId
 ) {
 
+
     const winner =
         Number(teamId) ===
         Number(winnerTeamId);
@@ -956,7 +1844,8 @@ function teamDisplay(
         );
 
 
-    let logoHTML = "";
+    let logoHTML =
+        "";
 
 
     if (logo) {
@@ -973,7 +1862,9 @@ function teamDisplay(
     }
 
 
-    if (side === "away") {
+    if (
+        side === "away"
+    ) {
 
         return `
 
@@ -983,8 +1874,11 @@ function teamDisplay(
                 ${winner ? "winner" : ""}
             ">
 
-                <div class="history-team-name">
-                    ${teamName}
+                <div
+                class="history-team-name">
+
+                ${teamName}
+
                 </div>
 
                 ${logoHTML}
@@ -1006,8 +1900,11 @@ function teamDisplay(
 
             ${logoHTML}
 
-            <div class="history-team-name">
-                ${teamName}
+            <div
+            class="history-team-name">
+
+            ${teamName}
+
             </div>
 
         </div>
@@ -1022,6 +1919,7 @@ function teamDisplay(
    ========================================================= */
 
 function buildMatchup(matchup) {
+
 
     const awayWinner =
         Number(matchup.winnerTeamId) ===
@@ -1060,9 +1958,14 @@ function buildMatchup(matchup) {
 
                 </span>
 
-                <span class="history-score-vs">
-                    —
+
+                <span
+                class="history-score-vs">
+
+                —
+
                 </span>
+
 
                 <span class="
                     ${homeWinner
@@ -1100,12 +2003,15 @@ function buildMatchup(matchup) {
 
 function closestGameText(week) {
 
+
     const game =
         week.closestGame;
 
 
     if (!game) {
+
         return "N/A";
+
     }
 
 
@@ -1124,12 +2030,15 @@ function closestGameText(week) {
 
 function biggestBlowoutText(week) {
 
+
     const game =
         week.biggestBlowout;
 
 
     if (!game) {
+
         return "N/A";
+
     }
 
 
@@ -1164,6 +2073,7 @@ function biggestBlowoutText(week) {
 
 function buildWeek(week) {
 
+
     const matchupsHTML =
         week.matchups
             .map(
@@ -1177,17 +2087,22 @@ function buildWeek(week) {
 
     return `
 
-        <div class="card week-history">
+        <div class="week-history">
 
 
-            <div class="week-history-header">
+            <div
+            class="week-history-header">
 
                 <h3>
-                    🏈 WEEK ${week.week}
+
+                🏈 WEEK ${week.week}
+
                 </h3>
 
                 <p>
-                    FINAL • OFFICIAL MSA ARCHIVE
+
+                FINAL • OFFICIAL MSA ARCHIVE
+
                 </p>
 
             </div>
@@ -1199,22 +2114,24 @@ function buildWeek(week) {
                 <div class="week-award">
 
                     <div class="week-award-icon">
-                        🔥
+                    🔥
                     </div>
 
                     <div class="week-award-label">
-                        High Score
+                    High Score
                     </div>
 
                     <div class="week-award-team">
-                        ${week.highestScore.teamName}
+
+                    ${week.highestScore.teamName}
+
                     </div>
 
                     <div class="week-award-score">
 
-                        ${Number(
-                            week.highestScore.score
-                        ).toFixed(1)}
+                    ${Number(
+                        week.highestScore.score
+                    ).toFixed(1)}
 
                     </div>
 
@@ -1224,22 +2141,24 @@ function buildWeek(week) {
                 <div class="week-award">
 
                     <div class="week-award-icon">
-                        🧊
+                    🧊
                     </div>
 
                     <div class="week-award-label">
-                        Low Score
+                    Low Score
                     </div>
 
                     <div class="week-award-team">
-                        ${week.lowestScore.teamName}
+
+                    ${week.lowestScore.teamName}
+
                     </div>
 
                     <div class="week-award-score">
 
-                        ${Number(
-                            week.lowestScore.score
-                        ).toFixed(1)}
+                    ${Number(
+                        week.lowestScore.score
+                    ).toFixed(1)}
 
                     </div>
 
@@ -1249,27 +2168,27 @@ function buildWeek(week) {
                 <div class="week-award">
 
                     <div class="week-award-icon">
-                        ⚔️
+                    ⚔️
                     </div>
 
                     <div class="week-award-label">
-                        Closest Game
+                    Closest Game
                     </div>
 
                     <div class="week-award-team">
 
-                        ${closestGameText(
-                            week
-                        )}
+                    ${closestGameText(
+                        week
+                    )}
 
                     </div>
 
                     <div class="week-award-score">
 
-                        ${Number(
-                            week.closestGame.margin
-                        ).toFixed(1)}
-                        pts
+                    ${Number(
+                        week.closestGame.margin
+                    ).toFixed(1)}
+                    pts
 
                     </div>
 
@@ -1279,27 +2198,27 @@ function buildWeek(week) {
                 <div class="week-award">
 
                     <div class="week-award-icon">
-                        💀
+                    💀
                     </div>
 
                     <div class="week-award-label">
-                        Biggest Ass-Kicking
+                    Biggest Ass-Kicking
                     </div>
 
                     <div class="week-award-team">
 
-                        ${biggestBlowoutText(
-                            week
-                        )}
+                    ${biggestBlowoutText(
+                        week
+                    )}
 
                     </div>
 
                     <div class="week-award-score">
 
-                        ${Number(
-                            week.biggestBlowout.margin
-                        ).toFixed(1)}
-                        pts
+                    ${Number(
+                        week.biggestBlowout.margin
+                    ).toFixed(1)}
+                    pts
 
                     </div>
 
@@ -1311,7 +2230,7 @@ function buildWeek(week) {
 
             <div class="week-matchups">
 
-                ${matchupsHTML}
+            ${matchupsHTML}
 
             </div>
 
@@ -1329,6 +2248,7 @@ function buildWeek(week) {
 
 async function loadHistory() {
 
+
     const container =
         document.getElementById(
             "weekly-history"
@@ -1343,13 +2263,17 @@ async function loadHistory() {
 
     try {
 
+
         const response =
             await fetch(
+
                 "data/history.json?t=" +
                 Date.now(),
+
                 {
                     cache: "no-store"
                 }
+
             );
 
 
@@ -1371,12 +2295,14 @@ async function loadHistory() {
             history.weeks.length === 0
         ) {
 
+
             container.innerHTML = `
 
-                <div class="card history-error">
+                <div
+                class="history-error">
 
-                    No completed weeks have been
-                    archived yet.
+                No completed weeks have been
+                archived yet.
 
                 </div>
 
@@ -1399,7 +2325,7 @@ async function loadHistory() {
         const weeks =
             [...history.weeks]
                 .sort(
-                    (a, b) =>
+                    (a,b) =>
                         b.week - a.week
                 );
 
@@ -1424,9 +2350,12 @@ async function loadHistory() {
             "COMPLETED THROUGH WEEK " +
             history.completedThroughWeek;
 
+
     }
 
+
     catch (error) {
+
 
         console.error(
             "MSA history error:",
@@ -1436,16 +2365,17 @@ async function loadHistory() {
 
         container.innerHTML = `
 
-            <div class="card history-error">
+            <div
+            class="history-error">
 
-                💀 The Syndicate archives are
-                temporarily refusing to cooperate.
+            💀 The Syndicate archives are
+            temporarily refusing to cooperate.
 
-                <br><br>
+            <br><br>
 
-                <strong>
-                    history.json could not be loaded.
-                </strong>
+            <strong>
+            history.json could not be loaded.
+            </strong>
 
             </div>
 
@@ -1454,6 +2384,7 @@ async function loadHistory() {
 
         status.textContent =
             "ARCHIVE DATA UNAVAILABLE";
+
 
     }
 
@@ -1465,6 +2396,7 @@ async function loadHistory() {
    ========================================================= */
 
 loadHistory();
+
 
 </script>
 
