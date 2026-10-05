@@ -20,7 +20,7 @@ href="style.css">
 <style>
 
 /* =========================================================
-   SYNDICATE REPORT
+   THE SYNDICATE REPORT — MSA MEDIA HEADQUARTERS
    ========================================================= */
 
 .report-page {
@@ -28,139 +28,319 @@ href="style.css">
     margin: auto;
 }
 
-.latest-report {
-    max-width: 900px;
-    margin: auto;
+
+/* =========================================================
+   REPORT INTRO
+   ========================================================= */
+
+.report-intro {
     text-align: center;
+
+    margin-bottom: 32px;
+
+    padding:
+        30px 20px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(217,39,46,.10),
+            rgba(18,18,18,.95) 45%,
+            rgba(7,7,7,.94)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.26);
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 14px 40px rgba(0,0,0,.48);
+
+    backdrop-filter:
+        blur(2px);
+
+    -webkit-backdrop-filter:
+        blur(2px);
 }
 
-.latest-label {
+
+.report-intro::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 8%;
+    right: 8%;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d9272e,
+            #f5b642,
+            #7bb800,
+            transparent
+        );
+}
+
+
+.report-intro-label {
+    margin-bottom: 7px;
+
+    color: #aaa;
+
+    font-size: .7rem;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.report-intro .section-title {
+    margin-bottom: 7px;
+
     color: #f5b642;
-    font-weight: bold;
-    letter-spacing: 1px;
+
+    font-size:
+        clamp(1.7rem,4vw,2.3rem);
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,.85);
 }
 
-.latest-title {
-    margin-bottom: 8px;
-}
 
-.latest-description {
-    opacity: .7;
-    max-width: 700px;
-    margin: 0 auto 20px auto;
-    line-height: 1.6;
+.report-intro .section-sub {
+    margin-bottom: 0;
 }
 
 
 /* =========================================================
-   VIDEO
+   MEDIA STATUS BAR
+   ========================================================= */
+
+.media-status {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    max-width: 750px;
+
+    margin:
+        -12px auto 32px auto;
+
+    padding:
+        9px 14px;
+
+    background:
+        rgba(8,8,8,.75);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-radius: 8px;
+
+    color: #aaa;
+
+    font-size: .66rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.1px;
+
+    text-transform: uppercase;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.25);
+}
+
+
+.media-live {
+    color: #78cf00;
+
+    text-shadow:
+        0 0 8px rgba(120,207,0,.45);
+}
+
+
+.media-divider {
+    opacity: .35;
+}
+
+
+/* =========================================================
+   LATEST REPORT
+   ========================================================= */
+
+.latest-report {
+    max-width: 950px;
+
+    margin: auto;
+
+    padding:
+        30px;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20,20,20,.97),
+            rgba(7,7,7,.96)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.28);
+
+    border-top:
+        3px solid #d9272e;
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 16px 45px rgba(0,0,0,.55);
+}
+
+
+.latest-report::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            #d9272e,
+            #f5b642,
+            #7bb800
+        );
+
+    opacity: .8;
+}
+
+
+.latest-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding:
+        6px 12px;
+
+    color: #ff5b61;
+
+    background:
+        rgba(217,39,46,.10);
+
+    border:
+        1px solid rgba(217,39,46,.25);
+
+    border-radius: 20px;
+
+    font-size: .68rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+.latest-title {
+    margin:
+        0 auto 10px auto;
+
+    max-width: 800px;
+
+    color: #f5b642;
+
+    font-size:
+        clamp(1.25rem,3vw,1.65rem);
+
+    line-height: 1.3;
+
+    text-shadow:
+        0 3px 10px rgba(0,0,0,.75);
+}
+
+
+.latest-description {
+    color: #bbb;
+
+    max-width: 720px;
+
+    margin:
+        0 auto 22px auto;
+
+    line-height: 1.65;
+
+    font-size: .9rem;
+}
+
+
+/* =========================================================
+   VIDEO PLAYER
    ========================================================= */
 
 .video-wrap {
     position: relative;
+
     width: 100%;
+
     padding-bottom: 56.25%;
+
     height: 0;
+
     overflow: hidden;
+
     border-radius: 10px;
+
+    background: #000;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.60);
 }
+
 
 .video-wrap iframe {
     position: absolute;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     border: 0;
-}
-
-
-/* =========================================================
-   ARCHIVE
-   ========================================================= */
-
-.archive-section {
-    margin-top: 60px;
-}
-
-.archive-grid {
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-.video-card {
-    overflow: hidden;
-}
-
-.video-card img {
-    width: 100%;
-    display: block;
-    cursor: pointer;
-    transition:
-        transform .2s ease,
-        opacity .2s ease;
-}
-
-.video-card img:hover {
-    transform: scale(1.02);
-    opacity: .85;
-}
-
-.video-card .inside {
-    padding: 16px;
-}
-
-.video-card h3 {
-    margin-top: 0;
-}
-
-.video-card p {
-    min-height: 45px;
-    opacity: .75;
-}
-
-.watch {
-    display: inline-block;
-    margin-top: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    color: #f5b642;
-}
-
-.watch:hover {
-    text-decoration: underline;
-}
-
-
-/* =========================================================
-   ARCHIVE PLAYER
-   ========================================================= */
-
-.archive-player {
-    max-width: 900px;
-    margin: 45px auto 0 auto;
-    text-align: center;
-}
-
-.archive-now-playing {
-    margin-bottom: 18px;
-}
-
-.archive-now-playing-label {
-    color: #f5b642;
-    font-size: .75rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-.archive-now-playing-title {
-    font-size: 1.1rem;
-    font-weight: bold;
 }
 
 
@@ -170,17 +350,480 @@ href="style.css">
 
 .youtube-button {
     display: inline-block;
-    margin-top: 18px;
-    padding: 10px 18px;
+
+    margin-top: 20px;
+
+    padding:
+        11px 20px;
+
     border-radius: 8px;
-    border: 1px solid rgba(245,182,66,.4);
+
+    border:
+        1px solid rgba(245,182,66,.45);
+
+    background:
+        rgba(0,0,0,.42);
+
     color: #f5b642;
+
     text-decoration: none;
-    font-weight: bold;
+
+    font-size: .76rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        color .2s ease,
+        box-shadow .2s ease;
 }
 
+
 .youtube-button:hover {
-    border-color: #f5b642;
+    transform:
+        translateY(-2px);
+
+    background:
+        #f5b642;
+
+    color:
+        #0b0b0b;
+
+    box-shadow:
+        0 7px 20px rgba(245,182,66,.20);
+}
+
+
+/* =========================================================
+   ARCHIVE SECTION
+   ========================================================= */
+
+.archive-section {
+    margin-top: 65px;
+}
+
+
+.archive-header {
+    max-width: 850px;
+
+    margin:
+        0 auto 27px auto;
+
+    padding:
+        24px 18px;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        rgba(10,10,10,.78);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.35);
+}
+
+
+.archive-header::before {
+    content: "";
+
+    position: absolute;
+
+    left: 20%;
+    right: 20%;
+    top: 0;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #f5b642,
+            transparent
+        );
+}
+
+
+.archive-header .section-title {
+    color: #f5b642;
+
+    margin-bottom: 7px;
+}
+
+
+.archive-header .section-sub {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   ARCHIVE GRID
+   ========================================================= */
+
+.archive-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   ARCHIVE VIDEO CARDS
+   ========================================================= */
+
+.video-card {
+    overflow: hidden;
+
+    padding: 0;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.96),
+            rgba(7,7,7,.95)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-top:
+        3px solid #f5b642;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.42);
+
+    transition:
+        transform .22s ease,
+        border-color .22s ease,
+        box-shadow .22s ease;
+}
+
+
+.video-card:nth-child(3n+2) {
+    border-top-color: #7bb800;
+}
+
+
+.video-card:nth-child(3n+3) {
+    border-top-color: #d9272e;
+}
+
+
+.video-card:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(245,182,66,.35);
+
+    box-shadow:
+        0 15px 36px rgba(0,0,0,.55);
+}
+
+
+.video-thumbnail-wrap {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #000;
+}
+
+
+.video-card img {
+    width: 100%;
+
+    display: block;
+
+    cursor: pointer;
+
+    transition:
+        transform .25s ease,
+        opacity .25s ease;
+}
+
+
+.video-card:hover img {
+    transform:
+        scale(1.035);
+
+    opacity: .78;
+}
+
+
+/* =========================================================
+   PLAY ICON OVERLAY
+   ========================================================= */
+
+.video-play-overlay {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,0,0,.72);
+
+    border:
+        2px solid rgba(245,182,66,.65);
+
+    color: #f5b642;
+
+    font-size: 1.2rem;
+
+    pointer-events: none;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.55);
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+
+.video-card:hover
+.video-play-overlay {
+    transform:
+        translate(-50%,-50%)
+        scale(1.08);
+
+    background:
+        rgba(245,182,66,.90);
+
+    color:
+        #0b0b0b;
+}
+
+
+/* =========================================================
+   ARCHIVE CARD CONTENT
+   ========================================================= */
+
+.video-card .inside {
+    padding:
+        17px 17px 19px 17px;
+}
+
+
+.video-card h3 {
+    margin:
+        0 0 8px 0;
+
+    color: #f5b642;
+
+    font-size: .78rem;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.video-card p {
+    min-height: 48px;
+
+    margin-bottom: 5px;
+
+    color: #bbb;
+
+    font-size: .86rem;
+
+    line-height: 1.45;
+}
+
+
+.watch {
+    display: inline-block;
+
+    margin-top: 9px;
+
+    color: #f5b642;
+
+    text-decoration: none;
+
+    font-size: .72rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+
+.watch:hover {
+    color: #ffd166;
+}
+
+
+/* =========================================================
+   ARCHIVE PLAYER
+   ========================================================= */
+
+.archive-player {
+    max-width: 950px;
+
+    margin:
+        50px auto 0 auto;
+
+    padding:
+        28px;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.97),
+            rgba(6,6,6,.96)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.24);
+
+    border-top:
+        3px solid #7bb800;
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 15px 42px rgba(0,0,0,.50);
+}
+
+
+.archive-player h3 {
+    color: #f5b642;
+
+    margin-bottom: 5px;
+}
+
+
+.archive-player > .muted {
+    margin-bottom: 20px;
+}
+
+
+.archive-now-playing {
+    margin-bottom: 18px;
+
+    padding:
+        11px 14px;
+
+    background:
+        rgba(0,0,0,.38);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-radius: 8px;
+}
+
+
+.archive-now-playing-label {
+    color: #7fd100;
+
+    font-size: .65rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+}
+
+
+.archive-now-playing-title {
+    color: #eee;
+
+    font-size: 1rem;
+
+    font-weight: 900;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   REPORT FOOTNOTE
+   ========================================================= */
+
+.report-footnote {
+    max-width: 800px;
+
+    margin:
+        35px auto 0 auto;
+
+    padding:
+        15px 18px;
+
+    text-align: center;
+
+    color: #aaa;
+
+    font-size: .76rem;
+
+    line-height: 1.6;
+
+    background:
+        rgba(8,8,8,.70);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-left:
+        3px solid #d9272e;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .archive-grid {
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+    }
+
 }
 
 
@@ -190,8 +833,44 @@ href="style.css">
 
 @media (max-width: 650px) {
 
+    .report-intro {
+        padding:
+            24px 14px;
+    }
+
+
+    .latest-report {
+        padding:
+            23px 14px;
+    }
+
+
     .latest-title {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
+    }
+
+
+    .archive-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .archive-player {
+        padding:
+            22px 13px;
+    }
+
+
+    .media-status {
+        font-size: .57rem;
+
+        gap: 6px;
+    }
+
+
+    .video-card p {
+        min-height: 0;
     }
 
 }
@@ -274,6 +953,16 @@ League History
 <div class="report-page">
 
 
+<!-- =====================================================
+     MEDIA HEADQUARTERS INTRO
+     ===================================================== -->
+
+<section class="report-intro">
+
+<div class="report-intro-label">
+☠️ MSA MEDIA HEADQUARTERS ☠️
+</div>
+
 <h2 class="section-title">
 🎙️ THE SYNDICATE REPORT
 </h2>
@@ -282,13 +971,44 @@ League History
 Bad takes. Questionable trades. Zero journalistic integrity.
 </p>
 
+</section>
+
+
+<!-- =====================================================
+     MEDIA STATUS
+     ===================================================== -->
+
+<div class="media-status">
+
+<span class="media-live">
+● ON AIR
+</span>
+
+<span class="media-divider">
+•
+</span>
+
+<span>
+MSA Fantasy Football
+</span>
+
+<span class="media-divider">
+•
+</span>
+
+<span>
+Trash Talk Encouraged
+</span>
+
+</div>
+
 
 <!-- =====================================================
      LATEST EPISODE
      ===================================================== -->
 
 <section
-class="panel latest-report"
+class="latest-report"
 id="latest-report">
 
 <p>
@@ -305,6 +1025,8 @@ Loading the latest Syndicate Report...
 <section class="archive-section">
 
 
+<div class="archive-header">
+
 <h2 class="section-title">
 ☠️ FROM THE SYNDICATE ARCHIVES
 </h2>
@@ -316,6 +1038,8 @@ Every questionable prediction.
 Every moment of unnecessary chaos.
 
 </p>
+
+</div>
 
 
 <div
@@ -329,7 +1053,7 @@ id="archive-grid">
      ===================================================== -->
 
 <div
-class="panel archive-player"
+class="archive-player"
 id="archive-player-section">
 
 
@@ -373,6 +1097,19 @@ rel="noopener">
 
 </a>
 
+
+</div>
+
+
+<div class="report-footnote">
+
+<strong>
+☠️ SYNDICATE BROADCAST POLICY:
+</strong>
+
+Opinions expressed on The Syndicate Report may be
+wrong within minutes of being spoken.
+Receipts, unfortunately, are permanent.
 
 </div>
 
@@ -690,13 +1427,6 @@ function buildLatestEpisode() {
 
 /* =========================================================
    PLAY ARCHIVED VIDEO
-
-   This is the important fix.
-
-   Clicking a thumbnail or WATCH button
-   now loads the selected episode into
-   our archive iframe instead of trying
-   to navigate directly to an embed URL.
    ========================================================= */
 
 function playArchiveVideo(
@@ -742,13 +1472,15 @@ function playArchiveVideo(
 
     nowPlaying.innerHTML = `
 
-        <div class="archive-now-playing-label">
+        <div
+        class="archive-now-playing-label">
 
         NOW PLAYING
 
         </div>
 
-        <div class="archive-now-playing-title">
+        <div
+        class="archive-now-playing-title">
 
         ${getVideoLabel(video)}
         —
@@ -857,24 +1589,39 @@ function buildArchive() {
 
 
             card.className =
-                "video-card card";
+                "video-card";
 
 
             card.innerHTML = `
 
 
-                <a
-                href="#archive-player-section"
-                onclick="
-                    playArchiveVideo(${videoIndex});
-                    return false;
-                ">
+                <div
+                class="video-thumbnail-wrap">
 
-                    <img
-                    src="${getThumbnailURL(video)}"
-                    alt="${getVideoLabel(video)}">
 
-                </a>
+                    <a
+                    href="#archive-player-section"
+                    onclick="
+                        playArchiveVideo(${videoIndex});
+                        return false;
+                    ">
+
+                        <img
+                        src="${getThumbnailURL(video)}"
+                        alt="${getVideoLabel(video)}">
+
+                    </a>
+
+
+                    <div
+                    class="video-play-overlay">
+
+                    ▶
+
+                    </div>
+
+
+                </div>
 
 
                 <div class="inside">
@@ -902,7 +1649,7 @@ function buildArchive() {
                         return false;
                     ">
 
-                    ▶ WATCH
+                    ▶ WATCH EPISODE
 
                     </a>
 
