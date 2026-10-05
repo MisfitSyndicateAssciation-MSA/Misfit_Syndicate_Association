@@ -89,6 +89,39 @@
         "awayScore": 202.7,
         "homeScore": 130.6,
         "margin": 72.1
+      },
+      "awards": {
+        "kingOfTheWeek": {
+          "teamId": 9,
+          "teamName": "Apukalypse Now, Skattebo Later",
+          "score": 202.7
+        },
+        "frozenMisfit": {
+          "teamId": 4,
+          "teamName": "Nabershood Cookout",
+          "score": 103.6
+        },
+        "theExecution": {
+          "teamId": 9,
+          "teamName": "Apukalypse Now, Skattebo Later",
+          "opponentId": 8,
+          "opponentName": "Big Pickens Energy",
+          "margin": 72.1
+        },
+        "photoFinish": {
+          "winnerTeamId": 1,
+          "winnerTeamName": "Big Papi Queso",
+          "loserTeamId": 4,
+          "loserTeamName": "Nabershood Cookout",
+          "margin": 15.1
+        },
+        "shouldHaveStayedHome": {
+          "teamId": 8,
+          "teamName": "Big Pickens Energy",
+          "opponentId": 9,
+          "opponentName": "Apukalypse Now, Skattebo Later",
+          "margin": 72.1
+        }
       }
     },
     {
@@ -177,6 +210,39 @@
         "awayScore": 81.3,
         "homeScore": 153.6,
         "margin": 72.3
+      },
+      "awards": {
+        "kingOfTheWeek": {
+          "teamId": 12,
+          "teamName": "Ladiboyz",
+          "score": 153.6
+        },
+        "frozenMisfit": {
+          "teamId": 6,
+          "teamName": "Double Dookie Dawgs",
+          "score": 76.8
+        },
+        "theExecution": {
+          "teamId": 12,
+          "teamName": "Ladiboyz",
+          "opponentId": 3,
+          "opponentName": "Team Ramrod",
+          "margin": 72.3
+        },
+        "photoFinish": {
+          "winnerTeamId": 4,
+          "winnerTeamName": "Nabershood Cookout",
+          "loserTeamId": 5,
+          "loserTeamName": "Pitts Creek",
+          "margin": 19.2
+        },
+        "shouldHaveStayedHome": {
+          "teamId": 3,
+          "teamName": "Team Ramrod",
+          "opponentId": 12,
+          "opponentName": "Ladiboyz",
+          "margin": 72.3
+        }
       }
     },
     {
@@ -265,6 +331,39 @@
         "awayScore": 127.0,
         "homeScore": 88.9,
         "margin": 38.1
+      },
+      "awards": {
+        "kingOfTheWeek": {
+          "teamId": 6,
+          "teamName": "Double Dookie Dawgs",
+          "score": 150.0
+        },
+        "frozenMisfit": {
+          "teamId": 1,
+          "teamName": "Big Papi Queso",
+          "score": 88.9
+        },
+        "theExecution": {
+          "teamId": 11,
+          "teamName": "Red Zone Redbirds",
+          "opponentId": 1,
+          "opponentName": "Big Papi Queso",
+          "margin": 38.1
+        },
+        "photoFinish": {
+          "winnerTeamId": 4,
+          "winnerTeamName": "Nabershood Cookout",
+          "loserTeamId": 12,
+          "loserTeamName": "Ladiboyz",
+          "margin": 3.9
+        },
+        "shouldHaveStayedHome": {
+          "teamId": 1,
+          "teamName": "Big Papi Queso",
+          "opponentId": 11,
+          "opponentName": "Red Zone Redbirds",
+          "margin": 38.1
+        }
       }
     }
   ]
