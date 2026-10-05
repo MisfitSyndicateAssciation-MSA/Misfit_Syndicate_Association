@@ -20,11 +20,98 @@ href="style.css">
 <style>
 
 /* =========================================================
-   MSA STANDINGS
+   MSA STANDINGS — SYNDICATE POWER BOARD
    ========================================================= */
 
-.standings-wrapper {
-    overflow-x: auto;
+.standings-page {
+    max-width: 1050px;
+    margin: auto;
+}
+
+
+/* =========================================================
+   PAGE INTRO
+   ========================================================= */
+
+.standings-intro {
+    text-align: center;
+
+    margin-bottom: 28px;
+
+    padding: 28px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(18,18,18,.94),
+            rgba(8,8,8,.90)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.28);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.45);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.standings-intro::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 10%;
+    right: 10%;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #7bb800,
+            #f5b642,
+            #d9272e,
+            transparent
+        );
+}
+
+
+.standings-intro-label {
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    font-size: .72rem;
+
+    opacity: .7;
+
+    margin-bottom: 7px;
+}
+
+
+.standings-intro .section-title {
+    margin-bottom: 7px;
+
+    color: #f5b642;
+
+    font-size:
+        clamp(1.6rem,4vw,2.2rem);
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,.85);
+}
+
+
+.standings-intro .section-sub {
+    margin-bottom: 0;
 }
 
 
@@ -34,33 +121,174 @@ href="style.css">
 
 .live-data-status {
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     flex-wrap: wrap;
+
     gap: 9px;
-    margin: 12px auto 25px auto;
+
+    max-width: 850px;
+
+    margin:
+        12px auto 28px auto;
+
+    padding:
+        9px 14px;
+
     text-transform: uppercase;
+
     letter-spacing: 1.3px;
+
     font-size: .68rem;
+
     font-weight: bold;
-    opacity: .75;
+
+    background:
+        rgba(8,8,8,.75);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-radius: 7px;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.25);
 }
 
+
 .live-dot {
-    color: #22c55e;
+    color: #78cf00;
+
+    text-shadow:
+        0 0 8px rgba(120,207,0,.45);
 }
+
 
 .live-dot::before {
     content: "●";
+
     margin-right: 5px;
 }
+
 
 .data-time {
     color: #f5b642;
 }
 
+
 .status-divider {
     opacity: .4;
+}
+
+
+/* =========================================================
+   STANDINGS TABLE WRAPPER
+   ========================================================= */
+
+.standings-wrapper {
+    overflow-x: auto;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.96),
+            rgba(7,7,7,.95)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.22);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 14px 40px rgba(0,0,0,.50);
+
+    backdrop-filter:
+        blur(2px);
+
+    -webkit-backdrop-filter:
+        blur(2px);
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.standings-wrapper table {
+    width: 100%;
+
+    min-width: 760px;
+
+    border-collapse: collapse;
+
+    background: transparent;
+}
+
+
+.standings-wrapper thead {
+    background:
+        linear-gradient(
+            90deg,
+            #c88c28,
+            #f5b642,
+            #c88c28
+        );
+}
+
+
+.standings-wrapper th {
+    padding:
+        15px 14px;
+
+    color: #0b0b0b;
+
+    background: transparent;
+
+    font-size: .72rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    border-bottom:
+        2px solid rgba(0,0,0,.30);
+}
+
+
+.standings-wrapper td {
+    padding:
+        14px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.07);
+
+    vertical-align: middle;
+}
+
+
+.standings-wrapper tbody tr {
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+.standings-wrapper tbody tr:hover {
+    background:
+        rgba(245,182,66,.055);
+}
+
+
+.standings-wrapper tbody tr:last-child td {
+    border-bottom: none;
 }
 
 
@@ -70,12 +298,21 @@ href="style.css">
 
 .standings-team-link {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
+
     text-decoration: none;
+
     font-weight: bold;
+
     color: inherit;
+
+    transition:
+        color .2s ease;
 }
+
 
 .standings-team-link:hover {
     color: #f5b642;
@@ -87,11 +324,30 @@ href="style.css">
    ========================================================= */
 
 .standings-logo {
-    width: 52px;
-    height: 52px;
+    width: 55px;
+
+    height: 55px;
+
     object-fit: contain;
+
     border-radius: 10px;
+
     flex-shrink: 0;
+
+    filter:
+        drop-shadow(
+            0 5px 8px rgba(0,0,0,.70)
+        );
+
+    transition:
+        transform .2s ease;
+}
+
+
+.standings-team-link:hover
+.standings-logo {
+    transform:
+        scale(1.08);
 }
 
 
@@ -109,8 +365,13 @@ href="style.css">
    ========================================================= */
 
 .rank-cell {
-    font-weight: bold;
+    font-weight: 900;
+
     white-space: nowrap;
+
+    color: #f5b642;
+
+    font-size: 1rem;
 }
 
 
@@ -119,7 +380,8 @@ href="style.css">
    ========================================================= */
 
 .record-cell {
-    font-weight: bold;
+    font-weight: 900;
+
     white-space: nowrap;
 }
 
@@ -130,6 +392,8 @@ href="style.css">
 
 .points-cell {
     white-space: nowrap;
+
+    color: #ddd;
 }
 
 
@@ -139,30 +403,171 @@ href="style.css">
 
 .playoff-cell {
     white-space: nowrap;
-    font-weight: bold;
+
+    font-weight: 900;
+
+    color: #9bd400;
 }
 
 
 /* =========================================================
-   TOP / BOTTOM VISUAL ACCENTS
+   FIRST PLACE — KING OF THE SYNDICATE
    ========================================================= */
 
 .first-place-row {
     background:
         linear-gradient(
             90deg,
-            rgba(245,182,66,.08),
+            rgba(245,182,66,.16),
+            rgba(123,184,0,.06),
             transparent
         );
+
+    box-shadow:
+        inset 4px 0 0 #f5b642;
 }
+
+
+.first-place-row .rank-cell {
+    color: #ffd166;
+
+    text-shadow:
+        0 0 10px rgba(245,182,66,.30);
+}
+
+
+.first-place-row
+.standings-team-name {
+    color: #ffd166;
+}
+
+
+/* =========================================================
+   LAST PLACE — BASEMENT DWELLER
+   ========================================================= */
 
 .last-place-row {
     background:
         linear-gradient(
             90deg,
-            rgba(180,30,30,.08),
+            rgba(190,30,35,.16),
             transparent
         );
+
+    box-shadow:
+        inset 4px 0 0 #d9272e;
+}
+
+
+.last-place-row .rank-cell {
+    color: #ef555b;
+}
+
+
+.last-place-row
+.standings-team-name {
+    color: #e36a6e;
+}
+
+
+/* =========================================================
+   POSITION ACCENTS
+   ========================================================= */
+
+.standings-wrapper
+tbody tr:nth-child(2) {
+    box-shadow:
+        inset 3px 0 0 rgba(190,190,190,.55);
+}
+
+
+.standings-wrapper
+tbody tr:nth-child(3) {
+    box-shadow:
+        inset 3px 0 0 rgba(176,110,55,.55);
+}
+
+
+/* =========================================================
+   STANDINGS LEGEND
+   ========================================================= */
+
+.standings-legend {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    font-size: .68rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    opacity: .75;
+}
+
+
+.legend-item {
+    padding:
+        6px 10px;
+
+    background:
+        rgba(8,8,8,.72);
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    border-radius: 20px;
+}
+
+
+.legend-first {
+    color: #f5b642;
+}
+
+
+.legend-last {
+    color: #e34a50;
+}
+
+
+/* =========================================================
+   FOOTNOTE
+   ========================================================= */
+
+.standings-note {
+    max-width: 780px;
+
+    margin:
+        28px auto 0 auto;
+
+    padding:
+        16px 18px;
+
+    text-align: center;
+
+    font-size: .8rem;
+
+    line-height: 1.6;
+
+    color: #ccc;
+
+    background:
+        rgba(8,8,8,.72);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-left:
+        3px solid #7bb800;
+
+    border-radius: 8px;
 }
 
 
@@ -172,23 +577,53 @@ href="style.css">
 
 @media (max-width: 650px) {
 
+    .standings-intro {
+        padding:
+            23px 14px;
+    }
+
+
     .standings-logo {
         width: 42px;
+
         height: 42px;
     }
+
 
     .standings-team-link {
         gap: 8px;
     }
 
+
     .standings-team-name {
         min-width: 130px;
     }
 
+
     .live-data-status {
         font-size: .58rem;
+
         gap: 6px;
-        padding: 0 10px;
+
+        padding:
+            8px 10px;
+    }
+
+
+    .standings-wrapper th {
+        padding:
+            12px 10px;
+    }
+
+
+    .standings-wrapper td {
+        padding:
+            11px 10px;
+    }
+
+
+    .standings-note {
+        font-size: .74rem;
     }
 
 }
@@ -272,6 +707,18 @@ League History
 
 <main>
 
+<div class="standings-page">
+
+
+<!-- =====================================================
+     STANDINGS INTRO
+     ===================================================== -->
+
+<section class="standings-intro">
+
+<div class="standings-intro-label">
+☠️ THE SYNDICATE POWER BOARD ☠️
+</div>
 
 <h2 class="section-title">
 
@@ -288,6 +735,12 @@ Loading latest standings from ESPN...
 
 </p>
 
+</section>
+
+
+<!-- =====================================================
+     LIVE DATA STATUS
+     ===================================================== -->
 
 <div
 class="live-data-status"
@@ -307,6 +760,10 @@ Checking for updates...
 
 </div>
 
+
+<!-- =====================================================
+     STANDINGS TABLE
+     ===================================================== -->
 
 <div class="standings-wrapper">
 
@@ -359,6 +816,50 @@ Loading the latest MSA chaos...
 
 </div>
 
+
+<!-- =====================================================
+     LEGEND
+     ===================================================== -->
+
+<div class="standings-legend">
+
+<span class="legend-item legend-first">
+👑 King of the Syndicate
+</span>
+
+<span class="legend-item">
+🥈 Chasing the Crown
+</span>
+
+<span class="legend-item">
+🥉 Still Dangerous
+</span>
+
+<span class="legend-item legend-last">
+💀 Basement Dweller
+</span>
+
+</div>
+
+
+<!-- =====================================================
+     STANDINGS NOTE
+     ===================================================== -->
+
+<div class="standings-note">
+
+<strong>
+☠️ MSA STANDINGS PROTOCOL:
+</strong>
+
+Records reflect completed ESPN fantasy matchups.
+Live scores may be changing on Matchup Headquarters
+before ESPN officially updates the standings.
+
+</div>
+
+
+</div>
 
 </main>
 
@@ -755,17 +1256,15 @@ async function loadStandings() {
            COMPLETED WEEK STATUS
            =================================================
 
-        IMPORTANT:
-
         Standings represent completed games.
 
-        During Week 4 live scoring, the records
-        remain the official completed standings
-        through Week 3.
+        During a live scoring week, records remain
+        the official completed standings from the
+        previous finalized week.
 
-        Once ESPN finalizes Week 4, the GitHub
-        updater will bring the new standings into
-        league.json automatically.
+        Once ESPN finalizes the current week, the
+        GitHub updater automatically brings the new
+        standings into league.json.
         ================================================= */
 
         const completedWeek =
