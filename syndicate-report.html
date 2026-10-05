@@ -97,6 +97,15 @@ href="style.css">
 .video-card img {
     width: 100%;
     display: block;
+    cursor: pointer;
+    transition:
+        transform .2s ease,
+        opacity .2s ease;
+}
+
+.video-card img:hover {
+    transform: scale(1.02);
+    opacity: .85;
 }
 
 .video-card .inside {
@@ -117,12 +126,61 @@ href="style.css">
     margin-top: 8px;
     text-decoration: none;
     font-weight: bold;
+    cursor: pointer;
+    color: #f5b642;
 }
+
+.watch:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   ARCHIVE PLAYER
+   ========================================================= */
 
 .archive-player {
     max-width: 900px;
     margin: 45px auto 0 auto;
     text-align: center;
+}
+
+.archive-now-playing {
+    margin-bottom: 18px;
+}
+
+.archive-now-playing-label {
+    color: #f5b642;
+    font-size: .75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.archive-now-playing-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   YOUTUBE BUTTON
+   ========================================================= */
+
+.youtube-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(245,182,66,.4);
+    color: #f5b642;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.youtube-button:hover {
+    border-color: #f5b642;
 }
 
 
@@ -172,7 +230,6 @@ Fantasy Football for the Beautifully Dysfunctional
 </header>
 
 
-
 <nav>
 
 <div class="nav-links">
@@ -208,7 +265,6 @@ League History
 </nav>
 
 
-
 <main>
 
 <div class="report-page">
@@ -221,7 +277,6 @@ League History
 <p class="section-sub">
 Bad takes. Questionable trades. Zero journalistic integrity.
 </p>
-
 
 
 <!-- =====================================================
@@ -237,7 +292,6 @@ Loading the latest Syndicate Report...
 </p>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -266,7 +320,6 @@ id="archive-grid">
 </div>
 
 
-
 <!-- =====================================================
      ARCHIVE PLAYER
      ===================================================== -->
@@ -275,19 +328,27 @@ id="archive-grid">
 class="panel archive-player"
 id="archive-player-section">
 
+
 <h3>
 📺 SYNDICATE ARCHIVE PLAYER
 </h3>
+
 
 <p class="muted">
 Pick an episode above and relive the chaos.
 </p>
 
+
+<div
+class="archive-now-playing"
+id="archive-now-playing">
+</div>
+
+
 <div class="video-wrap">
 
 <iframe
 id="archive-player"
-name="archive-player"
 src=""
 title="Syndicate Report Archive Player"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -295,6 +356,19 @@ allowfullscreen>
 </iframe>
 
 </div>
+
+
+<a
+id="archive-youtube-link"
+class="youtube-button"
+href="#"
+target="_blank"
+rel="noopener">
+
+▶ OPEN THIS EPISODE ON YOUTUBE
+
+</a>
+
 
 </div>
 
@@ -307,7 +381,6 @@ allowfullscreen>
 </main>
 
 
-
 <footer>
 
 © 2026 Misfit Syndicate Association • Built by Misfits, for Misfits
@@ -315,21 +388,19 @@ allowfullscreen>
 </footer>
 
 
-
 <script>
+
 
 /* =========================================================
    MSA VIDEO LIBRARY
 
-   IMPORTANT:
-
    NEWEST VIDEO ALWAYS GOES AT THE TOP.
 
-   That's it.
+   The first video automatically becomes
+   the featured episode.
 
-   The website automatically makes the first
-   video the featured episode and moves
-   everything else into the archive.
+   Everything else automatically becomes
+   part of the Syndicate archives.
    ========================================================= */
 
 const syndicateVideos = [
@@ -433,52 +504,87 @@ const syndicateVideos = [
 ];
 
 
-
 /* =========================================================
    VIDEO HELPERS
    ========================================================= */
 
 function getVideoLabel(video) {
 
-    if (video.type === "special") {
+    if (
+        video.type === "special"
+    ) {
 
         return (
+
             (video.emoji || "💀") +
             " " +
             video.label
+
         );
 
     }
 
+
     return (
+
         (video.emoji || "🎙️") +
         " EPISODE " +
         video.number
+
     );
 
 }
 
+
+/*
+This URL is ONLY for the video player.
+*/
 
 function getEmbedURL(video) {
 
     return (
+
         "https://www.youtube.com/embed/" +
         video.id
+
     );
 
 }
 
+
+/*
+This is the normal YouTube watch URL.
+
+Use this for buttons that open YouTube itself.
+*/
+
+function getWatchURL(video) {
+
+    return (
+
+        "https://www.youtube.com/watch?v=" +
+        video.id
+
+    );
+
+}
+
+
+/*
+YouTube thumbnail.
+*/
 
 function getThumbnailURL(video) {
 
     return (
+
         "https://img.youtube.com/vi/" +
         video.id +
         "/hqdefault.jpg"
+
     );
 
 }
-
 
 
 /* =========================================================
@@ -500,8 +606,10 @@ function buildLatestEpisode() {
         container.innerHTML = `
 
             <p>
+
             No Syndicate Report episodes
             are available yet.
+
             </p>
 
         `;
@@ -516,11 +624,14 @@ function buildLatestEpisode() {
 
 
     const description =
+
         latest.description ||
+
         "Another week of fantasy football, questionable decisions and unnecessary Syndicate chaos.";
 
 
     container.innerHTML = `
+
 
         <p class="latest-label">
 
@@ -556,22 +667,51 @@ function buildLatestEpisode() {
 
         </div>
 
+
+        <a
+        class="youtube-button"
+        href="${getWatchURL(latest)}"
+        target="_blank"
+        rel="noopener">
+
+        ▶ WATCH ON YOUTUBE
+
+        </a>
+
+
     `;
 
 }
 
 
-
 /* =========================================================
-   BUILD ARCHIVE
+   PLAY ARCHIVED VIDEO
+
+   This is the important fix.
+
+   Clicking a thumbnail or WATCH button
+   now loads the selected episode into
+   our archive iframe instead of trying
+   to navigate directly to an embed URL.
    ========================================================= */
 
-function buildArchive() {
+function playArchiveVideo(
+    videoIndex,
+    shouldScroll = true
+) {
 
-    const archive =
-        document.getElementById(
-            "archive-grid"
-        );
+
+    const video =
+        syndicateVideos[
+            videoIndex
+        ];
+
+
+    if (!video) {
+
+        return;
+
+    }
 
 
     const player =
@@ -580,11 +720,82 @@ function buildArchive() {
         );
 
 
+    const nowPlaying =
+        document.getElementById(
+            "archive-now-playing"
+        );
+
+
+    const youtubeLink =
+        document.getElementById(
+            "archive-youtube-link"
+        );
+
+
+    player.src =
+        getEmbedURL(video);
+
+
+    nowPlaying.innerHTML = `
+
+        <div class="archive-now-playing-label">
+
+        NOW PLAYING
+
+        </div>
+
+        <div class="archive-now-playing-title">
+
+        ${getVideoLabel(video)}
+        —
+        ${video.title}
+
+        </div>
+
+    `;
+
+
+    youtubeLink.href =
+        getWatchURL(video);
+
+
+    if (shouldScroll) {
+
+        document
+            .getElementById(
+                "archive-player-section"
+            )
+            .scrollIntoView({
+
+                behavior: "smooth",
+                block: "start"
+
+            });
+
+    }
+
+}
+
+
+/* =========================================================
+   BUILD ARCHIVE
+   ========================================================= */
+
+function buildArchive() {
+
+
+    const archive =
+        document.getElementById(
+            "archive-grid"
+        );
+
+
     const archiveVideos =
         syndicateVideos.slice(1);
 
 
-    archive.innerHTML = "";
+    archive.innerHTML =
+        "";
 
 
     if (
@@ -607,85 +818,106 @@ function buildArchive() {
 
 
     /*
-    Load newest archived episode
-    into the archive player.
+    Automatically load the newest
+    archived episode into the player.
+
+    Because the latest episode is index 0,
+    the first archived episode is index 1.
     */
 
-    player.src =
-        getEmbedURL(
-            archiveVideos[0]
-        );
+    playArchiveVideo(
+        1,
+        false
+    );
 
 
-    archiveVideos.forEach(video => {
+    /*
+    Build archive cards.
+
+    syndicateVideos index starts at 1 here
+    because index 0 is the featured episode.
+    */
+
+    archiveVideos.forEach(
+        (video, archiveIndex) => {
 
 
-        const card =
-            document.createElement(
-                "div"
-            );
+            const videoIndex =
+                archiveIndex + 1;
 
 
-        card.className =
-            "video-card card";
+            const card =
+                document.createElement(
+                    "div"
+                );
 
 
-        const embedURL =
-            getEmbedURL(video);
+            card.className =
+                "video-card card";
 
 
-        card.innerHTML = `
-
-            <a
-            href="${embedURL}"
-            target="archive-player">
-
-                <img
-                src="${getThumbnailURL(video)}"
-                alt="${getVideoLabel(video)}">
-
-            </a>
-
-
-            <div class="inside">
-
-                <h3>
-
-                ${getVideoLabel(video)}
-
-                </h3>
-
-
-                <p>
-
-                ${video.title}
-
-                </p>
+            card.innerHTML = `
 
 
                 <a
-                class="watch"
-                href="${embedURL}"
-                target="archive-player">
+                href="#archive-player-section"
+                onclick="
+                    playArchiveVideo(${videoIndex});
+                    return false;
+                ">
 
-                ▶ WATCH
+                    <img
+                    src="${getThumbnailURL(video)}"
+                    alt="${getVideoLabel(video)}">
 
                 </a>
 
-            </div>
 
-        `;
-
-
-        archive.appendChild(
-            card
-        );
+                <div class="inside">
 
 
-    });
+                    <h3>
+
+                    ${getVideoLabel(video)}
+
+                    </h3>
+
+
+                    <p>
+
+                    ${video.title}
+
+                    </p>
+
+
+                    <a
+                    class="watch"
+                    href="#archive-player-section"
+                    onclick="
+                        playArchiveVideo(${videoIndex});
+                        return false;
+                    ">
+
+                    ▶ WATCH
+
+                    </a>
+
+
+                </div>
+
+
+            `;
+
+
+            archive.appendChild(
+                card
+            );
+
+
+        }
+    );
 
 }
-
 
 
 /* =========================================================
@@ -695,6 +927,7 @@ function buildArchive() {
 buildLatestEpisode();
 
 buildArchive();
+
 
 </script>
 
