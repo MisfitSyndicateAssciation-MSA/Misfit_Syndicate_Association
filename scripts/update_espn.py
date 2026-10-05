@@ -172,6 +172,214 @@ def fetch_espn():
 
 
 # =========================================================
+# FETCH ESPN DATA FOR A SPECIFIC COMPLETED WEEK
+# =========================================================
+
+def fetch_espn_week(week):
+
+    week_url = (
+        f"https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/"
+        f"seasons/{SEASON}/segments/0/leagues/{LEAGUE_ID}"
+        "?view=mBoxscore"
+        "&view=mRoster"
+        f"&scoringPeriodId={week}"
+    )
+
+    request = urllib.request.Request(
+        week_url,
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/json",
+        },
+    )
+
+    with urllib.request.urlopen(
+        request,
+        timeout=30
+    ) as response:
+
+        return json.loads(
+            response.read().decode("utf-8")
+        )
+
+
+# =========================================================
+# HISTORICAL PLAYER SCORE
+#
+# statSourceId 0 = actual fantasy points.
+# statSourceId 1 = projection, which is intentionally ignored.
+# =========================================================
+
+def get_actual_player_score_for_week(
+    player,
+    week
+):
+
+    actual_scores = []
+
+    for stat in player.get(
+        "stats",
+        []
+    ):
+
+        if (
+            stat.get("scoringPeriodId") == week
+            and
+            stat.get("statSourceId") == 0
+        ):
+
+            actual_scores.append(
+                safe_score(
+                    stat.get(
+                        "appliedTotal",
+                        0
+                    )
+                )
+            )
+
+    if not actual_scores:
+        return 0.0
+
+    return max(
+        actual_scores
+    )
+
+
+# =========================================================
+# BENCHWARMER OF THE WEEK
+#
+# ESPN lineupSlotId 20 = Bench.
+# ESPN lineupSlotId 21 = IR, which is excluded.
+# =========================================================
+
+def build_benchwarmer_for_week(
+    week_raw,
+    week
+):
+
+    candidates = []
+
+    for team in week_raw.get(
+        "teams",
+        []
+    ):
+
+        team_id = team.get(
+            "id"
+        )
+
+        entries = (
+            team.get(
+                "roster",
+                {}
+            ).get(
+                "entries",
+                []
+            )
+        )
+
+        for entry in entries:
+
+            lineup_slot_id = (
+                entry.get(
+                    "lineupSlotId"
+                )
+            )
+
+            if lineup_slot_id != 20:
+                continue
+
+            player = (
+                entry.get(
+                    "playerPoolEntry",
+                    {}
+                ).get(
+                    "player",
+                    {}
+                )
+            )
+
+            player_id = (
+                player.get(
+                    "id"
+                )
+            )
+
+            if player_id is None:
+                player_id = (
+                    entry.get(
+                        "playerId"
+                    )
+                )
+
+            points = (
+                get_actual_player_score_for_week(
+                    player,
+                    week
+                )
+            )
+
+            candidates.append({
+
+                "teamId":
+                    team_id,
+
+                "teamName":
+                    TEAM_NAMES.get(
+                        team_id,
+                        f"Team {team_id}"
+                    ),
+
+                "playerId":
+                    player_id,
+
+                "playerName":
+                    player.get(
+                        "fullName",
+                        "Unknown Player"
+                    ),
+
+                "position":
+                    PLAYER_POSITIONS.get(
+                        player.get(
+                            "defaultPositionId"
+                        ),
+                        "N/A"
+                    ),
+
+                "nflTeam":
+                    NFL_TEAMS.get(
+                        player.get(
+                            "proTeamId",
+                            0
+                        ),
+                        "FA"
+                    ),
+
+                "points":
+                    points,
+
+                "lineupSlotId":
+                    lineup_slot_id,
+
+                "lineupSlot":
+                    "Bench",
+
+            })
+
+    if not candidates:
+        return None
+
+    return max(
+        candidates,
+        key=lambda item: (
+            item["points"],
+            item["playerName"],
+        )
+    )
+
+
+# =========================================================
 # SAFE SCORE
 # =========================================================
 
@@ -423,7 +631,8 @@ def build_rosters(raw):
 
 def build_history(
     raw,
-    current_week
+    current_week,
+    weekly_raw=None
 ):
 
     weeks = []
@@ -956,6 +1165,19 @@ def build_history(
 
             "stockRising":
                 stock_rising,
+
+            "benchwarmerOfTheWeek":
+                (
+                    build_benchwarmer_for_week(
+                        weekly_raw.get(
+                            week,
+                            {}
+                        ),
+                        week
+                    )
+                    if weekly_raw
+                    else None
+                ),
         }
 
 
@@ -1586,70 +1808,35 @@ def main():
         fetch_espn()
     )
 
-       # TEMPORARY WEEK-SPECIFIC BOXSCORE DIAGNOSTIC
-    print("=== WEEK 1 BOXSCORE DIAGNOSTIC ===")
-
-    week_url = (
-        f"https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/"
-        f"seasons/{SEASON}/segments/0/leagues/{LEAGUE_ID}"
-        "?view=mBoxscore"
-        "&view=mRoster"
-        "&scoringPeriodId=1"
+    current_week = raw.get(
+        "scoringPeriodId",
+        raw.get(
+            "status",
+            {}
+        ).get(
+            "currentMatchupPeriod",
+            1
+        )
     )
 
-    week_request = urllib.request.Request(
-        week_url,
-        headers={
-            "User-Agent": "Mozilla/5.0",
-            "Accept": "application/json",
-        },
-    )
+    weekly_raw = {}
 
-    with urllib.request.urlopen(
-        week_request,
-        timeout=30
-    ) as response:
-
-        week_raw = json.loads(
-            response.read().decode("utf-8")
-        )
-
-    for team in week_raw.get("teams", []):
-
-        entries = (
-            team.get("roster", {})
-            .get("entries", [])
-        )
+    for completed_week in range(
+        1,
+        current_week
+    ):
 
         print(
-            "WEEK 1 TEAM:",
-            team.get("id")
+            f"Fetching historical roster data "
+            f"for Week {completed_week}..."
         )
 
-        for entry in entries[:3]:
+        weekly_raw[
+            completed_week
+        ] = fetch_espn_week(
+            completed_week
+        )
 
-            player = (
-                entry.get("playerPoolEntry", {})
-                .get("player", {})
-            )
-
-            print({
-                "player": player.get("fullName"),
-                "lineupSlotId": entry.get("lineupSlotId"),
-                "stats": [
-                    {
-                        "scoringPeriodId": stat.get("scoringPeriodId"),
-                        "statSourceId": stat.get("statSourceId"),
-                        "appliedTotal": stat.get("appliedTotal"),
-                    }
-                    for stat in player.get("stats", [])
-                    if stat.get("scoringPeriodId") == 1
-                ],
-            })
-
-        break
-
-    print("=== END WEEK 1 BOXSCORE DIAGNOSTIC ===")
 
 
     clean = (
@@ -1664,7 +1851,8 @@ def main():
             raw,
             clean[
                 "currentWeek"
-            ]
+            ],
+            weekly_raw
         )
     )
 
