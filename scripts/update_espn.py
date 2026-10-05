@@ -685,6 +685,80 @@ def build_history(
 
 
         # -------------------------------------------------
+        # MSA WEEKLY AWARDS - PHASE 1
+        # -------------------------------------------------
+
+        def team_name_for_id(matchup, team_id):
+            if team_id == matchup["awayTeamId"]:
+                return matchup["awayTeamName"]
+            if team_id == matchup["homeTeamId"]:
+                return matchup["homeTeamName"]
+            return None
+
+        execution_winner_id = biggest_blowout["winnerTeamId"]
+        execution_loser_id = biggest_blowout["loserTeamId"]
+
+        photo_finish_winner_id = closest_game["winnerTeamId"]
+        photo_finish_loser_id = closest_game["loserTeamId"]
+
+        awards = {
+            "kingOfTheWeek": {
+                "teamId": highest["teamId"],
+                "teamName": highest["teamName"],
+                "score": highest["score"],
+            },
+
+            "frozenMisfit": {
+                "teamId": lowest["teamId"],
+                "teamName": lowest["teamName"],
+                "score": lowest["score"],
+            },
+
+            "theExecution": {
+                "teamId": execution_winner_id,
+                "teamName": team_name_for_id(
+                    biggest_blowout,
+                    execution_winner_id
+                ),
+                "opponentId": execution_loser_id,
+                "opponentName": team_name_for_id(
+                    biggest_blowout,
+                    execution_loser_id
+                ),
+                "margin": biggest_blowout["margin"],
+            },
+
+            "photoFinish": {
+                "winnerTeamId": photo_finish_winner_id,
+                "winnerTeamName": team_name_for_id(
+                    closest_game,
+                    photo_finish_winner_id
+                ),
+                "loserTeamId": photo_finish_loser_id,
+                "loserTeamName": team_name_for_id(
+                    closest_game,
+                    photo_finish_loser_id
+                ),
+                "margin": closest_game["margin"],
+            },
+
+            "shouldHaveStayedHome": {
+                "teamId": execution_loser_id,
+                "teamName": team_name_for_id(
+                    biggest_blowout,
+                    execution_loser_id
+                ),
+                "opponentId": execution_winner_id,
+                "opponentName": team_name_for_id(
+                    biggest_blowout,
+                    execution_winner_id
+                ),
+                "margin": biggest_blowout["margin"],
+            },
+        }
+
+
+        # -------------------------------------------------
         # SAVE COMPLETED WEEK
         # -------------------------------------------------
 
@@ -811,6 +885,9 @@ def build_history(
                     ],
 
             },
+
+            "awards":
+                awards,
 
         })
 
