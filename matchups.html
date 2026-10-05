@@ -216,6 +216,29 @@ href="style.css">
 }
 
 
+/* Automatic refresh information */
+
+.auto-refresh-status {
+    max-width: 900px;
+    margin: 0 auto 25px auto;
+    text-align: center;
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    opacity: .65;
+}
+
+.auto-refresh-live {
+    color: #22c55e;
+    font-weight: 900;
+}
+
+.auto-refresh-time {
+    color: #f5b642;
+    font-weight: bold;
+}
+
+
 /* Special matchup message */
 
 .special-message {
@@ -387,6 +410,21 @@ Loading this week's chaos from ESPN...
 </p>
 
 
+<div
+class="auto-refresh-status"
+id="auto-refresh-status">
+
+<span class="auto-refresh-live">
+● LIVE
+</span>
+
+&nbsp;•&nbsp;
+
+Checking ESPN data...
+
+</div>
+
+
 <div id="matchups-container">
 
 <div class="matchup">
@@ -549,7 +587,7 @@ function getMatchupKey(teamA, teamB) {
     ]
     .sort(
         (a, b) =>
-            a - b
+        a - b
     )
     .join("-");
 
@@ -708,6 +746,73 @@ function buildTeamDisplay(
 
 
 /* =========================================================
+   UPDATE REFRESH STATUS
+   ========================================================= */
+
+function updateRefreshStatus(success = true) {
+
+    const refreshStatus =
+        document.getElementById(
+            "auto-refresh-status"
+        );
+
+
+    const now =
+        new Date();
+
+
+    const time =
+        now.toLocaleTimeString(
+            [],
+            {
+                hour: "numeric",
+                minute: "2-digit"
+            }
+        );
+
+
+    if (success) {
+
+        refreshStatus.innerHTML = `
+
+            <span class="auto-refresh-live">
+            ● LIVE
+            </span>
+
+            &nbsp;•&nbsp;
+
+            ESPN data checked
+
+            <span class="auto-refresh-time">
+            ${time}
+            </span>
+
+            &nbsp;•&nbsp;
+
+            Page checks every 60 seconds
+
+        `;
+
+    }
+
+    else {
+
+        refreshStatus.innerHTML = `
+
+            ⚠️ ESPN data check failed
+
+            &nbsp;•&nbsp;
+
+            Retrying automatically
+
+        `;
+
+    }
+
+}
+
+
+/* =========================================================
    LOAD MATCHUPS
    ========================================================= */
 
@@ -744,7 +849,11 @@ async function loadMatchups() {
             await fetch(
 
                 "data/league.json?t=" +
-                Date.now()
+                Date.now(),
+
+                {
+                    cache: "no-store"
+                }
 
             );
 
@@ -1181,6 +1290,13 @@ async function loadMatchups() {
         }
 
 
+        /*
+        Update the small live-refresh indicator.
+        */
+
+        updateRefreshStatus(true);
+
+
     }
 
 
@@ -1201,16 +1317,37 @@ async function loadMatchups() {
             "Unable to load ESPN matchup data.";
 
 
-        container.innerHTML = `
+        /*
+        IMPORTANT:
+        We do NOT erase the existing matchup cards
+        during an automatic refresh failure.
 
-            <div class="matchup">
+        If the page has never successfully loaded,
+        show the error message.
+        */
 
-            ESPN is temporarily refusing
-            to participate in the dysfunction.
+        if (
+            container.children.length === 1 &&
+            container.textContent.includes(
+                "Loading the latest MSA matchups"
+            )
+        ) {
 
-            </div>
+            container.innerHTML = `
 
-        `;
+                <div class="matchup">
+
+                ESPN is temporarily refusing
+                to participate in the dysfunction.
+
+                </div>
+
+            `;
+
+        }
+
+
+        updateRefreshStatus(false);
 
 
     }
@@ -1219,7 +1356,59 @@ async function loadMatchups() {
 }
 
 
+/* =========================================================
+   AUTOMATIC LIVE REFRESH
+   ========================================================= */
+
+/*
+Load immediately when somebody opens
+the Matchups page.
+*/
+
 loadMatchups();
+
+
+/*
+Then check the GitHub-generated ESPN JSON
+every 60 seconds.
+
+This does NOT reload the browser page.
+It quietly refreshes the matchup cards.
+*/
+
+const matchupRefreshInterval =
+    setInterval(
+
+        loadMatchups,
+
+        60000
+
+    );
+
+
+/*
+If someone leaves the tab open in the
+background, browsers can slow timers down.
+
+When they return to the tab, immediately
+check for fresh ESPN data again.
+*/
+
+document.addEventListener(
+    "visibilitychange",
+    () => {
+
+        if (
+            document.visibilityState ===
+            "visible"
+        ) {
+
+            loadMatchups();
+
+        }
+
+    }
+);
 
 
 </script>
