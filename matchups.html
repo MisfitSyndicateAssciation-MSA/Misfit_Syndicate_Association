@@ -2,18 +2,252 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Matchups | Misfit Syndicate Association</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+<title>
+Matchups | Misfit Syndicate Association
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
+
+<style>
+
+/* =========================================================
+   MSA MATCHUPS
+   ========================================================= */
+
+#matchups-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/*
+Individual matchup card
+*/
+
+.matchup {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 25px 20px;
+}
+
+
+/*
+Matchup title
+*/
+
+.matchup-title {
+    font-size: 1.05rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+}
+
+
+/*
+Head-to-head team area
+*/
+
+.matchup-teams {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/*
+Individual team
+*/
+
+.matchup-team {
+    text-align: center;
+}
+
+
+/*
+Clickable team area
+*/
+
+.matchup-team-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.matchup-team-link:hover .matchup-team-name {
+    color: #f5b642;
+}
+
+
+/*
+Official MSA logos
+*/
+
+.matchup-team-logo {
+    width: 135px;
+    height: 135px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px auto;
+    border-radius: 16px;
+}
+
+
+/*
+Team name
+*/
+
+.matchup-team-name {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+
+/*
+Team record
+*/
+
+.matchup-team-record {
+    display: block;
+    margin-top: 6px;
+    font-size: .85rem;
+    opacity: .7;
+}
+
+
+/*
+VS area
+*/
+
+.matchup-vs {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+
+/*
+Projection
+*/
+
+.matchup-projection {
+    margin-top: 22px;
+    font-weight: bold;
+}
+
+.matchup-projection-label {
+    display: block;
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: .6;
+    margin-bottom: 5px;
+}
+
+.matchup-projection-score {
+    color: #f5b642;
+    font-size: 1.05rem;
+}
+
+
+/*
+Special matchup message
+*/
+
+.special-message {
+    margin-top: 14px;
+    font-style: italic;
+    opacity: .8;
+}
+
+
+/*
+Custom weekly matchup graphic
+*/
+
+.matchup-graphic {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 25px auto 0 auto;
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .matchup {
+        padding: 22px 12px;
+    }
+
+    .matchup-teams {
+        grid-template-columns: 1fr auto 1fr;
+        gap: 8px;
+    }
+
+    .matchup-team-logo {
+        width: 95px;
+        height: 95px;
+    }
+
+    .matchup-team-name {
+        font-size: .9rem;
+    }
+
+    .matchup-team-record {
+        font-size: .75rem;
+    }
+
+    .matchup-vs {
+        font-size: 1.1rem;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    .matchup-team-logo {
+        width: 78px;
+        height: 78px;
+    }
+
+    .matchup-teams {
+        gap: 5px;
+    }
+
+    .matchup-team-name {
+        font-size: .8rem;
+    }
+
+}
+
+</style>
+
 </head>
 
 
 <body>
 
+
 <header>
+
 <div class="hero">
 
 <img
@@ -21,7 +255,9 @@ src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
 alt="Misfit Syndicate Association Logo"
 class="logo">
 
-<h1>Misfit Syndicate Association</h1>
+<h1>
+Misfit Syndicate Association
+</h1>
 
 <div class="tagline">
 Fantasy Football for the Beautifully Dysfunctional
@@ -32,104 +268,210 @@ Fantasy Football for the Beautifully Dysfunctional
 </div>
 
 </div>
+
 </header>
 
 
 <nav>
+
 <div class="nav-links">
 
-<a href="index.html">Home</a>
-<a href="matchups.html" class="active">Matchups</a>
-<a href="standings.html">Standings</a>
-<a href="teams.html">Teams</a>
-<a href="syndicate-report.html">Syndicate Report</a>
-<a href="league-history.html">League History</a>
+<a href="index.html">
+Home
+</a>
+
+<a
+href="matchups.html"
+class="active">
+Matchups
+</a>
+
+<a href="standings.html">
+Standings
+</a>
+
+<a href="teams.html">
+Teams
+</a>
+
+<a href="syndicate-report.html">
+Syndicate Report
+</a>
+
+<a href="league-history.html">
+League History
+</a>
 
 </div>
+
 </nav>
 
 
 <main>
 
-<h2 class="section-title" id="week-title">
+
+<h2
+class="section-title"
+id="week-title">
+
 🏈 MSA MATCHUPS
+
 </h2>
 
-<p class="section-sub" id="matchup-status">
+
+<p
+class="section-sub"
+id="matchup-status">
+
 Loading this week's chaos from ESPN...
+
 </p>
 
 
-<div
-id="matchups-container"
-style="max-width:850px;margin:auto">
+<div id="matchups-container">
 
 <div class="matchup">
+
 Loading the latest MSA matchups...
+
 </div>
 
 </div>
+
 
 </main>
 
 
 <footer>
+
 © 2026 Misfit Syndicate Association • Built by Misfits, for Misfits
+
 </footer>
 
 
 <script>
 
 
-/*
-MSA team emojis mapped to ESPN team IDs.
-*/
+/* =========================================================
+   MSA TEAM EMOJIS
+   ========================================================= */
 
 const teamEmojis = {
 
     1: "🧀",
+
     3: "🐏",
+
     4: "🔮",
+
     5: "🏴‍☠️",
+
     6: "🐕",
+
     8: "⚡",
+
     9: "😵",
+
     10: "🦷",
+
     11: "🐦",
+
     12: "💋"
 
 };
 
 
-/*
-Week 4 graphics are matched by the TWO ESPN
-team IDs instead of ESPN's matchup order.
+/* =========================================================
+   OFFICIAL MSA TEAM LOGOS
+   ========================================================= */
 
-This means ESPN can rearrange the schedule
-however it wants and the correct graphic
-will still appear with the correct game.
-*/
+const teamLogos = {
+
+    1: "Big Papi Queso Logo.png",
+
+    3: "Team Ramrod Logo.png",
+
+    4: "Nabershood Cookout logo.png",
+
+    5: "Pitts Creek Logo.png",
+
+    6: "Double Dookies logo.jpeg",
+
+    8: "Big Pickens Energy logo.png",
+
+    9: "Apukalypse Now Logo.png",
+
+    10: "DB EATERS LOGO.png",
+
+    11: "Red Zone Redbirds.png",
+
+    12: "Ladiboyz Logo.png"
+
+};
+
+
+/* =========================================================
+   OFFICIAL MSA DISPLAY NAMES
+   ========================================================= */
+
+const teamDisplayNames = {
+
+    1: "Big Papi Queso",
+
+    3: "Team Ramrod",
+
+    4: "Nabershood Cookout",
+
+    5: "Pitts Creek",
+
+    6: "Double Dookie Dawgs",
+
+    8: "Big Pickens Energy",
+
+    9: "Apukalypse Now, Skattebo Later",
+
+    10: "Db.EAtERs",
+
+    11: "Red Zone Redbirds",
+
+    12: "Ladiboyz"
+
+};
+
+
+/* =========================================================
+   WEEK 4 CUSTOM GRAPHICS
+   =========================================================
+
+   Graphics are matched using the TWO ESPN
+   team IDs instead of ESPN matchup order.
+
+   This protects the graphics if ESPN changes
+   the order of the schedule.
+   ========================================================= */
 
 const week4Graphics = {
 
-    "1-10": "WK4 Match Up 1.png",
+    "1-10":
+        "WK4 Match Up 1.png",
 
-    "6-12": "WK4 Match Up 2.png",
+    "6-12":
+        "WK4 Match Up 2.png",
 
-    "4-9": "WK4 Match Up 3.png",
+    "4-9":
+        "WK4 Match Up 3.png",
 
-    "3-8": "WK4 Match Up 4.png",
+    "3-8":
+        "WK4 Match Up 4.png",
 
-    "5-11": "WK4 Match Up 5.png"
+    "5-11":
+        "WK4 Match Up 5.png"
 
 };
 
 
 /*
-Original MSA matchup numbers.
-
-This preserves the numbering used on
-your custom Week 4 graphics.
+Original Week 4 MSA matchup numbering.
 */
 
 const week4MatchupNumbers = {
@@ -147,28 +489,136 @@ const week4MatchupNumbers = {
 };
 
 
-/*
-Create a consistent matchup key.
+/* =========================================================
+   MATCHUP KEY
+   ========================================================= */
 
-Example:
+function getMatchupKey(
+    teamA,
+    teamB
+) {
 
-Db.EAtERs ID 10
-Big Papi Queso ID 1
+    return [
+        teamA,
+        teamB
+    ]
 
-Both 10 vs 1 and 1 vs 10 become:
+    .sort(
+        (a, b) =>
+            a - b
+    )
 
-1-10
-*/
-
-function getMatchupKey(teamA, teamB) {
-
-    return [teamA, teamB]
-        .sort((a, b) => a - b)
-        .join("-");
+    .join("-");
 
 }
 
 
+/* =========================================================
+   TEAM RECORD
+   ========================================================= */
+
+function getRecord(team) {
+
+    let record =
+        team.wins +
+        "-" +
+        team.losses;
+
+
+    if (team.ties > 0) {
+
+        record +=
+            "-" +
+            team.ties;
+
+    }
+
+
+    return record;
+
+}
+
+
+/* =========================================================
+   TEAM DISPLAY
+   ========================================================= */
+
+function buildTeamDisplay(team) {
+
+
+    const emoji =
+        teamEmojis[team.id]
+        || "🏈";
+
+
+    const displayName =
+        teamDisplayNames[team.id]
+        || team.name;
+
+
+    const logo =
+        teamLogos[team.id];
+
+
+    const record =
+        getRecord(team);
+
+
+    let logoHTML = "";
+
+
+    if (logo) {
+
+        logoHTML = `
+
+            <img
+            src="${encodeURI(logo)}"
+            alt="${displayName} logo"
+            class="matchup-team-logo">
+
+        `;
+
+    }
+
+
+    return `
+
+        <div class="matchup-team">
+
+            <a
+            href="team.html?id=${team.id}"
+            class="matchup-team-link">
+
+                ${logoHTML}
+
+                <span
+                class="matchup-team-name">
+
+                ${emoji}
+                ${displayName}
+
+                </span>
+
+
+                <span
+                class="matchup-team-record">
+
+                ${record}
+
+                </span>
+
+            </a>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+   LOAD MATCHUPS
+   ========================================================= */
 
 async function loadMatchups() {
 
@@ -195,14 +645,17 @@ async function loadMatchups() {
 
 
         /*
-        Timestamp prevents the browser from
-        showing an old cached league.json file.
+        Timestamp prevents the browser
+        from displaying cached ESPN data.
         */
 
-        const response = await fetch(
-            "data/league.json?t=" +
-            Date.now()
-        );
+        const response =
+            await fetch(
+
+                "data/league.json?t=" +
+                Date.now()
+
+            );
 
 
         if (!response.ok) {
@@ -218,40 +671,42 @@ async function loadMatchups() {
             await response.json();
 
 
-
         /*
-        Automatically display the current
-        ESPN fantasy week.
+        Automatically display the
+        current ESPN fantasy week.
         */
 
         weekTitle.textContent =
+
             "🏈 WEEK " +
             data.currentWeek +
             " MATCHUPS";
 
 
         status.textContent =
+
             "ESPN projections • Updated automatically";
 
 
         container.innerHTML = "";
 
 
-
         /*
-        Build a lookup table so ESPN team IDs
-        can be converted into team information.
+        Build team lookup using
+        ESPN team IDs.
         */
 
         const teams = {};
 
 
-        data.standings.forEach(team => {
+        data.standings.forEach(
+            team => {
 
-            teams[team.id] = team;
+                teams[team.id] =
+                    team;
 
-        });
-
+            }
+        );
 
 
         /*
@@ -274,53 +729,19 @@ async function loadMatchups() {
                     ];
 
 
-                if (!away || !home) {
+                if (
+                    !away ||
+                    !home
+                ) {
 
                     return;
 
                 }
 
 
-
                 /*
-                Team records.
-                */
-
-                const awayRecord =
-                    away.wins +
-                    "-" +
-                    away.losses +
-                    "-" +
-                    away.ties;
-
-
-                const homeRecord =
-                    home.wins +
-                    "-" +
-                    home.losses +
-                    "-" +
-                    home.ties;
-
-
-
-                /*
-                Team emojis.
-                */
-
-                const awayEmoji =
-                    teamEmojis[away.id]
-                    || "🏈";
-
-
-                const homeEmoji =
-                    teamEmojis[home.id]
-                    || "🏈";
-
-
-
-                /*
-                Identify this matchup using
-                the two ESPN team IDs.
+                Identify matchup by
+                ESPN team IDs.
                 */
 
                 const matchupKey =
@@ -330,15 +751,8 @@ async function loadMatchups() {
                     );
 
 
-
                 /*
                 Determine matchup number.
-
-                During Week 4 we preserve
-                the original MSA numbering.
-
-                Future weeks simply use
-                ESPN's displayed order.
                 */
 
                 let matchupNumber =
@@ -360,26 +774,26 @@ async function loadMatchups() {
                 }
 
 
-
                 /*
                 Standard matchup title.
                 */
 
                 let specialTitle =
+
                     "🔥 MATCHUP " +
                     matchupNumber;
 
 
-                let specialMessage = "";
-
+                let specialMessage =
+                    "";
 
 
                 /*
                 THE WINLESS BOWL
 
-                If both teams enter the week
-                without a win, the website
-                automatically recognizes it.
+                Automatically activates
+                when both teams enter the
+                matchup without a win.
                 */
 
                 if (
@@ -388,67 +802,82 @@ async function loadMatchups() {
                 ) {
 
                     specialTitle =
+
                         "💀 MATCHUP " +
                         matchupNumber +
                         " — THE WINLESS BOWL";
 
 
                     specialMessage = `
-                        <br>
-                        <em>
+
+                        <div
+                        class="special-message">
+
                         Somebody is legally required
                         to leave with a win.
-                        </em>
+
+                        </div>
+
                     `;
 
                 }
 
 
-
                 /*
-                ESPN live projections.
+                ESPN projections.
 
-                We are intentionally NOT displaying
-                current scores yet because ESPN's
-                schedule feed is currently returning
-                0.0 for active Week 4 scores.
-
-                Once the live scoring feed is solved,
-                we'll add the score back here.
+                Current scores remain intentionally
+                hidden until ESPN's live-score feed
+                can be trusted.
                 */
+
+                const awayProjection =
+                    Number(
+                        matchup.awayProjection
+                    ).toFixed(1);
+
+
+                const homeProjection =
+                    Number(
+                        matchup.homeProjection
+                    ).toFixed(1);
+
 
                 const projectionDisplay = `
 
-                    <br>
+                    <div
+                    class="matchup-projection">
 
-                    <span class="gold">
+                        <span
+                        class="matchup-projection-label">
 
-                    ESPN Projection:
+                        ESPN PROJECTION
 
-                    ${Number(
-                        matchup.awayProjection
-                    ).toFixed(1)}
+                        </span>
 
-                    —
 
-                    ${Number(
-                        matchup.homeProjection
-                    ).toFixed(1)}
+                        <span
+                        class="matchup-projection-score">
 
-                    </span>
+                        ${awayProjection}
+
+                        &nbsp;—&nbsp;
+
+                        ${homeProjection}
+
+                        </span>
+
+                    </div>
 
                 `;
 
 
-
                 /*
-                Find the correct custom Week 4
-                graphic by TEAM IDs.
-
-                This fixes the mixed-up graphics.
+                Custom Week 4 graphic.
                 */
 
-                let graphic = "";
+                let graphic =
+                    "";
 
 
                 if (
@@ -468,13 +897,13 @@ async function loadMatchups() {
                     graphic = `
 
                         <img
-                        src="${graphicFile}"
-                        alt="Week 4 Matchup ${matchupNumber}">
+                        src="${encodeURI(graphicFile)}"
+                        alt="Week 4 Matchup ${matchupNumber}"
+                        class="matchup-graphic">
 
                     `;
 
                 }
-
 
 
                 /*
@@ -493,26 +922,38 @@ async function loadMatchups() {
 
                 card.innerHTML = `
 
-                    <strong>
+
+                    <div
+                    class="matchup-title">
+
                     ${specialTitle}
-                    </strong>
 
-                    <br><br>
+                    </div>
 
 
-                    <strong>
+                    <div
+                    class="matchup-teams">
 
-                    ${awayEmoji}
-                    ${away.name}
-                    (${awayRecord})
 
-                    ⚔️
+                        ${buildTeamDisplay(
+                            away
+                        )}
 
-                    ${homeEmoji}
-                    ${home.name}
-                    (${homeRecord})
 
-                    </strong>
+                        <div
+                        class="matchup-vs">
+
+                        ⚔️
+
+                        </div>
+
+
+                        ${buildTeamDisplay(
+                            home
+                        )}
+
+
+                    </div>
 
 
                     ${projectionDisplay}
@@ -523,8 +964,8 @@ async function loadMatchups() {
 
                     ${graphic}
 
-                `;
 
+                `;
 
 
                 container.appendChild(
@@ -533,20 +974,17 @@ async function loadMatchups() {
 
 
             }
-
         );
 
 
-
         /*
-        Safety message if ESPN ever returns
-        an empty matchup list.
+        Safety message if ESPN ever
+        returns no matchups.
         */
 
         if (
             data.matchups.length === 0
         ) {
-
 
             container.innerHTML = `
 
@@ -569,12 +1007,16 @@ async function loadMatchups() {
 
 
         console.error(
+
             "MSA ESPN matchup error:",
+
             error
+
         );
 
 
         status.textContent =
+
             "Unable to load ESPN matchup data.";
 
 
@@ -603,4 +1045,5 @@ loadMatchups();
 
 
 </body>
+
 </html>
