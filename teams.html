@@ -29,6 +29,20 @@ View Team button
     transform: scale(1.05);
 }
 
+
+/*
+Official MSA team logos
+*/
+
+.team-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    margin: 5px auto 18px auto;
+    border-radius: 18px;
+}
+
 </style>
 
 </head>
@@ -152,10 +166,75 @@ const teamEmojis = {
 
 
 /*
-Official MSA Teams-page order.
+Official MSA team logos.
 
-This keeps the Teams page stable instead
-of rearranging whenever standings change.
+These files are stored in the main/root
+folder of the GitHub repository.
+
+The numbers are ESPN team IDs.
+*/
+
+const teamLogos = {
+
+    1: "Big Papi Queso Logo.png",
+
+    3: "Team Ramrod Logo.png",
+
+    4: "Nabershood Cookout logo.png",
+
+    5: "Pitts Creek Logo.png",
+
+    6: "Double Dookies logo.jpeg",
+
+    8: "Big Pickens Energy logo.png",
+
+    9: "Apukalypse Now Logo.png",
+
+    10: "DB EATERS LOGO.png",
+
+    11: "Red Zone Redbirds.png",
+
+    12: "Ladiboyz Logo.png"
+
+};
+
+
+
+/*
+Clean official MSA display names.
+
+This also prevents ESPN naming quirks
+such as the extra tooth emoji.
+*/
+
+const teamDisplayNames = {
+
+    1: "Big Papi Queso",
+
+    3: "Team Ramrod",
+
+    4: "Nabershood Cookout",
+
+    5: "Pitts Creek",
+
+    6: "Double Dookie Dawgs",
+
+    8: "Big Pickens Energy",
+
+    9: "Apukalypse Now, Skattebo Later",
+
+    10: "Db.EAtERs",
+
+    11: "Red Zone Redbirds",
+
+    12: "Ladiboyz"
+
+};
+
+
+
+/*
+Official MSA Teams-page order.
 */
 
 const teamDisplayOrder = [
@@ -289,8 +368,7 @@ async function loadTeams() {
 
 
         /*
-        Create lookup table using
-        ESPN team IDs.
+        Create lookup table using ESPN IDs.
         */
 
         const teamsById = {};
@@ -344,6 +422,15 @@ async function loadTeams() {
                     getStreak(team);
 
 
+                const displayName =
+                    teamDisplayNames[team.id]
+                    || team.name;
+
+
+                const logo =
+                    teamLogos[team.id];
+
+
 
                 /*
                 Create team card.
@@ -361,27 +448,20 @@ async function loadTeams() {
 
 
                 /*
-                ESPN team logo.
+                Official MSA team logo.
                 */
 
                 let logoHTML = "";
 
 
-                if (team.logo) {
+                if (logo) {
 
                     logoHTML = `
 
                         <img
-                        src="${team.logo}"
-                        alt="${team.name} logo"
-                        style="
-                            width:100px;
-                            height:100px;
-                            object-fit:contain;
-                            margin:10px auto 15px auto;
-                            display:block;
-                            border-radius:12px;
-                        ">
+                        src="${encodeURI(logo)}"
+                        alt="${displayName} logo"
+                        class="team-logo">
 
                     `;
 
@@ -391,10 +471,6 @@ async function loadTeams() {
 
                 /*
                 Build card content.
-
-                The View Team button sends the
-                visitor to team.html with this
-                team's ESPN ID.
                 */
 
                 card.innerHTML = `
@@ -405,7 +481,7 @@ async function loadTeams() {
                     <h3>
 
                     ${emoji}
-                    ${team.name}
+                    ${displayName}
 
                     </h3>
 
