@@ -10,15 +10,10 @@ html{
 
 body{
     background-color:#0b0b0b;
-    background-image:
-        linear-gradient(
-            rgba(0,0,0,.28),
-            rgba(0,0,0,.28)
-        ),
-        url("msa-background.png");
-    background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
+    background-image:url("msa-background.png");
+    background-size:100% auto;
+    background-position:center top;
+    background-repeat:repeat-y;
     background-attachment:fixed;
 
     color:#f4f4f4;
@@ -42,9 +37,9 @@ header{
     background:
         radial-gradient(
             circle at center,
-            rgba(30,30,30,.65) 0%,
-            rgba(10,10,10,.70) 50%,
-            rgba(0,0,0,.78) 100%
+            rgba(30,30,30,.55) 0%,
+            rgba(10,10,10,.62) 50%,
+            rgba(0,0,0,.72) 100%
         );
 
     border-bottom:3px solid #b88a3b;
@@ -58,9 +53,11 @@ header{
     width:min(330px,75vw);
     height:auto;
     margin-bottom:20px;
-    filter:drop-shadow(
-        0 8px 18px rgba(0,0,0,.7)
-    );
+
+    filter:
+        drop-shadow(
+            0 8px 18px rgba(0,0,0,.7)
+        );
 }
 
 h1{
@@ -68,6 +65,7 @@ h1{
     letter-spacing:3px;
     text-transform:uppercase;
     margin-bottom:12px;
+    text-shadow:0 3px 10px rgba(0,0,0,.9);
 }
 
 .tagline{
@@ -75,11 +73,13 @@ h1{
     font-size:clamp(1rem,3vw,1.45rem);
     font-weight:bold;
     letter-spacing:1px;
+    text-shadow:0 2px 8px rgba(0,0,0,.9);
 }
 
 .season{
     margin-top:20px;
-    color:#aaa;
+    color:#ccc;
+    text-shadow:0 2px 8px rgba(0,0,0,.9);
 }
 
 
@@ -88,16 +88,21 @@ h1{
    ========================================================= */
 
 nav{
-    background:rgba(17,17,17,.96);
+    background:rgba(10,10,10,.96);
     border-bottom:1px solid #333;
+
     position:sticky;
     top:0;
     z-index:10;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.45);
 }
 
 .nav-links{
     max-width:1100px;
     margin:auto;
+
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
@@ -106,9 +111,12 @@ nav{
 .nav-links a{
     color:#fff;
     text-decoration:none;
+
     padding:18px 16px;
+
     font-size:.85rem;
     font-weight:bold;
+
     text-transform:uppercase;
     letter-spacing:1px;
 }
@@ -132,11 +140,15 @@ main{
 
 .panel,
 .card{
-    background:rgba(20,20,20,.94);
-    border:1px solid #292929;
+    background:rgba(15,15,15,.92);
+
+    border:
+        1px solid rgba(214,170,85,.20);
+
     border-radius:12px;
+
     box-shadow:
-        0 8px 25px rgba(0,0,0,.35);
+        0 10px 30px rgba(0,0,0,.55);
 }
 
 .panel{
@@ -147,9 +159,17 @@ main{
     text-align:center;
 }
 
+
+/* =========================================================
+   HEADINGS & TEXT
+   ========================================================= */
+
 h2{
     color:#d6aa55;
     margin-bottom:15px;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.8);
 }
 
 .muted{
@@ -163,12 +183,18 @@ h2{
 .section-title{
     text-align:center;
     margin-bottom:8px;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.9);
 }
 
 .section-sub{
     text-align:center;
     margin-bottom:30px;
-    color:#ccc;
+    color:#ddd;
+
+    text-shadow:
+        0 2px 6px rgba(0,0,0,.9);
 }
 
 
@@ -178,11 +204,13 @@ h2{
 
 .grid{
     display:grid;
+
     grid-template-columns:
         repeat(
             auto-fit,
             minmax(240px,1fr)
         );
+
     gap:20px;
 }
 
@@ -207,17 +235,22 @@ table{
     width:100%;
     border-collapse:collapse;
     text-align:left;
+
+    background:rgba(12,12,12,.90);
 }
 
 th{
     padding:14px;
+
     background:#d89b32;
     color:#0b0b0b;
 }
 
 td{
     padding:14px;
-    border-bottom:1px solid #292929;
+
+    border-bottom:
+        1px solid #292929;
 }
 
 
@@ -228,15 +261,24 @@ td{
 .matchup{
     padding:20px;
     margin-bottom:20px;
-    border:1px solid #333;
+
+    border:
+        1px solid rgba(214,170,85,.22);
+
     text-align:center;
     border-radius:10px;
-    background:rgba(17,17,17,.95);
+
+    background:
+        rgba(12,12,12,.94);
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.45);
 }
 
 .matchup img{
     width:100%;
     height:auto;
+
     border-radius:8px;
     margin-top:15px;
 }
@@ -247,10 +289,17 @@ td{
    ========================================================= */
 
 .video-card{
-    background:rgba(17,17,17,.95);
-    border:1px solid #333;
+    background:
+        rgba(12,12,12,.94);
+
+    border:
+        1px solid rgba(214,170,85,.20);
+
     border-radius:10px;
     overflow:hidden;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.45);
 }
 
 .video-card img{
@@ -268,6 +317,10 @@ td{
     text-decoration:none;
 }
 
+.watch:hover{
+    color:#f5c15b;
+}
+
 
 /* =========================================================
    VIDEO PLAYER
@@ -275,18 +328,28 @@ td{
 
 .video-wrap{
     position:relative;
+
     width:100%;
+
     padding-bottom:56.25%;
     height:0;
+
     overflow:hidden;
     margin-top:25px;
+
+    border-radius:10px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.6);
 }
 
 .video-wrap iframe{
     position:absolute;
     inset:0;
+
     width:100%;
     height:100%;
+
     border:0;
 }
 
@@ -301,6 +364,7 @@ td{
 
 .quick-links a{
     display:block;
+
     color:#fff;
     text-decoration:none;
 }
@@ -317,11 +381,21 @@ td{
 
 footer{
     text-align:center;
+
     padding:35px 20px;
+
     color:#aaa;
-    border-top:1px solid #222;
+
+    border-top:
+        1px solid rgba(214,170,85,.18);
+
     font-size:.85rem;
-    background:rgba(5,5,5,.88);
+
+    background:
+        rgba(5,5,5,.94);
+
+    box-shadow:
+        0 -8px 25px rgba(0,0,0,.35);
 }
 
 
@@ -332,8 +406,10 @@ footer{
 @media(max-width:650px){
 
     body{
-        background-attachment:scroll;
+        background-size:auto 100vh;
         background-position:center top;
+        background-repeat:repeat-y;
+        background-attachment:scroll;
     }
 
     header{
