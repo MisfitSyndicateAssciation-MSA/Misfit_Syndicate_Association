@@ -23,25 +23,27 @@ body{
 
 
 /* =========================================================
-   NEW MSA HERO BANNER
+   MSA HERO BANNER
    ========================================================= */
 
 header{
     width:100%;
-
-    aspect-ratio:2 / 1;
-
+    height:500px;
     min-height:0;
 
     display:block;
-
     padding:0;
-
     position:relative;
 
     background-color:#050505;
     background-image:url("msa-hero-banner.png");
-    background-size:cover;
+
+    /*
+    CONTAIN keeps the complete banner visible instead of
+    blowing it up and cropping large portions of the artwork.
+    */
+
+    background-size:contain;
     background-position:center center;
     background-repeat:no-repeat;
 
@@ -55,14 +57,8 @@ header{
 
 
 /*
-The new banner artwork already contains:
-- MSA logo
-- league name
-- tagline
-- season
-
-The original HTML remains in place,
-but is hidden so we do not have duplicate text.
+The new banner artwork already contains the logo,
+league name, tagline and season information.
 */
 
 header .hero{
@@ -397,9 +393,9 @@ footer{
 @media(max-width:900px){
 
     header{
-        aspect-ratio:2 / 1;
+        height:400px;
 
-        background-size:cover;
+        background-size:contain;
         background-position:center center;
     }
 
@@ -420,15 +416,10 @@ footer{
     }
 
 
-    /*
-    Keep the complete center portion of the MSA banner
-    visible on smaller screens.
-    */
-
     header{
-        aspect-ratio:16 / 10;
+        height:300px;
 
-        background-size:cover;
+        background-size:contain;
         background-position:center center;
     }
 
@@ -460,9 +451,9 @@ footer{
 @media(max-width:420px){
 
     header{
-        aspect-ratio:4 / 3;
+        height:230px;
 
-        background-size:cover;
+        background-size:contain;
         background-position:center center;
     }
 
