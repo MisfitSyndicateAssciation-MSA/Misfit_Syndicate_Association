@@ -1,1 +1,1901 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Power Rankings | Misfit Syndicate Association
+</title>
+
+<link
+rel="stylesheet"
+href="style.css?v=2">
+
+<style>
+
+/* =========================================================
+   MSA POWER RANKINGS
+   ========================================================= */
+
+.power-page{
+    max-width:1050px;
+    margin:auto;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.power-intro{
+    position:relative;
+    overflow:hidden;
+
+    text-align:center;
+
+    margin-bottom:20px;
+    padding:34px 22px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(245,182,66,.12),
+            rgba(18,18,18,.97) 45%,
+            rgba(6,6,6,.96)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.28);
+
+    border-radius:13px;
+
+    box-shadow:
+        0 14px 40px rgba(0,0,0,.48);
+}
+
+
+.power-intro::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:8%;
+    right:8%;
+
+    height:4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d9272e,
+            #f5b642,
+            #7bb800,
+            transparent
+        );
+}
+
+
+.power-kicker{
+    margin-bottom:7px;
+
+    color:#aaa;
+
+    font-size:.68rem;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+}
+
+
+.power-intro h2{
+    margin-bottom:8px;
+
+    color:#f5b642;
+
+    font-size:
+        clamp(1.7rem,4vw,2.4rem);
+}
+
+
+.power-intro p{
+    max-width:760px;
+
+    margin:auto;
+
+    color:#bbb;
+
+    line-height:1.65;
+}
+
+
+/* =========================================================
+   LIVE STATUS
+   ========================================================= */
+
+.power-status{
+    width:fit-content;
+    max-width:95%;
+
+    margin:
+        0 auto 28px auto;
+
+    padding:
+        9px 15px;
+
+    text-align:center;
+
+    background:
+        rgba(8,8,8,.80);
+
+    border:
+        1px solid rgba(120,207,0,.18);
+
+    border-radius:999px;
+
+    color:#78cf00;
+
+    font-size:.64rem;
+
+    font-weight:900;
+
+    letter-spacing:1.1px;
+
+    text-transform:uppercase;
+
+    text-shadow:
+        0 0 8px rgba(120,207,0,.30);
+}
+
+
+/* =========================================================
+   FORMULA
+   ========================================================= */
+
+.formula-panel{
+    margin-bottom:35px;
+
+    padding:22px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.96),
+            rgba(7,7,7,.95)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.20);
+
+    border-left:
+        4px solid #f5b642;
+
+    border-radius:11px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.35);
+}
+
+
+.formula-panel h3{
+    color:#f5b642;
+
+    margin-bottom:8px;
+}
+
+
+.formula-panel p{
+    max-width:780px;
+
+    margin:auto;
+
+    color:#aaa;
+
+    font-size:.82rem;
+
+    line-height:1.6;
+}
+
+
+.formula-pills{
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin-top:15px;
+}
+
+
+.formula-pill{
+    padding:
+        7px 11px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    border-radius:999px;
+
+    color:#ddd;
+
+    font-size:.67rem;
+
+    font-weight:900;
+
+    letter-spacing:.6px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   RANKINGS LIST
+   ========================================================= */
+
+.power-list{
+    display:grid;
+
+    gap:18px;
+}
+
+
+/* =========================================================
+   TEAM CARD
+   ========================================================= */
+
+.power-card{
+    position:relative;
+
+    overflow:hidden;
+
+    display:grid;
+
+    grid-template-columns:
+        90px
+        120px
+        minmax(0,1fr)
+        145px;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:
+        22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(19,19,19,.97),
+            rgba(7,7,7,.96)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.075);
+
+    border-left:
+        5px solid #f5b642;
+
+    border-radius:12px;
+
+    box-shadow:
+        0 11px 32px rgba(0,0,0,.40);
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease;
+}
+
+
+.power-card:hover{
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(245,182,66,.40);
+}
+
+
+.power-card.rank-one{
+    background:
+        radial-gradient(
+            circle at left,
+            rgba(245,182,66,.15),
+            rgba(18,18,18,.97) 38%,
+            rgba(7,7,7,.96)
+        );
+
+    border:
+        1px solid rgba(245,182,66,.48);
+
+    border-left:
+        6px solid #f5b642;
+}
+
+
+.power-card.rank-last{
+    background:
+        radial-gradient(
+            circle at left,
+            rgba(217,39,46,.13),
+            rgba(18,18,18,.97) 38%,
+            rgba(7,7,7,.96)
+        );
+
+    border:
+        1px solid rgba(217,39,46,.30);
+
+    border-left:
+        6px solid #d9272e;
+}
+
+
+/* =========================================================
+   RANK
+   ========================================================= */
+
+.power-rank{
+    text-align:center;
+
+    color:#f5b642;
+
+    font-size:2.4rem;
+
+    font-weight:900;
+
+    line-height:1;
+}
+
+
+.power-rank-label{
+    display:block;
+
+    margin-top:6px;
+
+    color:#777;
+
+    font-size:.54rem;
+
+    letter-spacing:1.3px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.power-logo{
+    width:110px;
+    height:110px;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin:auto;
+
+    filter:
+        drop-shadow(
+            0 7px 12px rgba(0,0,0,.65)
+        );
+}
+
+
+/* =========================================================
+   TEAM INFO
+   ========================================================= */
+
+.power-team-name{
+    color:#f5b642;
+
+    font-size:
+        clamp(1.05rem,2.5vw,1.4rem);
+
+    font-weight:900;
+
+    line-height:1.2;
+
+    margin-bottom:4px;
+}
+
+
+.power-owner{
+    color:#aaa;
+
+    font-size:.78rem;
+
+    margin-bottom:10px;
+}
+
+
+.power-label{
+    display:inline-block;
+
+    margin-bottom:13px;
+
+    padding:
+        5px 9px;
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:
+        1px solid rgba(255,255,255,.075);
+
+    border-radius:999px;
+
+    color:#ddd;
+
+    font-size:.62rem;
+
+    font-weight:900;
+
+    letter-spacing:.8px;
+
+    text-transform:uppercase;
+}
+
+
+.power-stats{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:7px;
+}
+
+
+.power-stat{
+    padding:
+        6px 9px;
+
+    background:
+        rgba(0,0,0,.30);
+
+    border:
+        1px solid rgba(255,255,255,.055);
+
+    border-radius:6px;
+
+    color:#aaa;
+
+    font-size:.68rem;
+}
+
+
+.power-stat strong{
+    color:#eee;
+}
+
+
+/* =========================================================
+   POWER SCORE
+   ========================================================= */
+
+.power-score-box{
+    text-align:center;
+
+    padding:
+        15px 10px;
+
+    background:
+        rgba(0,0,0,.34);
+
+    border:
+        1px solid rgba(245,182,66,.18);
+
+    border-radius:10px;
+}
+
+
+.power-score-label{
+    color:#888;
+
+    font-size:.57rem;
+
+    font-weight:900;
+
+    letter-spacing:1.2px;
+
+    text-transform:uppercase;
+}
+
+
+.power-score{
+    color:#8fd000;
+
+    font-size:2rem;
+
+    font-weight:900;
+
+    line-height:1.1;
+
+    margin:
+        4px 0;
+}
+
+
+.power-score-max{
+    color:#666;
+
+    font-size:.6rem;
+
+    font-weight:bold;
+}
+
+
+/* =========================================================
+   EXPLANATION
+   ========================================================= */
+
+.power-note{
+    margin-top:35px;
+
+    padding:
+        24px 20px;
+
+    text-align:center;
+
+    background:
+        rgba(10,10,10,.88);
+
+    border:
+        1px solid rgba(245,182,66,.17);
+
+    border-radius:11px;
+}
+
+
+.power-note h3{
+    color:#f5b642;
+
+    margin-bottom:7px;
+}
+
+
+.power-note p{
+    max-width:760px;
+
+    margin:auto;
+
+    color:#aaa;
+
+    font-size:.82rem;
+
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.power-error{
+    padding:30px;
+
+    text-align:center;
+
+    background:
+        rgba(15,15,15,.94);
+
+    border:
+        1px solid rgba(217,39,46,.30);
+
+    border-radius:10px;
+
+    color:#ccc;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:850px){
+
+    .power-card{
+        grid-template-columns:
+            70px
+            95px
+            minmax(0,1fr)
+            120px;
+
+        gap:12px;
+
+        padding:18px;
+    }
+
+
+    .power-logo{
+        width:85px;
+        height:85px;
+    }
+
+
+    .power-rank{
+        font-size:2rem;
+    }
+
+
+    .power-score{
+        font-size:1.6rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:650px){
+
+    .power-card{
+        grid-template-columns:
+            55px
+            75px
+            minmax(0,1fr);
+
+        gap:10px;
+    }
+
+
+    .power-logo{
+        width:68px;
+        height:68px;
+    }
+
+
+    .power-score-box{
+        grid-column:
+            1 / -1;
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:8px;
+
+        padding:9px;
+    }
+
+
+    .power-score{
+        font-size:1.3rem;
+
+        margin:0;
+    }
+
+
+    .power-team-name{
+        font-size:.95rem;
+    }
+
+
+    .power-stat{
+        font-size:.61rem;
+    }
+
+
+    .power-label{
+        font-size:.55rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media(max-width:420px){
+
+    .power-card{
+        grid-template-columns:
+            45px
+            60px
+            minmax(0,1fr);
+
+        padding:
+            15px 10px;
+    }
+
+
+    .power-logo{
+        width:55px;
+        height:55px;
+    }
+
+
+    .power-rank{
+        font-size:1.6rem;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="hero">
+
+<img
+src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
+alt="Misfit Syndicate Association Logo"
+class="logo">
+
+<h1>
+Misfit Syndicate Association
+</h1>
+
+<div class="tagline">
+Fantasy Football for the Beautifully Dysfunctional
+</div>
+
+<div class="season">
+🏈 2026 MSA Season
+</div>
+
+</div>
+
+</header>
+
+
+<nav>
+
+<div class="nav-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="matchups.html">
+Matchups
+</a>
+
+<a href="standings.html">
+Standings
+</a>
+
+<a href="teams.html">
+Teams
+</a>
+
+<a
+href="power-rankings.html"
+class="active">
+Power Rankings
+</a>
+
+<a href="syndicate-report.html">
+Syndicate Report
+</a>
+
+<a href="rules.html">
+Rules
+</a>
+
+<a href="league-history.html">
+League History
+</a>
+
+</div>
+
+</nav>
+
+
+<main>
+
+<div class="power-page">
+
+
+<!-- =====================================================
+     INTRO
+     ===================================================== -->
+
+<section class="power-intro">
+
+<div class="power-kicker">
+☠️ THE COMMISSIONER'S ALGORITHM ☠️
+</div>
+
+<h2>
+🔥 SYNDICATE POWER RANKINGS
+</h2>
+
+<p>
+
+Standings tell you who's winning.
+
+Power Rankings tell you who should scare you.
+
+Every team is graded using completed-season performance,
+scoring strength, ESPN playoff odds and current momentum.
+
+</p>
+
+</section>
+
+
+<!-- =====================================================
+     STATUS
+     ===================================================== -->
+
+<div
+class="power-status"
+id="power-status">
+
+● LOADING SYNDICATE INTELLIGENCE...
+
+</div>
+
+
+<!-- =====================================================
+     FORMULA
+     ===================================================== -->
+
+<section class="formula-panel">
+
+<h3>
+🧪 THE SYNDICATE FORMULA
+</h3>
+
+<p>
+
+The Power Score is calculated automatically from ESPN data.
+It is designed to reward winning first, while still recognizing
+high-scoring teams that may have been screwed by matchups.
+
+</p>
+
+
+<div class="formula-pills">
+
+<span class="formula-pill">
+🏆 40% Record
+</span>
+
+<span class="formula-pill">
+🔥 35% Points Scored
+</span>
+
+<span class="formula-pill">
+🎯 15% Playoff Odds
+</span>
+
+<span class="formula-pill">
+📈 10% Momentum
+</span>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     POWER RANKINGS
+     ===================================================== -->
+
+<div
+class="power-list"
+id="power-list">
+
+<div class="power-error">
+
+Calculating which Misfits are dangerous
+and which ones are completely full of shit...
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     FOOTNOTE
+     ===================================================== -->
+
+<section class="power-note">
+
+<h3>
+⚠️ POWER RANKINGS ARE NOT THE STANDINGS
+</h3>
+
+<p>
+
+League standings remain the official record.
+
+The Syndicate Power Rankings are an automated measure
+of team strength based on results, scoring and momentum.
+
+In other words: you can be ranked below somebody you beat.
+
+Complaints may be submitted directly to the nearest wall.
+
+</p>
+
+</section>
+
+
+</div>
+
+</main>
+
+
+<footer>
+
+© 2026 Misfit Syndicate Association • Built by Misfits, for Misfits
+
+</footer>
+
+
+<script>
+
+
+/* =========================================================
+   OFFICIAL MSA DISPLAY NAMES
+   ========================================================= */
+
+const teamDisplayNames = {
+
+    1: "Big Papi Queso",
+
+    3: "Team Ramrod",
+
+    4: "Nabershood Cookout",
+
+    5: "Pitts Creek",
+
+    6: "Double Dookie Dawgs",
+
+    8: "Big Pickens Energy",
+
+    9: "Apukalypse Now, Skattebo Later",
+
+    10: "Db.EAtERs",
+
+    11: "Red Zone Redbirds",
+
+    12: "Ladiboyz"
+
+};
+
+
+/* =========================================================
+   OFFICIAL MSA LOGOS
+   ========================================================= */
+
+const teamLogos = {
+
+    1: "Big Papi Queso Logo.png",
+
+    3: "Team Ramrod Logo.png",
+
+    4: "Nabershood Cookout logo.png",
+
+    5: "Pitts Creek Logo.png",
+
+    6: "Double Dookies logo.jpeg",
+
+    8: "Big Pickens Energy logo.png",
+
+    9: "Apukalypse Now Logo.png",
+
+    10: "DB EATERS LOGO.png",
+
+    11: "Red Zone Redbirds.png",
+
+    12: "Ladiboyz Logo.png"
+
+};
+
+
+/* =========================================================
+   FORMAT NUMBER
+   ========================================================= */
+
+function formatNumber(
+    value,
+    decimals = 1
+){
+
+    const number =
+        Number(value);
+
+
+    if (
+        !Number.isFinite(number)
+    ){
+
+        return "0.0";
+
+    }
+
+
+    return number.toFixed(
+        decimals
+    );
+
+}
+
+
+/* =========================================================
+   RECORD
+   ========================================================= */
+
+function getRecord(team){
+
+    let record =
+        `${team.wins}-${team.losses}`;
+
+
+    if (
+        Number(team.ties) > 0
+    ){
+
+        record +=
+            `-${team.ties}`;
+
+    }
+
+
+    return record;
+
+}
+
+
+/* =========================================================
+   STREAK
+   ========================================================= */
+
+function getStreak(team){
+
+    const length =
+        Number(
+            team.streakLength || 0
+        );
+
+
+    if (
+        !length
+    ){
+
+        return "—";
+
+    }
+
+
+    if (
+        team.streakType === "WIN"
+    ){
+
+        return `🔥 W${length}`;
+
+    }
+
+
+    if (
+        team.streakType === "LOSS"
+    ){
+
+        return `💀 L${length}`;
+
+    }
+
+
+    return "—";
+
+}
+
+
+/* =========================================================
+   WIN PERCENTAGE
+   ========================================================= */
+
+function getWinPct(team){
+
+    const wins =
+        Number(
+            team.wins || 0
+        );
+
+
+    const losses =
+        Number(
+            team.losses || 0
+        );
+
+
+    const ties =
+        Number(
+            team.ties || 0
+        );
+
+
+    const games =
+        wins +
+        losses +
+        ties;
+
+
+    if (
+        games === 0
+    ){
+
+        return 0;
+
+    }
+
+
+    return (
+        wins +
+        (ties * .5)
+    ) / games;
+
+}
+
+
+/* =========================================================
+   NORMALIZE
+   ========================================================= */
+
+function normalize(
+    value,
+    minimum,
+    maximum
+){
+
+    if (
+        maximum === minimum
+    ){
+
+        return 1;
+
+    }
+
+
+    return (
+        value -
+        minimum
+    ) / (
+        maximum -
+        minimum
+    );
+
+}
+
+
+/* =========================================================
+   MOMENTUM SCORE
+   ========================================================= */
+
+function getMomentum(team){
+
+    const length =
+        Math.min(
+            Number(
+                team.streakLength || 0
+            ),
+            5
+        );
+
+
+    /*
+    Neutral momentum begins at 50.
+
+    Winning streaks climb toward 100.
+    Losing streaks fall toward 0.
+    */
+
+    if (
+        team.streakType === "WIN"
+    ){
+
+        return Math.min(
+            100,
+            50 +
+            (length * 10)
+        );
+
+    }
+
+
+    if (
+        team.streakType === "LOSS"
+    ){
+
+        return Math.max(
+            0,
+            50 -
+            (length * 10)
+        );
+
+    }
+
+
+    return 50;
+
+}
+
+
+/* =========================================================
+   POWER LABEL
+   ========================================================= */
+
+function getPowerLabel(
+    team,
+    powerRank
+){
+
+    const streak =
+        Number(
+            team.streakLength || 0
+        );
+
+
+    if (
+        powerRank === 1
+    ){
+
+        return "👑 KING OF THE SYNDICATE";
+
+    }
+
+
+    if (
+        powerRank === 10
+    ){
+
+        return "💀 BASEMENT DWELLER";
+
+    }
+
+
+    if (
+        team.streakType === "WIN" &&
+        streak >= 3
+    ){
+
+        return "🔥 ON FIRE";
+
+    }
+
+
+    if (
+        team.streakType === "WIN" &&
+        streak >= 2
+    ){
+
+        return "📈 STOCK RISING";
+
+    }
+
+
+    if (
+        team.streakType === "LOSS" &&
+        streak >= 3
+    ){
+
+        return "🚨 FREE FALLING";
+
+    }
+
+
+    if (
+        team.streakType === "LOSS" &&
+        streak >= 2
+    ){
+
+        return "📉 STOCK DOWN";
+
+    }
+
+
+    if (
+        Number(team.pointsFor) >=
+        400
+    ){
+
+        return "💣 OFFENSIVE MENACE";
+
+    }
+
+
+    if (
+        Number(team.playoffPct) >=
+        70
+    ){
+
+        return "🎯 PLAYOFF THREAT";
+
+    }
+
+
+    return "☠️ SYNDICATE WILDCARD";
+
+}
+
+
+/* =========================================================
+   CALCULATE POWER RANKINGS
+   ========================================================= */
+
+function calculatePowerRankings(
+    teams
+){
+
+    const points =
+        teams.map(
+            team =>
+                Number(
+                    team.pointsFor || 0
+                )
+        );
+
+
+    const minPoints =
+        Math.min(
+            ...points
+        );
+
+
+    const maxPoints =
+        Math.max(
+            ...points
+        );
+
+
+    const rankings =
+        teams.map(
+            team => {
+
+
+                /*
+                RECORD COMPONENT
+
+                Win percentage already exists
+                naturally on a 0–1 scale.
+                */
+
+                const recordComponent =
+                    getWinPct(
+                        team
+                    ) * 100;
+
+
+                /*
+                POINTS COMPONENT
+
+                Highest-scoring team receives 100.
+                Lowest-scoring team receives 0.
+                Everyone else scales between them.
+                */
+
+                const pointsComponent =
+                    normalize(
+                        Number(
+                            team.pointsFor || 0
+                        ),
+                        minPoints,
+                        maxPoints
+                    ) * 100;
+
+
+                /*
+                ESPN PLAYOFF COMPONENT
+
+                league.json already stores this
+                as a percentage.
+                */
+
+                const playoffComponent =
+                    Number(
+                        team.playoffPct || 0
+                    );
+
+
+                /*
+                MOMENTUM COMPONENT
+                */
+
+                const momentumComponent =
+                    getMomentum(
+                        team
+                    );
+
+
+                /*
+                FINAL SYNDICATE POWER SCORE
+
+                40% Record
+                35% Points
+                15% Playoff Odds
+                10% Momentum
+                */
+
+                const powerScore =
+                    (
+                        recordComponent * .40
+                    ) +
+                    (
+                        pointsComponent * .35
+                    ) +
+                    (
+                        playoffComponent * .15
+                    ) +
+                    (
+                        momentumComponent * .10
+                    );
+
+
+                return {
+
+                    ...team,
+
+                    powerScore:
+                        Number(
+                            powerScore.toFixed(1)
+                        )
+
+                };
+
+            }
+        );
+
+
+    /*
+    Highest Power Score wins.
+
+    Points For breaks a tie.
+
+    ESPN standings rank is the
+    final tiebreaker.
+    */
+
+    rankings.sort(
+        (a,b) => {
+
+            if (
+                b.powerScore !==
+                a.powerScore
+            ){
+
+                return (
+                    b.powerScore -
+                    a.powerScore
+                );
+
+            }
+
+
+            if (
+                Number(b.pointsFor) !==
+                Number(a.pointsFor)
+            ){
+
+                return (
+                    Number(b.pointsFor) -
+                    Number(a.pointsFor)
+                );
+
+            }
+
+
+            return (
+                Number(a.rank) -
+                Number(b.rank)
+            );
+
+        }
+    );
+
+
+    return rankings;
+
+}
+
+
+/* =========================================================
+   BUILD TEAM CARD
+   ========================================================= */
+
+function buildPowerCard(
+    team,
+    powerRank
+){
+
+    const teamId =
+        Number(
+            team.id
+        );
+
+
+    const teamName =
+        teamDisplayNames[
+            teamId
+        ] ||
+        team.name;
+
+
+    const logo =
+        teamLogos[
+            teamId
+        ];
+
+
+    const logoURL =
+        logo
+            ? encodeURI(
+                logo
+            )
+            : "";
+
+
+    let rankClass =
+        "";
+
+
+    if (
+        powerRank === 1
+    ){
+
+        rankClass =
+            "rank-one";
+
+    }
+
+
+    if (
+        powerRank === 10
+    ){
+
+        rankClass =
+            "rank-last";
+
+    }
+
+
+    const logoHTML =
+        logoURL
+            ? `
+
+                <img
+                src="${logoURL}"
+                alt="${teamName} Logo"
+                class="power-logo">
+
+              `
+            : "";
+
+
+    return `
+
+        <article
+        class="
+            power-card
+            ${rankClass}
+        ">
+
+
+            <div class="power-rank">
+
+                #${powerRank}
+
+                <span
+                class="power-rank-label">
+
+                POWER RANK
+
+                </span>
+
+            </div>
+
+
+            <div>
+
+                ${logoHTML}
+
+            </div>
+
+
+            <div class="power-team-info">
+
+                <div
+                class="power-team-name">
+
+                ${teamName}
+
+                </div>
+
+
+                <div
+                class="power-owner">
+
+                ${team.owner}
+
+                </div>
+
+
+                <div
+                class="power-label">
+
+                ${getPowerLabel(
+                    team,
+                    powerRank
+                )}
+
+                </div>
+
+
+                <div class="power-stats">
+
+
+                    <span class="power-stat">
+
+                    RECORD:
+                    <strong>
+                    ${getRecord(team)}
+                    </strong>
+
+                    </span>
+
+
+                    <span class="power-stat">
+
+                    ESPN:
+                    <strong>
+                    #${team.rank}
+                    </strong>
+
+                    </span>
+
+
+                    <span class="power-stat">
+
+                    PF:
+                    <strong>
+                    ${formatNumber(
+                        team.pointsFor
+                    )}
+                    </strong>
+
+                    </span>
+
+
+                    <span class="power-stat">
+
+                    PLAYOFF:
+                    <strong>
+                    ${formatNumber(
+                        team.playoffPct
+                    )}%
+                    </strong>
+
+                    </span>
+
+
+                    <span class="power-stat">
+
+                    STREAK:
+                    <strong>
+                    ${getStreak(team)}
+                    </strong>
+
+                    </span>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="power-score-box">
+
+                <div
+                class="power-score-label">
+
+                SYNDICATE
+                POWER SCORE
+
+                </div>
+
+
+                <div class="power-score">
+
+                ${formatNumber(
+                    team.powerScore
+                )}
+
+                </div>
+
+
+                <div
+                class="power-score-max">
+
+                / 100
+
+                </div>
+
+            </div>
+
+
+        </article>
+
+    `;
+
+}
+
+
+/* =========================================================
+   LOAD POWER RANKINGS
+   ========================================================= */
+
+async function loadPowerRankings(){
+
+    const container =
+        document.getElementById(
+            "power-list"
+        );
+
+
+    const status =
+        document.getElementById(
+            "power-status"
+        );
+
+
+    try{
+
+
+        const response =
+            await fetch(
+
+                "data/league.json?t=" +
+                Date.now(),
+
+                {
+                    cache:"no-store"
+                }
+
+            );
+
+
+        if(
+            !response.ok
+        ){
+
+            throw new Error(
+                "Unable to load league.json"
+            );
+
+        }
+
+
+        const league =
+            await response.json();
+
+
+        if(
+            !league.standings ||
+            league.standings.length === 0
+        ){
+
+            throw new Error(
+                "No standings data found"
+            );
+
+        }
+
+
+        const rankings =
+            calculatePowerRankings(
+                league.standings
+            );
+
+
+        container.innerHTML =
+            rankings
+                .map(
+                    (team,index) =>
+                        buildPowerCard(
+                            team,
+                            index + 1
+                        )
+                )
+                .join("");
+
+
+        const completedWeek =
+            Math.max(
+                0,
+                Number(
+                    league.currentWeek || 1
+                ) - 1
+            );
+
+
+        status.textContent =
+            "● AUTOMATED POWER RANKINGS • " +
+            "THROUGH WEEK " +
+            completedWeek +
+            " • ESPN DATA";
+
+
+    }
+
+
+    catch(error){
+
+
+        console.error(
+            "MSA Power Rankings error:",
+            error
+        );
+
+
+        container.innerHTML = `
+
+            <div class="power-error">
+
+            💀 The Syndicate algorithm has
+            apparently been drinking.
+
+            <br><br>
+
+            <strong>
+            Power Rankings could not be loaded.
+            </strong>
+
+            </div>
+
+        `;
+
+
+        status.textContent =
+            "POWER RANKINGS DATA UNAVAILABLE";
+
+    }
+
+}
+
+
+/* =========================================================
+   START
+   ========================================================= */
+
+loadPowerRankings();
+
+
+</script>
+
+
+</body>
+
+</html>
