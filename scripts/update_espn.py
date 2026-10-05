@@ -708,23 +708,96 @@ def main():
     )
 
 
-    with open(
-        output_file,
-        "w",
-        encoding="utf-8"
-    ) as f:
+    # -----------------------------------------------------
+    # ONLY WRITE WHEN ESPN DATA ACTUALLY CHANGED
+    #
+    # updatedAt changes every run, so we remove it from the
+    # comparison. This prevents GitHub from creating a new
+    # commit every five minutes when ESPN data is identical.
+    # -----------------------------------------------------
 
-        json.dump(
-            clean,
-            f,
-            indent=2,
-            ensure_ascii=False
+    existing = None
+
+    if os.path.exists(output_file):
+
+        try:
+
+            with open(
+                output_file,
+                "r",
+                encoding="utf-8"
+            ) as f:
+
+                existing = json.load(f)
+
+        except (
+            json.JSONDecodeError,
+            OSError
+        ):
+
+            existing = None
+
+
+    clean_compare = dict(clean)
+    clean_compare.pop(
+        "updatedAt",
+        None
+    )
+
+
+    existing_compare = None
+
+    if isinstance(existing, dict):
+
+        existing_compare = dict(existing)
+        existing_compare.pop(
+            "updatedAt",
+            None
         )
 
 
-    print(
-        f"SUCCESS: Created {output_file}"
+    data_changed = (
+        existing_compare
+        != clean_compare
     )
+
+
+    if data_changed:
+
+        clean["updatedAt"] = (
+            datetime.now(
+                timezone.utc
+            ).isoformat()
+        )
+
+
+        with open(
+            output_file,
+            "w",
+            encoding="utf-8"
+        ) as f:
+
+            json.dump(
+                clean,
+                f,
+                indent=2,
+                ensure_ascii=False
+            )
+
+
+        print(
+            f"SUCCESS: ESPN data changed. Updated {output_file}"
+        )
+
+    else:
+
+        print(
+            "NO CHANGES: ESPN data matches the existing league.json."
+        )
+
+        print(
+            "Skipping file write so GitHub will not create a useless commit."
+        )
 
     print(
         f"Week: {clean['currentWeek']}"
