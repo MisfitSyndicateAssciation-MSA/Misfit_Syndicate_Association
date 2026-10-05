@@ -123,7 +123,18 @@
           "margin": 72.1
         },
         "giantKiller": null,
-        "stockRising": null
+        "stockRising": null,
+        "benchwarmerOfTheWeek": {
+          "teamId": 5,
+          "teamName": "Pitts Creek",
+          "playerId": 4431611,
+          "playerName": "Caleb Williams",
+          "position": "QB",
+          "nflTeam": "CHI",
+          "points": 41.5,
+          "lineupSlotId": 20,
+          "lineupSlot": "Bench"
+        }
       }
     },
     {
@@ -262,6 +273,17 @@
           "previousAverage": 118.6,
           "improvement": 35.0,
           "weeksCompared": 1
+        },
+        "benchwarmerOfTheWeek": {
+          "teamId": 5,
+          "teamName": "Pitts Creek",
+          "playerId": 12483,
+          "playerName": "Matthew Stafford",
+          "position": "QB",
+          "nflTeam": "LAR",
+          "points": 36.9,
+          "lineupSlotId": 20,
+          "lineupSlot": "Bench"
         }
       }
     },
@@ -401,6 +423,17 @@
           "previousAverage": 93.4,
           "improvement": 56.6,
           "weeksCompared": 2
+        },
+        "benchwarmerOfTheWeek": {
+          "teamId": 11,
+          "teamName": "Red Zone Redbirds",
+          "playerId": 3912547,
+          "playerName": "Sam Darnold",
+          "position": "QB",
+          "nflTeam": "SEA",
+          "points": 38.5,
+          "lineupSlotId": 20,
+          "lineupSlot": "Bench"
         }
       }
     }
