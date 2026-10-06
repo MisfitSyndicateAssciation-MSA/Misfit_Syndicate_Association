@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 4,
-  "updatedAt": "2026-10-06T02:03:33.527704+00:00",
+  "updatedAt": "2026-10-06T02:23:59.885818+00:00",
   "standings": [
     {
       "rank": 1,
@@ -180,19 +180,19 @@
       "week": 4,
       "awayTeamId": 6,
       "homeTeamId": 12,
-      "awayScore": 114.4,
+      "awayScore": 117.4,
       "homeScore": 131.1,
-      "awayProjection": 125.57,
-      "homeProjection": 134.79
+      "awayProjection": 125.83,
+      "homeProjection": 133.89
     },
     {
       "week": 4,
       "awayTeamId": 4,
       "homeTeamId": 9,
       "awayScore": 110.1,
-      "homeScore": 146.0,
+      "homeScore": 150.1,
       "awayProjection": 110.1,
-      "homeProjection": 155.14
+      "homeProjection": 157.0
     },
     {
       "week": 4,
@@ -200,7 +200,7 @@
       "homeTeamId": 8,
       "awayScore": 152.0,
       "homeScore": 91.3,
-      "awayProjection": 171.16,
+      "awayProjection": 166.46,
       "homeProjection": 91.3
     },
     {
@@ -216,9 +216,9 @@
       "week": 4,
       "awayTeamId": 10,
       "homeTeamId": 1,
-      "awayScore": 132.6,
+      "awayScore": 134.5,
       "homeScore": 139.1,
-      "awayProjection": 137.9,
+      "awayProjection": 138.5,
       "homeProjection": 139.1
     }
   ],
