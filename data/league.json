@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-06T13:46:29.245527+00:00",
+  "updatedAt": "2026-10-06T14:03:34.957553+00:00",
   "standings": [
     {
       "rank": 1,
@@ -201,7 +201,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 122.49,
-      "homeProjection": 101.29
+      "homeProjection": 119.11
     },
     {
       "week": 5,
@@ -539,8 +539,8 @@
         "name": "Malik Nabers",
         "position": "WR",
         "nflTeam": "NYG",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -557,8 +557,8 @@
         "name": "Terry McLaurin",
         "position": "WR",
         "nflTeam": "WAS",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "OUT"
       },
       {
@@ -575,8 +575,8 @@
         "name": "Sam LaPorta",
         "position": "TE",
         "nflTeam": "DET",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -611,8 +611,8 @@
         "name": "Dalton Kincaid",
         "position": "TE",
         "nflTeam": "BUF",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
