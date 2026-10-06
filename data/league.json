@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-06T07:45:46.659331+00:00",
+  "updatedAt": "2026-10-06T12:18:31.214972+00:00",
   "standings": [
     {
       "rank": 1,
@@ -182,7 +182,7 @@
       "homeTeamId": 9,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 116.71,
+      "awayProjection": 128.36,
       "homeProjection": 118.92
     },
     {
@@ -1597,8 +1597,8 @@
         "name": "Omarion Hampton",
         "position": "RB",
         "nflTeam": "LAC",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1678,8 +1678,8 @@
         "name": "Chuba Hubbard",
         "position": "RB",
         "nflTeam": "CAR",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
