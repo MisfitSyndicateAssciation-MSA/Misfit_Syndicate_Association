@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-06T14:03:34.957553+00:00",
+  "updatedAt": "2026-10-06T15:25:41.594002+00:00",
   "standings": [
     {
       "rank": 1,
@@ -209,7 +209,7 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 132.59,
+      "awayProjection": 131.78,
       "homeProjection": 99.96
     },
     {
@@ -319,8 +319,8 @@
         "name": "Deebo Samuel Sr.",
         "position": "WR",
         "nflTeam": "SF",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -346,8 +346,8 @@
         "name": "Denzel Boston",
         "position": "WR",
         "nflTeam": "CLE",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
