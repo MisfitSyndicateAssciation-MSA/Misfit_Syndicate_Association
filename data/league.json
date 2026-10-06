@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-06T15:25:41.594002+00:00",
+  "updatedAt": "2026-10-06T16:01:13.937162+00:00",
   "standings": [
     {
       "rank": 1,
@@ -183,7 +183,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 128.54,
-      "homeProjection": 118.71
+      "homeProjection": 132.26
     },
     {
       "week": 5,
@@ -1141,8 +1141,8 @@
         "name": "Puka Nacua",
         "position": "WR",
         "nflTeam": "LAR",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1159,8 +1159,8 @@
         "name": "Kenneth Walker III",
         "position": "RB",
         "nflTeam": "KC",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1186,8 +1186,8 @@
         "name": "Carnell Tate",
         "position": "WR",
         "nflTeam": "TEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
