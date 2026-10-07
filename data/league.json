@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-06T18:40:21.904392+00:00",
+  "updatedAt": "2026-10-07T07:51:10.622528+00:00",
   "standings": [
     {
       "rank": 1,
@@ -18,8 +18,8 @@
       "pointsAgainst": 379.2,
       "streakType": "WIN",
       "streakLength": 4,
-      "playoffPct": 89.3,
-      "waiverRank": 10
+      "playoffPct": 88.1,
+      "waiverRank": 7
     },
     {
       "rank": 2,
@@ -35,8 +35,8 @@
       "pointsAgainst": 491.7,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 88.7,
-      "waiverRank": 9
+      "playoffPct": 88.3,
+      "waiverRank": 6
     },
     {
       "rank": 3,
@@ -52,8 +52,8 @@
       "pointsAgainst": 449.9,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 76.5,
-      "waiverRank": 8
+      "playoffPct": 75.2,
+      "waiverRank": 5
     },
     {
       "rank": 4,
@@ -69,8 +69,8 @@
       "pointsAgainst": 468.2,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 67.3,
-      "waiverRank": 7
+      "playoffPct": 66.3,
+      "waiverRank": 4
     },
     {
       "rank": 5,
@@ -86,8 +86,8 @@
       "pointsAgainst": 506.1,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 52.4,
-      "waiverRank": 6
+      "playoffPct": 53.8,
+      "waiverRank": 10
     },
     {
       "rank": 6,
@@ -103,8 +103,8 @@
       "pointsAgainst": 511.9,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 68.2,
-      "waiverRank": 5
+      "playoffPct": 66.2,
+      "waiverRank": 9
     },
     {
       "rank": 7,
@@ -120,8 +120,8 @@
       "pointsAgainst": 490.3,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 64.6,
-      "waiverRank": 4
+      "playoffPct": 65.1,
+      "waiverRank": 3
     },
     {
       "rank": 8,
@@ -137,8 +137,8 @@
       "pointsAgainst": 525.9,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 32.5,
-      "waiverRank": 3
+      "playoffPct": 37.5,
+      "waiverRank": 8
     },
     {
       "rank": 9,
@@ -154,7 +154,7 @@
       "pointsAgainst": 506.8,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 44.0,
+      "playoffPct": 43.0,
       "waiverRank": 2
     },
     {
@@ -351,15 +351,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4688813,
-        "name": "Josh Downs",
-        "position": "WR",
-        "nflTeam": "IND",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 2576925,
         "name": "Darren Waller",
         "position": "TE",
@@ -367,6 +358,15 @@
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3116406,
+        "name": "Tyreek Hill",
+        "position": "WR",
+        "nflTeam": "FA",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "OUT"
       }
     ],
     "3": [
@@ -497,15 +497,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4597500,
-        "name": "Adonai Mitchell",
-        "position": "WR",
-        "nflTeam": "NYJ",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "DOUBTFUL"
-      },
-      {
         "playerId": 4568490,
         "name": "RJ Harvey",
         "position": "RB",
@@ -521,6 +512,15 @@
         "nflTeam": "NO",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 14880,
+        "name": "Kirk Cousins",
+        "position": "QB",
+        "nflTeam": "LV",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -652,15 +652,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": -16009,
-        "name": "Packers D/ST",
-        "position": "D/ST",
-        "nflTeam": "GB",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 3068267,
         "name": "Austin Ekeler",
         "position": "RB",
@@ -676,6 +667,15 @@
         "nflTeam": "NYJ",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16007,
+        "name": "Broncos D/ST",
+        "position": "D/ST",
+        "nflTeam": "DEN",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
