@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-07T17:33:51.069751+00:00",
+  "updatedAt": "2026-10-07T17:52:41.985147+00:00",
   "standings": [
     {
       "rank": 1,
@@ -182,7 +182,7 @@
       "homeTeamId": 9,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 126.02,
+      "awayProjection": 125.99,
       "homeProjection": 132.12
     },
     {
@@ -191,8 +191,8 @@
       "homeTeamId": 6,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 120.38,
-      "homeProjection": 136.68
+      "awayProjection": 120.41,
+      "homeProjection": 136.73
     },
     {
       "week": 5,
@@ -200,8 +200,8 @@
       "homeTeamId": 4,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 122.41,
-      "homeProjection": 118.96
+      "awayProjection": 122.39,
+      "homeProjection": 126.38
     },
     {
       "week": 5,
@@ -209,7 +209,7 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 131.63,
+      "awayProjection": 131.61,
       "homeProjection": 117.27
     },
     {
@@ -218,8 +218,8 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 116.4,
-      "homeProjection": 110.12
+      "awayProjection": 116.38,
+      "homeProjection": 110.32
     }
   ],
   "rosters": {
@@ -364,8 +364,8 @@
         "name": "Tyreek Hill",
         "position": "WR",
         "nflTeam": "FA",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
         "injuryStatus": "OUT"
       }
     ],
@@ -1060,7 +1060,7 @@
         "nflTeam": "WAS",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4697745,
