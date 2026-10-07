@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-07T14:25:12.555594+00:00",
+  "updatedAt": "2026-10-07T14:45:46.741463+00:00",
   "standings": [
     {
       "rank": 1,
@@ -218,7 +218,7 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 108.43,
+      "awayProjection": 116.4,
       "homeProjection": 110.12
     }
   ],
@@ -1386,8 +1386,8 @@
         "name": "Kalif Raymond",
         "position": "WR",
         "nflTeam": "CHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
