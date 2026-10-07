@@ -1316,6 +1316,21 @@ def build_history(
         })
 
 
+    power_snapshots = (
+        build_historical_power_rankings(
+            weeks
+        )
+    )
+
+    for week_data in weeks:
+
+        week_data["powerRankings"] = (
+            power_snapshots.get(
+                week_data["week"],
+                []
+            )
+        )
+
     return {
 
         "leagueId":
@@ -1342,6 +1357,209 @@ def build_history(
             weeks,
 
     }
+
+
+
+# =========================================================
+# HISTORICAL POWER RANKINGS
+#
+# Reconstructs each completed week's MSA Power Rankings from
+# completed matchup history only.
+#
+# Historical ESPN playoff odds are not available retroactively,
+# so backfilled weeks use the three reconstructable components:
+# - Record
+# - Points Scored
+# - Momentum
+#
+# Their original 40 / 35 / 10 weights are proportionally
+# normalized across the available 85% total.
+# =========================================================
+
+def historical_win_pct(team):
+
+    wins = team.get("wins", 0)
+    losses = team.get("losses", 0)
+    ties = team.get("ties", 0)
+
+    games = wins + losses + ties
+
+    if games == 0:
+        return 0.0
+
+    return (
+        wins + (ties * 0.5)
+    ) / games
+
+
+def historical_momentum(team):
+
+    length = min(
+        int(team.get("streakLength", 0) or 0),
+        5
+    )
+
+    if team.get("streakType") == "WIN":
+        return min(
+            100,
+            50 + (length * 10)
+        )
+
+    if team.get("streakType") == "LOSS":
+        return max(
+            0,
+            50 - (length * 10)
+        )
+
+    return 50
+
+
+def build_historical_power_rankings(weeks):
+
+    records = {
+        team_id: {
+            "teamId": team_id,
+            "teamName": team_name,
+            "wins": 0,
+            "losses": 0,
+            "ties": 0,
+            "pointsFor": 0.0,
+            "streakType": "NONE",
+            "streakLength": 0,
+        }
+        for team_id, team_name in TEAM_NAMES.items()
+    }
+
+    snapshots = {}
+
+    for week_data in weeks:
+
+        week = week_data["week"]
+
+        for matchup in week_data["matchups"]:
+
+            away_id = matchup["awayTeamId"]
+            home_id = matchup["homeTeamId"]
+
+            records[away_id]["pointsFor"] += matchup["awayScore"]
+            records[home_id]["pointsFor"] += matchup["homeScore"]
+
+            winner_id = matchup["winnerTeamId"]
+            loser_id = matchup["loserTeamId"]
+
+            if winner_id is None:
+
+                records[away_id]["ties"] += 1
+                records[home_id]["ties"] += 1
+
+                records[away_id]["streakType"] = "TIE"
+                records[away_id]["streakLength"] = 0
+
+                records[home_id]["streakType"] = "TIE"
+                records[home_id]["streakLength"] = 0
+
+            else:
+
+                records[winner_id]["wins"] += 1
+                records[loser_id]["losses"] += 1
+
+                if records[winner_id]["streakType"] == "WIN":
+                    records[winner_id]["streakLength"] += 1
+                else:
+                    records[winner_id]["streakType"] = "WIN"
+                    records[winner_id]["streakLength"] = 1
+
+                if records[loser_id]["streakType"] == "LOSS":
+                    records[loser_id]["streakLength"] += 1
+                else:
+                    records[loser_id]["streakType"] = "LOSS"
+                    records[loser_id]["streakLength"] = 1
+
+        point_values = [
+            team["pointsFor"]
+            for team in records.values()
+        ]
+
+        min_points = min(point_values)
+        max_points = max(point_values)
+
+        ranking_rows = []
+
+        for team in records.values():
+
+            record_component = (
+                historical_win_pct(team) * 100
+            )
+
+            if max_points == min_points:
+                points_component = 100
+            else:
+                points_component = (
+                    (
+                        team["pointsFor"] - min_points
+                    ) /
+                    (
+                        max_points - min_points
+                    )
+                ) * 100
+
+            momentum_component = (
+                historical_momentum(team)
+            )
+
+            # Normalize the reconstructable 85% of the live formula
+            # back to a 100-point scale.
+            power_score = (
+                (
+                    record_component * 0.40
+                ) +
+                (
+                    points_component * 0.35
+                ) +
+                (
+                    momentum_component * 0.10
+                )
+            ) / 0.85
+
+            ranking_rows.append({
+                "teamId": team["teamId"],
+                "teamName": team["teamName"],
+                "wins": team["wins"],
+                "losses": team["losses"],
+                "ties": team["ties"],
+                "pointsFor": round(
+                    team["pointsFor"],
+                    2
+                ),
+                "streakType": team["streakType"],
+                "streakLength": team["streakLength"],
+                "powerScore": round(
+                    power_score,
+                    1
+                ),
+                "formulaMode": "historicalBackfill",
+            })
+
+        ranking_rows.sort(
+            key=lambda team: (
+                -team["powerScore"],
+                -team["pointsFor"],
+                team["teamId"],
+            )
+        )
+
+        snapshots[week] = [
+            {
+                "rank": rank,
+                **team,
+            }
+            for rank, team in enumerate(
+                ranking_rows,
+                start=1
+            )
+        ]
+
+    return snapshots
 
 
 # =========================================================
