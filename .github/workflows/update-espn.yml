@@ -25,15 +25,17 @@ jobs:
       - name: Fetch latest ESPN data
         run: python scripts/update_espn.py
 
+      - name: Run playoff diagnostic
+        run: python scripts/playoff_diagnostic.py
+
       - name: Save updated league and history data
         run: |
           git config user.name "MSA ESPN Bot"
           git config user.email "actions@github.com"
-
           git add data/league.json data/history.json
 
           if git diff --cached --quiet; then
-            echo "No ESPN or history changes to save."
+            echo "No ESPN changes to save."
           else
             git commit -m "Update ESPN fantasy and history data"
             git push
