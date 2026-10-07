@@ -25,9 +25,6 @@ jobs:
       - name: Fetch latest ESPN data
         run: python scripts/update_espn.py
 
-      - name: Run playoff diagnostic
-        run: python scripts/playoff_diagnostic.py
-
       - name: Save updated league and history data
         run: |
           git config user.name "MSA ESPN Bot"
