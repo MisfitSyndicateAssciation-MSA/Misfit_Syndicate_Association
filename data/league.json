@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-07T14:01:34.953860+00:00",
+  "updatedAt": "2026-10-07T14:25:12.555594+00:00",
   "standings": [
     {
       "rank": 1,
@@ -218,7 +218,7 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 118.52,
+      "awayProjection": 108.43,
       "homeProjection": 110.12
     }
   ],
@@ -1314,8 +1314,8 @@
         "name": "Tyler Warren",
         "position": "TE",
         "nflTeam": "IND",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1377,8 +1377,8 @@
         "name": "Juwan Johnson",
         "position": "TE",
         "nflTeam": "NO",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
