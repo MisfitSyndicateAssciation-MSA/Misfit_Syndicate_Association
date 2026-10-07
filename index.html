@@ -602,6 +602,212 @@
 
 
 /* =========================================================
+   CONNECT BEYOND THE WEBSITE
+   ========================================================= */
+
+.social-hub {
+    margin-top: 70px;
+}
+
+.social-feature {
+    position: relative;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 32px;
+    align-items: center;
+
+    margin-top: 24px;
+    padding: 30px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(20,20,20,.97),
+        rgba(7,7,7,.97)
+    );
+
+    border: 1px solid rgba(245,182,66,.25);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.48);
+}
+
+.social-feature::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 4px;
+
+    background: linear-gradient(
+        #d9272e,
+        #f5b642,
+        #7bb800
+    );
+}
+
+.social-feature.sidequest-feature {
+    background:
+        radial-gradient(
+            circle at 18% 50%,
+            rgba(123,184,0,.13),
+            transparent 38%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.98),
+            rgba(6,6,6,.97)
+        );
+}
+
+.social-logo-wrap {
+    text-align: center;
+}
+
+.social-logo {
+    display: block;
+
+    width: 100%;
+    max-width: 235px;
+    max-height: 235px;
+
+    margin: auto;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 10px 18px rgba(0,0,0,.75)
+        );
+
+    transition:
+        transform .25s ease;
+}
+
+.social-feature:hover .social-logo {
+    transform: scale(1.035);
+}
+
+.social-kicker {
+    margin-bottom: 8px;
+
+    color: #8bd000;
+
+    font-size: .72rem;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.social-copy h3 {
+    margin: 0 0 10px;
+
+    color: #f5b642;
+
+    font-size: 1.55rem;
+
+    text-shadow:
+        0 3px 10px rgba(0,0,0,.75);
+}
+
+.social-copy p {
+    max-width: 650px;
+
+    color: #ddd;
+
+    line-height: 1.6;
+}
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 19px;
+}
+
+.social-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 10px 17px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    color: #f5b642;
+
+    font-weight: bold;
+    font-size: .78rem;
+
+    letter-spacing: .6px;
+
+    background:
+        rgba(0,0,0,.48);
+
+    border:
+        1px solid rgba(245,182,66,.42);
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.social-button:hover {
+    transform: translateY(-2px);
+
+    background: #f5b642;
+
+    color: #111;
+
+    border-color: #f5b642;
+
+    box-shadow:
+        0 7px 18px rgba(0,0,0,.4);
+}
+
+.social-button.primary {
+    background: linear-gradient(
+        135deg,
+        rgba(123,184,0,.22),
+        rgba(245,182,66,.12)
+    );
+
+    border-color:
+        rgba(139,208,0,.58);
+}
+
+.social-divider {
+    max-width: 720px;
+
+    margin: 35px auto 0;
+
+    text-align: center;
+
+    opacity: .55;
+
+    font-size: .7rem;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
    MOBILE
    ========================================================= */
 
@@ -656,6 +862,27 @@
 
     .home-matchups {
         grid-template-columns: 1fr;
+    }
+
+    .social-feature {
+        grid-template-columns: 1fr;
+
+        padding: 24px 18px;
+
+        text-align: center;
+    }
+
+    .social-logo {
+        max-width: 190px;
+        max-height: 190px;
+    }
+
+    .social-buttons {
+        justify-content: center;
+    }
+
+    .social-button {
+        width: 100%;
     }
 
 }
@@ -717,11 +944,11 @@ Teams
 <a href="power-rankings.html">
 Power Rankings
 </a>
-   
+
 <a href="playoff-picture.html">
 Playoff Picture
 </a>
-   
+
 <a href="weekly-awards.html">
 Weekly Awards
 </a>
@@ -1025,6 +1252,140 @@ Champions, failures and permanent MSA lore.
 
 </a>
 
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CONNECT BEYOND THE WEBSITE
+     ===================================================== -->
+
+<section class="dashboard-section social-hub">
+
+<h2 class="section-heading">
+📡 CONNECT BEYOND THE WEBSITE
+</h2>
+
+<p class="section-description">
+The MSA has its home. The commissioner has his side quests.
+</p>
+
+
+<!-- MSA FACEBOOK -->
+
+<div class="card social-feature">
+
+<div class="social-logo-wrap">
+
+<img
+src="MSA%20Logo(2).png"
+alt="Misfit Syndicate Association logo"
+class="social-logo">
+
+</div>
+
+
+<div class="social-copy">
+
+<div class="social-kicker">
+☠️ OFFICIAL LEAGUE COMMUNITY
+</div>
+
+<h3>
+CONNECT WITH THE SYNDICATE
+</h3>
+
+<p>
+Join the official Misfit Syndicate Association Facebook
+group for league announcements, polls, meetups, trash talk,
+commissioner nonsense and everything MSA.
+</p>
+
+<div class="social-buttons">
+
+<a
+class="social-button primary"
+href="https://www.facebook.com/groups/misfitsyndicateassocateffl"
+target="_blank"
+rel="noopener noreferrer">
+
+f &nbsp; ENTER THE MSA FACEBOOK GROUP →
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="social-divider">
+FROM THE COMMISSIONER
+</div>
+
+
+<!-- SIDEQUEST PUNK -->
+
+<div class="card social-feature sidequest-feature">
+
+<div class="social-logo-wrap">
+
+<img
+src="Sidequest%20Punk%20Logo.png"
+alt="SideQuest Punk logo"
+class="social-logo">
+
+</div>
+
+
+<div class="social-copy">
+
+<div class="social-kicker">
+🎸 STEVE OG • CREATOR • COMMISSIONER
+</div>
+
+<h3>
+SIDEQUEST PUNK
+</h3>
+
+<p>
+Follow Steve OG outside the fantasy football chaos.
+SideQuest Punk is my home for music, videos, podcasts,
+streams and whatever side quest comes next.
+</p>
+
+<div class="social-buttons">
+
+<a
+class="social-button"
+href="https://www.youtube.com/@SideQuestSteveOG"
+target="_blank"
+rel="noopener noreferrer">
+▶ &nbsp; YOUTUBE
+</a>
+
+<a
+class="social-button"
+href="https://www.instagram.com/sidequestpunk_steveog/"
+target="_blank"
+rel="noopener noreferrer">
+◎ &nbsp; INSTAGRAM
+</a>
+
+<a
+class="social-button"
+href="https://www.facebook.com/profile.php?id=61576438245116"
+target="_blank"
+rel="noopener noreferrer">
+f &nbsp; FACEBOOK
+</a>
+
+</div>
+
+</div>
 
 </div>
 
@@ -1692,7 +2053,8 @@ async function loadDashboard() {
             `;
 
 
-            matchupContainer.appendChild(
+            card.appendChild;
+                           matchupContainer.appendChild(
                 card
             );
 
