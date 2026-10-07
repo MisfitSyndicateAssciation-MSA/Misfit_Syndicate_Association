@@ -36,9 +36,7 @@ href="style.css?v=2">
 .power-intro{
     position:relative;
     overflow:hidden;
-
     text-align:center;
-
     margin-bottom:20px;
     padding:34px 22px;
 
@@ -50,9 +48,7 @@ href="style.css?v=2">
             rgba(6,6,6,.96)
         );
 
-    border:
-        1px solid rgba(245,182,66,.28);
-
+    border:1px solid rgba(245,182,66,.28);
     border-radius:13px;
 
     box-shadow:
@@ -62,13 +58,10 @@ href="style.css?v=2">
 
 .power-intro::before{
     content:"";
-
     position:absolute;
-
     top:0;
     left:8%;
     right:8%;
-
     height:4px;
 
     background:
@@ -85,36 +78,25 @@ href="style.css?v=2">
 
 .power-kicker{
     margin-bottom:7px;
-
     color:#aaa;
-
     font-size:.68rem;
-
     font-weight:900;
-
     letter-spacing:3px;
-
     text-transform:uppercase;
 }
 
 
 .power-intro h2{
     margin-bottom:8px;
-
     color:#f5b642;
-
-    font-size:
-        clamp(1.7rem,4vw,2.4rem);
+    font-size:clamp(1.7rem,4vw,2.4rem);
 }
 
 
 .power-intro p{
     max-width:760px;
-
     margin:auto;
-
     color:#bbb;
-
     line-height:1.65;
 }
 
@@ -126,31 +108,18 @@ href="style.css?v=2">
 .power-status{
     width:fit-content;
     max-width:95%;
-
-    margin:
-        0 auto 28px auto;
-
-    padding:
-        9px 15px;
-
+    margin:0 auto 28px auto;
+    padding:9px 15px;
     text-align:center;
 
-    background:
-        rgba(8,8,8,.80);
-
-    border:
-        1px solid rgba(120,207,0,.18);
-
+    background:rgba(8,8,8,.80);
+    border:1px solid rgba(120,207,0,.18);
     border-radius:999px;
 
     color:#78cf00;
-
     font-size:.64rem;
-
     font-weight:900;
-
     letter-spacing:1.1px;
-
     text-transform:uppercase;
 
     text-shadow:
@@ -164,9 +133,7 @@ href="style.css?v=2">
 
 .formula-panel{
     margin-bottom:35px;
-
     padding:22px;
-
     text-align:center;
 
     background:
@@ -176,12 +143,8 @@ href="style.css?v=2">
             rgba(7,7,7,.95)
         );
 
-    border:
-        1px solid rgba(245,182,66,.20);
-
-    border-left:
-        4px solid #f5b642;
-
+    border:1px solid rgba(245,182,66,.20);
+    border-left:4px solid #f5b642;
     border-radius:11px;
 
     box-shadow:
@@ -191,58 +154,468 @@ href="style.css?v=2">
 
 .formula-panel h3{
     color:#f5b642;
-
     margin-bottom:8px;
 }
 
 
 .formula-panel p{
     max-width:780px;
-
     margin:auto;
-
     color:#aaa;
-
     font-size:.82rem;
-
     line-height:1.6;
 }
 
 
 .formula-pills{
     display:flex;
-
     justify-content:center;
-
     flex-wrap:wrap;
-
     gap:8px;
-
     margin-top:15px;
 }
 
 
 .formula-pill{
-    padding:
-        7px 11px;
+    padding:7px 11px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:999px;
+
+    color:#ddd;
+    font-size:.67rem;
+    font-weight:900;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+   ========================================================= */
+
+.power-section-title{
+    margin-bottom:16px;
+    text-align:center;
+}
+
+
+.power-section-kicker{
+    color:#777;
+    font-size:.62rem;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+
+.power-section-title h3{
+    margin:5px 0 5px 0;
+    color:#f5b642;
+    font-size:1.35rem;
+}
+
+
+.power-section-title p{
+    max-width:720px;
+    margin:auto;
+    color:#888;
+    font-size:.76rem;
+    line-height:1.55;
+}
+
+
+/* =========================================================
+   TRENDING SECTION
+   ========================================================= */
+
+.trend-section{
+    margin-bottom:38px;
+}
+
+
+.trend-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+
+.trend-panel{
+    overflow:hidden;
 
     background:
-        rgba(255,255,255,.035);
+        linear-gradient(
+            145deg,
+            rgba(18,18,18,.97),
+            rgba(7,7,7,.96)
+        );
+
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:12px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.34);
+}
+
+
+.trend-panel.up{
+    border-top:3px solid #78cf00;
+}
+
+
+.trend-panel.down{
+    border-top:3px solid #d9272e;
+}
+
+
+.trend-header{
+    padding:16px 18px 13px 18px;
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+
+.trend-header h4{
+    margin:0 0 4px 0;
+    font-size:1rem;
+}
+
+
+.trend-panel.up .trend-header h4{
+    color:#8fd000;
+}
+
+
+.trend-panel.down .trend-header h4{
+    color:#ef555b;
+}
+
+
+.trend-header p{
+    margin:0;
+    color:#777;
+    font-size:.66rem;
+}
+
+
+.trend-list{
+    padding:6px 14px 12px 14px;
+}
+
+
+.trend-row{
+    display:grid;
+    grid-template-columns:42px 42px minmax(0,1fr) auto;
+    align-items:center;
+    gap:9px;
+
+    padding:11px 3px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.045);
+}
+
+
+.trend-row:last-child{
+    border-bottom:0;
+}
+
+
+.trend-position{
+    color:#666;
+    font-size:.65rem;
+    font-weight:900;
+    text-align:center;
+}
+
+
+.trend-logo{
+    width:38px;
+    height:38px;
+    object-fit:contain;
+    display:block;
+}
+
+
+.trend-team{
+    min-width:0;
+}
+
+
+.trend-team-name{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+
+    color:#ddd;
+    font-size:.77rem;
+    font-weight:900;
+}
+
+
+.trend-ranks{
+    margin-top:3px;
+    color:#777;
+    font-size:.59rem;
+}
+
+
+.trend-change{
+    min-width:54px;
+    text-align:right;
+    font-size:.82rem;
+    font-weight:900;
+}
+
+
+.trend-change.positive{
+    color:#8fd000;
+}
+
+
+.trend-change.negative{
+    color:#ef555b;
+}
+
+
+.trend-change.neutral{
+    color:#888;
+}
+
+
+.no-trend{
+    padding:25px 15px;
+    color:#777;
+    font-size:.72rem;
+    text-align:center;
+}
+
+
+/* =========================================================
+   RANKING HISTORY
+   ========================================================= */
+
+.history-section{
+    margin-bottom:40px;
+}
+
+
+.history-shell{
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17,17,17,.97),
+            rgba(6,6,6,.97)
+        );
+
+    border:1px solid rgba(245,182,66,.16);
+    border-radius:12px;
+
+    box-shadow:
+        0 12px 34px rgba(0,0,0,.38);
+}
+
+
+.history-scroll{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+}
+
+
+.history-table{
+    min-width:720px;
+}
+
+
+.history-header,
+.history-row{
+    display:grid;
+    align-items:center;
+}
+
+
+.history-header{
+    min-height:42px;
+
+    background:
+        rgba(245,182,66,.055);
+
+    border-bottom:
+        1px solid rgba(245,182,66,.12);
+}
+
+
+.history-team-heading{
+    padding-left:15px;
+
+    color:#888;
+    font-size:.59rem;
+    font-weight:900;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+
+.history-week-heading{
+    text-align:center;
+
+    color:#999;
+    font-size:.59rem;
+    font-weight:900;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+}
+
+
+.history-row{
+    min-height:58px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.045);
+}
+
+
+.history-row:last-child{
+    border-bottom:0;
+}
+
+
+.history-team-cell{
+    display:flex;
+    align-items:center;
+    gap:9px;
+
+    min-width:0;
+    padding-left:12px;
+}
+
+
+.history-logo{
+    width:35px;
+    height:35px;
+
+    flex:0 0 auto;
+
+    object-fit:contain;
+}
+
+
+.history-team-text{
+    min-width:0;
+}
+
+
+.history-team-name{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+
+    color:#ddd;
+    font-size:.72rem;
+    font-weight:900;
+}
+
+
+.history-team-owner{
+    margin-top:2px;
+
+    color:#666;
+    font-size:.54rem;
+}
+
+
+.history-rank-cell{
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:58px;
+
+    border-left:
+        1px solid rgba(255,255,255,.035);
+}
+
+
+.history-rank-badge{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:31px;
+    height:31px;
+
+    background:
+        rgba(255,255,255,.045);
 
     border:
         1px solid rgba(255,255,255,.07);
 
-    border-radius:999px;
+    border-radius:50%;
 
-    color:#ddd;
+    color:#bbb;
 
-    font-size:.67rem;
-
+    font-size:.68rem;
     font-weight:900;
+}
 
-    letter-spacing:.6px;
 
-    text-transform:uppercase;
+.history-rank-badge.top{
+    background:
+        rgba(245,182,66,.12);
+
+    border-color:
+        rgba(245,182,66,.34);
+
+    color:#f5b642;
+}
+
+
+.history-rank-badge.bottom{
+    background:
+        rgba(217,39,46,.10);
+
+    border-color:
+        rgba(217,39,46,.28);
+
+    color:#ef555b;
+}
+
+
+.history-arrow{
+    position:absolute;
+    right:4px;
+    top:4px;
+
+    font-size:.48rem;
+    font-weight:900;
+}
+
+
+.history-arrow.up{
+    color:#8fd000;
+}
+
+
+.history-arrow.down{
+    color:#ef555b;
+}
+
+
+.history-arrow.same{
+    color:#555;
+}
+
+
+/* =========================================================
+   CURRENT RANKINGS HEADING
+   ========================================================= */
+
+.current-ranking-heading{
+    margin-bottom:18px;
 }
 
 
@@ -252,7 +625,6 @@ href="style.css?v=2">
 
 .power-list{
     display:grid;
-
     gap:18px;
 }
 
@@ -263,7 +635,6 @@ href="style.css?v=2">
 
 .power-card{
     position:relative;
-
     overflow:hidden;
 
     display:grid;
@@ -275,11 +646,9 @@ href="style.css?v=2">
         145px;
 
     align-items:center;
-
     gap:18px;
 
-    padding:
-        22px;
+    padding:22px;
 
     background:
         linear-gradient(
@@ -288,12 +657,8 @@ href="style.css?v=2">
             rgba(7,7,7,.96)
         );
 
-    border:
-        1px solid rgba(255,255,255,.075);
-
-    border-left:
-        5px solid #f5b642;
-
+    border:1px solid rgba(255,255,255,.075);
+    border-left:5px solid #f5b642;
     border-radius:12px;
 
     box-shadow:
@@ -306,11 +671,8 @@ href="style.css?v=2">
 
 
 .power-card:hover{
-    transform:
-        translateY(-3px);
-
-    border-color:
-        rgba(245,182,66,.40);
+    transform:translateY(-3px);
+    border-color:rgba(245,182,66,.40);
 }
 
 
@@ -323,11 +685,8 @@ href="style.css?v=2">
             rgba(7,7,7,.96)
         );
 
-    border:
-        1px solid rgba(245,182,66,.48);
-
-    border-left:
-        6px solid #f5b642;
+    border:1px solid rgba(245,182,66,.48);
+    border-left:6px solid #f5b642;
 }
 
 
@@ -340,11 +699,8 @@ href="style.css?v=2">
             rgba(7,7,7,.96)
         );
 
-    border:
-        1px solid rgba(217,39,46,.30);
-
-    border-left:
-        6px solid #d9272e;
+    border:1px solid rgba(217,39,46,.30);
+    border-left:6px solid #d9272e;
 }
 
 
@@ -354,29 +710,57 @@ href="style.css?v=2">
 
 .power-rank{
     text-align:center;
-
     color:#f5b642;
-
     font-size:2.4rem;
-
     font-weight:900;
-
     line-height:1;
 }
 
 
 .power-rank-label{
     display:block;
-
     margin-top:6px;
 
     color:#777;
+    font-size:.54rem;
+    letter-spacing:1.3px;
+    text-transform:uppercase;
+}
+
+
+.power-weekly-trend{
+    display:inline-block;
+    margin-top:9px;
+    padding:4px 7px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid rgba(255,255,255,.06);
+
+    border-radius:999px;
 
     font-size:.54rem;
+    font-weight:900;
+    white-space:nowrap;
+}
 
-    letter-spacing:1.3px;
 
-    text-transform:uppercase;
+.power-weekly-trend.up{
+    color:#8fd000;
+    border-color:rgba(120,207,0,.20);
+}
+
+
+.power-weekly-trend.down{
+    color:#ef555b;
+    border-color:rgba(217,39,46,.20);
+}
+
+
+.power-weekly-trend.same{
+    color:#888;
 }
 
 
@@ -389,9 +773,7 @@ href="style.css?v=2">
     height:110px;
 
     object-fit:contain;
-
     display:block;
-
     margin:auto;
 
     filter:
@@ -412,29 +794,22 @@ href="style.css?v=2">
         clamp(1.05rem,2.5vw,1.4rem);
 
     font-weight:900;
-
     line-height:1.2;
-
     margin-bottom:4px;
 }
 
 
 .power-owner{
     color:#aaa;
-
     font-size:.78rem;
-
     margin-bottom:10px;
 }
 
 
 .power-label{
     display:inline-block;
-
     margin-bottom:13px;
-
-    padding:
-        5px 9px;
+    padding:5px 9px;
 
     background:
         rgba(255,255,255,.045);
@@ -445,29 +820,22 @@ href="style.css?v=2">
     border-radius:999px;
 
     color:#ddd;
-
     font-size:.62rem;
-
     font-weight:900;
-
     letter-spacing:.8px;
-
     text-transform:uppercase;
 }
 
 
 .power-stats{
     display:flex;
-
     flex-wrap:wrap;
-
     gap:7px;
 }
 
 
 .power-stat{
-    padding:
-        6px 9px;
+    padding:6px 9px;
 
     background:
         rgba(0,0,0,.30);
@@ -478,7 +846,6 @@ href="style.css?v=2">
     border-radius:6px;
 
     color:#aaa;
-
     font-size:.68rem;
 }
 
@@ -494,9 +861,7 @@ href="style.css?v=2">
 
 .power-score-box{
     text-align:center;
-
-    padding:
-        15px 10px;
+    padding:15px 10px;
 
     background:
         rgba(0,0,0,.34);
@@ -510,36 +875,25 @@ href="style.css?v=2">
 
 .power-score-label{
     color:#888;
-
     font-size:.57rem;
-
     font-weight:900;
-
     letter-spacing:1.2px;
-
     text-transform:uppercase;
 }
 
 
 .power-score{
     color:#8fd000;
-
     font-size:2rem;
-
     font-weight:900;
-
     line-height:1.1;
-
-    margin:
-        4px 0;
+    margin:4px 0;
 }
 
 
 .power-score-max{
     color:#666;
-
     font-size:.6rem;
-
     font-weight:bold;
 }
 
@@ -550,10 +904,7 @@ href="style.css?v=2">
 
 .power-note{
     margin-top:35px;
-
-    padding:
-        24px 20px;
-
+    padding:24px 20px;
     text-align:center;
 
     background:
@@ -568,20 +919,16 @@ href="style.css?v=2">
 
 .power-note h3{
     color:#f5b642;
-
     margin-bottom:7px;
 }
 
 
 .power-note p{
     max-width:760px;
-
     margin:auto;
 
     color:#aaa;
-
     font-size:.82rem;
-
     line-height:1.6;
 }
 
@@ -592,7 +939,6 @@ href="style.css?v=2">
 
 .power-error{
     padding:30px;
-
     text-align:center;
 
     background:
@@ -621,7 +967,6 @@ href="style.css?v=2">
             120px;
 
         gap:12px;
-
         padding:18px;
     }
 
@@ -650,6 +995,11 @@ href="style.css?v=2">
 
 @media(max-width:650px){
 
+    .trend-grid{
+        grid-template-columns:1fr;
+    }
+
+
     .power-card{
         grid-template-columns:
             55px
@@ -667,15 +1017,11 @@ href="style.css?v=2">
 
 
     .power-score-box{
-        grid-column:
-            1 / -1;
+        grid-column:1 / -1;
 
         display:flex;
-
         justify-content:center;
-
         align-items:center;
-
         gap:8px;
 
         padding:9px;
@@ -684,7 +1030,6 @@ href="style.css?v=2">
 
     .power-score{
         font-size:1.3rem;
-
         margin:0;
     }
 
@@ -703,6 +1048,12 @@ href="style.css?v=2">
         font-size:.55rem;
     }
 
+
+    .power-weekly-trend{
+        font-size:.48rem;
+        padding:3px 5px;
+    }
+
 }
 
 
@@ -718,8 +1069,7 @@ href="style.css?v=2">
             60px
             minmax(0,1fr);
 
-        padding:
-            15px 10px;
+        padding:15px 10px;
     }
 
 
@@ -731,6 +1081,23 @@ href="style.css?v=2">
 
     .power-rank{
         font-size:1.6rem;
+    }
+
+
+    .trend-row{
+        grid-template-columns:
+            34px
+            35px
+            minmax(0,1fr)
+            auto;
+
+        gap:6px;
+    }
+
+
+    .trend-logo{
+        width:32px;
+        height:32px;
     }
 
 }
@@ -773,7 +1140,7 @@ Fantasy Football for the Beautifully Dysfunctional
 
 <div class="nav-links">
 
-<a href="index.html" class="active">
+<a href="index.html">
 Home
 </a>
 
@@ -816,6 +1183,7 @@ League History
 </div>
 
 </nav>
+
 
 <main>
 
@@ -875,8 +1243,8 @@ id="power-status">
 
 <p>
 
-The Power Score is calculated automatically from ESPN data.
-It is designed to reward winning first, while still recognizing
+The live Power Score is calculated automatically from ESPN data.
+It rewards winning first while still recognizing dangerous
 high-scoring teams that may have been screwed by matchups.
 
 </p>
@@ -906,8 +1274,160 @@ high-scoring teams that may have been screwed by matchups.
 
 
 <!-- =====================================================
-     POWER RANKINGS
+     WEEKLY MOVERS
      ===================================================== -->
+
+<section class="trend-section">
+
+<div class="power-section-title">
+
+<div class="power-section-kicker">
+WEEK-TO-WEEK CHAOS
+</div>
+
+<h3>
+📊 SYNDICATE STOCK WATCH
+</h3>
+
+<p id="trend-description">
+Tracking which Misfits are climbing and which ones are falling apart.
+</p>
+
+</div>
+
+
+<div class="trend-grid">
+
+
+<div class="trend-panel up">
+
+<div class="trend-header">
+
+<h4>
+🔥 TRENDING UP
+</h4>
+
+<p>
+Biggest Power Ranking risers from the latest completed week.
+</p>
+
+</div>
+
+<div
+class="trend-list"
+id="trending-up">
+
+<div class="no-trend">
+Loading the hot hands...
+</div>
+
+</div>
+
+</div>
+
+
+<div class="trend-panel down">
+
+<div class="trend-header">
+
+<h4>
+💀 TRENDING DOWN
+</h4>
+
+<p>
+Biggest Power Ranking drops from the latest completed week.
+</p>
+
+</div>
+
+<div
+class="trend-list"
+id="trending-down">
+
+<div class="no-trend">
+Locating the weekly disasters...
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     WEEK-BY-WEEK HISTORY
+     ===================================================== -->
+
+<section class="history-section">
+
+<div class="power-section-title">
+
+<div class="power-section-kicker">
+THE RECEIPTS DON'T LIE
+</div>
+
+<h3>
+📈 WEEK-BY-WEEK RANKING MOVEMENT
+</h3>
+
+<p>
+
+Follow every team's Power Ranking journey from Week 1 through
+the latest completed week. Green arrows mean they climbed.
+Red arrows mean somebody had a bad week.
+
+</p>
+
+</div>
+
+
+<div class="history-shell">
+
+<div class="history-scroll">
+
+<div
+class="history-table"
+id="history-table">
+
+<div class="power-error">
+Loading weekly Power Ranking history...
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CURRENT POWER RANKINGS
+     ===================================================== -->
+
+<div class="power-section-title current-ranking-heading">
+
+<div class="power-section-kicker">
+WHO SHOULD SCARE YOU RIGHT NOW?
+</div>
+
+<h3>
+⚡ CURRENT POWER RANKINGS
+</h3>
+
+<p>
+
+The current Syndicate order using the full live Power Score formula.
+
+</p>
+
+</div>
+
 
 <div
 class="power-list"
@@ -938,7 +1458,11 @@ and which ones are completely full of shit...
 League standings remain the official record.
 
 The Syndicate Power Rankings are an automated measure
-of team strength based on results, scoring and momentum.
+of team strength based on results, scoring, playoff odds
+and momentum.
+
+The weekly movement tracker uses archived completed-week
+Power Ranking snapshots so the Syndicate can keep the receipts.
 
 In other words: you can be ranked below somebody you beat.
 
@@ -994,6 +1518,35 @@ const teamDisplayNames = {
 
 
 /* =========================================================
+   OFFICIAL MSA OWNERS
+   ========================================================= */
+
+const teamOwners = {
+
+    1: "Steve Perez",
+
+    3: "Mark Torres",
+
+    4: "Colin Brazee",
+
+    5: "Jeri Armijo",
+
+    6: "Sai Kappagantula",
+
+    8: "Adam Hadlock",
+
+    9: "Dion Will",
+
+    10: "AJ Jackson",
+
+    11: "Juan Loredo",
+
+    12: "Steven Fisher"
+
+};
+
+
+/* =========================================================
    OFFICIAL MSA LOGOS
    ========================================================= */
 
@@ -1035,7 +1588,7 @@ function formatNumber(
         Number(value);
 
 
-    if (
+    if(
         !Number.isFinite(number)
     ){
 
@@ -1061,7 +1614,7 @@ function getRecord(team){
         `${team.wins}-${team.losses}`;
 
 
-    if (
+    if(
         Number(team.ties) > 0
     ){
 
@@ -1088,16 +1641,14 @@ function getStreak(team){
         );
 
 
-    if (
-        !length
-    ){
+    if(!length){
 
         return "—";
 
     }
 
 
-    if (
+    if(
         team.streakType === "WIN"
     ){
 
@@ -1106,7 +1657,7 @@ function getStreak(team){
     }
 
 
-    if (
+    if(
         team.streakType === "LOSS"
     ){
 
@@ -1150,7 +1701,7 @@ function getWinPct(team){
         ties;
 
 
-    if (
+    if(
         games === 0
     ){
 
@@ -1177,7 +1728,7 @@ function normalize(
     maximum
 ){
 
-    if (
+    if(
         maximum === minimum
     ){
 
@@ -1212,14 +1763,7 @@ function getMomentum(team){
         );
 
 
-    /*
-    Neutral momentum begins at 50.
-
-    Winning streaks climb toward 100.
-    Losing streaks fall toward 0.
-    */
-
-    if (
+    if(
         team.streakType === "WIN"
     ){
 
@@ -1232,7 +1776,7 @@ function getMomentum(team){
     }
 
 
-    if (
+    if(
         team.streakType === "LOSS"
     ){
 
@@ -1265,7 +1809,7 @@ function getPowerLabel(
         );
 
 
-    if (
+    if(
         powerRank === 1
     ){
 
@@ -1274,7 +1818,7 @@ function getPowerLabel(
     }
 
 
-    if (
+    if(
         powerRank === 10
     ){
 
@@ -1283,7 +1827,7 @@ function getPowerLabel(
     }
 
 
-    if (
+    if(
         team.streakType === "WIN" &&
         streak >= 3
     ){
@@ -1293,7 +1837,7 @@ function getPowerLabel(
     }
 
 
-    if (
+    if(
         team.streakType === "WIN" &&
         streak >= 2
     ){
@@ -1303,7 +1847,7 @@ function getPowerLabel(
     }
 
 
-    if (
+    if(
         team.streakType === "LOSS" &&
         streak >= 3
     ){
@@ -1313,7 +1857,7 @@ function getPowerLabel(
     }
 
 
-    if (
+    if(
         team.streakType === "LOSS" &&
         streak >= 2
     ){
@@ -1323,9 +1867,8 @@ function getPowerLabel(
     }
 
 
-    if (
-        Number(team.pointsFor) >=
-        400
+    if(
+        Number(team.pointsFor) >= 400
     ){
 
         return "💣 OFFENSIVE MENACE";
@@ -1333,9 +1876,8 @@ function getPowerLabel(
     }
 
 
-    if (
-        Number(team.playoffPct) >=
-        70
+    if(
+        Number(team.playoffPct) >= 70
     ){
 
         return "🎯 PLAYOFF THREAT";
@@ -1349,7 +1891,7 @@ function getPowerLabel(
 
 
 /* =========================================================
-   CALCULATE POWER RANKINGS
+   CALCULATE LIVE POWER RANKINGS
    ========================================================= */
 
 function calculatePowerRankings(
@@ -1382,26 +1924,11 @@ function calculatePowerRankings(
             team => {
 
 
-                /*
-                RECORD COMPONENT
-
-                Win percentage already exists
-                naturally on a 0–1 scale.
-                */
-
                 const recordComponent =
                     getWinPct(
                         team
                     ) * 100;
 
-
-                /*
-                POINTS COMPONENT
-
-                Highest-scoring team receives 100.
-                Lowest-scoring team receives 0.
-                Everyone else scales between them.
-                */
 
                 const pointsComponent =
                     normalize(
@@ -1413,37 +1940,17 @@ function calculatePowerRankings(
                     ) * 100;
 
 
-                /*
-                ESPN PLAYOFF COMPONENT
-
-                league.json already stores this
-                as a percentage.
-                */
-
                 const playoffComponent =
                     Number(
                         team.playoffPct || 0
                     );
 
 
-                /*
-                MOMENTUM COMPONENT
-                */
-
                 const momentumComponent =
                     getMomentum(
                         team
                     );
 
-
-                /*
-                FINAL SYNDICATE POWER SCORE
-
-                40% Record
-                35% Points
-                15% Playoff Odds
-                10% Momentum
-                */
 
                 const powerScore =
                     (
@@ -1475,19 +1982,10 @@ function calculatePowerRankings(
         );
 
 
-    /*
-    Highest Power Score wins.
-
-    Points For breaks a tie.
-
-    ESPN standings rank is the
-    final tiebreaker.
-    */
-
     rankings.sort(
         (a,b) => {
 
-            if (
+            if(
                 b.powerScore !==
                 a.powerScore
             ){
@@ -1500,7 +1998,7 @@ function calculatePowerRankings(
             }
 
 
-            if (
+            if(
                 Number(b.pointsFor) !==
                 Number(a.pointsFor)
             ){
@@ -1528,12 +2026,910 @@ function calculatePowerRankings(
 
 
 /* =========================================================
+   HISTORICAL HELPERS
+   ========================================================= */
+
+function getHistoricalWeeks(
+    history
+){
+
+    if(
+        !history ||
+        !Array.isArray(history.weeks)
+    ){
+
+        return [];
+
+    }
+
+
+    return history.weeks
+        .filter(
+            week =>
+                Array.isArray(
+                    week.powerRankings
+                ) &&
+                week.powerRankings.length > 0
+        )
+        .sort(
+            (a,b) =>
+                Number(a.week) -
+                Number(b.week)
+        );
+
+}
+
+
+/* =========================================================
+   TEAM ID FROM HISTORICAL ROW
+   ========================================================= */
+
+function historicalTeamId(row){
+
+    return Number(
+        row.teamId ??
+        row.id ??
+        0
+    );
+
+}
+
+
+/* =========================================================
+   FIND HISTORICAL TEAM
+   ========================================================= */
+
+function findHistoricalTeam(
+    week,
+    teamId
+){
+
+    if(
+        !week ||
+        !Array.isArray(
+            week.powerRankings
+        )
+    ){
+
+        return null;
+
+    }
+
+
+    return week.powerRankings.find(
+        row =>
+            historicalTeamId(row) ===
+            Number(teamId)
+    ) || null;
+
+}
+
+
+/* =========================================================
+   WEEKLY MOVEMENT
+   Positive number = climbed.
+   Negative number = fell.
+   ========================================================= */
+
+function getMovement(
+    previousRank,
+    currentRank
+){
+
+    const previous =
+        Number(previousRank);
+
+
+    const current =
+        Number(currentRank);
+
+
+    if(
+        !previous ||
+        !current
+    ){
+
+        return 0;
+
+    }
+
+
+    return previous - current;
+
+}
+
+
+/* =========================================================
+   MOVEMENT LABEL
+   ========================================================= */
+
+function movementLabel(
+    movement
+){
+
+    const amount =
+        Number(movement || 0);
+
+
+    if(
+        amount > 0
+    ){
+
+        return {
+            text:`▲ ${amount}`,
+            className:"up"
+        };
+
+    }
+
+
+    if(
+        amount < 0
+    ){
+
+        return {
+            text:`▼ ${Math.abs(amount)}`,
+            className:"down"
+        };
+
+    }
+
+
+    return {
+        text:"—",
+        className:"same"
+    };
+
+}
+
+
+/* =========================================================
+   LOGO HTML
+   ========================================================= */
+
+function getLogoHTML(
+    teamId,
+    teamName,
+    className
+){
+
+    const logo =
+        teamLogos[
+            Number(teamId)
+        ];
+
+
+    if(!logo){
+
+        return "";
+
+    }
+
+
+    return `
+
+        <img
+        src="${encodeURI(logo)}"
+        alt="${teamName} Logo"
+        class="${className}">
+
+    `;
+
+}
+
+
+/* =========================================================
+   BUILD TREND ROW
+   ========================================================= */
+
+function buildTrendRow(
+    item,
+    index
+){
+
+    const teamId =
+        Number(
+            item.teamId
+        );
+
+
+    const teamName =
+        teamDisplayNames[
+            teamId
+        ] ||
+        item.teamName ||
+        `Team ${teamId}`;
+
+
+    const directionClass =
+        item.movement > 0
+            ? "positive"
+            : item.movement < 0
+                ? "negative"
+                : "neutral";
+
+
+    const directionText =
+        item.movement > 0
+            ? `▲ ${item.movement}`
+            : item.movement < 0
+                ? `▼ ${Math.abs(item.movement)}`
+                : "—";
+
+
+    return `
+
+        <div class="trend-row">
+
+            <div class="trend-position">
+                #${index + 1}
+            </div>
+
+            <div>
+
+                ${getLogoHTML(
+                    teamId,
+                    teamName,
+                    "trend-logo"
+                )}
+
+            </div>
+
+            <div class="trend-team">
+
+                <div class="trend-team-name">
+                    ${teamName}
+                </div>
+
+                <div class="trend-ranks">
+                    #${item.previousRank}
+                    →
+                    #${item.currentRank}
+                </div>
+
+            </div>
+
+            <div
+            class="
+                trend-change
+                ${directionClass}
+            ">
+
+                ${directionText}
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+   BUILD TRENDING PANELS
+   ========================================================= */
+
+function buildTrending(
+    weeks
+){
+
+    const upContainer =
+        document.getElementById(
+            "trending-up"
+        );
+
+
+    const downContainer =
+        document.getElementById(
+            "trending-down"
+        );
+
+
+    const description =
+        document.getElementById(
+            "trend-description"
+        );
+
+
+    if(
+        weeks.length < 2
+    ){
+
+        upContainer.innerHTML =
+            `<div class="no-trend">
+            At least two completed weeks are needed
+            before the Syndicate can start judging movement.
+            </div>`;
+
+
+        downContainer.innerHTML =
+            `<div class="no-trend">
+            Nobody can collapse until we have
+            another week of evidence.
+            </div>`;
+
+
+        return;
+
+    }
+
+
+    const previousWeek =
+        weeks[
+            weeks.length - 2
+        ];
+
+
+    const currentWeek =
+        weeks[
+            weeks.length - 1
+        ];
+
+
+    description.textContent =
+        `Movement from Week ${previousWeek.week} to Week ${currentWeek.week}.`;
+
+
+    const movements =
+        currentWeek.powerRankings
+            .map(
+                currentRow => {
+
+                    const teamId =
+                        historicalTeamId(
+                            currentRow
+                        );
+
+
+                    const previousRow =
+                        findHistoricalTeam(
+                            previousWeek,
+                            teamId
+                        );
+
+
+                    if(!previousRow){
+
+                        return null;
+
+                    }
+
+
+                    const movement =
+                        getMovement(
+                            previousRow.rank,
+                            currentRow.rank
+                        );
+
+
+                    return {
+
+                        teamId,
+
+                        teamName:
+                            currentRow.teamName,
+
+                        previousRank:
+                            Number(
+                                previousRow.rank
+                            ),
+
+                        currentRank:
+                            Number(
+                                currentRow.rank
+                            ),
+
+                        movement
+
+                    };
+
+                }
+            )
+            .filter(Boolean);
+
+
+    const rising =
+        movements
+            .filter(
+                item =>
+                    item.movement > 0
+            )
+            .sort(
+                (a,b) => {
+
+                    if(
+                        b.movement !==
+                        a.movement
+                    ){
+
+                        return (
+                            b.movement -
+                            a.movement
+                        );
+
+                    }
+
+
+                    return (
+                        a.currentRank -
+                        b.currentRank
+                    );
+
+                }
+            )
+            .slice(
+                0,
+                3
+            );
+
+
+    const falling =
+        movements
+            .filter(
+                item =>
+                    item.movement < 0
+            )
+            .sort(
+                (a,b) => {
+
+                    if(
+                        a.movement !==
+                        b.movement
+                    ){
+
+                        return (
+                            a.movement -
+                            b.movement
+                        );
+
+                    }
+
+
+                    return (
+                        b.currentRank -
+                        a.currentRank
+                    );
+
+                }
+            )
+            .slice(
+                0,
+                3
+            );
+
+
+    if(
+        rising.length > 0
+    ){
+
+        upContainer.innerHTML =
+            rising
+                .map(
+                    (item,index) =>
+                        buildTrendRow(
+                            item,
+                            index
+                        )
+                )
+                .join("");
+
+    }
+    else{
+
+        upContainer.innerHTML =
+            `<div class="no-trend">
+            Nobody moved up this week.
+            The ladder stayed weirdly civilized.
+            </div>`;
+
+    }
+
+
+    if(
+        falling.length > 0
+    ){
+
+        downContainer.innerHTML =
+            falling
+                .map(
+                    (item,index) =>
+                        buildTrendRow(
+                            item,
+                            index
+                        )
+                )
+                .join("");
+
+    }
+    else{
+
+        downContainer.innerHTML =
+            `<div class="no-trend">
+            Nobody dropped this week.
+            Somehow everybody avoided disaster.
+            </div>`;
+
+    }
+
+}
+
+
+/* =========================================================
+   BUILD HISTORY TABLE
+   ========================================================= */
+
+function buildHistoryTable(
+    weeks
+){
+
+    const container =
+        document.getElementById(
+            "history-table"
+        );
+
+
+    if(
+        weeks.length === 0
+    ){
+
+        container.innerHTML = `
+
+            <div class="power-error">
+
+            Historical Power Rankings
+            are not available yet.
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    const latestWeek =
+        weeks[
+            weeks.length - 1
+        ];
+
+
+    const latestRows =
+        [...latestWeek.powerRankings]
+            .sort(
+                (a,b) =>
+                    Number(a.rank) -
+                    Number(b.rank)
+            );
+
+
+    const columns =
+        `210px repeat(${weeks.length}, minmax(78px,1fr))`;
+
+
+    const header =
+        `
+
+        <div
+        class="history-header"
+        style="grid-template-columns:${columns};">
+
+            <div class="history-team-heading">
+                TEAM
+            </div>
+
+            ${weeks
+                .map(
+                    week => `
+
+                        <div class="history-week-heading">
+                            WEEK ${week.week}
+                        </div>
+
+                    `
+                )
+                .join("")}
+
+        </div>
+
+        `;
+
+
+    const rows =
+        latestRows
+            .map(
+                latestRow => {
+
+                    const teamId =
+                        historicalTeamId(
+                            latestRow
+                        );
+
+
+                    const teamName =
+                        teamDisplayNames[
+                            teamId
+                        ] ||
+                        latestRow.teamName ||
+                        `Team ${teamId}`;
+
+
+                    const owner =
+                        teamOwners[
+                            teamId
+                        ] ||
+                        "";
+
+
+                    let previousRank =
+                        null;
+
+
+                    const weekCells =
+                        weeks
+                            .map(
+                                week => {
+
+                                    const row =
+                                        findHistoricalTeam(
+                                            week,
+                                            teamId
+                                        );
+
+
+                                    if(!row){
+
+                                        return `
+
+                                            <div
+                                            class="history-rank-cell">
+
+                                                <span
+                                                class="history-rank-badge">
+
+                                                —
+
+                                                </span>
+
+                                            </div>
+
+                                        `;
+
+                                    }
+
+
+                                    const rank =
+                                        Number(
+                                            row.rank
+                                        );
+
+
+                                    let badgeClass =
+                                        "";
+
+
+                                    if(
+                                        rank === 1
+                                    ){
+
+                                        badgeClass =
+                                            "top";
+
+                                    }
+
+
+                                    if(
+                                        rank === 10
+                                    ){
+
+                                        badgeClass =
+                                            "bottom";
+
+                                    }
+
+
+                                    let arrowHTML =
+                                        "";
+
+
+                                    if(
+                                        previousRank !==
+                                        null
+                                    ){
+
+                                        const movement =
+                                            getMovement(
+                                                previousRank,
+                                                rank
+                                            );
+
+
+                                        const label =
+                                            movementLabel(
+                                                movement
+                                            );
+
+
+                                        arrowHTML =
+                                            `
+
+                                            <span
+                                            class="
+                                                history-arrow
+                                                ${label.className}
+                                            ">
+
+                                            ${label.text}
+
+                                            </span>
+
+                                            `;
+
+                                    }
+
+
+                                    previousRank =
+                                        rank;
+
+
+                                    return `
+
+                                        <div
+                                        class="history-rank-cell">
+
+                                            <span
+                                            class="
+                                                history-rank-badge
+                                                ${badgeClass}
+                                            ">
+
+                                            #${rank}
+
+                                            </span>
+
+                                            ${arrowHTML}
+
+                                        </div>
+
+                                    `;
+
+                                }
+                            )
+                            .join("");
+
+
+                    return `
+
+                        <div
+                        class="history-row"
+                        style="grid-template-columns:${columns};">
+
+                            <div class="history-team-cell">
+
+                                ${getLogoHTML(
+                                    teamId,
+                                    teamName,
+                                    "history-logo"
+                                )}
+
+                                <div class="history-team-text">
+
+                                    <div class="history-team-name">
+                                        ${teamName}
+                                    </div>
+
+                                    <div class="history-team-owner">
+                                        ${owner}
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            ${weekCells}
+
+                        </div>
+
+                    `;
+
+                }
+            )
+            .join("");
+
+
+    container.innerHTML =
+        header +
+        rows;
+
+}
+
+
+/* =========================================================
+   GET LATEST WEEKLY MOVEMENT BY TEAM
+   ========================================================= */
+
+function getLatestMovementMap(
+    weeks
+){
+
+    const movementMap =
+        {};
+
+
+    if(
+        weeks.length < 2
+    ){
+
+        return movementMap;
+
+    }
+
+
+    const previousWeek =
+        weeks[
+            weeks.length - 2
+        ];
+
+
+    const currentWeek =
+        weeks[
+            weeks.length - 1
+        ];
+
+
+    currentWeek.powerRankings.forEach(
+        currentRow => {
+
+            const teamId =
+                historicalTeamId(
+                    currentRow
+                );
+
+
+            const previousRow =
+                findHistoricalTeam(
+                    previousWeek,
+                    teamId
+                );
+
+
+            if(!previousRow){
+
+                movementMap[
+                    teamId
+                ] = 0;
+
+                return;
+
+            }
+
+
+            movementMap[
+                teamId
+            ] =
+                getMovement(
+                    previousRow.rank,
+                    currentRow.rank
+                );
+
+        }
+    );
+
+
+    return movementMap;
+
+}
+
+
+/* =========================================================
    BUILD TEAM CARD
    ========================================================= */
 
 function buildPowerCard(
     team,
-    powerRank
+    powerRank,
+    movementMap
 ){
 
     const teamId =
@@ -1567,7 +2963,7 @@ function buildPowerCard(
         "";
 
 
-    if (
+    if(
         powerRank === 1
     ){
 
@@ -1577,7 +2973,7 @@ function buildPowerCard(
     }
 
 
-    if (
+    if(
         powerRank === 10
     ){
 
@@ -1600,6 +2996,37 @@ function buildPowerCard(
             : "";
 
 
+    const weeklyMovement =
+        Number(
+            movementMap[
+                teamId
+            ] || 0
+        );
+
+
+    const weeklyMovementLabel =
+        movementLabel(
+            weeklyMovement
+        );
+
+
+    const movementHTML =
+        `
+
+        <span
+        class="
+            power-weekly-trend
+            ${weeklyMovementLabel.className}
+        ">
+
+        ${weeklyMovementLabel.text}
+        WEEKLY
+
+        </span>
+
+        `;
+
+
     return `
 
         <article
@@ -1619,6 +3046,8 @@ function buildPowerCard(
                 POWER RANK
 
                 </span>
+
+                ${movementHTML}
 
             </div>
 
@@ -1643,7 +3072,7 @@ function buildPowerCard(
                 <div
                 class="power-owner">
 
-                ${team.owner}
+                ${teamOwners[teamId] || team.owner || ""}
 
                 </div>
 
@@ -1779,21 +3208,37 @@ async function loadPowerRankings(){
     try{
 
 
-        const response =
-            await fetch(
+        const cacheBust =
+            Date.now();
 
-                "data/league.json?t=" +
-                Date.now(),
 
-                {
-                    cache:"no-store"
-                }
+        const [
+            leagueResponse,
+            historyResponse
+        ] =
+            await Promise.all([
 
-            );
+                fetch(
+                    "data/league.json?t=" +
+                    cacheBust,
+                    {
+                        cache:"no-store"
+                    }
+                ),
+
+                fetch(
+                    "data/history.json?t=" +
+                    cacheBust,
+                    {
+                        cache:"no-store"
+                    }
+                )
+
+            ]);
 
 
         if(
-            !response.ok
+            !leagueResponse.ok
         ){
 
             throw new Error(
@@ -1803,8 +3248,28 @@ async function loadPowerRankings(){
         }
 
 
-        const league =
-            await response.json();
+        if(
+            !historyResponse.ok
+        ){
+
+            throw new Error(
+                "Unable to load history.json"
+            );
+
+        }
+
+
+        const [
+            league,
+            history
+        ] =
+            await Promise.all([
+
+                leagueResponse.json(),
+
+                historyResponse.json()
+
+            ]);
 
 
         if(
@@ -1819,6 +3284,28 @@ async function loadPowerRankings(){
         }
 
 
+        const historicalWeeks =
+            getHistoricalWeeks(
+                history
+            );
+
+
+        buildTrending(
+            historicalWeeks
+        );
+
+
+        buildHistoryTable(
+            historicalWeeks
+        );
+
+
+        const movementMap =
+            getLatestMovementMap(
+                historicalWeeks
+            );
+
+
         const rankings =
             calculatePowerRankings(
                 league.standings
@@ -1831,7 +3318,8 @@ async function loadPowerRankings(){
                     (team,index) =>
                         buildPowerCard(
                             team,
-                            index + 1
+                            index + 1,
+                            movementMap
                         )
                 )
                 .join("");
@@ -1878,6 +3366,42 @@ async function loadPowerRankings(){
             Power Rankings could not be loaded.
             </strong>
 
+            </div>
+
+        `;
+
+
+        document.getElementById(
+            "history-table"
+        ).innerHTML = `
+
+            <div class="power-error">
+
+            Historical Power Rankings
+            could not be loaded.
+
+            </div>
+
+        `;
+
+
+        document.getElementById(
+            "trending-up"
+        ).innerHTML = `
+
+            <div class="no-trend">
+            Trend data unavailable.
+            </div>
+
+        `;
+
+
+        document.getElementById(
+            "trending-down"
+        ).innerHTML = `
+
+            <div class="no-trend">
+            Trend data unavailable.
             </div>
 
         `;
