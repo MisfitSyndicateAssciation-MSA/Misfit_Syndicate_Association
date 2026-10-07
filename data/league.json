@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-07T14:45:46.741463+00:00",
+  "updatedAt": "2026-10-07T15:58:52.215646+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,7 +192,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 120.38,
-      "homeProjection": 131.78
+      "homeProjection": 136.68
     },
     {
       "week": 5,
@@ -858,8 +858,8 @@
         "name": "Javonte Williams",
         "position": "RB",
         "nflTeam": "DAL",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -903,8 +903,8 @@
         "name": "Jaylen Warren",
         "position": "RB",
         "nflTeam": "PIT",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -935,33 +935,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4360234,
-        "name": "Evan McPherson",
-        "position": "K",
-        "nflTeam": "CIN",
-        "lineupSlot": "K",
-        "lineupSlotId": 17,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 15818,
-        "name": "Keenan Allen",
-        "position": "WR",
-        "nflTeam": "IND",
-        "lineupSlot": "IR",
-        "lineupSlotId": 21,
-        "injuryStatus": "QUESTIONABLE"
-      },
-      {
-        "playerId": -16002,
-        "name": "Bills D/ST",
-        "position": "D/ST",
-        "nflTeam": "BUF",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4870795,
         "name": "Makai Lemon",
         "position": "WR",
@@ -977,6 +950,24 @@
         "nflTeam": "CIN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16006,
+        "name": "Cowboys D/ST",
+        "position": "D/ST",
+        "nflTeam": "DAL",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4567104,
+        "name": "Will Reichard",
+        "position": "K",
+        "nflTeam": "MIN",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
         "injuryStatus": "ACTIVE"
       }
     ],
