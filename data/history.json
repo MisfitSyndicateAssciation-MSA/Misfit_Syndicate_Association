@@ -135,7 +135,139 @@
           "lineupSlotId": 20,
           "lineupSlot": "Bench"
         }
-      }
+      },
+      "powerRankings": [
+        {
+          "rank": 1,
+          "teamId": 9,
+          "teamName": "Apukalypse Now, Skattebo Later",
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 202.7,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 95.3,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 2,
+          "teamId": 5,
+          "teamName": "Pitts Creek",
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 135.6,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 67.4,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 3,
+          "teamId": 10,
+          "teamName": "Db.EAtERs",
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 131.0,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 65.5,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 4,
+          "teamId": 11,
+          "teamName": "Red Zone Redbirds",
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 129.1,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 64.7,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 5,
+          "teamId": 1,
+          "teamName": "Big Papi Queso",
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 118.7,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 60.4,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 6,
+          "teamId": 8,
+          "teamName": "Big Pickens Energy",
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 130.6,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 15.9,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 7,
+          "teamId": 12,
+          "teamName": "Ladiboyz",
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 118.6,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 10.9,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 8,
+          "teamId": 3,
+          "teamName": "Team Ramrod",
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 113.2,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 8.7,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 9,
+          "teamId": 6,
+          "teamName": "Double Dookie Dawgs",
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 110.0,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 7.4,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 10,
+          "teamId": 4,
+          "teamName": "Nabershood Cookout",
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 103.6,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 4.7,
+          "formulaMode": "historicalBackfill"
+        }
+      ]
     },
     {
       "week": 2,
@@ -285,7 +417,139 @@
           "lineupSlotId": 20,
           "lineupSlot": "Bench"
         }
-      }
+      },
+      "powerRankings": [
+        {
+          "rank": 1,
+          "teamId": 9,
+          "teamName": "Apukalypse Now, Skattebo Later",
+          "wins": 2,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 347.9,
+          "streakType": "WIN",
+          "streakLength": 2,
+          "powerScore": 96.5,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 2,
+          "teamId": 11,
+          "teamName": "Red Zone Redbirds",
+          "wins": 2,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 278.5,
+          "streakType": "WIN",
+          "streakLength": 2,
+          "powerScore": 78.7,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 3,
+          "teamId": 10,
+          "teamName": "Db.EAtERs",
+          "wins": 2,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 233.5,
+          "streakType": "WIN",
+          "streakLength": 2,
+          "powerScore": 67.2,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 4,
+          "teamId": 12,
+          "teamName": "Ladiboyz",
+          "wins": 1,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 272.2,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 52.4,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 5,
+          "teamId": 5,
+          "teamName": "Pitts Creek",
+          "wins": 1,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 246.9,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 43.6,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 6,
+          "teamId": 4,
+          "teamName": "Nabershood Cookout",
+          "wins": 1,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 234.1,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 42.7,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 7,
+          "teamId": 1,
+          "teamName": "Big Papi Queso",
+          "wins": 1,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 232.9,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 40.0,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 8,
+          "teamId": 8,
+          "teamName": "Big Pickens Energy",
+          "wins": 0,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 245.8,
+          "streakType": "LOSS",
+          "streakLength": 2,
+          "powerScore": 18.6,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 9,
+          "teamId": 3,
+          "teamName": "Team Ramrod",
+          "wins": 0,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 194.5,
+          "streakType": "LOSS",
+          "streakLength": 2,
+          "powerScore": 5.5,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 10,
+          "teamId": 6,
+          "teamName": "Double Dookie Dawgs",
+          "wins": 0,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 186.8,
+          "streakType": "LOSS",
+          "streakLength": 2,
+          "powerScore": 3.5,
+          "formulaMode": "historicalBackfill"
+        }
+      ]
     },
     {
       "week": 3,
@@ -435,7 +699,139 @@
           "lineupSlotId": 20,
           "lineupSlot": "Bench"
         }
-      }
+      },
+      "powerRankings": [
+        {
+          "rank": 1,
+          "teamId": 11,
+          "teamName": "Red Zone Redbirds",
+          "wins": 3,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 405.5,
+          "streakType": "WIN",
+          "streakLength": 3,
+          "powerScore": 79.3,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 2,
+          "teamId": 9,
+          "teamName": "Apukalypse Now, Skattebo Later",
+          "wins": 2,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 472.9,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 77.3,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 3,
+          "teamId": 10,
+          "teamName": "Db.EAtERs",
+          "wins": 3,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 367.1,
+          "streakType": "WIN",
+          "streakLength": 3,
+          "powerScore": 68.8,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 4,
+          "teamId": 5,
+          "teamName": "Pitts Creek",
+          "wins": 2,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 383.7,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 55.3,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 5,
+          "teamId": 4,
+          "teamName": "Nabershood Cookout",
+          "wins": 2,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 357.7,
+          "streakType": "WIN",
+          "streakLength": 2,
+          "powerScore": 49.4,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 6,
+          "teamId": 12,
+          "teamName": "Ladiboyz",
+          "wins": 1,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 391.9,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 39.5,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 7,
+          "teamId": 6,
+          "teamName": "Double Dookie Dawgs",
+          "wins": 1,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 336.8,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 26.8,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 8,
+          "teamId": 1,
+          "teamName": "Big Papi Queso",
+          "wins": 1,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 321.8,
+          "streakType": "LOSS",
+          "streakLength": 2,
+          "powerScore": 19.2,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 9,
+          "teamId": 8,
+          "teamName": "Big Pickens Energy",
+          "wins": 0,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 366.6,
+          "streakType": "LOSS",
+          "streakLength": 3,
+          "powerScore": 14.6,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 10,
+          "teamId": 3,
+          "teamName": "Team Ramrod",
+          "wins": 0,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 334.8,
+          "streakType": "LOSS",
+          "streakLength": 3,
+          "powerScore": 5.9,
+          "formulaMode": "historicalBackfill"
+        }
+      ]
     },
     {
       "week": 4,
@@ -585,7 +981,139 @@
           "lineupSlotId": 20,
           "lineupSlot": "Bench"
         }
-      }
+      },
+      "powerRankings": [
+        {
+          "rank": 1,
+          "teamId": 9,
+          "teamName": "Apukalypse Now, Skattebo Later",
+          "wins": 3,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 629.3,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 83.5,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 2,
+          "teamId": 11,
+          "teamName": "Red Zone Redbirds",
+          "wins": 4,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 521.7,
+          "streakType": "WIN",
+          "streakLength": 4,
+          "powerScore": 74.3,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 3,
+          "teamId": 10,
+          "teamName": "Db.EAtERs",
+          "wins": 3,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 503.2,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 52.4,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 4,
+          "teamId": 12,
+          "teamName": "Ladiboyz",
+          "wins": 2,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 526.8,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 48.4,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 5,
+          "teamId": 1,
+          "teamName": "Big Papi Queso",
+          "wins": 2,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 460.9,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 33.3,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 6,
+          "teamId": 4,
+          "teamName": "Nabershood Cookout",
+          "wins": 2,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 467.8,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 32.6,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 7,
+          "teamId": 3,
+          "teamName": "Team Ramrod",
+          "wins": 1,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 494.6,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 29.3,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 8,
+          "teamId": 5,
+          "teamName": "Pitts Creek",
+          "wins": 2,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 448.8,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 28.2,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 9,
+          "teamId": 6,
+          "teamName": "Double Dookie Dawgs",
+          "wins": 1,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 464.5,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 20.1,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 10,
+          "teamId": 8,
+          "teamName": "Big Pickens Energy",
+          "wins": 0,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 457.9,
+          "streakType": "LOSS",
+          "streakLength": 4,
+          "powerScore": 3.3,
+          "formulaMode": "historicalBackfill"
+        }
+      ]
     }
   ]
 }
