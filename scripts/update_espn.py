@@ -30,6 +30,7 @@ ESPN_URL = (
     "&view=mBoxscore"
     "&view=mLiveScoring"
     "&view=mRoster"
+    "&view=mSettings"
 )
 
 
@@ -1467,6 +1468,11 @@ def build_clean_data(raw):
                     1
                 ),
 
+            "playoffSeed":
+                team.get(
+                    "playoffSeed"
+                ),
+
             "waiverRank":
                 team.get(
                     "waiverRank"
@@ -1633,6 +1639,140 @@ def build_clean_data(raw):
 
 
     # -----------------------------------------------------
+    # PLAYOFF PICTURE
+    # -----------------------------------------------------
+
+    schedule_settings = raw.get(
+        "settings",
+        {}
+    ).get(
+        "scheduleSettings",
+        {}
+    )
+
+    playoff_team_count = schedule_settings.get(
+        "playoffTeamCount",
+        6
+    )
+
+    regular_season_weeks = schedule_settings.get(
+        "matchupPeriodCount",
+        14
+    )
+
+    seeded_teams = sorted(
+        standings,
+        key=lambda team: (
+            team.get("playoffSeed")
+            if team.get("playoffSeed") is not None
+            else 999
+        )
+    )
+
+    championship_field = [
+        {
+            "seed": team.get("playoffSeed"),
+            "teamId": team.get("id"),
+            "name": team.get("name"),
+            "owner": team.get("owner"),
+            "logo": team.get("logo"),
+            "wins": team.get("wins"),
+            "losses": team.get("losses"),
+            "ties": team.get("ties"),
+            "playoffPct": team.get("playoffPct"),
+        }
+        for team in seeded_teams
+        if (
+            team.get("playoffSeed") is not None
+            and team.get("playoffSeed") <= playoff_team_count
+        )
+    ]
+
+    basement_field = [
+        {
+            "seed": team.get("playoffSeed"),
+            "teamId": team.get("id"),
+            "name": team.get("name"),
+            "owner": team.get("owner"),
+            "logo": team.get("logo"),
+            "wins": team.get("wins"),
+            "losses": team.get("losses"),
+            "ties": team.get("ties"),
+            "playoffPct": team.get("playoffPct"),
+        }
+        for team in seeded_teams
+        if (
+            team.get("playoffSeed") is not None
+            and team.get("playoffSeed") > playoff_team_count
+        )
+    ]
+
+    playoff_picture = {
+        "playoffTeamCount": playoff_team_count,
+        "regularSeasonWeeks": regular_season_weeks,
+        "playoffsBeginWeek": regular_season_weeks + 1,
+        "playoffReseed": schedule_settings.get(
+            "playoffReseed",
+            False
+        ),
+        "seedingRule": schedule_settings.get(
+            "playoffSeedingRule"
+        ),
+        "consolationLadderDisabled":
+            schedule_settings.get(
+                "consolationLadderDisabled",
+                False
+            ),
+        "roundLengths":
+            schedule_settings.get(
+                "playoffMatchupPeriodLengthByRound",
+                {}
+            ),
+        "championshipField":
+            championship_field,
+        "basementField":
+            basement_field,
+        "projectedChampionship": {
+            "byeSeeds": [1, 2],
+            "roundOne": [
+                {
+                    "higherSeed": 3,
+                    "lowerSeed": 6,
+                },
+                {
+                    "higherSeed": 4,
+                    "lowerSeed": 5,
+                },
+            ],
+            "semifinals": [
+                {
+                    "seed": 1,
+                    "opponentFrom":
+                        "Winner of #4 vs #5",
+                },
+                {
+                    "seed": 2,
+                    "opponentFrom":
+                        "Winner of #3 vs #6",
+                },
+            ],
+        },
+        "projectedBasement": {
+            "roundOne": [
+                {
+                    "higherSeed": 7,
+                    "lowerSeed": 10,
+                },
+                {
+                    "higherSeed": 8,
+                    "lowerSeed": 9,
+                },
+            ]
+        },
+    }
+
+
+    # -----------------------------------------------------
     # FINAL LIVE JSON
     # -----------------------------------------------------
 
@@ -1664,6 +1804,9 @@ def build_clean_data(raw):
 
         "rosters":
             rosters,
+
+        "playoffPicture":
+            playoff_picture,
 
     }
 
