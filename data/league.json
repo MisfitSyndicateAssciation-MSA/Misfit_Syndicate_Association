@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-07T07:51:10.622528+00:00",
+  "updatedAt": "2026-10-07T09:32:51.727664+00:00",
   "standings": [
     {
       "rank": 1,
@@ -218,7 +218,7 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 104.84,
+      "awayProjection": 118.52,
       "homeProjection": 110.12
     }
   ],
@@ -1296,8 +1296,8 @@
         "name": "Saquon Barkley",
         "position": "RB",
         "nflTeam": "PHI",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1418,12 +1418,12 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4599739,
-        "name": "Kendre Miller",
+        "playerId": 4887558,
+        "name": "Emanuel Wilson",
         "position": "RB",
-        "nflTeam": "NO",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "nflTeam": "SEA",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       }
     ],
