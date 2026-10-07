@@ -11,7 +11,7 @@
   <style>
     .playoff-intro {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .playoff-intro h1 {
@@ -30,7 +30,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin: 24px 0;
+      margin: 22px 0;
     }
 
     .meta-pill {
@@ -44,7 +44,7 @@
 
     .section-heading {
       text-align: center;
-      margin: 40px 0 18px;
+      margin: 32px 0 16px;
     }
 
     .section-heading h2 {
@@ -89,7 +89,7 @@
     }
 
     .race-table tbody tr:hover {
-      background: rgba(255,255,255,0.035);
+      background: rgba(255, 255, 255, 0.035);
     }
 
     .seed {
@@ -106,14 +106,48 @@
       min-width: 240px;
     }
 
-    .team-logo {
+    .logo-shell {
       width: 46px;
       height: 46px;
-      object-fit: contain;
       border-radius: 50%;
       background: #111;
       border: 1px solid #444;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
       flex-shrink: 0;
+    }
+
+    .team-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .mini-logo-shell {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #111;
+      border: 1px solid #444;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .mini-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .logo-fallback {
+      font-size: 1rem;
+      font-weight: 900;
+      color: #d4a017;
     }
 
     .team-name {
@@ -141,19 +175,19 @@
     .status-in {
       color: #8dff9b;
       border: 1px solid #27963b;
-      background: rgba(39,150,59,0.15);
+      background: rgba(39, 150, 59, 0.15);
     }
 
     .status-bubble {
       color: #ffd75c;
       border: 1px solid #b98a00;
-      background: rgba(185,138,0,0.15);
+      background: rgba(185, 138, 0, 0.15);
     }
 
     .status-out {
       color: #ff7b7b;
       border: 1px solid #a52a2a;
-      background: rgba(165,42,42,0.15);
+      background: rgba(165, 42, 42, 0.15);
     }
 
     .cut-line td {
@@ -171,7 +205,7 @@
 
     .bracket-note {
       max-width: 850px;
-      margin: 0 auto 20px;
+      margin: 0 auto 14px;
       text-align: center;
       color: #aaa;
       line-height: 1.5;
@@ -179,16 +213,16 @@
 
     .bracket-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(3, minmax(230px, 1fr));
+      gap: 18px;
       align-items: center;
-      margin-top: 25px;
+      margin-top: 12px;
     }
 
     .round-column {
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 16px;
     }
 
     .round-title {
@@ -198,26 +232,27 @@
       font-size: 0.82rem;
       letter-spacing: 1px;
       font-weight: 900;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
     .match-card {
       background: linear-gradient(
         145deg,
-        rgba(28,28,28,0.98),
-        rgba(8,8,8,0.98)
+        rgba(28, 28, 28, 0.98),
+        rgba(8, 8, 8, 0.98)
       );
       border: 1px solid #3a3a3a;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 5px 16px rgba(0,0,0,0.35);
+      box-shadow: 0 5px 16px rgba(0, 0, 0, 0.35);
     }
 
     .match-team {
       display: flex;
       align-items: center;
       gap: 9px;
-      padding: 11px;
+      min-height: 48px;
+      padding: 10px 11px;
       border-bottom: 1px solid #2d2d2d;
     }
 
@@ -231,54 +266,59 @@
       min-width: 26px;
     }
 
-    .mini-logo {
-      width: 34px;
-      height: 34px;
-      object-fit: contain;
-      border-radius: 50%;
-      background: #111;
-    }
-
     .match-team-name {
       font-size: 0.9rem;
       font-weight: 800;
       color: #eee;
     }
 
-    .bye-card {
-      border-color: #8d6c00;
-    }
-
     .bye-label {
       text-align: center;
       color: #e4b62c;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 900;
       letter-spacing: 1px;
       padding: 6px;
-      background: rgba(212,160,23,0.08);
+      background: rgba(212, 160, 23, 0.08);
+      border-bottom: 1px solid #6f5800;
     }
 
-    .future-slot {
+    .semifinal-card {
+      border-color: #8d6c00;
+    }
+
+    .future-team {
+      color: #aaa;
+      font-style: italic;
+    }
+
+    .championship-card {
+      border: 1px solid #d4a017;
+      box-shadow: 0 0 18px rgba(212, 160, 23, 0.14);
+    }
+
+    .championship-header {
+      text-align: center;
+      color: #e4b62c;
+      font-weight: 900;
+      padding: 9px;
+      border-bottom: 1px solid #6f5800;
+      background: rgba(212, 160, 23, 0.08);
+    }
+
+    .championship-slot {
       min-height: 58px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 12px;
-      color: #999;
-      font-size: 0.85rem;
+      color: #bbb;
+      border-bottom: 1px solid #2d2d2d;
     }
 
-    .championship-card {
-      border: 1px solid #d4a017;
-      box-shadow: 0 0 18px rgba(212,160,23,0.12);
-    }
-
-    .championship-card .future-slot {
-      min-height: 100px;
-      color: #e4b62c;
-      font-weight: 800;
+    .championship-slot:last-child {
+      border-bottom: none;
     }
 
     .basement-section .match-card {
@@ -286,15 +326,27 @@
     }
 
     .basement-section .round-title {
-      color: #df6262;
+      color: #ff6b6b;
     }
 
     .basement-section .section-heading h2 {
       color: #ff6767;
     }
 
+    .basement-section .bye-label,
+    .basement-section .championship-header {
+      color: #ff7b7b;
+      border-color: #6d2727;
+      background: rgba(165, 42, 42, 0.12);
+    }
+
+    .basement-section .championship-card {
+      border-color: #8c3030;
+      box-shadow: 0 0 18px rgba(165, 42, 42, 0.14);
+    }
+
     .legend {
-      margin-top: 18px;
+      margin-top: 14px;
       color: #888;
       text-align: center;
       font-size: 0.82rem;
@@ -304,7 +356,7 @@
     .loading,
     .error-message {
       text-align: center;
-      padding: 40px 20px;
+      padding: 30px 20px;
       color: #aaa;
     }
 
@@ -318,7 +370,7 @@
       }
 
       .round-column {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
       }
     }
   </style>
@@ -353,7 +405,9 @@
       </p>
 
       <div class="playoff-meta" id="playoffMeta">
-        <span class="meta-pill">Loading ESPN playoff data...</span>
+        <span class="meta-pill">
+          Loading ESPN playoff data...
+        </span>
       </div>
     </section>
 
@@ -376,7 +430,9 @@
     <section>
       <div class="section-heading">
         <h2>🏆 The Syndicate Championship</h2>
-        <p>Projected championship bracket based on current ESPN seeds.</p>
+        <p>
+          Projected championship bracket based on current ESPN seeds.
+        </p>
       </div>
 
       <p class="bracket-note">
@@ -393,13 +449,15 @@
     <section class="basement-section">
       <div class="section-heading">
         <h2>💀 The Basement Brawl</h2>
-        <p>For the Misfits currently living below the playoff line.</p>
+        <p>
+          For the Misfits currently living below the playoff line.
+        </p>
       </div>
 
       <p class="bracket-note">
-        The consolation ladder is enabled in ESPN.
-        These matchups are currently projected from the bottom four seeds
-        until ESPN publishes the official postseason bracket.
+        ESPN's consolation ladder is enabled.
+        The Basement Brawl shown here is projected from the current
+        bottom four seeds until ESPN publishes the official bracket.
       </p>
 
       <div id="basementBracket" class="loading">
@@ -415,6 +473,15 @@
 
   <script>
     const DATA_URL = "data/league.json";
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
 
     function record(team) {
       const ties = Number(team.ties || 0);
@@ -442,17 +509,48 @@
       );
     }
 
-    function logoHtml(team, className = "team-logo") {
-      if (!team || !team.logo) {
+    function fallbackLetter(team) {
+      const name = team?.name || "?";
+      return escapeHtml(name.charAt(0).toUpperCase());
+    }
+
+    function logoHtml(
+      team,
+      shellClass = "logo-shell",
+      imageClass = "team-logo"
+    ) {
+      if (!team) {
         return "";
       }
 
+      if (!team.logo) {
+        return `
+          <span class="${shellClass}">
+            <span class="logo-fallback">
+              ${fallbackLetter(team)}
+            </span>
+          </span>
+        `;
+      }
+
       return `
-        <img
-          class="${className}"
-          src="${team.logo}"
-          alt="${team.name || "Team"} logo"
-        >
+        <span class="${shellClass}">
+          <img
+            class="${imageClass}"
+            src="${escapeHtml(team.logo)}"
+            alt="${escapeHtml(team.name || "Team")} logo"
+            onerror="
+              this.style.display='none';
+              this.nextElementSibling.style.display='inline';
+            "
+          >
+          <span
+            class="logo-fallback"
+            style="display:none;"
+          >
+            ${fallbackLetter(team)}
+          </span>
+        </span>
       `;
     }
 
@@ -514,10 +612,11 @@
       );
 
       if (!allTeams.length) {
-        document.getElementById("raceContainer").innerHTML =
-          `<div class="error-message">
+        document.getElementById("raceContainer").innerHTML = `
+          <div class="error-message">
             No playoff standings are available.
-          </div>`;
+          </div>
+        `;
         return;
       }
 
@@ -532,7 +631,9 @@
 
         return `
           <tr class="${cutClass}">
-            <td class="seed">#${seed}</td>
+            <td class="seed">
+              #${seed}
+            </td>
 
             <td>
               <div class="team-cell">
@@ -540,19 +641,23 @@
 
                 <div>
                   <div class="team-name">
-                    ${team.name}
+                    ${escapeHtml(team.name)}
                   </div>
 
                   <div class="owner-name">
-                    ${team.owner}
+                    ${escapeHtml(team.owner)}
                   </div>
                 </div>
               </div>
             </td>
 
-            <td>${record(team)}</td>
+            <td>
+              ${record(team)}
+            </td>
 
-            <td>${odds(team)}</td>
+            <td>
+              ${odds(team)}
+            </td>
 
             <td>
               <span class="status-badge ${status.className}">
@@ -593,19 +698,39 @@
         return `
           <div class="match-team">
             <span class="match-seed">#?</span>
-            <span class="match-team-name">TBD</span>
+            <span class="match-team-name">
+              TBD
+            </span>
           </div>
         `;
       }
 
       return `
         <div class="match-team">
-          <span class="match-seed">#${team.seed}</span>
+          <span class="match-seed">
+            #${team.seed}
+          </span>
 
-          ${logoHtml(team, "mini-logo")}
+          ${logoHtml(
+            team,
+            "mini-logo-shell",
+            "mini-logo"
+          )}
 
           <span class="match-team-name">
-            ${team.name}
+            ${escapeHtml(team.name)}
+          </span>
+        </div>
+      `;
+    }
+
+    function futureTeamHtml(label) {
+      return `
+        <div class="match-team">
+          <span class="match-seed">→</span>
+
+          <span class="match-team-name future-team">
+            ${escapeHtml(label)}
           </span>
         </div>
       `;
@@ -620,26 +745,31 @@
       `;
     }
 
-    function byeCard(team) {
+    function semifinalCard(seedTeam, opponentLabel) {
       return `
-        <div class="match-card bye-card">
+        <div class="match-card semifinal-card">
           <div class="bye-label">
             FIRST-ROUND BYE
           </div>
 
-          ${matchTeamHtml(team)}
+          ${matchTeamHtml(seedTeam)}
+          ${futureTeamHtml(opponentLabel)}
         </div>
       `;
     }
 
     function renderChampionship(playoffs) {
-      const teams = playoffs.championshipField || [];
+      const teams =
+        playoffs.championshipField || [];
 
       if (!teams.length) {
-        document.getElementById("championshipBracket").innerHTML =
-          `<div class="error-message">
+        document.getElementById(
+          "championshipBracket"
+        ).innerHTML = `
+          <div class="error-message">
             Championship field unavailable.
-          </div>`;
+          </div>
+        `;
         return;
       }
 
@@ -650,13 +780,18 @@
       const s5 = teamBySeed(teams, 5);
       const s6 = teamBySeed(teams, 6);
 
-      document.getElementById("championshipBracket").innerHTML = `
+      const week15 = Number(
+        playoffs.playoffsBeginWeek
+      );
+
+      document.getElementById(
+        "championshipBracket"
+      ).innerHTML = `
         <div class="bracket-grid">
 
           <div class="round-column">
             <div class="round-title">
-              Week ${playoffs.playoffsBeginWeek}
-              • Opening Round
+              Week ${week15} • Opening Round
             </div>
 
             ${matchupCard(s3, s6)}
@@ -665,37 +800,37 @@
 
           <div class="round-column">
             <div class="round-title">
-              Week ${Number(playoffs.playoffsBeginWeek) + 1}
-              • Semifinals
+              Week ${week15 + 1} • Semifinals
             </div>
 
-            ${byeCard(s1)}
+            ${semifinalCard(
+              s1,
+              "Winner of #4 vs #5"
+            )}
 
-            <div class="match-card">
-              <div class="future-slot">
-                #1 Seed vs projected winner of #4 vs #5
-              </div>
-            </div>
-
-            ${byeCard(s2)}
-
-            <div class="match-card">
-              <div class="future-slot">
-                #2 Seed vs projected winner of #3 vs #6
-              </div>
-            </div>
+            ${semifinalCard(
+              s2,
+              "Winner of #3 vs #6"
+            )}
           </div>
 
           <div class="round-column">
             <div class="round-title">
-              Weeks ${Number(playoffs.playoffsBeginWeek) + 2}–${Number(playoffs.playoffsBeginWeek) + 3}
+              Weeks ${week15 + 2}–${week15 + 3}
               • Championship
             </div>
 
             <div class="match-card championship-card">
-              <div class="future-slot">
-                🏆 THE SYNDICATE CHAMPIONSHIP<br>
-                Semifinal Winner vs Semifinal Winner
+              <div class="championship-header">
+                🏆 THE SYNDICATE CHAMPIONSHIP
+              </div>
+
+              <div class="championship-slot">
+                Semifinal Winner
+              </div>
+
+              <div class="championship-slot">
+                Semifinal Winner
               </div>
             </div>
           </div>
@@ -705,13 +840,17 @@
     }
 
     function renderBasement(playoffs) {
-      const teams = playoffs.basementField || [];
+      const teams =
+        playoffs.basementField || [];
 
       if (!teams.length) {
-        document.getElementById("basementBracket").innerHTML =
-          `<div class="error-message">
+        document.getElementById(
+          "basementBracket"
+        ).innerHTML = `
+          <div class="error-message">
             Basement Brawl field unavailable.
-          </div>`;
+          </div>
+        `;
         return;
       }
 
@@ -720,12 +859,18 @@
       const s9 = teamBySeed(teams, 9);
       const s10 = teamBySeed(teams, 10);
 
-      document.getElementById("basementBracket").innerHTML = `
+      const week15 = Number(
+        playoffs.playoffsBeginWeek
+      );
+
+      document.getElementById(
+        "basementBracket"
+      ).innerHTML = `
         <div class="bracket-grid">
 
           <div class="round-column">
             <div class="round-title">
-              Projected Opening Round
+              Week ${week15} • Basement Opening Round
             </div>
 
             ${matchupCard(s7, s10)}
@@ -734,31 +879,47 @@
 
           <div class="round-column">
             <div class="round-title">
-              Basement Survival
+              Week ${week15 + 1} • Basement Survival
             </div>
 
             <div class="match-card">
-              <div class="future-slot">
-                Projected consolation matchup
-              </div>
+              ${futureTeamHtml(
+                "Projected consolation survivor"
+              )}
+
+              ${futureTeamHtml(
+                "Projected consolation survivor"
+              )}
             </div>
 
             <div class="match-card">
-              <div class="future-slot">
-                Projected consolation matchup
-              </div>
+              ${futureTeamHtml(
+                "Projected consolation matchup"
+              )}
+
+              ${futureTeamHtml(
+                "Projected consolation matchup"
+              )}
             </div>
           </div>
 
           <div class="round-column">
             <div class="round-title">
-              Final Destination
+              Weeks ${week15 + 2}–${week15 + 3}
+              • Final Destination
             </div>
 
             <div class="match-card championship-card">
-              <div class="future-slot">
-                💀 THE BASEMENT BRAWL<br>
-                Somebody has to finish down here.
+              <div class="championship-header">
+                💀 THE BASEMENT BRAWL
+              </div>
+
+              <div class="championship-slot">
+                Basement Survivor
+              </div>
+
+              <div class="championship-slot">
+                Basement Survivor
               </div>
             </div>
           </div>
@@ -802,14 +963,17 @@
           </div>
         `;
 
-        document.getElementById("raceContainer").innerHTML =
-          message;
+        document.getElementById(
+          "raceContainer"
+        ).innerHTML = message;
 
-        document.getElementById("championshipBracket").innerHTML =
-          message;
+        document.getElementById(
+          "championshipBracket"
+        ).innerHTML = message;
 
-        document.getElementById("basementBracket").innerHTML =
-          message;
+        document.getElementById(
+          "basementBracket"
+        ).innerHTML = message;
       }
     }
 
