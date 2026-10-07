@@ -378,19 +378,51 @@
 
 <body>
 
-  <header></header>
+  <header>
+
+    <div class="hero">
+
+      <img
+        src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
+        alt="Misfit Syndicate Association Logo"
+        class="logo"
+      >
+
+      <h1>
+        Misfit Syndicate Association
+      </h1>
+
+      <div class="tagline">
+        Fantasy Football for the Beautifully Dysfunctional
+      </div>
+
+      <div class="season">
+        🏈 2026 MSA Season
+      </div>
+
+    </div>
+
+  </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="matchups.html">Matchups</a>
-    <a href="standings.html">Standings</a>
-    <a href="teams.html">Teams</a>
-    <a href="power-rankings.html">Power Rankings</a>
-    <a href="playoff-picture.html">Playoff Picture</a>
-    <a href="weekly-awards.html">Weekly Awards</a>
-    <a href="syndicate-report.html">Syndicate Report</a>
-    <a href="rules.html">Rules</a>
-    <a href="league-history.html">League History</a>
+    <div class="nav-links">
+
+      <a href="index.html">Home</a>
+      <a href="matchups.html">Matchups</a>
+      <a href="standings.html">Standings</a>
+      <a href="teams.html">Teams</a>
+      <a href="power-rankings.html">Power Rankings</a>
+
+      <a href="playoff-picture.html" class="active">
+        Playoff Picture
+      </a>
+
+      <a href="weekly-awards.html">Weekly Awards</a>
+      <a href="syndicate-report.html">Syndicate Report</a>
+      <a href="rules.html">Rules</a>
+      <a href="league-history.html">League History</a>
+
+    </div>
   </nav>
 
   <main>
@@ -449,6 +481,7 @@
     <section class="basement-section">
       <div class="section-heading">
         <h2>💀 The Basement Brawl</h2>
+
         <p>
           For the Misfits currently living below the playoff line.
         </p>
@@ -473,6 +506,23 @@
 
   <script>
     const DATA_URL = "data/league.json";
+
+    /*
+      THESE ARE YOUR UPLOADED MSA TEAM LOGOS.
+      We use these instead of ESPN's remote logos.
+    */
+    const teamLogos = {
+      1: "Big Papi Queso Logo.png",
+      3: "Team Ramrod Logo.png",
+      4: "Nabershood Cookout logo.png",
+      5: "Pitts Creek Logo.png",
+      6: "Double Dookies logo.jpeg",
+      8: "Big Pickens Energy logo.png",
+      9: "Apukalypse Now Logo.png",
+      10: "DB EATERS LOGO.png",
+      11: "Red Zone Redbirds.png",
+      12: "Ladiboyz Logo.png"
+    };
 
     function escapeHtml(value) {
       return String(value ?? "")
@@ -523,7 +573,10 @@
         return "";
       }
 
-      if (!team.logo) {
+      const customLogo =
+        teamLogos[Number(team.teamId)];
+
+      if (!customLogo) {
         return `
           <span class="${shellClass}">
             <span class="logo-fallback">
@@ -537,7 +590,7 @@
         <span class="${shellClass}">
           <img
             class="${imageClass}"
-            src="${escapeHtml(team.logo)}"
+            src="${encodeURI(customLogo)}"
             alt="${escapeHtml(team.name || "Team")} logo"
             onerror="
               this.style.display='none';
@@ -553,8 +606,7 @@
         </span>
       `;
     }
-
-    function getStatus(seed, playoffCount) {
+        function getStatus(seed, playoffCount) {
       if (seed <= playoffCount) {
         return {
           text: "IN",
@@ -698,6 +750,7 @@
         return `
           <div class="match-team">
             <span class="match-seed">#?</span>
+
             <span class="match-team-name">
               TBD
             </span>
