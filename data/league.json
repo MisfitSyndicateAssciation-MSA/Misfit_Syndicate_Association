@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-08T04:53:15.613002+00:00",
+  "updatedAt": "2026-10-08T07:48:26.942778+00:00",
   "standings": [
     {
       "rank": 1,
@@ -18,7 +18,7 @@
       "pointsAgainst": 379.2,
       "streakType": "WIN",
       "streakLength": 4,
-      "playoffPct": 88.1,
+      "playoffPct": 89.0,
       "playoffSeed": 1,
       "waiverRank": 7
     },
@@ -36,7 +36,7 @@
       "pointsAgainst": 491.7,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 88.3,
+      "playoffPct": 88.4,
       "playoffSeed": 2,
       "waiverRank": 6
     },
@@ -54,7 +54,7 @@
       "pointsAgainst": 449.9,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 75.2,
+      "playoffPct": 76.6,
       "playoffSeed": 3,
       "waiverRank": 5
     },
@@ -72,7 +72,7 @@
       "pointsAgainst": 468.2,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 66.3,
+      "playoffPct": 65.7,
       "playoffSeed": 4,
       "waiverRank": 4
     },
@@ -90,7 +90,7 @@
       "pointsAgainst": 506.1,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 53.8,
+      "playoffPct": 53.1,
       "playoffSeed": 5,
       "waiverRank": 10
     },
@@ -108,7 +108,7 @@
       "pointsAgainst": 511.9,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 66.2,
+      "playoffPct": 65.8,
       "playoffSeed": 6,
       "waiverRank": 9
     },
@@ -126,7 +126,7 @@
       "pointsAgainst": 490.3,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 65.1,
+      "playoffPct": 66.2,
       "playoffSeed": 7,
       "waiverRank": 3
     },
@@ -144,7 +144,7 @@
       "pointsAgainst": 525.9,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 37.5,
+      "playoffPct": 36.3,
       "playoffSeed": 8,
       "waiverRank": 8
     },
@@ -162,7 +162,7 @@
       "pointsAgainst": 506.8,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 43.0,
+      "playoffPct": 42.8,
       "playoffSeed": 9,
       "waiverRank": 2
     },
@@ -180,7 +180,7 @@
       "pointsAgainst": 645.5,
       "streakType": "LOSS",
       "streakLength": 4,
-      "playoffPct": 16.4,
+      "playoffPct": 16.0,
       "playoffSeed": 10,
       "waiverRank": 1
     }
@@ -192,7 +192,7 @@
       "homeTeamId": 9,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 125.99,
+      "awayProjection": 128.37,
       "homeProjection": 132.12
     },
     {
@@ -1634,8 +1634,8 @@
         "name": "Kyle Pitts Sr.",
         "position": "TE",
         "nflTeam": "ATL",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1697,8 +1697,8 @@
         "name": "Kenyon Sadiq",
         "position": "TE",
         "nflTeam": "NYJ",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1743,7 +1743,7 @@
         "wins": 4,
         "losses": 0,
         "ties": 0,
-        "playoffPct": 88.1
+        "playoffPct": 89.0
       },
       {
         "seed": 2,
@@ -1754,7 +1754,7 @@
         "wins": 3,
         "losses": 1,
         "ties": 0,
-        "playoffPct": 88.3
+        "playoffPct": 88.4
       },
       {
         "seed": 3,
@@ -1765,7 +1765,7 @@
         "wins": 3,
         "losses": 1,
         "ties": 0,
-        "playoffPct": 75.2
+        "playoffPct": 76.6
       },
       {
         "seed": 4,
@@ -1776,7 +1776,7 @@
         "wins": 2,
         "losses": 2,
         "ties": 0,
-        "playoffPct": 66.3
+        "playoffPct": 65.7
       },
       {
         "seed": 5,
@@ -1787,7 +1787,7 @@
         "wins": 2,
         "losses": 2,
         "ties": 0,
-        "playoffPct": 53.8
+        "playoffPct": 53.1
       },
       {
         "seed": 6,
@@ -1798,7 +1798,7 @@
         "wins": 2,
         "losses": 2,
         "ties": 0,
-        "playoffPct": 66.2
+        "playoffPct": 65.8
       }
     ],
     "basementField": [
@@ -1811,7 +1811,7 @@
         "wins": 2,
         "losses": 2,
         "ties": 0,
-        "playoffPct": 65.1
+        "playoffPct": 66.2
       },
       {
         "seed": 8,
@@ -1822,7 +1822,7 @@
         "wins": 1,
         "losses": 3,
         "ties": 0,
-        "playoffPct": 37.5
+        "playoffPct": 36.3
       },
       {
         "seed": 9,
@@ -1833,7 +1833,7 @@
         "wins": 1,
         "losses": 3,
         "ties": 0,
-        "playoffPct": 43.0
+        "playoffPct": 42.8
       },
       {
         "seed": 10,
@@ -1844,7 +1844,7 @@
         "wins": 0,
         "losses": 4,
         "ties": 0,
-        "playoffPct": 16.4
+        "playoffPct": 16.0
       }
     ],
     "projectedChampionship": {
