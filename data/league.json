@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-08T15:55:54.968554+00:00",
+  "updatedAt": "2026-10-08T18:23:49.847537+00:00",
   "standings": [
     {
       "rank": 1,
@@ -904,8 +904,8 @@
         "name": "Michael Pittman Jr.",
         "position": "WR",
         "nflTeam": "PIT",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
         "injuryStatus": "OUT"
       },
       {
@@ -945,15 +945,6 @@
         "injuryStatus": "QUESTIONABLE"
       },
       {
-        "playerId": 4870795,
-        "name": "Makai Lemon",
-        "position": "WR",
-        "nflTeam": "PHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 3116164,
         "name": "Mike Gesicki",
         "position": "TE",
@@ -978,6 +969,24 @@
         "nflTeam": "MIN",
         "lineupSlot": "K",
         "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4569559,
+        "name": "Devaughn Vele",
+        "position": "WR",
+        "nflTeam": "NO",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4384852,
+        "name": "Dohnte Meyers",
+        "position": "WR",
+        "nflTeam": "CIN",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
