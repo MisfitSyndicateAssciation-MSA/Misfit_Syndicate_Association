@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-08T00:31:41.267499+00:00",
+  "updatedAt": "2026-10-08T04:53:15.613002+00:00",
   "standings": [
     {
       "rank": 1,
@@ -220,7 +220,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 131.61,
-      "homeProjection": 117.27
+      "homeProjection": 123.67
     },
     {
       "week": 5,
@@ -430,8 +430,8 @@
         "name": "Jayden Daniels",
         "position": "QB",
         "nflTeam": "WAS",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -529,8 +529,8 @@
         "name": "Kirk Cousins",
         "position": "QB",
         "nflTeam": "LV",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
