@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-08T22:44:00.024598+00:00",
+  "updatedAt": "2026-10-08T22:59:40.590541+00:00",
   "standings": [
     {
       "rank": 1,
@@ -202,7 +202,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 126.05,
-      "homeProjection": 139.35
+      "homeProjection": 137.26
     },
     {
       "week": 5,
@@ -886,8 +886,8 @@
         "name": "Luther Burden III",
         "position": "WR",
         "nflTeam": "CHI",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -976,8 +976,8 @@
         "name": "Devaughn Vele",
         "position": "WR",
         "nflTeam": "NO",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
