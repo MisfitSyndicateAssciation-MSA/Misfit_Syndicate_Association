@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-08T21:47:42.253602+00:00",
+  "updatedAt": "2026-10-08T22:44:00.024598+00:00",
   "standings": [
     {
       "rank": 1,
@@ -228,7 +228,7 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 116.38,
+      "awayProjection": 122.15,
       "homeProjection": 110.38
     }
   ],
@@ -1324,8 +1324,8 @@
         "name": "Tyler Warren",
         "position": "TE",
         "nflTeam": "IND",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1378,8 +1378,8 @@
         "name": "Seahawks D/ST",
         "position": "D/ST",
         "nflTeam": "SEA",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1387,8 +1387,8 @@
         "name": "Juwan Johnson",
         "position": "TE",
         "nflTeam": "NO",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1396,15 +1396,6 @@
         "name": "Kalif Raymond",
         "position": "WR",
         "nflTeam": "CHI",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": -16029,
-        "name": "Panthers D/ST",
-        "position": "D/ST",
-        "nflTeam": "CAR",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
@@ -1434,6 +1425,15 @@
         "nflTeam": "SEA",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16020,
+        "name": "Jets D/ST",
+        "position": "D/ST",
+        "nflTeam": "NYJ",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
       }
     ],
