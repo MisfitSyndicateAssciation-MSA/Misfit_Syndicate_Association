@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-07T23:15:36.398593+00:00",
+  "updatedAt": "2026-10-08T00:31:41.267499+00:00",
   "standings": [
     {
       "rank": 1,
@@ -201,7 +201,7 @@
       "homeTeamId": 6,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 120.41,
+      "awayProjection": 126.05,
       "homeProjection": 136.73
     },
     {
@@ -996,8 +996,8 @@
         "name": "Justin Jefferson",
         "position": "WR",
         "nflTeam": "MIN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1005,8 +1005,8 @@
         "name": "George Pickens",
         "position": "WR",
         "nflTeam": "DAL",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1023,8 +1023,8 @@
         "name": "TreVeyon Henderson",
         "position": "RB",
         "nflTeam": "NE",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1104,8 +1104,8 @@
         "name": "Parker Washington",
         "position": "WR",
         "nflTeam": "JAX",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1131,8 +1131,8 @@
         "name": "Ollie Gordon II",
         "position": "RB",
         "nflTeam": "MIA",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       }
     ],
