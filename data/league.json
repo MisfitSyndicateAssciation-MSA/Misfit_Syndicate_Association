@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-09T07:31:17.420992+00:00",
+  "updatedAt": "2026-10-09T14:59:05.853857+00:00",
   "standings": [
     {
       "rank": 1,
@@ -560,7 +560,7 @@
         "nflTeam": "NYJ",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "DOUBTFUL"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 3121422,
