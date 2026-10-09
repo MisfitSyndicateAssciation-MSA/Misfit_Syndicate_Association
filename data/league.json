@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-09T18:45:06.648148+00:00",
+  "updatedAt": "2026-10-09T19:01:58.183682+00:00",
   "standings": [
     {
       "rank": 1,
@@ -219,7 +219,7 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 132.42,
+      "awayProjection": 135.28,
       "homeProjection": 123.76
     },
     {
@@ -311,8 +311,8 @@
         "name": "Rams D/ST",
         "position": "D/ST",
         "nflTeam": "LAR",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -377,6 +377,15 @@
         "lineupSlot": "IR",
         "lineupSlotId": 21,
         "injuryStatus": "OUT"
+      },
+      {
+        "playerId": -16028,
+        "name": "Commanders D/ST",
+        "position": "D/ST",
+        "nflTeam": "WAS",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
       }
     ],
     "3": [
@@ -769,7 +778,7 @@
         "nflTeam": "CHI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3916148,
