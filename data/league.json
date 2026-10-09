@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-09T20:15:04.674893+00:00",
+  "updatedAt": "2026-10-09T20:36:00.280908+00:00",
   "standings": [
     {
       "rank": 1,
@@ -560,7 +560,7 @@
         "nflTeam": "NYG",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4427366,
@@ -859,8 +859,8 @@
         "name": "Ashton Jeanty",
         "position": "RB",
         "nflTeam": "LV",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -922,8 +922,8 @@
         "name": "Jaylen Warren",
         "position": "RB",
         "nflTeam": "PIT",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1198,7 +1198,7 @@
         "nflTeam": "NYG",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4871023,
@@ -1225,7 +1225,7 @@
         "nflTeam": "NYG",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4361741,
