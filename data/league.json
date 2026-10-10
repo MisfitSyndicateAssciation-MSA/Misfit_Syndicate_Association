@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-10T15:04:48.639752+00:00",
+  "updatedAt": "2026-10-10T15:23:43.887904+00:00",
   "standings": [
     {
       "rank": 1,
@@ -210,7 +210,7 @@
       "homeTeamId": 4,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 125.34,
+      "awayProjection": 118.62,
       "homeProjection": 125.04
     },
     {
@@ -1499,7 +1499,7 @@
         "nflTeam": "ARI",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4426388,
