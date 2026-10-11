@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-11T15:53:57.311690+00:00",
+  "updatedAt": "2026-10-11T16:10:06.229028+00:00",
   "standings": [
     {
       "rank": 1,
@@ -201,7 +201,7 @@
       "homeTeamId": 6,
       "awayScore": 30.0,
       "homeScore": 12.2,
-      "awayProjection": 132.3,
+      "awayProjection": 129.68,
       "homeProjection": 129.7
     },
     {
@@ -211,7 +211,7 @@
       "awayScore": 0.0,
       "homeScore": 4.0,
       "awayProjection": 118.68,
-      "homeProjection": 122.89
+      "homeProjection": 122.07
     },
     {
       "week": 5,
@@ -220,7 +220,7 @@
       "awayScore": 0.0,
       "homeScore": 5.7,
       "awayProjection": 134.78,
-      "homeProjection": 122.58
+      "homeProjection": 121.67
     },
     {
       "week": 5,
@@ -228,7 +228,7 @@
       "homeTeamId": 5,
       "awayScore": 2.9,
       "homeScore": 36.4,
-      "awayProjection": 105.89,
+      "awayProjection": 104.03,
       "homeProjection": 138.55
     }
   ],
@@ -1428,10 +1428,10 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": -16020,
-        "name": "Jets D/ST",
+        "playerId": -16005,
+        "name": "Browns D/ST",
         "position": "D/ST",
-        "nflTeam": "NYJ",
+        "nflTeam": "CLE",
         "lineupSlot": "D/ST",
         "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
@@ -1488,8 +1488,8 @@
         "name": "Marvin Harrison Jr.",
         "position": "WR",
         "nflTeam": "ARI",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "OUT"
       },
       {
@@ -1497,8 +1497,8 @@
         "name": "Jameson Williams",
         "position": "WR",
         "nflTeam": "DET",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
