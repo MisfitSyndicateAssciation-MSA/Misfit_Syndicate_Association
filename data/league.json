@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-11T02:10:42.471482+00:00",
+  "updatedAt": "2026-10-11T02:31:21.242593+00:00",
   "standings": [
     {
       "rank": 1,
@@ -229,7 +229,7 @@
       "awayScore": 2.9,
       "homeScore": 36.4,
       "awayProjection": 105.89,
-      "homeProjection": 124.48
+      "homeProjection": 138.55
     }
   ],
   "rosters": {
@@ -808,15 +808,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 3046439,
-        "name": "Hunter Henry",
-        "position": "TE",
-        "nflTeam": "NE",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 3116165,
         "name": "Chris Godwin Jr.",
         "position": "WR",
@@ -835,12 +826,21 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": -16012,
-        "name": "Chiefs D/ST",
+        "playerId": -16025,
+        "name": "49ers D/ST",
         "position": "D/ST",
-        "nflTeam": "KC",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "nflTeam": "SF",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4689936,
+        "name": "Jake Bates",
+        "position": "K",
+        "nflTeam": "DET",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
         "injuryStatus": "ACTIVE"
       }
     ],
