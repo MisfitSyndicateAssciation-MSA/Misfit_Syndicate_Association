@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-11T17:03:02.185136+00:00",
+  "updatedAt": "2026-10-11T17:22:25.973349+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,46 +190,46 @@
       "week": 5,
       "awayTeamId": 12,
       "homeTeamId": 9,
-      "awayScore": 22.0,
-      "homeScore": 10.0,
-      "awayProjection": 117.45,
-      "homeProjection": 132.11
+      "awayScore": 30.0,
+      "homeScore": 13.6,
+      "awayProjection": 116.59,
+      "homeProjection": 127.82
     },
     {
       "week": 5,
       "awayTeamId": 8,
       "homeTeamId": 6,
-      "awayScore": 50.0,
-      "homeScore": 12.2,
-      "awayProjection": 141.87,
-      "homeProjection": 129.69
+      "awayScore": 58.1,
+      "homeScore": 56.2,
+      "awayProjection": 145.56,
+      "homeProjection": 159.72
     },
     {
       "week": 5,
       "awayTeamId": 11,
       "homeTeamId": 4,
-      "awayScore": 10.0,
-      "homeScore": 4.0,
-      "awayProjection": 118.68,
-      "homeProjection": 119.55
+      "awayScore": 12.9,
+      "homeScore": 36.4,
+      "awayProjection": 120.16,
+      "homeProjection": 134.77
     },
     {
       "week": 5,
       "awayTeamId": 1,
       "homeTeamId": 3,
-      "awayScore": 10.0,
-      "homeScore": 7.1,
-      "awayProjection": 134.88,
-      "homeProjection": 120.24
+      "awayScore": 24.0,
+      "homeScore": 20.0,
+      "awayProjection": 135.35,
+      "homeProjection": 118.91
     },
     {
       "week": 5,
       "awayTeamId": 10,
       "homeTeamId": 5,
-      "awayScore": 12.9,
-      "homeScore": 36.4,
-      "awayProjection": 104.03,
-      "homeProjection": 138.55
+      "awayScore": 20.2,
+      "homeScore": 52.4,
+      "awayProjection": 108.49,
+      "homeProjection": 152.61
     }
   ],
   "rosters": {
@@ -1717,7 +1717,7 @@
         "nflTeam": "MIN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": -16013,
