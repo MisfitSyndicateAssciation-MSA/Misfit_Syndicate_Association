@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-10T23:58:52.070178+00:00",
+  "updatedAt": "2026-10-11T02:10:42.471482+00:00",
   "standings": [
     {
       "rank": 1,
@@ -704,8 +704,8 @@
         "name": "Jaxon Smith-Njigba",
         "position": "WR",
         "nflTeam": "SEA",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -749,8 +749,8 @@
         "name": "DJ Moore",
         "position": "WR",
         "nflTeam": "BUF",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -830,8 +830,8 @@
         "name": "Harrison Butker",
         "position": "K",
         "nflTeam": "KC",
-        "lineupSlot": "K",
-        "lineupSlotId": 17,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -839,8 +839,8 @@
         "name": "Chiefs D/ST",
         "position": "D/ST",
         "nflTeam": "KC",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
