@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-11T21:41:35.094838+00:00",
+  "updatedAt": "2026-10-11T21:58:04.389757+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,18 +190,18 @@
       "week": 5,
       "awayTeamId": 12,
       "homeTeamId": 9,
-      "awayScore": 53.6,
-      "homeScore": 65.9,
-      "awayProjection": 104.64,
-      "homeProjection": 103.52
+      "awayScore": 61.2,
+      "homeScore": 67.9,
+      "awayProjection": 107.14,
+      "homeProjection": 104.64
     },
     {
       "week": 5,
       "awayTeamId": 8,
       "homeTeamId": 6,
-      "awayScore": 87.0,
+      "awayScore": 90.6,
       "homeScore": 183.8,
-      "awayProjection": 123.62,
+      "awayProjection": 122.39,
       "homeProjection": 183.8
     },
     {
@@ -209,27 +209,27 @@
       "awayTeamId": 11,
       "homeTeamId": 4,
       "awayScore": 42.2,
-      "homeScore": 139.3,
-      "awayProjection": 124.55,
-      "homeProjection": 177.33
+      "homeScore": 141.3,
+      "awayProjection": 122.53,
+      "homeProjection": 176.73
     },
     {
       "week": 5,
       "awayTeamId": 1,
       "homeTeamId": 3,
-      "awayScore": 117.8,
-      "homeScore": 56.4,
-      "awayProjection": 127.83,
-      "homeProjection": 105.16
+      "awayScore": 117.9,
+      "homeScore": 61.4,
+      "awayProjection": 127.37,
+      "homeProjection": 108.12
     },
     {
       "week": 5,
       "awayTeamId": 10,
       "homeTeamId": 5,
       "awayScore": 83.1,
-      "homeScore": 84.6,
-      "awayProjection": 113.07,
-      "homeProjection": 148.9
+      "homeScore": 90.6,
+      "awayProjection": 110.01,
+      "homeProjection": 152.93
     }
   ],
   "rosters": {
@@ -985,6 +985,15 @@
         "name": "Antonio Williams",
         "position": "WR",
         "nflTeam": "WAS",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4360423,
+        "name": "Michael Penix Jr.",
+        "position": "QB",
+        "nflTeam": "ATL",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
