@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-11T15:36:34.600074+00:00",
+  "updatedAt": "2026-10-11T15:53:57.311690+00:00",
   "standings": [
     {
       "rank": 1,
@@ -199,9 +199,9 @@
       "week": 5,
       "awayTeamId": 8,
       "homeTeamId": 6,
-      "awayScore": 26.9,
+      "awayScore": 30.0,
       "homeScore": 12.2,
-      "awayProjection": 132.52,
+      "awayProjection": 132.3,
       "homeProjection": 129.7
     },
     {
@@ -209,9 +209,9 @@
       "awayTeamId": 11,
       "homeTeamId": 4,
       "awayScore": 0.0,
-      "homeScore": 1.0,
+      "homeScore": 4.0,
       "awayProjection": 118.68,
-      "homeProjection": 120.9
+      "homeProjection": 122.89
     },
     {
       "week": 5,
@@ -220,7 +220,7 @@
       "awayScore": 0.0,
       "homeScore": 5.7,
       "awayProjection": 134.78,
-      "homeProjection": 123.74
+      "homeProjection": 122.58
     },
     {
       "week": 5,
@@ -531,7 +531,7 @@
         "nflTeam": "NO",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 14880,
@@ -576,18 +576,18 @@
         "name": "Terry McLaurin",
         "position": "WR",
         "nflTeam": "WAS",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
-        "injuryStatus": "QUESTIONABLE"
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4239993,
         "name": "Tee Higgins",
         "position": "WR",
         "nflTeam": "CIN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4430027,
@@ -623,7 +623,7 @@
         "nflTeam": "PIT",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4385690,
@@ -769,7 +769,7 @@
         "nflTeam": "NE",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4431611,
@@ -778,7 +778,7 @@
         "nflTeam": "CHI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 3916148,
@@ -852,7 +852,7 @@
         "nflTeam": "CIN",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4890973,
@@ -861,7 +861,7 @@
         "nflTeam": "LV",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4432665,
@@ -1007,7 +1007,7 @@
         "nflTeam": "MIN",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4426354,
@@ -1517,7 +1517,7 @@
         "nflTeam": "MIN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 3116365,
