@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-12T03:34:32.227419+00:00",
+  "updatedAt": "2026-10-12T03:58:06.571126+00:00",
   "standings": [
     {
       "rank": 1,
@@ -199,9 +199,9 @@
       "week": 5,
       "awayTeamId": 8,
       "homeTeamId": 6,
-      "awayScore": 125.9,
+      "awayScore": 126.9,
       "homeScore": 183.8,
-      "awayProjection": 125.9,
+      "awayProjection": 126.9,
       "homeProjection": 183.8
     },
     {
@@ -218,18 +218,18 @@
       "awayTeamId": 1,
       "homeTeamId": 3,
       "awayScore": 124.0,
-      "homeScore": 106.1,
+      "homeScore": 109.1,
       "awayProjection": 124.0,
-      "homeProjection": 106.11
+      "homeProjection": 109.1
     },
     {
       "week": 5,
       "awayTeamId": 10,
       "homeTeamId": 5,
       "awayScore": 111.8,
-      "homeScore": 131.4,
+      "homeScore": 133.6,
       "awayProjection": 111.8,
-      "homeProjection": 167.39
+      "homeProjection": 169.59
     }
   ],
   "rosters": {
@@ -996,7 +996,7 @@
         "nflTeam": "ATL",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       }
     ],
     "8": [
