@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-12T20:51:05.537628+00:00",
+  "updatedAt": "2026-10-12T23:00:14.870746+00:00",
   "standings": [
     {
       "rank": 1,
@@ -229,7 +229,7 @@
       "awayScore": 111.8,
       "homeScore": 133.6,
       "awayProjection": 111.8,
-      "homeProjection": 169.59
+      "homeProjection": 156.98
     }
   ],
   "rosters": {
@@ -751,7 +751,7 @@
         "nflTeam": "BUF",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 12483,
