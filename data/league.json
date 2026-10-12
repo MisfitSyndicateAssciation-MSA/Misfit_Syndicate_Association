@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 5,
-  "updatedAt": "2026-10-12T14:44:39.150775+00:00",
+  "updatedAt": "2026-10-12T16:38:16.373366+00:00",
   "standings": [
     {
       "rank": 1,
@@ -1371,7 +1371,7 @@
         "nflTeam": "HOU",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "DOUBTFUL"
       },
       {
         "playerId": 4360761,
