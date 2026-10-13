@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-13T16:05:35.831782+00:00",
+  "updatedAt": "2026-10-13T16:54:22.573334+00:00",
   "standings": [
     {
       "rank": 1,
@@ -913,8 +913,8 @@
         "name": "Kyle Monangai",
         "position": "RB",
         "nflTeam": "CHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
         "injuryStatus": "OUT"
       },
       {
@@ -940,8 +940,8 @@
         "name": "Will Reichard",
         "position": "K",
         "nflTeam": "MIN",
-        "lineupSlot": "K",
-        "lineupSlotId": 17,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
