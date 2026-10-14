@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-14T18:47:17.019117+00:00",
+  "updatedAt": "2026-10-14T19:57:05.245325+00:00",
   "standings": [
     {
       "rank": 1,
@@ -211,7 +211,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 137.71,
-      "homeProjection": 131.1
+      "homeProjection": 133.05
     },
     {
       "week": 6,
@@ -275,8 +275,8 @@
         "name": "Jalen Hurts",
         "position": "QB",
         "nflTeam": "PHI",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -376,6 +376,15 @@
         "nflTeam": "WAS",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 2969939,
+        "name": "Jameis Winston",
+        "position": "QB",
+        "nflTeam": "NYG",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       }
     ],
