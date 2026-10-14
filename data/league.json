@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-14T01:16:48.602935+00:00",
+  "updatedAt": "2026-10-14T01:49:19.188589+00:00",
   "standings": [
     {
       "rank": 1,
@@ -193,7 +193,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 73.94,
-      "homeProjection": 94.71
+      "homeProjection": 118.53
     },
     {
       "week": 6,
@@ -210,7 +210,7 @@
       "homeTeamId": 1,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 120.23,
+      "awayProjection": 116.53,
       "homeProjection": 131.11
     },
     {
@@ -895,8 +895,8 @@
         "name": "Drake Maye",
         "position": "QB",
         "nflTeam": "NE",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -931,8 +931,8 @@
         "name": "Tyler Shough",
         "position": "QB",
         "nflTeam": "NO",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1553,8 +1553,8 @@
         "name": "Jahmyr Gibbs",
         "position": "RB",
         "nflTeam": "DET",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1571,8 +1571,8 @@
         "name": "Omarion Hampton",
         "position": "RB",
         "nflTeam": "LAC",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1607,8 +1607,8 @@
         "name": "Kyle Pitts Sr.",
         "position": "TE",
         "nflTeam": "ATL",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1634,8 +1634,8 @@
         "name": "Matthew Golden",
         "position": "WR",
         "nflTeam": "GB",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1652,8 +1652,8 @@
         "name": "Chuba Hubbard",
         "position": "RB",
         "nflTeam": "CAR",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1661,8 +1661,8 @@
         "name": "Kenyon Sadiq",
         "position": "TE",
         "nflTeam": "NYJ",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
