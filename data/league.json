@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-14T08:41:50.528627+00:00",
+  "updatedAt": "2026-10-14T12:47:22.301057+00:00",
   "standings": [
     {
       "rank": 1,
@@ -969,6 +969,15 @@
         "nflTeam": "KC",
         "lineupSlot": "D/ST",
         "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4685261,
+        "name": "Germie Bernard",
+        "position": "WR",
+        "nflTeam": "PIT",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
