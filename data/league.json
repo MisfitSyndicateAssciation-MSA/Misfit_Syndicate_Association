@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-14T21:01:44.046641+00:00",
+  "updatedAt": "2026-10-14T21:34:13.023934+00:00",
   "standings": [
     {
       "rank": 1,
@@ -522,7 +522,7 @@
         "nflTeam": "NO",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 14880,
@@ -1025,7 +1025,7 @@
         "nflTeam": "NE",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "DOUBTFUL"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4038941,
@@ -1299,7 +1299,7 @@
         "nflTeam": "DAL",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 3929630,
