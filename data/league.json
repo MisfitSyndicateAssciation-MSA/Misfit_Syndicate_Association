@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-14T21:34:13.023934+00:00",
+  "updatedAt": "2026-10-14T22:05:07.221107+00:00",
   "standings": [
     {
       "rank": 1,
@@ -193,7 +193,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 109.23,
-      "homeProjection": 118.5
+      "homeProjection": 118.41
     },
     {
       "week": 6,
@@ -210,7 +210,7 @@
       "homeTeamId": 1,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 137.71,
+      "awayProjection": 137.65,
       "homeProjection": 133.05
     },
     {
@@ -219,8 +219,8 @@
       "homeTeamId": 10,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 119.75,
-      "homeProjection": 123.17
+      "awayProjection": 119.71,
+      "homeProjection": 123.21
     },
     {
       "week": 6,
@@ -228,8 +228,8 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 129.25,
-      "homeProjection": 120.84
+      "awayProjection": 129.28,
+      "homeProjection": 120.81
     }
   ],
   "rosters": {
@@ -340,7 +340,7 @@
         "nflTeam": "CLE",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 2576925,
