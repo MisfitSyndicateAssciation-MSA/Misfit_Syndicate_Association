@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-14T01:49:19.188589+00:00",
+  "updatedAt": "2026-10-14T04:58:42.032667+00:00",
   "standings": [
     {
       "rank": 1,
@@ -220,7 +220,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 111.99,
-      "homeProjection": 109.27
+      "homeProjection": 123.17
     },
     {
       "week": 6,
@@ -1270,8 +1270,8 @@
         "name": "Saquon Barkley",
         "position": "RB",
         "nflTeam": "PHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1324,8 +1324,8 @@
         "name": "David Montgomery",
         "position": "RB",
         "nflTeam": "HOU",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "DOUBTFUL"
       },
       {
