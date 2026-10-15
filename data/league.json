@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-15T20:00:14.981549+00:00",
+  "updatedAt": "2026-10-15T20:30:30.925110+00:00",
   "standings": [
     {
       "rank": 1,
@@ -623,7 +623,7 @@
         "nflTeam": "PIT",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4385690,
@@ -778,7 +778,7 @@
         "nflTeam": "CHI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3916148,
