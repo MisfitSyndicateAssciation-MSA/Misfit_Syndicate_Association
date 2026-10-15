@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-15T17:43:22.415345+00:00",
+  "updatedAt": "2026-10-15T18:56:51.672873+00:00",
   "standings": [
     {
       "rank": 1,
@@ -377,6 +377,15 @@
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "OUT"
+      },
+      {
+        "playerId": 4373678,
+        "name": "Khalil Shakir",
+        "position": "WR",
+        "nflTeam": "BUF",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
       }
     ],
     "3": [
