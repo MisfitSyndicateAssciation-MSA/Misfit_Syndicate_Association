@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-15T17:10:34.833729+00:00",
+  "updatedAt": "2026-10-15T17:43:22.415345+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 12,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 109.23,
-      "homeProjection": 118.41
+      "awayProjection": 109.24,
+      "homeProjection": 118.49
     },
     {
       "week": 6,
@@ -201,7 +201,7 @@
       "homeTeamId": 11,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 143.98,
+      "awayProjection": 143.68,
       "homeProjection": 105.3
     },
     {
@@ -210,8 +210,8 @@
       "homeTeamId": 1,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 137.65,
-      "homeProjection": 133.05
+      "awayProjection": 137.6,
+      "homeProjection": 133.04
     },
     {
       "week": 6,
@@ -220,7 +220,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 119.71,
-      "homeProjection": 120.22
+      "homeProjection": 120.21
     },
     {
       "week": 6,
@@ -228,8 +228,8 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 129.07,
-      "homeProjection": 120.81
+      "awayProjection": 128.7,
+      "homeProjection": 120.75
     }
   ],
   "rosters": {
@@ -352,15 +352,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4575131,
-        "name": "Jacory Croskey-Merritt",
-        "position": "RB",
-        "nflTeam": "WAS",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 2969939,
         "name": "Jameis Winston",
         "position": "QB",
@@ -377,6 +368,15 @@
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4426385,
+        "name": "Zach Charbonnet",
+        "position": "RB",
+        "nflTeam": "SEA",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "OUT"
       }
     ],
     "3": [
