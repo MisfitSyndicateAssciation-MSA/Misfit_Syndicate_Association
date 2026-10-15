@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-14T23:56:26.642637+00:00",
+  "updatedAt": "2026-10-15T01:46:26.900342+00:00",
   "standings": [
     {
       "rank": 1,
@@ -228,7 +228,7 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 129.28,
+      "awayProjection": 129.07,
       "homeProjection": 120.81
     }
   ],
@@ -311,8 +311,8 @@
         "name": "Deebo Samuel Sr.",
         "position": "WR",
         "nflTeam": "SF",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
         "injuryStatus": "OUT"
       },
       {
@@ -343,24 +343,6 @@
         "injuryStatus": "QUESTIONABLE"
       },
       {
-        "playerId": 2576925,
-        "name": "Darren Waller",
-        "position": "TE",
-        "nflTeam": "CAR",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
-      },
-      {
-        "playerId": 3116406,
-        "name": "Tyreek Hill",
-        "position": "WR",
-        "nflTeam": "FA",
-        "lineupSlot": "IR",
-        "lineupSlotId": 21,
-        "injuryStatus": "QUESTIONABLE"
-      },
-      {
         "playerId": 4426354,
         "name": "George Pickens",
         "position": "WR",
@@ -385,6 +367,15 @@
         "nflTeam": "NYG",
         "lineupSlot": "QB",
         "lineupSlotId": 0,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4361411,
+        "name": "Pat Freiermuth",
+        "position": "TE",
+        "nflTeam": "PIT",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -448,8 +439,8 @@
         "name": "Harold Fannin Jr.",
         "position": "TE",
         "nflTeam": "CLE",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -466,8 +457,8 @@
         "name": "Dallas Goedert",
         "position": "TE",
         "nflTeam": "PHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
