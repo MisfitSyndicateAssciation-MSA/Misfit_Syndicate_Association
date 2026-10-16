@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-15T22:37:56.478357+00:00",
+  "updatedAt": "2026-10-16T00:24:52.307366+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,7 +192,7 @@
       "homeTeamId": 12,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 109.9,
+      "awayProjection": 108.63,
       "homeProjection": 117.08
     },
     {
@@ -201,7 +201,7 @@
       "homeTeamId": 11,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 143.78,
+      "awayProjection": 142.97,
       "homeProjection": 106.96
     },
     {
@@ -217,19 +217,19 @@
       "week": 6,
       "awayTeamId": 4,
       "homeTeamId": 10,
-      "awayScore": 0.0,
-      "homeScore": 0.0,
-      "awayProjection": 119.3,
-      "homeProjection": 120.31
+      "awayScore": 12.0,
+      "homeScore": 10.5,
+      "awayProjection": 119.84,
+      "homeProjection": 119.89
     },
     {
       "week": 6,
       "awayTeamId": 3,
       "homeTeamId": 5,
       "awayScore": 0.0,
-      "homeScore": 0.0,
-      "awayProjection": 114.53,
-      "homeProjection": 121.23
+      "homeScore": 3.1,
+      "awayProjection": 113.81,
+      "homeProjection": 122.73
     }
   ],
   "rosters": {
@@ -870,7 +870,7 @@
         "nflTeam": "LV",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4361579,
