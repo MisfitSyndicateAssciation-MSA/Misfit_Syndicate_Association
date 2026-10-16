@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-16T18:14:07.956533+00:00",
+  "updatedAt": "2026-10-16T18:56:41.616872+00:00",
   "standings": [
     {
       "rank": 1,
@@ -924,7 +924,7 @@
         "nflTeam": "CHI",
         "lineupSlot": "IR",
         "lineupSlotId": 21,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4695883,
@@ -1600,7 +1600,7 @@
         "nflTeam": "ARI",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4685382,
