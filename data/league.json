@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-16T17:49:58.272797+00:00",
+  "updatedAt": "2026-10-16T18:14:07.956533+00:00",
   "standings": [
     {
       "rank": 1,
@@ -414,7 +414,7 @@
         "nflTeam": "KC",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4685472,
@@ -1335,7 +1335,7 @@
         "nflTeam": "BAL",
         "lineupSlot": "QB",
         "lineupSlotId": 0,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4685512,
