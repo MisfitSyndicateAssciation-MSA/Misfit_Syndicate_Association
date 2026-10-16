@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-16T03:12:13.650305+00:00",
+  "updatedAt": "2026-10-16T03:49:09.599376+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,9 +190,9 @@
       "week": 6,
       "awayTeamId": 8,
       "homeTeamId": 12,
-      "awayScore": 3.0,
+      "awayScore": 3.2,
       "homeScore": 0.0,
-      "awayProjection": 98.08,
+      "awayProjection": 97.96,
       "homeProjection": 117.08
     },
     {
@@ -201,7 +201,7 @@
       "homeTeamId": 11,
       "awayScore": 6.4,
       "homeScore": 0.0,
-      "awayProjection": 140.69,
+      "awayProjection": 140.49,
       "homeProjection": 106.96
     },
     {
@@ -217,19 +217,19 @@
       "week": 6,
       "awayTeamId": 4,
       "homeTeamId": 10,
-      "awayScore": 12.0,
-      "homeScore": 10.5,
-      "awayProjection": 125.62,
-      "homeProjection": 110.13
+      "awayScore": 11.0,
+      "homeScore": 11.2,
+      "awayProjection": 124.75,
+      "homeProjection": 110.52
     },
     {
       "week": 6,
       "awayTeamId": 3,
       "homeTeamId": 5,
-      "awayScore": 4.0,
-      "homeScore": 22.2,
-      "awayProjection": 110.1,
-      "homeProjection": 135.89
+      "awayScore": 7.0,
+      "homeScore": 25.4,
+      "awayProjection": 124.52,
+      "homeProjection": 138.69
     }
   ],
   "rosters": {
@@ -412,8 +412,8 @@
         "name": "Rashee Rice",
         "position": "WR",
         "nflTeam": "KC",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -457,8 +457,8 @@
         "name": "DK Metcalf",
         "position": "WR",
         "nflTeam": "PIT",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
