@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-16T19:55:44.163092+00:00",
+  "updatedAt": "2026-10-16T20:22:27.343024+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 12,
       "awayScore": 3.2,
       "homeScore": 0.0,
-      "awayProjection": 97.45,
-      "homeProjection": 103.37
+      "awayProjection": 97.54,
+      "homeProjection": 103.5
     },
     {
       "week": 6,
@@ -201,8 +201,8 @@
       "homeTeamId": 11,
       "awayScore": 6.4,
       "homeScore": 0.0,
-      "awayProjection": 140.49,
-      "homeProjection": 106.9
+      "awayProjection": 139.99,
+      "homeProjection": 106.88
     },
     {
       "week": 6,
@@ -210,8 +210,8 @@
       "homeTeamId": 1,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 139.04,
-      "homeProjection": 134.35
+      "awayProjection": 139.0,
+      "homeProjection": 133.89
     },
     {
       "week": 6,
@@ -219,8 +219,8 @@
       "homeTeamId": 10,
       "awayScore": 11.0,
       "homeScore": 11.2,
-      "awayProjection": 124.75,
-      "homeProjection": 88.88
+      "awayProjection": 124.74,
+      "homeProjection": 88.76
     },
     {
       "week": 6,
@@ -228,7 +228,7 @@
       "homeTeamId": 5,
       "awayScore": 7.0,
       "homeScore": 25.4,
-      "awayProjection": 123.86,
+      "awayProjection": 123.67,
       "homeProjection": 136.31
     }
   ],
@@ -340,7 +340,7 @@
         "nflTeam": "CLE",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4426354,
@@ -1308,7 +1308,7 @@
         "nflTeam": "PHI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4047646,
@@ -1618,7 +1618,7 @@
         "nflTeam": "BAL",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4241478,
