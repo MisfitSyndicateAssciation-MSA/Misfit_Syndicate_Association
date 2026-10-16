@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-16T20:22:27.343024+00:00",
+  "updatedAt": "2026-10-16T20:56:00.682279+00:00",
   "standings": [
     {
       "rank": 1,
@@ -1627,7 +1627,7 @@
         "nflTeam": "PHI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 2577417,
