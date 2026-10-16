@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-16T02:09:46.535820+00:00",
+  "updatedAt": "2026-10-16T02:43:49.157458+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,18 +190,18 @@
       "week": 6,
       "awayTeamId": 8,
       "homeTeamId": 12,
-      "awayScore": 4.0,
+      "awayScore": 5.0,
       "homeScore": 0.0,
-      "awayProjection": 104.54,
+      "awayProjection": 102.34,
       "homeProjection": 117.08
     },
     {
       "week": 6,
       "awayTeamId": 9,
       "homeTeamId": 11,
-      "awayScore": 3.5,
+      "awayScore": 6.4,
       "homeScore": 0.0,
-      "awayProjection": 141.29,
+      "awayProjection": 142.14,
       "homeProjection": 106.96
     },
     {
@@ -217,19 +217,19 @@
       "week": 6,
       "awayTeamId": 4,
       "homeTeamId": 10,
-      "awayScore": 12.0,
-      "homeScore": 7.3,
-      "awayProjection": 123.29,
-      "homeProjection": 113.11
+      "awayScore": 14.0,
+      "homeScore": 8.5,
+      "awayProjection": 126.31,
+      "homeProjection": 110.72
     },
     {
       "week": 6,
       "awayTeamId": 3,
       "homeTeamId": 5,
       "awayScore": 4.0,
-      "homeScore": 5.6,
-      "awayProjection": 113.21,
-      "homeProjection": 126.18
+      "homeScore": 11.9,
+      "awayProjection": 111.39,
+      "homeProjection": 128.45
     }
   ],
   "rosters": {
@@ -1270,7 +1270,7 @@
         "nflTeam": "DEN",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 3117256,
