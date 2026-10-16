@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-16T01:38:14.659703+00:00",
+  "updatedAt": "2026-10-16T02:09:46.535820+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,9 +190,9 @@
       "week": 6,
       "awayTeamId": 8,
       "homeTeamId": 12,
-      "awayScore": 3.0,
+      "awayScore": 4.0,
       "homeScore": 0.0,
-      "awayProjection": 105.33,
+      "awayProjection": 104.54,
       "homeProjection": 117.08
     },
     {
@@ -201,7 +201,7 @@
       "homeTeamId": 11,
       "awayScore": 3.5,
       "homeScore": 0.0,
-      "awayProjection": 142.43,
+      "awayProjection": 141.29,
       "homeProjection": 106.96
     },
     {
@@ -217,19 +217,19 @@
       "week": 6,
       "awayTeamId": 4,
       "homeTeamId": 10,
-      "awayScore": 13.0,
-      "homeScore": 7.0,
-      "awayProjection": 123.02,
-      "homeProjection": 114.81
+      "awayScore": 12.0,
+      "homeScore": 7.3,
+      "awayProjection": 123.29,
+      "homeProjection": 113.11
     },
     {
       "week": 6,
       "awayTeamId": 3,
       "homeTeamId": 5,
-      "awayScore": 5.0,
-      "homeScore": 3.1,
-      "awayProjection": 115.22,
-      "homeProjection": 114.78
+      "awayScore": 4.0,
+      "homeScore": 5.6,
+      "awayProjection": 113.21,
+      "homeProjection": 126.18
     }
   ],
   "rosters": {
@@ -740,8 +740,8 @@
         "name": "Colston Loveland",
         "position": "TE",
         "nflTeam": "CHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -803,8 +803,8 @@
         "name": "Jake Ferguson",
         "position": "TE",
         "nflTeam": "DAL",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -821,8 +821,8 @@
         "name": "Harrison Butker",
         "position": "K",
         "nflTeam": "KC",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -835,12 +835,12 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4689936,
-        "name": "Jake Bates",
-        "position": "K",
-        "nflTeam": "DET",
-        "lineupSlot": "K",
-        "lineupSlotId": 17,
+        "playerId": 4683062,
+        "name": "Xavier Worthy",
+        "position": "WR",
+        "nflTeam": "KC",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1270,7 +1270,7 @@
         "nflTeam": "DEN",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3117256,
