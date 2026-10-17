@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-16T22:24:01.739312+00:00",
+  "updatedAt": "2026-10-17T00:47:21.780336+00:00",
   "standings": [
     {
       "rank": 1,
@@ -228,7 +228,7 @@
       "homeTeamId": 5,
       "awayScore": 7.0,
       "homeScore": 25.4,
-      "awayProjection": 123.67,
+      "awayProjection": 123.56,
       "homeProjection": 136.31
     }
   ],
@@ -448,8 +448,8 @@
         "name": "Harold Fannin Jr.",
         "position": "TE",
         "nflTeam": "CLE",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -466,8 +466,8 @@
         "name": "Dallas Goedert",
         "position": "TE",
         "nflTeam": "PHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
