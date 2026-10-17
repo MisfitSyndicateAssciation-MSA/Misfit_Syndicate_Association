@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-17T20:16:22.077934+00:00",
+  "updatedAt": "2026-10-17T22:53:46.658393+00:00",
   "standings": [
     {
       "rank": 1,
@@ -202,7 +202,7 @@
       "awayScore": 6.4,
       "homeScore": 0.0,
       "awayProjection": 140.01,
-      "homeProjection": 106.88
+      "homeProjection": 134.14
     },
     {
       "week": 6,
@@ -1488,8 +1488,8 @@
         "name": "Marvin Harrison Jr.",
         "position": "WR",
         "nflTeam": "HOU",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1497,8 +1497,8 @@
         "name": "Jameson Williams",
         "position": "WR",
         "nflTeam": "DET",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1538,30 +1538,12 @@
         "injuryStatus": "INJURY_RESERVE"
       },
       {
-        "playerId": 4429025,
-        "name": "Quentin Johnston",
-        "position": "WR",
-        "nflTeam": "LAC",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 3912547,
         "name": "Sam Darnold",
         "position": "QB",
         "nflTeam": "SEA",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 4574716,
-        "name": "Harrison Mevis",
-        "position": "K",
-        "nflTeam": "FA",
-        "lineupSlot": "K",
-        "lineupSlotId": 17,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1578,8 +1560,26 @@
         "name": "Brenton Strange",
         "position": "TE",
         "nflTeam": "JAX",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 5082424,
+        "name": "Dominic Zvada",
+        "position": "K",
+        "nflTeam": "NYG",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4428718,
+        "name": "Tre Tucker",
+        "position": "WR",
+        "nflTeam": "LV",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       }
     ],
