@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-17T00:47:21.780336+00:00",
+  "updatedAt": "2026-10-17T01:21:16.572336+00:00",
   "standings": [
     {
       "rank": 1,
@@ -193,7 +193,7 @@
       "awayScore": 3.2,
       "homeScore": 0.0,
       "awayProjection": 97.54,
-      "homeProjection": 103.5
+      "homeProjection": 112.55
     },
     {
       "week": 6,
@@ -1598,8 +1598,8 @@
         "name": "Jeremiyah Love",
         "position": "RB",
         "nflTeam": "ARI",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "OUT"
       },
       {
@@ -1607,8 +1607,8 @@
         "name": "Omarion Hampton",
         "position": "RB",
         "nflTeam": "LAC",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
