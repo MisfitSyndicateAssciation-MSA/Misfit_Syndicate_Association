@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-17T16:54:57.151920+00:00",
+  "updatedAt": "2026-10-17T17:18:36.839904+00:00",
   "standings": [
     {
       "rank": 1,
@@ -193,7 +193,7 @@
       "awayScore": 3.2,
       "homeScore": 0.0,
       "awayProjection": 97.58,
-      "homeProjection": 111.23
+      "homeProjection": 111.29
     },
     {
       "week": 6,
@@ -210,7 +210,7 @@
       "homeTeamId": 1,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 139.0,
+      "awayProjection": 136.4,
       "homeProjection": 133.9
     },
     {
@@ -219,7 +219,7 @@
       "homeTeamId": 10,
       "awayScore": 11.0,
       "homeScore": 11.2,
-      "awayProjection": 124.73,
+      "awayProjection": 124.71,
       "homeProjection": 106.4
     },
     {
@@ -229,7 +229,7 @@
       "awayScore": 7.0,
       "homeScore": 25.4,
       "awayProjection": 123.57,
-      "homeProjection": 136.31
+      "homeProjection": 136.33
     }
   ],
   "rosters": {
@@ -895,8 +895,8 @@
         "name": "Luther Burden III",
         "position": "WR",
         "nflTeam": "CHI",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -985,8 +985,8 @@
         "name": "Germie Bernard",
         "position": "WR",
         "nflTeam": "PIT",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       }
     ],
