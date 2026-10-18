@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-18T13:36:05.389790+00:00",
+  "updatedAt": "2026-10-18T14:01:44.617698+00:00",
   "standings": [
     {
       "rank": 1,
@@ -169,7 +169,7 @@
     {
       "rank": 10,
       "id": 8,
-      "name": "Big Pickens Energy",
+      "name": "El Semental Carnoso",
       "abbrev": "MS13",
       "owner": "Adam Hadlock",
       "logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/16.svg",
@@ -190,9 +190,9 @@
       "week": 6,
       "awayTeamId": 8,
       "homeTeamId": 12,
-      "awayScore": 13.5,
+      "awayScore": 12.2,
       "homeScore": 0.0,
-      "awayProjection": 97.27,
+      "awayProjection": 94.33,
       "homeProjection": 111.21
     },
     {
@@ -201,34 +201,34 @@
       "homeTeamId": 11,
       "awayScore": 6.4,
       "homeScore": 13.4,
-      "awayProjection": 140.05,
-      "homeProjection": 137.41
+      "awayProjection": 136.48,
+      "homeProjection": 136.77
     },
     {
       "week": 6,
       "awayTeamId": 6,
       "homeTeamId": 1,
-      "awayScore": 0.0,
-      "homeScore": 0.0,
-      "awayProjection": 136.12,
-      "homeProjection": 133.48
+      "awayScore": 1.0,
+      "homeScore": 5.2,
+      "awayProjection": 135.68,
+      "homeProjection": 136.45
     },
     {
       "week": 6,
       "awayTeamId": 4,
       "homeTeamId": 10,
-      "awayScore": 11.0,
+      "awayScore": 19.0,
       "homeScore": 11.2,
-      "awayProjection": 124.04,
+      "awayProjection": 128.54,
       "homeProjection": 106.4
     },
     {
       "week": 6,
       "awayTeamId": 3,
       "homeTeamId": 5,
-      "awayScore": 7.0,
+      "awayScore": 8.1,
       "homeScore": 25.4,
-      "awayProjection": 123.26,
+      "awayProjection": 122.89,
       "homeProjection": 136.3
     }
   ],
@@ -1847,7 +1847,7 @@
       {
         "seed": 10,
         "teamId": 8,
-        "name": "Big Pickens Energy",
+        "name": "El Semental Carnoso",
         "owner": "Adam Hadlock",
         "logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/16.svg",
         "wins": 0,
