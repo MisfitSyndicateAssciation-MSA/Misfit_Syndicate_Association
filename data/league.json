@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-18T18:01:23.283815+00:00",
+  "updatedAt": "2026-10-18T18:32:19.199979+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,46 +190,46 @@
       "week": 6,
       "awayTeamId": 8,
       "homeTeamId": 12,
-      "awayScore": 51.7,
-      "homeScore": 16.7,
-      "awayProjection": 96.4,
-      "homeProjection": 107.5
+      "awayScore": 55.4,
+      "homeScore": 22.3,
+      "awayProjection": 96.31,
+      "homeProjection": 108.39
     },
     {
       "week": 6,
       "awayTeamId": 9,
       "homeTeamId": 11,
-      "awayScore": 24.9,
-      "homeScore": 21.0,
-      "awayProjection": 129.28,
-      "homeProjection": 130.16
+      "awayScore": 26.1,
+      "homeScore": 32.6,
+      "awayProjection": 127.65,
+      "homeProjection": 139.21
     },
     {
       "week": 6,
       "awayTeamId": 6,
       "homeTeamId": 1,
-      "awayScore": 33.3,
-      "homeScore": 24.5,
-      "awayProjection": 137.76,
-      "homeProjection": 120.83
+      "awayScore": 51.8,
+      "homeScore": 28.4,
+      "awayProjection": 146.9,
+      "homeProjection": 119.11
     },
     {
       "week": 6,
       "awayTeamId": 4,
       "homeTeamId": 10,
-      "awayScore": 69.8,
-      "homeScore": 12.2,
-      "awayProjection": 145.31,
-      "homeProjection": 94.4
+      "awayScore": 72.6,
+      "homeScore": 23.5,
+      "awayProjection": 144.85,
+      "homeProjection": 102.08
     },
     {
       "week": 6,
       "awayTeamId": 3,
       "homeTeamId": 5,
-      "awayScore": 57.6,
-      "homeScore": 48.4,
-      "awayProjection": 120.12,
-      "homeProjection": 138.42
+      "awayScore": 74.6,
+      "homeScore": 53.7,
+      "awayProjection": 122.84,
+      "homeProjection": 134.16
     }
   ],
   "rosters": {
@@ -513,7 +513,7 @@
         "nflTeam": "NO",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 14880,
@@ -740,8 +740,8 @@
         "name": "DJ Moore",
         "position": "WR",
         "nflTeam": "BUF",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -830,8 +830,8 @@
         "name": "Xavier Worthy",
         "position": "WR",
         "nflTeam": "KC",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       }
     ],
