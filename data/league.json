@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-18T20:13:04.758848+00:00",
+  "updatedAt": "2026-10-18T20:43:50.203584+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,46 +190,46 @@
       "week": 6,
       "awayTeamId": 8,
       "homeTeamId": 12,
-      "awayScore": 58.7,
-      "homeScore": 65.1,
-      "awayProjection": 85.2,
-      "homeProjection": 137.28
+      "awayScore": 60.1,
+      "homeScore": 68.7,
+      "awayProjection": 85.1,
+      "homeProjection": 138.44
     },
     {
       "week": 6,
       "awayTeamId": 9,
       "homeTeamId": 11,
-      "awayScore": 52.6,
-      "homeScore": 38.7,
-      "awayProjection": 134.52,
-      "homeProjection": 129.75
+      "awayScore": 67.1,
+      "homeScore": 51.3,
+      "awayProjection": 140.34,
+      "homeProjection": 124.19
     },
     {
       "week": 6,
       "awayTeamId": 6,
       "homeTeamId": 1,
-      "awayScore": 83.5,
-      "homeScore": 51.9,
-      "awayProjection": 148.18,
-      "homeProjection": 103.87
+      "awayScore": 113.8,
+      "homeScore": 48.9,
+      "awayProjection": 160.6,
+      "homeProjection": 103.23
     },
     {
       "week": 6,
       "awayTeamId": 4,
       "homeTeamId": 10,
-      "awayScore": 91.5,
-      "homeScore": 23.9,
-      "awayProjection": 148.95,
-      "homeProjection": 83.55
+      "awayScore": 97.2,
+      "homeScore": 26.9,
+      "awayProjection": 149.11,
+      "homeProjection": 80.23
     },
     {
       "week": 6,
       "awayTeamId": 3,
       "homeTeamId": 5,
-      "awayScore": 110.4,
-      "homeScore": 62.9,
-      "awayProjection": 116.64,
-      "homeProjection": 113.26
+      "awayScore": 118.2,
+      "homeScore": 76.3,
+      "awayProjection": 118.2,
+      "homeProjection": 118.7
     }
   ],
   "rosters": {
@@ -1079,7 +1079,7 @@
         "nflTeam": "NE",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4432620,
