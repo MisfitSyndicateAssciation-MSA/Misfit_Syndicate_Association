@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-19T01:57:14.519814+00:00",
+  "updatedAt": "2026-10-19T02:29:25.668420+00:00",
   "standings": [
     {
       "rank": 1,
@@ -191,36 +191,36 @@
       "awayTeamId": 8,
       "homeTeamId": 12,
       "awayScore": 69.4,
-      "homeScore": 92.8,
+      "homeScore": 95.5,
       "awayProjection": 84.37,
-      "homeProjection": 131.18
+      "homeProjection": 126.09
     },
     {
       "week": 6,
       "awayTeamId": 9,
       "homeTeamId": 11,
-      "awayScore": 115.9,
+      "awayScore": 117.9,
       "homeScore": 117.1,
-      "awayProjection": 138.25,
+      "awayProjection": 135.81,
       "homeProjection": 117.1
     },
     {
       "week": 6,
       "awayTeamId": 6,
       "homeTeamId": 1,
-      "awayScore": 140.4,
-      "homeScore": 52.4,
-      "awayProjection": 148.89,
-      "homeProjection": 90.87
+      "awayScore": 147.9,
+      "homeScore": 58.8,
+      "awayProjection": 153.57,
+      "homeProjection": 91.57
     },
     {
       "week": 6,
       "awayTeamId": 4,
       "homeTeamId": 10,
-      "awayScore": 136.0,
-      "homeScore": 45.3,
-      "awayProjection": 156.55,
-      "homeProjection": 60.12
+      "awayScore": 137.9,
+      "homeScore": 49.5,
+      "awayProjection": 155.73,
+      "homeProjection": 59.4
     },
     {
       "week": 6,
@@ -879,7 +879,7 @@
         "nflTeam": "LAC",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4685278,
