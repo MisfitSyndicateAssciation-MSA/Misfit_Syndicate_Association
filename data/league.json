@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 6,
-  "updatedAt": "2026-10-20T01:03:53.504473+00:00",
+  "updatedAt": "2026-10-20T01:39:36.756480+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,10 +190,10 @@
       "week": 6,
       "awayTeamId": 8,
       "homeTeamId": 12,
-      "awayScore": 81.4,
-      "homeScore": 122.6,
-      "awayProjection": 92.14,
-      "homeProjection": 133.3
+      "awayScore": 82.8,
+      "homeScore": 125.2,
+      "awayProjection": 90.28,
+      "homeProjection": 132.66
     },
     {
       "week": 6,
@@ -209,9 +209,9 @@
       "awayTeamId": 6,
       "homeTeamId": 1,
       "awayScore": 148.4,
-      "homeScore": 89.0,
+      "homeScore": 100.1,
       "awayProjection": 148.4,
-      "homeProjection": 104.29
+      "homeProjection": 110.76
     },
     {
       "week": 6,
@@ -227,9 +227,9 @@
       "awayTeamId": 3,
       "homeTeamId": 5,
       "awayScore": 118.2,
-      "homeScore": 120.5,
+      "homeScore": 121.5,
       "awayProjection": 118.2,
-      "homeProjection": 116.88
+      "homeProjection": 118.47
     }
   ],
   "rosters": {
@@ -1645,7 +1645,7 @@
         "nflTeam": "SF",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3953687,
