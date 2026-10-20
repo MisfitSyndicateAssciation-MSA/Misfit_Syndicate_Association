@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-20T19:36:43.106328+00:00",
+  "updatedAt": "2026-10-20T21:49:59.127480+00:00",
   "standings": [
     {
       "rank": 1,
@@ -1454,7 +1454,7 @@
         "nflTeam": "LAR",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "OUT"
+        "injuryStatus": "INJURY_RESERVE"
       },
       {
         "playerId": 4259545,
