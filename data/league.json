@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-20T08:09:28.805398+00:00",
+  "updatedAt": "2026-10-20T13:27:59.197373+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,7 +192,7 @@
       "homeTeamId": 11,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 108.48,
+      "awayProjection": 135.15,
       "homeProjection": 79.11
     },
     {
@@ -1580,8 +1580,8 @@
         "name": "Jahmyr Gibbs",
         "position": "RB",
         "nflTeam": "DET",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1598,8 +1598,8 @@
         "name": "Omarion Hampton",
         "position": "RB",
         "nflTeam": "LAC",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1616,8 +1616,8 @@
         "name": "DeVonta Smith",
         "position": "WR",
         "nflTeam": "PHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1643,8 +1643,8 @@
         "name": "Mike Evans",
         "position": "WR",
         "nflTeam": "SF",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "DOUBTFUL"
       },
       {
