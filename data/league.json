@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-21T19:57:02.622573+00:00",
+  "updatedAt": "2026-10-21T20:28:02.001633+00:00",
   "standings": [
     {
       "rank": 1,
@@ -331,7 +331,7 @@
         "nflTeam": "CLE",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4426354,
@@ -578,7 +578,7 @@
         "nflTeam": "GB",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4038815,
@@ -1225,7 +1225,7 @@
         "nflTeam": "GB",
         "lineupSlot": "QB",
         "lineupSlotId": 0,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4034949,
@@ -1654,7 +1654,7 @@
         "nflTeam": "GB",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3139477,
