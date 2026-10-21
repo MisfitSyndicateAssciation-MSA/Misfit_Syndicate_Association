@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-20T21:49:59.127480+00:00",
+  "updatedAt": "2026-10-21T00:08:12.278444+00:00",
   "standings": [
     {
       "rank": 1,
@@ -211,7 +211,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 97.49,
-      "homeProjection": 122.83
+      "homeProjection": 139.07
     },
     {
       "week": 7,
@@ -1142,8 +1142,8 @@
         "name": "Chase Brown",
         "position": "RB",
         "nflTeam": "CIN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1169,8 +1169,8 @@
         "name": "Cam Skattebo",
         "position": "RB",
         "nflTeam": "NYG",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1178,8 +1178,8 @@
         "name": "Carnell Tate",
         "position": "WR",
         "nflTeam": "TEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1232,8 +1232,8 @@
         "name": "Eddy Pineiro",
         "position": "K",
         "nflTeam": "SF",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1250,8 +1250,8 @@
         "name": "Jaylen Waddle",
         "position": "WR",
         "nflTeam": "DEN",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
