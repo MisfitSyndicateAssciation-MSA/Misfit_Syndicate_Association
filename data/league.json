@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-21T08:17:31.237449+00:00",
+  "updatedAt": "2026-10-21T13:19:34.868066+00:00",
   "standings": [
     {
       "rank": 1,
@@ -201,7 +201,7 @@
       "homeTeamId": 8,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 105.26,
+      "awayProjection": 129.38,
       "homeProjection": 131.35
     },
     {
@@ -275,8 +275,8 @@
         "name": "Joe Burrow",
         "position": "QB",
         "nflTeam": "CIN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -293,8 +293,8 @@
         "name": "Aaron Jones Sr.",
         "position": "RB",
         "nflTeam": "MIN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -329,8 +329,8 @@
         "name": "Denzel Boston",
         "position": "WR",
         "nflTeam": "CLE",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -340,15 +340,6 @@
         "nflTeam": "DAL",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 2969939,
-        "name": "Jameis Winston",
-        "position": "QB",
-        "nflTeam": "NYG",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -370,10 +361,10 @@
         "injuryStatus": "OUT"
       },
       {
-        "playerId": 4373678,
-        "name": "Khalil Shakir",
-        "position": "WR",
-        "nflTeam": "BUF",
+        "playerId": 4433970,
+        "name": "J.J. McCarthy",
+        "position": "QB",
+        "nflTeam": "NYG",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
