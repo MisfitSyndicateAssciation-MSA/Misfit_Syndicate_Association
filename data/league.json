@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-21T13:19:34.868066+00:00",
+  "updatedAt": "2026-10-21T14:36:34.625098+00:00",
   "standings": [
     {
       "rank": 1,
@@ -229,7 +229,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 122.93,
-      "homeProjection": 114.42
+      "homeProjection": 125.79
     }
   ],
   "rosters": {
@@ -612,8 +612,8 @@
         "name": "Cam Little",
         "position": "K",
         "nflTeam": "JAX",
-        "lineupSlot": "K",
-        "lineupSlotId": 17,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -662,21 +662,21 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4427095,
-        "name": "DeMario Douglas",
-        "position": "WR",
-        "nflTeam": "NE",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4635008,
         "name": "Keon Coleman",
         "position": "WR",
         "nflTeam": "BUF",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 17372,
+        "name": "Chris Boswell",
+        "position": "K",
+        "nflTeam": "PIT",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
         "injuryStatus": "ACTIVE"
       }
     ],
