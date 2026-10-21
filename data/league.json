@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-21T21:36:45.617682+00:00",
+  "updatedAt": "2026-10-21T23:10:18.975306+00:00",
   "standings": [
     {
       "rank": 1,
@@ -1088,7 +1088,7 @@
         "nflTeam": "KC",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4711533,
