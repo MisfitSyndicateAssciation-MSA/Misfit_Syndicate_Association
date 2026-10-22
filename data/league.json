@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-21T23:42:52.394375+00:00",
+  "updatedAt": "2026-10-22T00:06:17.392993+00:00",
   "standings": [
     {
       "rank": 1,
@@ -967,6 +967,15 @@
         "name": "Germie Bernard",
         "position": "WR",
         "nflTeam": "PIT",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4242557,
+        "name": "Colby Parkinson",
+        "position": "TE",
+        "nflTeam": "LAR",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
