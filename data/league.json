@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-22T21:13:28.494014+00:00",
+  "updatedAt": "2026-10-22T21:49:20.366758+00:00",
   "standings": [
     {
       "rank": 1,
@@ -220,7 +220,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 131.41,
-      "homeProjection": 150.52
+      "homeProjection": 148.5
     },
     {
       "week": 7,
@@ -913,8 +913,8 @@
         "name": "Jalen Coker",
         "position": "WR",
         "nflTeam": "CAR",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -967,15 +967,15 @@
         "name": "Germie Bernard",
         "position": "WR",
         "nflTeam": "PIT",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4242557,
-        "name": "Colby Parkinson",
+        "playerId": 4429086,
+        "name": "Michael Mayer",
         "position": "TE",
-        "nflTeam": "LAR",
+        "nflTeam": "LV",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
