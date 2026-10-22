@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-22T09:35:05.192992+00:00",
+  "updatedAt": "2026-10-22T18:11:36.187345+00:00",
   "standings": [
     {
       "rank": 1,
@@ -358,7 +358,7 @@
         "nflTeam": "SEA",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4433970,
