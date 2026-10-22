@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-22T08:15:49.772346+00:00",
+  "updatedAt": "2026-10-22T09:35:05.192992+00:00",
   "standings": [
     {
       "rank": 1,
@@ -210,7 +210,7 @@
       "homeTeamId": 9,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 97.42,
+      "awayProjection": 111.56,
       "homeProjection": 140.02
     },
     {
@@ -1297,8 +1297,8 @@
         "name": "Saquon Barkley",
         "position": "RB",
         "nflTeam": "PHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1306,8 +1306,8 @@
         "name": "A.J. Brown",
         "position": "WR",
         "nflTeam": "NE",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1315,8 +1315,8 @@
         "name": "Tyler Warren",
         "position": "TE",
         "nflTeam": "IND",
-        "lineupSlot": "IR",
-        "lineupSlotId": 21,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1333,8 +1333,8 @@
         "name": "Jadarian Price",
         "position": "RB",
         "nflTeam": "SEA",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
         "injuryStatus": "INJURY_RESERVE"
       },
       {
@@ -1351,8 +1351,8 @@
         "name": "Michael Wilson",
         "position": "WR",
         "nflTeam": "ARI",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1360,8 +1360,8 @@
         "name": "Seahawks D/ST",
         "position": "D/ST",
         "nflTeam": "SEA",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1401,21 +1401,12 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": -16005,
-        "name": "Browns D/ST",
-        "position": "D/ST",
-        "nflTeam": "CLE",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4429023,
         "name": "MarShawn Lloyd",
         "position": "RB",
         "nflTeam": "GB",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1425,6 +1416,15 @@
         "nflTeam": "HOU",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16010,
+        "name": "Titans D/ST",
+        "position": "D/ST",
+        "nflTeam": "TEN",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
       }
     ],
