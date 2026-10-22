@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-22T20:06:45.727885+00:00",
+  "updatedAt": "2026-10-22T20:38:45.687414+00:00",
   "standings": [
     {
       "rank": 1,
@@ -1234,7 +1234,7 @@
         "nflTeam": "GB",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4034949,
