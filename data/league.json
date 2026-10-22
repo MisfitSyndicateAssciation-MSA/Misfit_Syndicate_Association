@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-22T18:56:29.750397+00:00",
+  "updatedAt": "2026-10-22T20:06:45.727885+00:00",
   "standings": [
     {
       "rank": 1,
@@ -193,7 +193,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 134.06,
-      "homeProjection": 80.44
+      "homeProjection": 116.65
     },
     {
       "week": 7,
@@ -1434,8 +1434,8 @@
         "name": "Josh Allen",
         "position": "QB",
         "nflTeam": "BUF",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1461,8 +1461,8 @@
         "name": "Davante Adams",
         "position": "WR",
         "nflTeam": "LAR",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "INJURY_RESERVE"
       },
       {
@@ -1488,8 +1488,8 @@
         "name": "Jameson Williams",
         "position": "WR",
         "nflTeam": "DET",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1506,8 +1506,8 @@
         "name": "Jordan Addison",
         "position": "WR",
         "nflTeam": "MIN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1533,8 +1533,8 @@
         "name": "Sam Darnold",
         "position": "QB",
         "nflTeam": "SEA",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1551,8 +1551,8 @@
         "name": "Brenton Strange",
         "position": "TE",
         "nflTeam": "JAX",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
