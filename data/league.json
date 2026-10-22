@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-22T21:49:20.366758+00:00",
+  "updatedAt": "2026-10-22T22:15:44.893321+00:00",
   "standings": [
     {
       "rank": 1,
@@ -210,7 +210,7 @@
       "homeTeamId": 9,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 111.56,
+      "awayProjection": 117.94,
       "homeProjection": 139.88
     },
     {
@@ -998,7 +998,7 @@
         "nflTeam": "MIN",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4047365,
@@ -1324,8 +1324,8 @@
         "name": "Lamar Jackson",
         "position": "QB",
         "nflTeam": "BAL",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1378,8 +1378,8 @@
         "name": "Jacoby Brissett",
         "position": "QB",
         "nflTeam": "ARI",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1591,7 +1591,7 @@
         "nflTeam": "ARI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "DOUBTFUL"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4685382,
