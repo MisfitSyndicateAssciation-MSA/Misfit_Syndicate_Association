@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-23T21:05:17.278464+00:00",
+  "updatedAt": "2026-10-23T21:37:23.187063+00:00",
   "standings": [
     {
       "rank": 1,
@@ -1142,8 +1142,8 @@
         "name": "Puka Nacua",
         "position": "WR",
         "nflTeam": "LAR",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1261,22 +1261,13 @@
         "nflTeam": "DEN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 3117256,
         "name": "Dalton Schultz",
         "position": "TE",
         "nflTeam": "HOU",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": -16004,
-        "name": "Bengals D/ST",
-        "position": "D/ST",
-        "nflTeam": "CIN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
