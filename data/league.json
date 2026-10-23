@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-23T18:11:31.475441+00:00",
+  "updatedAt": "2026-10-23T18:54:45.064692+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 11,
       "awayScore": 3.0,
       "homeScore": 19.0,
-      "awayProjection": 132.1,
-      "homeProjection": 119.29
+      "awayProjection": 132.12,
+      "homeProjection": 119.26
     },
     {
       "week": 7,
@@ -201,7 +201,7 @@
       "homeTeamId": 8,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 128.5,
+      "awayProjection": 128.48,
       "homeProjection": 126.84
     },
     {
@@ -211,7 +211,7 @@
       "awayScore": 7.8,
       "homeScore": 0.0,
       "awayProjection": 109.74,
-      "homeProjection": 139.88
+      "homeProjection": 139.9
     },
     {
       "week": 7,
@@ -219,8 +219,8 @@
       "homeTeamId": 6,
       "awayScore": 19.9,
       "homeScore": 33.6,
-      "awayProjection": 139.75,
-      "homeProjection": 157.49
+      "awayProjection": 139.64,
+      "homeProjection": 159.43
     },
     {
       "week": 7,
@@ -228,8 +228,8 @@
       "homeTeamId": 4,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 127.42,
-      "homeProjection": 132.4
+      "awayProjection": 129.4,
+      "homeProjection": 132.36
     }
   ],
   "rosters": {
@@ -405,7 +405,7 @@
         "nflTeam": "KC",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4685472,
@@ -945,15 +945,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 2971573,
-        "name": "Ka'imi Fairbairn",
-        "position": "K",
-        "nflTeam": "HOU",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": -16012,
         "name": "Chiefs D/ST",
         "position": "D/ST",
@@ -976,6 +967,15 @@
         "name": "Michael Mayer",
         "position": "TE",
         "nflTeam": "LV",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4686468,
+        "name": "Seth McGowan",
+        "position": "RB",
+        "nflTeam": "IND",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
