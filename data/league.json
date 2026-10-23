@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-23T15:57:09.651964+00:00",
+  "updatedAt": "2026-10-23T17:11:47.585267+00:00",
   "standings": [
     {
       "rank": 1,
@@ -202,7 +202,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 128.5,
-      "homeProjection": 130.39
+      "homeProjection": 126.84
     },
     {
       "week": 7,
@@ -715,7 +715,7 @@
         "nflTeam": "TB",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4723086,
@@ -1095,8 +1095,8 @@
         "name": "Travis Kelce",
         "position": "TE",
         "nflTeam": "KC",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1113,9 +1113,9 @@
         "name": "Emeka Egbuka",
         "position": "WR",
         "nflTeam": "TB",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
-        "injuryStatus": "QUESTIONABLE"
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4685702,
@@ -1317,7 +1317,7 @@
         "nflTeam": "IND",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 3916387,
