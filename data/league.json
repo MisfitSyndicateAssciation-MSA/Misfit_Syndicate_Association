@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-23T02:14:20.515443+00:00",
+  "updatedAt": "2026-10-23T02:53:33.396765+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,10 +190,10 @@
       "week": 7,
       "awayTeamId": 12,
       "homeTeamId": 11,
-      "awayScore": 6.0,
-      "homeScore": 13.8,
-      "awayProjection": 134.69,
-      "homeProjection": 120.63
+      "awayScore": 3.0,
+      "homeScore": 18.0,
+      "awayProjection": 132.36,
+      "homeProjection": 120.45
     },
     {
       "week": 7,
@@ -201,26 +201,26 @@
       "homeTeamId": 8,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 129.7,
+      "awayProjection": 128.5,
       "homeProjection": 130.39
     },
     {
       "week": 7,
       "awayTeamId": 10,
       "homeTeamId": 9,
-      "awayScore": 2.8,
+      "awayScore": 5.4,
       "homeScore": 0.0,
-      "awayProjection": 111.14,
+      "awayProjection": 109.46,
       "homeProjection": 139.88
     },
     {
       "week": 7,
       "awayTeamId": 5,
       "homeTeamId": 6,
-      "awayScore": 16.8,
-      "homeScore": 21.2,
-      "awayProjection": 141.27,
-      "homeProjection": 154.93
+      "awayScore": 19.9,
+      "homeScore": 31.6,
+      "awayProjection": 141.29,
+      "homeProjection": 158.75
     },
     {
       "week": 7,
@@ -329,8 +329,8 @@
         "name": "Denzel Boston",
         "position": "WR",
         "nflTeam": "CLE",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -338,8 +338,8 @@
         "name": "George Pickens",
         "position": "WR",
         "nflTeam": "DAL",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -365,6 +365,15 @@
         "name": "J.J. McCarthy",
         "position": "QB",
         "nflTeam": "NYG",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 5083754,
+        "name": "Ryan Flournoy",
+        "position": "WR",
+        "nflTeam": "DAL",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
