@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-23T17:11:47.585267+00:00",
+  "updatedAt": "2026-10-23T17:45:09.182131+00:00",
   "standings": [
     {
       "rank": 1,
@@ -1591,7 +1591,7 @@
         "nflTeam": "ARI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4685382,
