@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-23T07:50:35.225538+00:00",
+  "updatedAt": "2026-10-23T15:57:09.651964+00:00",
   "standings": [
     {
       "rank": 1,
@@ -229,7 +229,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 127.42,
-      "homeProjection": 127.28
+      "homeProjection": 132.4
     }
   ],
   "rosters": {
@@ -558,8 +558,8 @@
         "name": "Breece Hall",
         "position": "RB",
         "nflTeam": "NYJ",
-        "lineupSlot": "IR",
-        "lineupSlotId": 21,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -587,15 +587,6 @@
         "nflTeam": "GB",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
-      },
-      {
-        "playerId": 4038815,
-        "name": "Rico Dowdle",
-        "position": "RB",
-        "nflTeam": "PIT",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -639,8 +630,8 @@
         "name": "Braelon Allen",
         "position": "RB",
         "nflTeam": "NYJ",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
