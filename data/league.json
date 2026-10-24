@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-24T19:37:01.223132+00:00",
+  "updatedAt": "2026-10-24T19:59:58.257152+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 11,
       "awayScore": 3.0,
       "homeScore": 19.0,
-      "awayProjection": 115.47,
-      "homeProjection": 120.15
+      "awayProjection": 114.34,
+      "homeProjection": 120.09
     },
     {
       "week": 7,
@@ -201,8 +201,8 @@
       "homeTeamId": 8,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 128.29,
-      "homeProjection": 126.85
+      "awayProjection": 128.19,
+      "homeProjection": 126.32
     },
     {
       "week": 7,
@@ -210,8 +210,8 @@
       "homeTeamId": 9,
       "awayScore": 7.8,
       "homeScore": 0.0,
-      "awayProjection": 90.25,
-      "homeProjection": 115.02
+      "awayProjection": 90.26,
+      "homeProjection": 115.14
     },
     {
       "week": 7,
@@ -219,8 +219,8 @@
       "homeTeamId": 6,
       "awayScore": 19.9,
       "homeScore": 33.6,
-      "awayProjection": 139.55,
-      "homeProjection": 157.53
+      "awayProjection": 137.44,
+      "homeProjection": 157.22
     },
     {
       "week": 7,
@@ -228,8 +228,8 @@
       "homeTeamId": 4,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 129.79,
-      "homeProjection": 132.42
+      "awayProjection": 129.52,
+      "homeProjection": 132.26
     }
   ],
   "rosters": {
@@ -468,7 +468,7 @@
         "nflTeam": "PHI",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": -16033,
@@ -1618,7 +1618,7 @@
         "nflTeam": "PHI",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 2577417,
