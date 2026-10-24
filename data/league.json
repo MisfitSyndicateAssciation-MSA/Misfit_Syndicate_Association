@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-24T19:09:24.198166+00:00",
+  "updatedAt": "2026-10-24T19:37:01.223132+00:00",
   "standings": [
     {
       "rank": 1,
@@ -210,7 +210,7 @@
       "homeTeamId": 9,
       "awayScore": 7.8,
       "homeScore": 0.0,
-      "awayProjection": 113.0,
+      "awayProjection": 90.25,
       "homeProjection": 115.02
     },
     {
@@ -1326,7 +1326,7 @@
         "nflTeam": "BAL",
         "lineupSlot": "QB",
         "lineupSlotId": 0,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4685512,
