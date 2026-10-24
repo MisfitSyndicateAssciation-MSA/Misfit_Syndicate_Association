@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-24T22:43:52.662967+00:00",
+  "updatedAt": "2026-10-24T23:55:51.958512+00:00",
   "standings": [
     {
       "rank": 1,
@@ -201,7 +201,7 @@
       "homeTeamId": 8,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 128.16,
+      "awayProjection": 131.31,
       "homeProjection": 130.57
     },
     {
@@ -284,8 +284,8 @@
         "name": "Rams D/ST",
         "position": "D/ST",
         "nflTeam": "LAR",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -329,8 +329,8 @@
         "name": "Denzel Boston",
         "position": "WR",
         "nflTeam": "CLE",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -338,8 +338,8 @@
         "name": "George Pickens",
         "position": "WR",
         "nflTeam": "DAL",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -383,8 +383,8 @@
         "name": "Browns D/ST",
         "position": "D/ST",
         "nflTeam": "CLE",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
       }
     ],
