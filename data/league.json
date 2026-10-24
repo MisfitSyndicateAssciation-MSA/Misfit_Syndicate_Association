@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-24T14:19:22.936610+00:00",
+  "updatedAt": "2026-10-24T19:09:24.198166+00:00",
   "standings": [
     {
       "rank": 1,
@@ -945,15 +945,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4569559,
-        "name": "Devaughn Vele",
-        "position": "WR",
-        "nflTeam": "NO",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": -16012,
         "name": "Chiefs D/ST",
         "position": "D/ST",
@@ -985,6 +976,15 @@
         "name": "Seth McGowan",
         "position": "RB",
         "nflTeam": "IND",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4710855,
+        "name": "Konata Mumpfield",
+        "position": "WR",
+        "nflTeam": "LAR",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
