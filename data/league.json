@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-24T19:59:58.257152+00:00",
+  "updatedAt": "2026-10-24T20:55:28.695986+00:00",
   "standings": [
     {
       "rank": 1,
@@ -202,7 +202,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 128.19,
-      "homeProjection": 126.32
+      "homeProjection": 130.57
     },
     {
       "week": 7,
@@ -1019,15 +1019,6 @@
         "injuryStatus": "DAY_TO_DAY"
       },
       {
-        "playerId": 4038941,
-        "name": "Justin Herbert",
-        "position": "QB",
-        "nflTeam": "LAC",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 3040151,
         "name": "George Kittle",
         "position": "TE",
@@ -1041,8 +1032,8 @@
         "name": "Bo Nix",
         "position": "QB",
         "nflTeam": "DEN",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1142,6 +1133,15 @@
         "nflTeam": "NYJ",
         "lineupSlot": "D/ST",
         "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 8439,
+        "name": "Aaron Rodgers",
+        "position": "QB",
+        "nflTeam": "PIT",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1544,7 +1544,7 @@
         "nflTeam": "MIN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "INJURY_RESERVE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4430539,
