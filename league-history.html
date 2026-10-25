@@ -1699,7 +1699,7 @@ almost immediately.
 <p>
 
 Week 4 brought together Team Ramrod and
-Big Pickens Energy with both franchises
+El Semental Carnoso (then Big Pickens Energy) with both franchises
 still searching for their first victory.
 
 One team would finally escape the basement.
@@ -1797,7 +1797,7 @@ const teamLogos = {
     4: "Nabershood Cookout logo.png",
     5: "Pitts Creek Logo.png",
     6: "Double Dookies logo.jpeg",
-    8: "Big Pickens Energy logo.png",
+    8: "Winless Stallion Crest.png",
     9: "Apukalypse Now Logo.png",
     10: "DB EATERS LOGO.png",
     11: "Red Zone Redbirds.png",
@@ -1805,6 +1805,19 @@ const teamLogos = {
 
 };
 
+
+/* Display the current team branding without changing archived ESPN results. */
+function displayTeamName(teamId, teamName) {
+    return Number(teamId) === 8
+        ? "El Semental Carnoso"
+        : teamName;
+}
+
+function displayArchivedName(teamName) {
+    return teamName === "Big Pickens Energy"
+        ? "El Semental Carnoso"
+        : teamName;
+}
 
 /* =========================================================
    LOGO HELPER
@@ -1843,6 +1856,8 @@ function teamDisplay(
     winnerTeamId
 ) {
 
+
+    teamName = displayTeamName(teamId, teamName);
 
     const winner =
         Number(teamId) ===
@@ -2027,9 +2042,9 @@ function closestGameText(week) {
 
 
     return (
-        game.awayTeamName +
+        displayArchivedName(game.awayTeamName) +
         " vs " +
-        game.homeTeamName
+        displayArchivedName(game.homeTeamName)
     );
 
 }
@@ -2058,7 +2073,7 @@ function biggestBlowoutText(week) {
         Number(game.awayScore)
     ) {
 
-        return game.homeTeamName;
+        return displayArchivedName(game.homeTeamName);
 
     }
 
@@ -2068,7 +2083,7 @@ function biggestBlowoutText(week) {
         Number(game.homeScore)
     ) {
 
-        return game.awayTeamName;
+        return displayArchivedName(game.awayTeamName);
 
     }
 
@@ -2134,7 +2149,7 @@ function buildWeek(week) {
 
                     <div class="week-award-team">
 
-                    ${week.highestScore.teamName}
+                    ${displayTeamName(week.highestScore.teamId, week.highestScore.teamName)}
 
                     </div>
 
@@ -2161,7 +2176,7 @@ function buildWeek(week) {
 
                     <div class="week-award-team">
 
-                    ${week.lowestScore.teamName}
+                    ${displayTeamName(week.lowestScore.teamId, week.lowestScore.teamName)}
 
                     </div>
 
