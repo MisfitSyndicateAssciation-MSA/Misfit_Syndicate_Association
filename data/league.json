@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-24T23:55:51.958512+00:00",
+  "updatedAt": "2026-10-25T02:12:48.550322+00:00",
   "standings": [
     {
       "rank": 1,
@@ -210,7 +210,7 @@
       "homeTeamId": 9,
       "awayScore": 7.8,
       "homeScore": 0.0,
-      "awayProjection": 90.34,
+      "awayProjection": 107.52,
       "homeProjection": 115.22
     },
     {
@@ -1324,8 +1324,8 @@
         "name": "Lamar Jackson",
         "position": "QB",
         "nflTeam": "BAL",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "OUT"
       },
       {
@@ -1374,15 +1374,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 2578570,
-        "name": "Jacoby Brissett",
-        "position": "QB",
-        "nflTeam": "ARI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4571557,
         "name": "Spencer Shrader",
         "position": "K",
@@ -1425,6 +1416,15 @@
         "nflTeam": "TEN",
         "lineupSlot": "D/ST",
         "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4035671,
+        "name": "Tyler Huntley",
+        "position": "QB",
+        "nflTeam": "BAL",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       }
     ],
