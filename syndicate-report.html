@@ -1,1697 +1,309 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>
-The Syndicate Report | Misfit Syndicate Association
-</title>
-
-<link
-rel="stylesheet"
-href="style.css">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSA Media HQ | Misfit Syndicate Association</title>
+<link rel="stylesheet" href="style.css">
 <style>
-
-/* =========================================================
-   THE SYNDICATE REPORT — MSA MEDIA HEADQUARTERS
-   ========================================================= */
-
-.report-page {
-    max-width: 1100px;
-    margin: auto;
+.media-hq{max-width:1100px;margin:auto}
+.media-intro,.show-section,.special-section{
+  background:linear-gradient(145deg,#191919,#080808);
+  border:1px solid rgba(245,182,66,.25);
+  border-radius:14px;
+  padding:26px;
+  margin:25px 0;
+  box-shadow:0 12px 35px rgba(0,0,0,.35)
 }
-
-
-/* =========================================================
-   REPORT INTRO
-   ========================================================= */
-
-.report-intro {
-    text-align: center;
-
-    margin-bottom: 32px;
-
-    padding:
-        30px 20px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            circle at top,
-            rgba(217,39,46,.10),
-            rgba(18,18,18,.95) 45%,
-            rgba(7,7,7,.94)
-        );
-
-    border:
-        1px solid rgba(245,182,66,.26);
-
-    border-radius: 13px;
-
-    box-shadow:
-        0 14px 40px rgba(0,0,0,.48);
-
-    backdrop-filter:
-        blur(2px);
-
-    -webkit-backdrop-filter:
-        blur(2px);
+.media-intro{text-align:center;border-top:4px solid #d9272e}
+.media-intro h2,.show-section h2,.special-section h2{color:#f5b642}
+.media-intro p,.show-description{color:#bbb;line-height:1.6}
+.show-section{border-top:4px solid #7bb800}
+.show-section.friday{border-top-color:#d9272e}
+.show-header{text-align:center;margin-bottom:25px}
+.show-time{color:#7bb800;font-weight:900;letter-spacing:1px}
+.friday .show-time{color:#ff7777}
+.show-jump{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:20px 0}
+.show-jump a,.youtube-button{
+  display:inline-block;
+  padding:12px 18px;
+  color:#f5b642;
+  border:1px solid #a77a2c;
+  border-radius:8px;
+  background:#111;
+  text-decoration:none;
+  font-weight:800
 }
-
-
-.report-intro::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 8%;
-    right: 8%;
-
-    height: 4px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            #d9272e,
-            #f5b642,
-            #7bb800,
-            transparent
-        );
+.show-jump a:hover,.youtube-button:hover{background:#f5b642;color:#111}
+.featured{
+  max-width:850px;
+  margin:25px auto;
+  padding:22px;
+  text-align:center;
+  background:#101010;
+  border:1px solid #49402d;
+  border-radius:12px
 }
-
-
-.report-intro-label {
-    margin-bottom: 7px;
-
-    color: #aaa;
-
-    font-size: .7rem;
-
-    font-weight: 900;
-
-    letter-spacing: 3px;
-
-    text-transform: uppercase;
+.featured h3{color:#f5b642}
+.featured p{color:#bbb}
+.video-wrap{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;border-radius:10px}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.youtube-button{margin-top:18px}
+.archive-title{color:#f5b642;text-align:center;margin:35px 0 18px}
+.archive-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.video-card{
+  background:#111;
+  border:1px solid #383838;
+  border-top:3px solid #f5b642;
+  border-radius:10px;
+  overflow:hidden;
+  transition:transform .2s
 }
-
-
-.report-intro .section-title {
-    margin-bottom: 7px;
-
-    color: #f5b642;
-
-    font-size:
-        clamp(1.7rem,4vw,2.3rem);
-
-    text-shadow:
-        0 3px 12px rgba(0,0,0,.85);
+.video-card:hover{transform:translateY(-3px)}
+.video-card img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.video-card .inside{padding:16px}
+.video-card h3{color:#f5b642;font-size:.8rem}
+.video-card p{color:#bbb;font-size:.86rem;line-height:1.5}
+.video-card a{color:#f5b642;text-decoration:none}
+.upcoming-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.upcoming-card{padding:18px;background:#151515;border:1px solid #56462a;border-radius:10px}
+.upcoming-card h4{color:#f5b642;margin:0 0 8px}
+.upcoming-card p{color:#bbb}
+.upcoming-card a{color:#7bb800}
+.msa-note{text-align:center;color:#aaa;line-height:1.6}
+@media(max-width:800px){.archive-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){
+  .archive-grid,.upcoming-grid{grid-template-columns:1fr}
+  .media-intro,.show-section,.special-section{padding:16px}
+  .featured{padding:13px}
 }
-
-
-.report-intro .section-sub {
-    margin-bottom: 0;
-}
-
-
-/* =========================================================
-   MEDIA STATUS BAR
-   ========================================================= */
-
-.media-status {
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    max-width: 750px;
-
-    margin:
-        -12px auto 32px auto;
-
-    padding:
-        9px 14px;
-
-    background:
-        rgba(8,8,8,.75);
-
-    border:
-        1px solid rgba(255,255,255,.06);
-
-    border-radius: 8px;
-
-    color: #aaa;
-
-    font-size: .66rem;
-
-    font-weight: 900;
-
-    letter-spacing: 1.1px;
-
-    text-transform: uppercase;
-
-    box-shadow:
-        0 6px 18px rgba(0,0,0,.25);
-}
-
-
-.media-live {
-    color: #78cf00;
-
-    text-shadow:
-        0 0 8px rgba(120,207,0,.45);
-}
-
-
-.media-divider {
-    opacity: .35;
-}
-
-
-/* =========================================================
-   LATEST REPORT
-   ========================================================= */
-
-.latest-report {
-    max-width: 950px;
-
-    margin: auto;
-
-    padding:
-        30px;
-
-    text-align: center;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(20,20,20,.97),
-            rgba(7,7,7,.96)
-        );
-
-    border:
-        1px solid rgba(245,182,66,.28);
-
-    border-top:
-        3px solid #d9272e;
-
-    border-radius: 13px;
-
-    box-shadow:
-        0 16px 45px rgba(0,0,0,.55);
-}
-
-
-.latest-report::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 5px;
-    height: 100%;
-
-    background:
-        linear-gradient(
-            #d9272e,
-            #f5b642,
-            #7bb800
-        );
-
-    opacity: .8;
-}
-
-
-.latest-label {
-    display: inline-block;
-
-    margin-bottom: 10px;
-
-    padding:
-        6px 12px;
-
-    color: #ff5b61;
-
-    background:
-        rgba(217,39,46,.10);
-
-    border:
-        1px solid rgba(217,39,46,.25);
-
-    border-radius: 20px;
-
-    font-size: .68rem;
-
-    font-weight: 900;
-
-    letter-spacing: 1.5px;
-
-    text-transform: uppercase;
-}
-
-
-.latest-title {
-    margin:
-        0 auto 10px auto;
-
-    max-width: 800px;
-
-    color: #f5b642;
-
-    font-size:
-        clamp(1.25rem,3vw,1.65rem);
-
-    line-height: 1.3;
-
-    text-shadow:
-        0 3px 10px rgba(0,0,0,.75);
-}
-
-
-.latest-description {
-    color: #bbb;
-
-    max-width: 720px;
-
-    margin:
-        0 auto 22px auto;
-
-    line-height: 1.65;
-
-    font-size: .9rem;
-}
-
-
-/* =========================================================
-   VIDEO PLAYER
-   ========================================================= */
-
-.video-wrap {
-    position: relative;
-
-    width: 100%;
-
-    padding-bottom: 56.25%;
-
-    height: 0;
-
-    overflow: hidden;
-
-    border-radius: 10px;
-
-    background: #000;
-
-    border:
-        1px solid rgba(255,255,255,.08);
-
-    box-shadow:
-        0 12px 35px rgba(0,0,0,.60);
-}
-
-
-.video-wrap iframe {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    border: 0;
-}
-
-
-/* =========================================================
-   YOUTUBE BUTTON
-   ========================================================= */
-
-.youtube-button {
-    display: inline-block;
-
-    margin-top: 20px;
-
-    padding:
-        11px 20px;
-
-    border-radius: 8px;
-
-    border:
-        1px solid rgba(245,182,66,.45);
-
-    background:
-        rgba(0,0,0,.42);
-
-    color: #f5b642;
-
-    text-decoration: none;
-
-    font-size: .76rem;
-
-    font-weight: 900;
-
-    letter-spacing: 1px;
-
-    transition:
-        transform .2s ease,
-        background .2s ease,
-        color .2s ease,
-        box-shadow .2s ease;
-}
-
-
-.youtube-button:hover {
-    transform:
-        translateY(-2px);
-
-    background:
-        #f5b642;
-
-    color:
-        #0b0b0b;
-
-    box-shadow:
-        0 7px 20px rgba(245,182,66,.20);
-}
-
-
-/* =========================================================
-   ARCHIVE SECTION
-   ========================================================= */
-
-.archive-section {
-    margin-top: 65px;
-}
-
-
-.archive-header {
-    max-width: 850px;
-
-    margin:
-        0 auto 27px auto;
-
-    padding:
-        24px 18px;
-
-    text-align: center;
-
-    position: relative;
-
-    background:
-        rgba(10,10,10,.78);
-
-    border:
-        1px solid rgba(255,255,255,.06);
-
-    border-radius: 11px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.35);
-}
-
-
-.archive-header::before {
-    content: "";
-
-    position: absolute;
-
-    left: 20%;
-    right: 20%;
-    top: 0;
-
-    height: 2px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            #f5b642,
-            transparent
-        );
-}
-
-
-.archive-header .section-title {
-    color: #f5b642;
-
-    margin-bottom: 7px;
-}
-
-
-.archive-header .section-sub {
-    margin-bottom: 0;
-}
-
-
-/* =========================================================
-   ARCHIVE GRID
-   ========================================================= */
-
-.archive-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0,1fr));
-
-    gap: 20px;
-}
-
-
-/* =========================================================
-   ARCHIVE VIDEO CARDS
-   ========================================================= */
-
-.video-card {
-    overflow: hidden;
-
-    padding: 0;
-
-    position: relative;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(18,18,18,.96),
-            rgba(7,7,7,.95)
-        );
-
-    border:
-        1px solid rgba(255,255,255,.08);
-
-    border-top:
-        3px solid #f5b642;
-
-    border-radius: 11px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.42);
-
-    transition:
-        transform .22s ease,
-        border-color .22s ease,
-        box-shadow .22s ease;
-}
-
-
-.video-card:nth-child(3n+2) {
-    border-top-color: #7bb800;
-}
-
-
-.video-card:nth-child(3n+3) {
-    border-top-color: #d9272e;
-}
-
-
-.video-card:hover {
-    transform:
-        translateY(-4px);
-
-    border-color:
-        rgba(245,182,66,.35);
-
-    box-shadow:
-        0 15px 36px rgba(0,0,0,.55);
-}
-
-
-.video-thumbnail-wrap {
-    position: relative;
-
-    overflow: hidden;
-
-    background: #000;
-}
-
-
-.video-card img {
-    width: 100%;
-
-    display: block;
-
-    cursor: pointer;
-
-    transition:
-        transform .25s ease,
-        opacity .25s ease;
-}
-
-
-.video-card:hover img {
-    transform:
-        scale(1.035);
-
-    opacity: .78;
-}
-
-
-/* =========================================================
-   PLAY ICON OVERLAY
-   ========================================================= */
-
-.video-play-overlay {
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    transform:
-        translate(-50%,-50%);
-
-    width: 52px;
-    height: 52px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background:
-        rgba(0,0,0,.72);
-
-    border:
-        2px solid rgba(245,182,66,.65);
-
-    color: #f5b642;
-
-    font-size: 1.2rem;
-
-    pointer-events: none;
-
-    box-shadow:
-        0 5px 18px rgba(0,0,0,.55);
-
-    transition:
-        transform .2s ease,
-        background .2s ease;
-}
-
-
-.video-card:hover
-.video-play-overlay {
-    transform:
-        translate(-50%,-50%)
-        scale(1.08);
-
-    background:
-        rgba(245,182,66,.90);
-
-    color:
-        #0b0b0b;
-}
-
-
-/* =========================================================
-   ARCHIVE CARD CONTENT
-   ========================================================= */
-
-.video-card .inside {
-    padding:
-        17px 17px 19px 17px;
-}
-
-
-.video-card h3 {
-    margin:
-        0 0 8px 0;
-
-    color: #f5b642;
-
-    font-size: .78rem;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-}
-
-
-.video-card p {
-    min-height: 48px;
-
-    margin-bottom: 5px;
-
-    color: #bbb;
-
-    font-size: .86rem;
-
-    line-height: 1.45;
-}
-
-
-.watch {
-    display: inline-block;
-
-    margin-top: 9px;
-
-    color: #f5b642;
-
-    text-decoration: none;
-
-    font-size: .72rem;
-
-    font-weight: 900;
-
-    letter-spacing: 1px;
-
-    cursor: pointer;
-}
-
-
-.watch:hover {
-    color: #ffd166;
-}
-
-
-/* =========================================================
-   ARCHIVE PLAYER
-   ========================================================= */
-
-.archive-player {
-    max-width: 950px;
-
-    margin:
-        50px auto 0 auto;
-
-    padding:
-        28px;
-
-    text-align: center;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(18,18,18,.97),
-            rgba(6,6,6,.96)
-        );
-
-    border:
-        1px solid rgba(245,182,66,.24);
-
-    border-top:
-        3px solid #7bb800;
-
-    border-radius: 13px;
-
-    box-shadow:
-        0 15px 42px rgba(0,0,0,.50);
-}
-
-
-.archive-player h3 {
-    color: #f5b642;
-
-    margin-bottom: 5px;
-}
-
-
-.archive-player > .muted {
-    margin-bottom: 20px;
-}
-
-
-.archive-now-playing {
-    margin-bottom: 18px;
-
-    padding:
-        11px 14px;
-
-    background:
-        rgba(0,0,0,.38);
-
-    border:
-        1px solid rgba(255,255,255,.06);
-
-    border-radius: 8px;
-}
-
-
-.archive-now-playing-label {
-    color: #7fd100;
-
-    font-size: .65rem;
-
-    font-weight: 900;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 5px;
-}
-
-
-.archive-now-playing-title {
-    color: #eee;
-
-    font-size: 1rem;
-
-    font-weight: 900;
-
-    line-height: 1.4;
-}
-
-
-/* =========================================================
-   REPORT FOOTNOTE
-   ========================================================= */
-
-.report-footnote {
-    max-width: 800px;
-
-    margin:
-        35px auto 0 auto;
-
-    padding:
-        15px 18px;
-
-    text-align: center;
-
-    color: #aaa;
-
-    font-size: .76rem;
-
-    line-height: 1.6;
-
-    background:
-        rgba(8,8,8,.70);
-
-    border:
-        1px solid rgba(255,255,255,.06);
-
-    border-left:
-        3px solid #d9272e;
-
-    border-radius: 8px;
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-    .archive-grid {
-        grid-template-columns:
-            repeat(2, minmax(0,1fr));
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 650px) {
-
-    .report-intro {
-        padding:
-            24px 14px;
-    }
-
-
-    .latest-report {
-        padding:
-            23px 14px;
-    }
-
-
-    .latest-title {
-        font-size: 1.2rem;
-    }
-
-
-    .archive-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-
-    .archive-player {
-        padding:
-            22px 13px;
-    }
-
-
-    .media-status {
-        font-size: .57rem;
-
-        gap: 6px;
-    }
-
-
-    .video-card p {
-        min-height: 0;
-    }
-
-}
-
 </style>
-
 </head>
-
-
 <body>
-
-
 <header>
-
 <div class="hero">
-
-<img
-src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png"
-alt="Misfit Syndicate Association Logo"
-class="logo">
-
-<h1>
-Misfit Syndicate Association
-</h1>
-
-<div class="tagline">
-Fantasy Football for the Beautifully Dysfunctional
+<img src="ChatGPT%20Image%20Aug%209,%202026,%2008_43_11%20AM.png" alt="Misfit Syndicate Association Logo" class="logo">
+<h1>Misfit Syndicate Association</h1>
+<div class="tagline">Fantasy Football for the Beautifully Dysfunctional</div>
+<div class="season">🏈 2026 MSA Season</div>
 </div>
-
-<div class="season">
-🏈 2026 MSA Season
-</div>
-
-</div>
-
 </header>
 
-
 <nav>
-
 <div class="nav-links">
-
-<a href="index.html" class="active">
-Home
-</a>
-
-<a href="matchups.html">
-Matchups
-</a>
-
-<a href="standings.html">
-Standings
-</a>
-
-<a href="teams.html">
-Teams
-</a>
-
-<a href="power-rankings.html">
-Power Rankings
-</a>
-
-<a href="playoff-picture.html">
-Playoff Picture
-</a>
-
-<a href="weekly-awards.html">
-Weekly Awards
-</a>
-
-<a href="syndicate-report.html">
-Syndicate Report
-</a>
-
-<a href="rules.html">
-Rules
-</a>
-
-<a href="league-history.html">
-League History
-</a>
-
+<a href="index.html">Home</a>
+<a href="matchups.html">Matchups</a>
+<a href="standings.html">Standings</a>
+<a href="teams.html">Teams</a>
+<a href="power-rankings.html">Power Rankings</a>
+<a href="playoff-picture.html">Playoff Picture</a>
+<a href="weekly-awards.html">Weekly Awards</a>
+<a href="syndicate-report.html" class="active">MSA Media HQ</a>
+<a href="rules.html">Rules</a>
+<a href="league-history.html">League History</a>
 </div>
-
 </nav>
 
 <main>
-
-<div class="report-page">
-
-
-<!-- =====================================================
-     MEDIA HEADQUARTERS INTRO
-     ===================================================== -->
-
-<section class="report-intro">
-
-<div class="report-intro-label">
-☠️ MSA MEDIA HEADQUARTERS ☠️
+<div class="media-hq">
+<section class="media-intro">
+<h2>🎙️ MSA MEDIA HEADQUARTERS</h2>
+<p>Two shows. One dysfunctional fantasy football league.</p>
+<p>Bad takes. Questionable trades. Zero journalistic integrity.</p>
+<div class="show-jump">
+<a href="#sunday-show">🎙️ Sunday Report</a>
+<a href="#friday-show">🤝 Friday Sit-Down</a>
+<a href="#msa-specials">🏈 Specials</a>
 </div>
-
-<h2 class="section-title">
-🎙️ THE SYNDICATE REPORT
-</h2>
-
-<p class="section-sub">
-Bad takes. Questionable trades. Zero journalistic integrity.
-</p>
-
 </section>
 
-
-<!-- =====================================================
-     MEDIA STATUS
-     ===================================================== -->
-
-<div class="media-status">
-
-<span class="media-live">
-● ON AIR
-</span>
-
-<span class="media-divider">
-•
-</span>
-
-<span>
-MSA Fantasy Football
-</span>
-
-<span class="media-divider">
-•
-</span>
-
-<span>
-Trash Talk Encouraged
-</span>
-
-</div>
-
-
-<!-- =====================================================
-     LATEST EPISODE
-     ===================================================== -->
-
-<section
-class="latest-report"
-id="latest-report">
-
-<p>
-Loading the latest Syndicate Report...
+<section class="show-section" id="sunday-show">
+<div class="show-header">
+<h2>🎙️ THE SYNDICATE REPORT</h2>
+<p class="show-time">SUNDAYS • 9:00 AM ARIZONA TIME</p>
+<p class="show-description">
+Your weekly MSA fantasy football review and preview.
+Matchups, standings, trades, predictions, power rankings,
+and the commissioner calling out the league's questionable decisions.
 </p>
-
+<p class="show-description">
+☠️ THE DEGENERATE DEBRIEF — The final 15 minutes are
+open-floor league discussion, trash talk, and fantasy chaos.
+</p>
+</div>
+<div id="report-upcoming"></div>
+<div id="report-featured"></div>
+<h3 class="archive-title">📺 THE SYNDICATE REPORT ARCHIVES</h3>
+<div class="archive-grid" id="report-archive"></div>
 </section>
 
-
-<!-- =====================================================
-     ARCHIVES
-     ===================================================== -->
-
-<section class="archive-section">
-
-
-<div class="archive-header">
-
-<h2 class="section-title">
-☠️ FROM THE SYNDICATE ARCHIVES
-</h2>
-
-<p class="section-sub">
-
-Every bad take.
-Every questionable prediction.
-Every moment of unnecessary chaos.
-
+<section class="show-section friday" id="friday-show">
+<div class="show-header">
+<h2>🤝 THE SYNDICATE SIT-DOWN</h2>
+<p class="show-time">FRIDAYS • 7:00–8:00 PM ARIZONA TIME</p>
+<p class="show-description">
+The Friday night Syndicate roundtable. League members join
+the open forum to discuss NFL games, fantasy matchups,
+trades, rivalries, predictions, and whatever chaos comes up.
 </p>
-
-</div>
-
-
-<div
-class="archive-grid"
-id="archive-grid">
-</div>
-
-
-<!-- =====================================================
-     ARCHIVE PLAYER
-     ===================================================== -->
-
-<div
-class="archive-player"
-id="archive-player-section">
-
-
-<h3>
-📺 SYNDICATE ARCHIVE PLAYER
-</h3>
-
-
-<p class="muted">
-Pick an episode above and relive the chaos.
+<p class="show-description">
+No formal agenda. Just the Syndicate sitting down and talking football.
 </p>
-
-
-<div
-class="archive-now-playing"
-id="archive-now-playing">
 </div>
+<div id="sitdown-upcoming"></div>
+<div id="sitdown-featured"></div>
+<h3 class="archive-title">📺 THE SIT-DOWN ARCHIVES</h3>
+<div class="archive-grid" id="sitdown-archive"></div>
+</section>
 
-
-<div class="video-wrap">
-
-<iframe
-id="archive-player"
-src=""
-title="Syndicate Report Archive Player"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
+<section class="special-section" id="msa-specials">
+<div class="show-header">
+<h2>🏈 MSA SPECIAL BROADCASTS</h2>
+<p class="show-description">Draft night, special broadcasts, and bonus Syndicate chaos.</p>
 </div>
+<div class="archive-grid" id="special-archive"></div>
+</section>
 
-
-<a
-id="archive-youtube-link"
-class="youtube-button"
-href="#"
-target="_blank"
-rel="noopener">
-
-▶ OPEN THIS EPISODE ON YOUTUBE
-
-</a>
-
-
-</div>
-
-
-<div class="report-footnote">
-
-<strong>
+<p class="msa-note">
 ☠️ SYNDICATE BROADCAST POLICY:
-</strong>
-
-Opinions expressed on The Syndicate Report may be
-wrong within minutes of being spoken.
+Opinions expressed on these shows may be wrong within minutes.
 Receipts, unfortunately, are permanent.
-
+</p>
 </div>
-
-
-</section>
-
-
-</div>
-
 </main>
 
-
 <footer>
-
 © 2026 Misfit Syndicate Association • Built by Misfits, for Misfits
-
 </footer>
 
-
 <script>
+/*
+  MSA MEDIA LIBRARY
+  Keep each show's newest video at the top.
+  Scheduled videos stay in Upcoming until their date.
+*/
 
-
-/* =========================================================
-   MSA VIDEO LIBRARY
-
-   NEWEST VIDEO ALWAYS GOES AT THE TOP.
-
-   The first video automatically becomes
-   the featured episode.
-
-   Everything else automatically becomes
-   part of the Syndicate archives.
-   ========================================================= */
-
-const syndicateVideos = [
-
-
-    {
-        type: "episode",
-        number: 8,
-        title: "Week 3 Review + Week 4 Preview",
-        id: "jC8uw3i0-74",
-        description:
-            "The Misfits recap Week 3, preview Week 4, talk shit, make questionable predictions, and probably regret them later."
-    },
-
-
-    {
-        type: "episode",
-        number: 7,
-        title: "Week 3 Sunday Morning Live",
-        id: "MVMuOpP9gyM"
-    },
-
-
-    {
-        type: "episode",
-        number: 6,
-        title: "Week 2 Review + Week 3 Preview",
-        id: "oLGHNSAG7Y4"
-    },
-
-
-    {
-        type: "episode",
-        number: 5,
-        title: "Week 2 Sunday Morning Live",
-        id: "RD_J4iGviUY"
-    },
-
-
-    {
-        type: "episode",
-        number: 4,
-        title: "Week 1 Review + Week 2 Preview",
-        id: "WvHorCU2y4w"
-    },
-
-
-    {
-        type: "episode",
-        number: 3,
-        title: "Week 1 Pregame Show — I Forgot to Go Live",
-        id: "7WsRI16ZofA",
-        emoji: "😂"
-    },
-
-
-    {
-        type: "episode",
-        number: 2,
-        title: "Week 1 Preview",
-        id: "ERSDZEqWb2Y"
-    },
-
-
-    {
-        type: "episode",
-        number: 1,
-        title: "Draft Aftermath",
-        id: "8iM8wUMGa14"
-    },
-
-
-    {
-        type: "special",
-        label: "MSA SPECIAL",
-        title:
-            "Syndicate Live Draft 2026 — 16 Rounds, 10 Teams & Total Chaos",
-        id: "OJ7cuIHsxFc",
-        emoji: "🏈"
-    },
-
-
-    {
-        type: "special",
-        label: "MSA SPECIAL",
-        title: "CHAOS LIVE CHAT",
-        id: "IHVD87Uk9Do",
-        emoji: "💀"
-    },
-
-
-    {
-        type: "episode",
-        number: 0,
-        title:
-            "Welcome to the Misfit Syndicate Association — 2026 Season",
-        id: "RzhrFssUNoc",
-        emoji: "💀"
-    }
-
+const reportVideos = [
+  {label:"EPISODE 14",title:"Week 10 Review + Week 11 Preview",id:"k7PzMgkFqJg",date:"2026-11-15"},
+  {label:"EPISODE 13",title:"Week 9 Review + Week 10 Preview",id:"xeKoJXWjZCA",date:"2026-11-08"},
+  {label:"EPISODE 12",title:"Week 8 Review + Week 9 Preview",id:"SKwwBxJnBss",date:"2026-11-01"},
+  {label:"EPISODE 11",title:"Week 6 Review + Week 7 Preview",id:"eIIkBNuqJak",date:"2026-10-25"},
+  {label:"EPISODE 10",title:"Week 5 Review + Week 6 Preview",id:"nIdFubUU0bM"},
+  {label:"EPISODE 9",title:"Week 4 Review + Week 5 Preview",id:"2s8s__Rqa2k"},
+  {label:"EPISODE 8",title:"Week 3 Review + Week 4 Preview",id:"jC8uw3i0-74"},
+  {label:"EPISODE 7",title:"Week 3 Sunday Morning Live",id:"MVMuOpP9gyM"},
+  {label:"EPISODE 6",title:"Week 2 Review + Week 3 Preview",id:"oLGHNSAG7Y4"},
+  {label:"EPISODE 5",title:"Week 2 Sunday Morning Live",id:"RD_J4iGviUY"},
+  {label:"EPISODE 4",title:"Week 1 Review + Week 2 Preview",id:"WvHorCU2y4w"},
+  {label:"EPISODE 3",title:"Week 1 Pregame Show — I Forgot to Go Live",id:"7WsRI16ZofA"},
+  {label:"EPISODE 2",title:"Week 1 Preview",id:"ERSDZEqWb2Y"},
+  {label:"EPISODE 1",title:"Draft Aftermath",id:"8iM8wUMGa14"},
+  {label:"EPISODE 0",title:"Welcome to the Misfit Syndicate Association — 2026 Season",id:"RzhrFssUNoc"}
 ];
 
+const sitdownVideos = [
+  {label:"SIT-DOWN WEEK 10",title:"Week 10 | LET'S GO!!!!",id:"OrUhR0ygM3Y",date:"2026-11-13"},
+  {label:"SIT-DOWN WEEK 9",title:"Week 9 | LET'S GO!!!!",id:"k8THP00WUh8",date:"2026-11-06"},
+  {label:"SIT-DOWN WEEK 8",title:"Week 8 | LET'S GO!!!",id:"bPkpHm85beE",date:"2026-10-30"},
+  {label:"SIT-DOWN WEEK 7",title:"Week 7 | LET'S GO!!!",id:"7BaztTeW1C4"},
+  {label:"SIT-DOWN WEEK 4",title:"The First Sit-Down — October 16 Recording",id:"aym2lQr6nPE"},
+  {label:"SIT-DOWN WEEK 4",title:"The First Sit-Down — October 9 Recording",id:"IjlVWh9fOfM"}
+];
 
-/* =========================================================
-   VIDEO HELPERS
-   ========================================================= */
+const specialVideos = [
+  {label:"MSA SPECIAL",title:"Syndicate Live Draft 2026 — 16 Rounds, 10 Teams & Total Chaos",id:"OJ7cuIHsxFc"},
+  {label:"MSA SPECIAL",title:"Chaos Live Chat",id:"IHVD87Uk9Do"},
+  {label:"MSA SPECIAL",title:"Open Forum Chaos Test",id:""}
+];
 
-function getVideoLabel(video) {
+const now = new Date();
+const azDate = new Intl.DateTimeFormat("en-CA",{
+  timeZone:"America/Phoenix",
+  year:"numeric",month:"2-digit",day:"2-digit"
+}).format(now);
 
-    if (
-        video.type === "special"
-    ) {
-
-        return (
-
-            (video.emoji || "💀") +
-            " " +
-            video.label
-
-        );
-
-    }
-
-
-    return (
-
-        (video.emoji || "🎙️") +
-        " EPISODE " +
-        video.number
-
-    );
-
+function watchURL(id){
+  return "https://www.youtube.com/watch?v="+encodeURIComponent(id);
 }
-
-
-/*
-This URL is ONLY for the video player.
-*/
-
-function getEmbedURL(video) {
-
-    return (
-
-        "https://www.youtube.com/embed/" +
-        video.id
-
-    );
-
+function embedURL(id){
+  return "https://www.youtube-nocookie.com/embed/"+encodeURIComponent(id);
 }
-
-
-/*
-This is the normal YouTube watch URL.
-
-Use this for buttons that open YouTube itself.
-*/
-
-function getWatchURL(video) {
-
-    return (
-
-        "https://www.youtube.com/watch?v=" +
-        video.id
-
-    );
-
+function thumbURL(id){
+  return "https://img.youtube.com/vi/"+encodeURIComponent(id)+"/hqdefault.jpg";
 }
-
-
-/*
-YouTube thumbnail.
-*/
-
-function getThumbnailURL(video) {
-
-    return (
-
-        "https://img.youtube.com/vi/" +
-        video.id +
-        "/hqdefault.jpg"
-
-    );
-
+function safe(value){
+  return String(value).replace(/[&<>"']/g,c=>({
+    "&":"&amp;","<":"&lt;",">":"&gt;",
+    '"':"&quot;","'":"&#39;"
+  }[c]));
 }
-
-
-/* =========================================================
-   BUILD LATEST EPISODE
-   ========================================================= */
-
-function buildLatestEpisode() {
-
-    const container =
-        document.getElementById(
-            "latest-report"
-        );
-
-
-    if (
-        syndicateVideos.length === 0
-    ) {
-
-        container.innerHTML = `
-
-            <p>
-
-            No Syndicate Report episodes
-            are available yet.
-
-            </p>
-
-        `;
-
-        return;
-
-    }
-
-
-    const latest =
-        syndicateVideos[0];
-
-
-    const description =
-
-        latest.description ||
-
-        "Another week of fantasy football, questionable decisions and unnecessary Syndicate chaos.";
-
-
-    container.innerHTML = `
-
-
-        <p class="latest-label">
-
-        🔥 LATEST EPISODE
-
-        </p>
-
-
-        <h3 class="latest-title">
-
-        ${getVideoLabel(latest)}
-        —
-        ${latest.title}
-
-        </h3>
-
-
-        <p class="latest-description">
-
-        ${description}
-
-        </p>
-
-
-        <div class="video-wrap">
-
-            <iframe
-            src="${getEmbedURL(latest)}"
-            title="${getVideoLabel(latest)}"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-            </iframe>
-
-        </div>
-
-
-        <a
-        class="youtube-button"
-        href="${getWatchURL(latest)}"
-        target="_blank"
-        rel="noopener">
-
-        ▶ WATCH ON YOUTUBE
-
-        </a>
-
-
-    `;
-
+function videoCard(v){
+  const link=watchURL(v.id);
+  return `
+  <article class="video-card">
+    <a href="${link}" target="_blank" rel="noopener">
+      <img loading="lazy" src="${thumbURL(v.id)}" alt="${safe(v.title)}">
+    </a>
+    <div class="inside">
+      <h3>${safe(v.label)}</h3>
+      <p>${safe(v.title)}</p>
+      <a href="${link}" target="_blank" rel="noopener">▶ WATCH ON YOUTUBE</a>
+    </div>
+  </article>`;
 }
-
-
-/* =========================================================
-   PLAY ARCHIVED VIDEO
-   ========================================================= */
-
-function playArchiveVideo(
-    videoIndex,
-    shouldScroll = true
-) {
-
-
-    const video =
-        syndicateVideos[
-            videoIndex
-        ];
-
-
-    if (!video) {
-
-        return;
-
-    }
-
-
-    const player =
-        document.getElementById(
-            "archive-player"
-        );
-
-
-    const nowPlaying =
-        document.getElementById(
-            "archive-now-playing"
-        );
-
-
-    const youtubeLink =
-        document.getElementById(
-            "archive-youtube-link"
-        );
-
-
-    player.src =
-        getEmbedURL(video);
-
-
-    nowPlaying.innerHTML = `
-
-        <div
-        class="archive-now-playing-label">
-
-        NOW PLAYING
-
-        </div>
-
-        <div
-        class="archive-now-playing-title">
-
-        ${getVideoLabel(video)}
-        —
-        ${video.title}
-
-        </div>
-
-    `;
-
-
-    youtubeLink.href =
-        getWatchURL(video);
-
-
-    if (shouldScroll) {
-
-        document
-            .getElementById(
-                "archive-player-section"
-            )
-            .scrollIntoView({
-
-                behavior: "smooth",
-                block: "start"
-
-            });
-
-    }
-
+function featuredVideo(v,show){
+  return `
+  <div class="featured">
+    <h3>🔥 LATEST ${safe(show)}</h3>
+    <h3>${safe(v.label)} — ${safe(v.title)}</h3>
+    <div class="video-wrap">
+      <iframe loading="lazy"
+        src="${embedURL(v.id)}"
+        title="${safe(v.title)}"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <a class="youtube-button" href="${watchURL(v.id)}"
+       target="_blank" rel="noopener">▶ WATCH ON YOUTUBE</a>
+  </div>`;
 }
-
-
-/* =========================================================
-   BUILD ARCHIVE
-   ========================================================= */
-
-function buildArchive() {
-
-
-    const archive =
-        document.getElementById(
-            "archive-grid"
-        );
-
-
-    const archiveVideos =
-        syndicateVideos.slice(1);
-
-
-    archive.innerHTML =
-        "";
-
-
-    if (
-        archiveVideos.length === 0
-    ) {
-
-        archive.innerHTML = `
-
-            <div class="card center">
-
-            The archives are currently empty.
-
-            </div>
-
-        `;
-
-        return;
-
-    }
-
-
-    /*
-    Automatically load the newest
-    archived episode into the player.
-
-    Because the latest episode is index 0,
-    the first archived episode is index 1.
-    */
-
-    playArchiveVideo(
-        1,
-        false
-    );
-
-
-    /*
-    Build archive cards.
-
-    syndicateVideos index starts at 1 here
-    because index 0 is the featured episode.
-    */
-
-    archiveVideos.forEach(
-        (video, archiveIndex) => {
-
-
-            const videoIndex =
-                archiveIndex + 1;
-
-
-            const card =
-                document.createElement(
-                    "div"
-                );
-
-
-            card.className =
-                "video-card";
-
-
-            card.innerHTML = `
-
-
-                <div
-                class="video-thumbnail-wrap">
-
-
-                    <a
-                    href="#archive-player-section"
-                    onclick="
-                        playArchiveVideo(${videoIndex});
-                        return false;
-                    ">
-
-                        <img
-                        src="${getThumbnailURL(video)}"
-                        alt="${getVideoLabel(video)}">
-
-                    </a>
-
-
-                    <div
-                    class="video-play-overlay">
-
-                    ▶
-
-                    </div>
-
-
-                </div>
-
-
-                <div class="inside">
-
-
-                    <h3>
-
-                    ${getVideoLabel(video)}
-
-                    </h3>
-
-
-                    <p>
-
-                    ${video.title}
-
-                    </p>
-
-
-                    <a
-                    class="watch"
-                    href="#archive-player-section"
-                    onclick="
-                        playArchiveVideo(${videoIndex});
-                        return false;
-                    ">
-
-                    ▶ WATCH EPISODE
-
-                    </a>
-
-
-                </div>
-
-
-            `;
-
-
-            archive.appendChild(
-                card
-            );
-
-
-        }
-    );
-
+function renderShow(videos,prefix,showName){
+  const upcoming=videos.filter(v=>v.date && v.date>azDate);
+  const aired=videos.filter(v=>!v.date || v.date<=azDate);
+
+  const upcomingContainer=document.getElementById(prefix+"-upcoming");
+  if(upcoming.length){
+    const time=prefix==="report"?"9:00 AM":"7:00 PM";
+    upcomingContainer.innerHTML=`
+      <h3 class="archive-title">📅 UPCOMING LIVESTREAMS</h3>
+      <div class="upcoming-grid">
+        ${upcoming.slice().reverse().map(v=>`
+          <div class="upcoming-card">
+            <h4>${safe(v.label)}</h4>
+            <p>${safe(v.title)}</p>
+            <p>📅 ${safe(v.date)} • ${time} Arizona time</p>
+            <a href="${watchURL(v.id)}" target="_blank" rel="noopener">
+              ▶ VIEW SCHEDULED STREAM
+            </a>
+          </div>
+        `).join("")}
+      </div>`;
+  }
+
+  const featured=document.getElementById(prefix+"-featured");
+  featured.innerHTML=aired.length
+    ?featuredVideo(aired[0],showName)
+    :"<p>No completed broadcasts available yet.</p>";
+
+  document.getElementById(prefix+"-archive").innerHTML=
+    aired.slice(1).map(videoCard).join("");
 }
-
-
-/* =========================================================
-   START THE REPORT
-   ========================================================= */
-
-buildLatestEpisode();
-
-buildArchive();
-
-
+renderShow(reportVideos,"report","SYNDICATE REPORT");
+renderShow(sitdownVideos,"sitdown","SYNDICATE SIT-DOWN");
+document.getElementById("special-archive").innerHTML=
+  specialVideos.filter(v=>v.id).map(videoCard).join("");
 </script>
-
-
 </body>
-
 </html>
