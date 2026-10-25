@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-25T17:42:35.257556+00:00",
+  "updatedAt": "2026-10-25T18:06:12.938961+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,46 +190,46 @@
       "week": 7,
       "awayTeamId": 12,
       "homeTeamId": 11,
-      "awayScore": 28.2,
-      "homeScore": 29.3,
-      "awayProjection": 136.87,
-      "homeProjection": 117.95
+      "awayScore": 34.9,
+      "homeScore": 30.3,
+      "awayProjection": 134.67,
+      "homeProjection": 114.55
     },
     {
       "week": 7,
       "awayTeamId": 1,
       "homeTeamId": 8,
-      "awayScore": 33.0,
-      "homeScore": 36.9,
-      "awayProjection": 137.04,
-      "homeProjection": 124.82
+      "awayScore": 35.4,
+      "homeScore": 47.5,
+      "awayProjection": 122.04,
+      "homeProjection": 123.65
     },
     {
       "week": 7,
       "awayTeamId": 10,
       "homeTeamId": 9,
-      "awayScore": 30.5,
-      "homeScore": 28.9,
-      "awayProjection": 106.74,
-      "homeProjection": 103.81
+      "awayScore": 34.7,
+      "homeScore": 33.5,
+      "awayProjection": 105.85,
+      "homeProjection": 118.27
     },
     {
       "week": 7,
       "awayTeamId": 5,
       "homeTeamId": 6,
-      "awayScore": 44.1,
-      "homeScore": 60.9,
-      "awayProjection": 140.42,
-      "homeProjection": 144.96
+      "awayScore": 50.3,
+      "homeScore": 64.9,
+      "awayProjection": 141.51,
+      "homeProjection": 142.49
     },
     {
       "week": 7,
       "awayTeamId": 3,
       "homeTeamId": 4,
-      "awayScore": 24.3,
-      "homeScore": 32.6,
-      "awayProjection": 106.52,
-      "homeProjection": 127.68
+      "awayScore": 37.3,
+      "homeScore": 35.2,
+      "awayProjection": 106.5,
+      "homeProjection": 119.44
     }
   ],
   "rosters": {
@@ -250,7 +250,7 @@
         "nflTeam": "SF",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4258173,
@@ -1151,8 +1151,8 @@
         "name": "Puka Nacua",
         "position": "WR",
         "nflTeam": "LAR",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "QUESTIONABLE"
       },
       {
