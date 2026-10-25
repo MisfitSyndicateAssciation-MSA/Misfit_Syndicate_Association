@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-25T23:07:49.815577+00:00",
+  "updatedAt": "2026-10-25T23:34:20.912341+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,46 +190,46 @@
       "week": 7,
       "awayTeamId": 12,
       "homeTeamId": 11,
-      "awayScore": 89.0,
-      "homeScore": 112.8,
-      "awayProjection": 122.79,
-      "homeProjection": 134.92
+      "awayScore": 95.6,
+      "homeScore": 116.9,
+      "awayProjection": 124.25,
+      "homeProjection": 132.09
     },
     {
       "week": 7,
       "awayTeamId": 1,
       "homeTeamId": 8,
-      "awayScore": 110.2,
-      "homeScore": 110.0,
-      "awayProjection": 125.98,
-      "homeProjection": 123.96
+      "awayScore": 109.2,
+      "homeScore": 111.5,
+      "awayProjection": 122.42,
+      "homeProjection": 121.61
     },
     {
       "week": 7,
       "awayTeamId": 10,
       "homeTeamId": 9,
-      "awayScore": 36.7,
+      "awayScore": 39.3,
       "homeScore": 81.8,
-      "awayProjection": 82.28,
-      "homeProjection": 104.76
+      "awayProjection": 83.88,
+      "homeProjection": 101.5
     },
     {
       "week": 7,
       "awayTeamId": 5,
       "homeTeamId": 6,
-      "awayScore": 79.4,
-      "homeScore": 114.7,
-      "awayProjection": 126.06,
-      "homeProjection": 144.34
+      "awayScore": 79.2,
+      "homeScore": 120.1,
+      "awayProjection": 122.53,
+      "homeProjection": 144.61
     },
     {
       "week": 7,
       "awayTeamId": 3,
       "homeTeamId": 4,
       "awayScore": 62.4,
-      "homeScore": 125.7,
+      "homeScore": 128.5,
       "awayProjection": 83.22,
-      "homeProjection": 130.31
+      "homeProjection": 128.5
     }
   ],
   "rosters": {
@@ -1270,7 +1270,7 @@
         "nflTeam": "DEN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3117256,
