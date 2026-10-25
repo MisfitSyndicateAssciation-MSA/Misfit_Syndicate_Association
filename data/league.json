@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-25T12:34:38.336925+00:00",
+  "updatedAt": "2026-10-25T13:14:08.184429+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,7 +192,7 @@
       "homeTeamId": 11,
       "awayScore": 3.0,
       "homeScore": 19.0,
-      "awayProjection": 114.32,
+      "awayProjection": 124.88,
       "homeProjection": 119.34
     },
     {
@@ -1616,8 +1616,8 @@
         "name": "DeVonta Smith",
         "position": "WR",
         "nflTeam": "PHI",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "OUT"
       },
       {
@@ -1661,8 +1661,8 @@
         "name": "Matthew Golden",
         "position": "WR",
         "nflTeam": "GB",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1706,8 +1706,8 @@
         "name": "T.J. Hockenson",
         "position": "TE",
         "nflTeam": "MIN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
