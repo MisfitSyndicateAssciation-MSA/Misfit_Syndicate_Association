@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-25T13:47:37.624686+00:00",
+  "updatedAt": "2026-10-25T14:11:15.519746+00:00",
   "standings": [
     {
       "rank": 1,
@@ -200,9 +200,9 @@
       "awayTeamId": 1,
       "homeTeamId": 8,
       "awayScore": 0.0,
-      "homeScore": 0.0,
+      "homeScore": 1.0,
       "awayProjection": 131.31,
-      "homeProjection": 127.67
+      "homeProjection": 124.73
     },
     {
       "week": 7,
@@ -210,26 +210,26 @@
       "homeTeamId": 9,
       "awayScore": 7.8,
       "homeScore": 13.5,
-      "awayProjection": 106.45,
-      "homeProjection": 117.23
+      "awayProjection": 105.01,
+      "homeProjection": 115.21
     },
     {
       "week": 7,
       "awayTeamId": 5,
       "homeTeamId": 6,
       "awayScore": 19.9,
-      "homeScore": 39.2,
+      "homeScore": 43.9,
       "awayProjection": 137.46,
-      "homeProjection": 159.21
+      "homeProjection": 158.74
     },
     {
       "week": 7,
       "awayTeamId": 3,
       "homeTeamId": 4,
-      "awayScore": 0.0,
+      "awayScore": 1.5,
       "homeScore": 3.0,
-      "awayProjection": 127.86,
-      "homeProjection": 119.6
+      "awayProjection": 126.89,
+      "homeProjection": 132.46
     }
   ],
   "rosters": {
@@ -567,8 +567,8 @@
         "name": "Breece Hall",
         "position": "RB",
         "nflTeam": "NYJ",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -639,8 +639,8 @@
         "name": "Braelon Allen",
         "position": "RB",
         "nflTeam": "NYJ",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
