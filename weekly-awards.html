@@ -626,7 +626,7 @@ const teamLogos = {
     4: "Nabershood Cookout logo.png",
     5: "Pitts Creek Logo.png",
     6: "Double Dookies logo.jpeg",
-    8: "Big Pickens Energy logo.png",
+    8: "Winless Stallion Crest.png",
     9: "Apukalypse Now Logo.png",
     10: "DB EATERS LOGO.png",
     11: "Red Zone Redbirds.png",
@@ -638,6 +638,13 @@ const teamLogos = {
 /* =========================================================
    HELPERS
    ========================================================= */
+
+function displayTeamName(name, teamId) {
+    if (Number(teamId) === 8 || name === "Big Pickens Energy") {
+        return "El Semental Carnoso";
+    }
+    return name;
+}
 
 function getTeamLogo(teamId) {
 
@@ -671,7 +678,7 @@ function teamLogoHTML(
     return `
         <img
         src="${logo}"
-        alt="${teamName} Logo"
+        alt="${displayTeamName(teamName, teamId)} Logo"
         class="${className}">
     `;
 
@@ -751,7 +758,7 @@ function standardTeamAward({
             )}
 
             <div class="award-winner">
-                ${teamName}
+                ${displayTeamName(teamName, teamId)}
             </div>
 
             <div class="award-stat">
@@ -824,7 +831,7 @@ function buildAwardsWeek(week) {
                 )}
 
                 <div class="king-name">
-                    ${king.teamName}
+                    ${displayTeamName(king.teamName, king.teamId)}
                 </div>
 
                 <div class="king-score">
@@ -873,7 +880,7 @@ function buildAwardsWeek(week) {
                     : "",
             detail:
                 execution
-                    ? `Victim: ${safe(execution.opponentName)}`
+                    ? `Victim: ${safe(displayTeamName(execution.opponentName))}`
                     : ""
         });
 
@@ -894,7 +901,7 @@ function buildAwardsWeek(week) {
                     : "",
             detail:
                 photo
-                    ? `Over ${safe(photo.loserTeamName)}`
+                    ? `Over ${safe(displayTeamName(photo.loserTeamName))}`
                     : ""
         });
 
@@ -916,7 +923,7 @@ function buildAwardsWeek(week) {
                     : "",
             detail:
                 stayedHome
-                    ? `Courtesy of ${safe(stayedHome.opponentName)}`
+                    ? `Courtesy of ${safe(displayTeamName(stayedHome.opponentName))}`
                     : ""
         });
 
@@ -938,7 +945,7 @@ function buildAwardsWeek(week) {
                     : "",
             detail:
                 giant
-                    ? `${safe(giant.opponentName)} • ${points(giant.margin)} pt margin`
+                    ? `${safe(displayTeamName(giant.opponentName))} • ${points(giant.margin)} pt margin`
                     : ""
         });
 
@@ -1026,7 +1033,7 @@ function buildAwardsWeek(week) {
 
                 <div class="award-detail">
                     Left on the bench by
-                    ${safe(bench.teamName)}
+                    ${safe(displayTeamName(bench.teamName, bench.teamId))}
                 </div>
 
             </div>
