@@ -517,12 +517,21 @@
       4: "Nabershood Cookout logo.png",
       5: "Pitts Creek Logo.png",
       6: "Double Dookies logo.jpeg",
-      8: "Big Pickens Energy logo.png",
+      8: "Winless Stallion Crest.png",
       9: "Apukalypse Now Logo.png",
       10: "DB EATERS LOGO.png",
       11: "Red Zone Redbirds.png",
       12: "Ladiboyz Logo.png"
     };
+
+    // Official MSA display-name override for Adam's rebranded team.
+    const teamDisplayNames = {
+      8: "El Semental Carnoso"
+    };
+
+    function displayTeamName(team) {
+      return teamDisplayNames[Number(team?.teamId)] || team?.name || "Team";
+    }
 
     function escapeHtml(value) {
       return String(value ?? "")
@@ -591,7 +600,7 @@
           <img
             class="${imageClass}"
             src="${encodeURI(customLogo)}"
-            alt="${escapeHtml(team.name || "Team")} logo"
+            alt="${escapeHtml(displayTeamName(team))} logo"
             onerror="
               this.style.display='none';
               this.nextElementSibling.style.display='inline';
@@ -693,7 +702,7 @@
 
                 <div>
                   <div class="team-name">
-                    ${escapeHtml(team.name)}
+                    ${escapeHtml(displayTeamName(team))}
                   </div>
 
                   <div class="owner-name">
@@ -771,7 +780,7 @@
           )}
 
           <span class="match-team-name">
-            ${escapeHtml(team.name)}
+            ${escapeHtml(displayTeamName(team))}
           </span>
         </div>
       `;
