@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-25T15:09:56.529592+00:00",
+  "updatedAt": "2026-10-25T15:43:10.199019+00:00",
   "standings": [
     {
       "rank": 1,
@@ -200,27 +200,27 @@
       "awayTeamId": 1,
       "homeTeamId": 8,
       "awayScore": 0.0,
-      "homeScore": 13.0,
+      "homeScore": 15.0,
       "awayProjection": 131.31,
-      "homeProjection": 131.7
+      "homeProjection": 128.41
     },
     {
       "week": 7,
       "awayTeamId": 10,
       "homeTeamId": 9,
-      "awayScore": 7.8,
-      "homeScore": 12.6,
-      "awayProjection": 103.18,
-      "homeProjection": 113.24
+      "awayScore": 9.5,
+      "homeScore": 15.1,
+      "awayProjection": 102.95,
+      "homeProjection": 112.09
     },
     {
       "week": 7,
       "awayTeamId": 5,
       "homeTeamId": 6,
       "awayScore": 19.9,
-      "homeScore": 52.6,
+      "homeScore": 54.7,
       "awayProjection": 137.46,
-      "homeProjection": 160.84
+      "homeProjection": 156.01
     },
     {
       "week": 7,
@@ -228,8 +228,8 @@
       "homeTeamId": 4,
       "awayScore": 7.6,
       "homeScore": 8.0,
-      "awayProjection": 129.85,
-      "homeProjection": 135.06
+      "awayProjection": 126.54,
+      "homeProjection": 132.53
     }
   ],
   "rosters": {
@@ -569,7 +569,7 @@
         "nflTeam": "NYJ",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4239993,
