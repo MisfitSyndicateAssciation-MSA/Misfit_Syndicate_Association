@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-26T21:43:10.661111+00:00",
+  "updatedAt": "2026-10-26T22:15:04.692263+00:00",
   "standings": [
     {
       "rank": 1,
@@ -250,7 +250,7 @@
         "nflTeam": "SF",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4258173,
@@ -1663,7 +1663,7 @@
         "nflTeam": "GB",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3139477,
