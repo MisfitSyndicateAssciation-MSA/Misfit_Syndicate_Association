@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 7,
-  "updatedAt": "2026-10-26T19:59:23.412706+00:00",
+  "updatedAt": "2026-10-26T21:43:10.661111+00:00",
   "standings": [
     {
       "rank": 1,
@@ -924,7 +924,7 @@
         "nflTeam": "CAR",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4360689,
