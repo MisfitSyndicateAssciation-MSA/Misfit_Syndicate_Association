@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-27T14:22:49.563839+00:00",
+  "updatedAt": "2026-10-27T15:13:25.098621+00:00",
   "standings": [
     {
       "rank": 1,
@@ -220,7 +220,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 79.0,
-      "homeProjection": 108.43
+      "homeProjection": 129.41
     },
     {
       "week": 8,
@@ -430,8 +430,8 @@
         "name": "Jayden Daniels",
         "position": "QB",
         "nflTeam": "WAS",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -466,8 +466,8 @@
         "name": "Ravens D/ST",
         "position": "D/ST",
         "nflTeam": "BAL",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -475,8 +475,8 @@
         "name": "Rachaad White",
         "position": "RB",
         "nflTeam": "WAS",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -493,8 +493,8 @@
         "name": "Patriots D/ST",
         "position": "D/ST",
         "nflTeam": "NE",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -502,8 +502,8 @@
         "name": "Bryce Young",
         "position": "QB",
         "nflTeam": "CAR",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -520,8 +520,8 @@
         "name": "Woody Marks",
         "position": "RB",
         "nflTeam": "HOU",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
