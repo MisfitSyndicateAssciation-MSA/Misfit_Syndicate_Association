@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-27T15:13:25.098621+00:00",
+  "updatedAt": "2026-10-27T15:59:45.191584+00:00",
   "standings": [
     {
       "rank": 1,
@@ -967,15 +967,6 @@
         "name": "Seth McGowan",
         "position": "RB",
         "nflTeam": "IND",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 4710855,
-        "name": "Konata Mumpfield",
-        "position": "WR",
-        "nflTeam": "LAR",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
