@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-27T13:30:09.673318+00:00",
+  "updatedAt": "2026-10-27T14:22:49.563839+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 12,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 110.24,
-      "homeProjection": 135.71
+      "awayProjection": 109.89,
+      "homeProjection": 137.01
     },
     {
       "week": 8,
@@ -201,8 +201,8 @@
       "homeTeamId": 10,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 97.83,
-      "homeProjection": 113.61
+      "awayProjection": 98.0,
+      "homeProjection": 111.71
     },
     {
       "week": 8,
@@ -210,7 +210,7 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 102.97,
+      "awayProjection": 103.62,
       "homeProjection": 122.74
     },
     {
@@ -219,8 +219,8 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 79.01,
-      "homeProjection": 109.09
+      "awayProjection": 79.0,
+      "homeProjection": 108.43
     },
     {
       "week": 8,
@@ -228,8 +228,8 @@
       "homeTeamId": 4,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 148.88,
-      "homeProjection": 72.42
+      "awayProjection": 149.38,
+      "homeProjection": 111.72
     }
   ],
   "rosters": {
@@ -540,8 +540,8 @@
         "name": "James Cook III",
         "position": "RB",
         "nflTeam": "BUF",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -549,8 +549,8 @@
         "name": "Malik Nabers",
         "position": "WR",
         "nflTeam": "NYG",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -567,8 +567,8 @@
         "name": "Tee Higgins",
         "position": "WR",
         "nflTeam": "CIN",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -594,8 +594,8 @@
         "name": "Dalton Kincaid",
         "position": "TE",
         "nflTeam": "BUF",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -603,8 +603,8 @@
         "name": "Jared Goff",
         "position": "QB",
         "nflTeam": "DET",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -612,8 +612,8 @@
         "name": "Cam Little",
         "position": "K",
         "nflTeam": "JAX",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -648,8 +648,8 @@
         "name": "C.J. Stroud",
         "position": "QB",
         "nflTeam": "HOU",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -657,8 +657,8 @@
         "name": "J.K. Dobbins",
         "position": "RB",
         "nflTeam": "DEN",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -675,8 +675,8 @@
         "name": "Chris Boswell",
         "position": "K",
         "nflTeam": "PIT",
-        "lineupSlot": "K",
-        "lineupSlotId": 17,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
