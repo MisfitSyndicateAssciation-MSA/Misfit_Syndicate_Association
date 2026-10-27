@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-27T19:42:27.432772+00:00",
+  "updatedAt": "2026-10-27T20:58:02.477609+00:00",
   "standings": [
     {
       "rank": 1,
@@ -210,7 +210,7 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 103.62,
+      "awayProjection": 122.05,
       "homeProjection": 122.74
     },
     {
@@ -1005,8 +1005,8 @@
         "name": "George Kittle",
         "position": "TE",
         "nflTeam": "SF",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1041,8 +1041,8 @@
         "name": "Jaguars D/ST",
         "position": "D/ST",
         "nflTeam": "JAX",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1059,8 +1059,8 @@
         "name": "Parker Washington",
         "position": "WR",
         "nflTeam": "JAX",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1077,8 +1077,8 @@
         "name": "Travis Kelce",
         "position": "TE",
         "nflTeam": "KC",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1113,8 +1113,8 @@
         "name": "Jets D/ST",
         "position": "D/ST",
         "nflTeam": "NYJ",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
