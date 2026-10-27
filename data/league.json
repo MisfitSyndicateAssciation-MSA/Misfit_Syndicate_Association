@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-27T22:49:47.501615+00:00",
+  "updatedAt": "2026-10-27T23:17:51.904277+00:00",
   "standings": [
     {
       "rank": 1,
@@ -219,7 +219,7 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 79.0,
+      "awayProjection": 116.77,
       "homeProjection": 129.41
     },
     {
@@ -1133,8 +1133,8 @@
         "name": "Puka Nacua",
         "position": "WR",
         "nflTeam": "LAR",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1160,8 +1160,8 @@
         "name": "Chris Olave",
         "position": "WR",
         "nflTeam": "NO",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1187,8 +1187,8 @@
         "name": "Trevor Lawrence",
         "position": "QB",
         "nflTeam": "JAX",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1196,8 +1196,8 @@
         "name": "Isaiah Likely",
         "position": "TE",
         "nflTeam": "NYG",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1205,8 +1205,8 @@
         "name": "Brock Purdy",
         "position": "QB",
         "nflTeam": "SF",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1228,21 +1228,12 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4034949,
-        "name": "Eddy Pineiro",
-        "position": "K",
-        "nflTeam": "SF",
-        "lineupSlot": "K",
-        "lineupSlotId": 17,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4429096,
         "name": "Blake Corum",
         "position": "RB",
         "nflTeam": "LAR",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
