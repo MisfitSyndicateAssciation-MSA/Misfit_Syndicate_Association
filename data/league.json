@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-27T17:32:55.404458+00:00",
+  "updatedAt": "2026-10-27T19:42:27.432772+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,7 +192,7 @@
       "homeTeamId": 12,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 109.89,
+      "awayProjection": 107.55,
       "homeProjection": 137.01
     },
     {
@@ -284,8 +284,8 @@
         "name": "Rams D/ST",
         "position": "D/ST",
         "nflTeam": "LAR",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -293,8 +293,8 @@
         "name": "Aaron Jones Sr.",
         "position": "RB",
         "nflTeam": "MIN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -356,8 +356,8 @@
         "name": "Zach Charbonnet",
         "position": "RB",
         "nflTeam": "SEA",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -374,8 +374,8 @@
         "name": "Ryan Flournoy",
         "position": "WR",
         "nflTeam": "DAL",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -915,7 +915,7 @@
         "nflTeam": "CAR",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4360689,
