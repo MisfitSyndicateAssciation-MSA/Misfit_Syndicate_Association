@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-28T21:37:12.103954+00:00",
+  "updatedAt": "2026-10-28T22:17:22.490859+00:00",
   "standings": [
     {
       "rank": 1,
@@ -202,7 +202,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 98.0,
-      "homeProjection": 123.17
+      "homeProjection": 125.34
     },
     {
       "week": 8,
@@ -210,7 +210,7 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 122.07,
+      "awayProjection": 122.08,
       "homeProjection": 122.74
     },
     {
@@ -219,8 +219,8 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 137.56,
-      "homeProjection": 129.41
+      "awayProjection": 137.57,
+      "homeProjection": 129.37
     },
     {
       "week": 8,
@@ -229,7 +229,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 149.27,
-      "homeProjection": 117.17
+      "homeProjection": 117.18
     }
   ],
   "rosters": {
@@ -1392,24 +1392,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4429023,
-        "name": "MarShawn Lloyd",
-        "position": "RB",
-        "nflTeam": "GB",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 4586312,
-        "name": "Jaylin Noel",
-        "position": "WR",
-        "nflTeam": "HOU",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "INJURY_RESERVE"
-      },
-      {
         "playerId": -16010,
         "name": "Titans D/ST",
         "position": "D/ST",
@@ -1423,6 +1405,33 @@
         "name": "Tyler Huntley",
         "position": "QB",
         "nflTeam": "BAL",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4567156,
+        "name": "Treylon Burks",
+        "position": "WR",
+        "nflTeam": "WAS",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4808766,
+        "name": "Mason Taylor",
+        "position": "TE",
+        "nflTeam": "NYJ",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4702555,
+        "name": "Jonah Coleman",
+        "position": "RB",
+        "nflTeam": "DEN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
