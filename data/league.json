@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-28T14:24:28.354005+00:00",
+  "updatedAt": "2026-10-28T16:13:34.648129+00:00",
   "standings": [
     {
       "rank": 1,
@@ -210,7 +210,7 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 122.05,
+      "awayProjection": 122.07,
       "homeProjection": 122.74
     },
     {
@@ -219,7 +219,7 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 137.5,
+      "awayProjection": 137.56,
       "homeProjection": 129.41
     },
     {
@@ -228,8 +228,8 @@
       "homeTeamId": 4,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 150.44,
-      "homeProjection": 117.26
+      "awayProjection": 150.33,
+      "homeProjection": 117.17
     }
   ],
   "rosters": {
@@ -963,19 +963,19 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4429086,
-        "name": "Michael Mayer",
-        "position": "TE",
-        "nflTeam": "LV",
+        "playerId": 4686468,
+        "name": "Seth McGowan",
+        "position": "RB",
+        "nflTeam": "IND",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4686468,
-        "name": "Seth McGowan",
-        "position": "RB",
-        "nflTeam": "IND",
+        "playerId": 4360635,
+        "name": "Chig Okonkwo",
+        "position": "TE",
+        "nflTeam": "WAS",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
