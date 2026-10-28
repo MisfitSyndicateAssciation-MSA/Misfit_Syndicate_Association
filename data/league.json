@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-28T20:58:13.802284+00:00",
+  "updatedAt": "2026-10-28T21:37:12.103954+00:00",
   "standings": [
     {
       "rank": 1,
@@ -228,7 +228,7 @@
       "homeTeamId": 4,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 150.33,
+      "awayProjection": 149.27,
       "homeProjection": 117.17
     }
   ],
@@ -605,7 +605,7 @@
         "nflTeam": "BUF",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3046779,
@@ -861,7 +861,7 @@
         "nflTeam": "LV",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4361579,
@@ -886,8 +886,8 @@
         "name": "Luther Burden III",
         "position": "WR",
         "nflTeam": "CHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -922,8 +922,8 @@
         "name": "Jalen Coker",
         "position": "WR",
         "nflTeam": "CAR",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1407,7 +1407,7 @@
         "nflTeam": "HOU",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "INJURY_RESERVE"
       },
       {
         "playerId": -16010,
