@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-27T23:17:51.904277+00:00",
+  "updatedAt": "2026-10-28T07:43:15.409164+00:00",
   "standings": [
     {
       "rank": 1,
@@ -18,9 +18,9 @@
       "pointsAgainst": 811.1,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 92.3,
+      "playoffPct": 92.9,
       "playoffSeed": 1,
-      "waiverRank": 10
+      "waiverRank": 9
     },
     {
       "rank": 2,
@@ -36,9 +36,9 @@
       "pointsAgainst": 797.0,
       "streakType": "WIN",
       "streakLength": 3,
-      "playoffPct": 83.2,
+      "playoffPct": 84.2,
       "playoffSeed": 2,
-      "waiverRank": 9
+      "waiverRank": 8
     },
     {
       "rank": 3,
@@ -54,9 +54,9 @@
       "pointsAgainst": 857.8,
       "streakType": "WIN",
       "streakLength": 3,
-      "playoffPct": 82.3,
+      "playoffPct": 80.0,
       "playoffSeed": 3,
-      "waiverRank": 8
+      "waiverRank": 7
     },
     {
       "rank": 4,
@@ -72,9 +72,9 @@
       "pointsAgainst": 825.2,
       "streakType": "LOSS",
       "streakLength": 3,
-      "playoffPct": 66.6,
+      "playoffPct": 61.2,
       "playoffSeed": 4,
-      "waiverRank": 7
+      "waiverRank": 6
     },
     {
       "rank": 5,
@@ -90,9 +90,9 @@
       "pointsAgainst": 810.1,
       "streakType": "WIN",
       "streakLength": 2,
-      "playoffPct": 76.1,
+      "playoffPct": 75.3,
       "playoffSeed": 5,
-      "waiverRank": 6
+      "waiverRank": 5
     },
     {
       "rank": 6,
@@ -108,9 +108,9 @@
       "pointsAgainst": 889.3,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 70.2,
+      "playoffPct": 71.0,
       "playoffSeed": 6,
-      "waiverRank": 5
+      "waiverRank": 10
     },
     {
       "rank": 7,
@@ -126,7 +126,7 @@
       "pointsAgainst": 852.6,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 50.6,
+      "playoffPct": 58.9,
       "playoffSeed": 7,
       "waiverRank": 4
     },
@@ -144,7 +144,7 @@
       "pointsAgainst": 860.9,
       "streakType": "LOSS",
       "streakLength": 2,
-      "playoffPct": 52.6,
+      "playoffPct": 54.0,
       "playoffSeed": 8,
       "waiverRank": 3
     },
@@ -162,7 +162,7 @@
       "pointsAgainst": 893.9,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 24.2,
+      "playoffPct": 21.0,
       "playoffSeed": 9,
       "waiverRank": 2
     },
@@ -180,7 +180,7 @@
       "pointsAgainst": 1079.4,
       "streakType": "LOSS",
       "streakLength": 7,
-      "playoffPct": 2.0,
+      "playoffPct": 1.7,
       "playoffSeed": 10,
       "waiverRank": 1
     }
@@ -192,7 +192,7 @@
       "homeTeamId": 12,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 107.55,
+      "awayProjection": 116.77,
       "homeProjection": 137.01
     },
     {
@@ -219,7 +219,7 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 116.77,
+      "awayProjection": 137.5,
       "homeProjection": 129.41
     },
     {
@@ -307,30 +307,12 @@
         "injuryStatus": "QUESTIONABLE"
       },
       {
-        "playerId": 4869461,
-        "name": "Trey Smack",
-        "position": "K",
-        "nflTeam": "GB",
-        "lineupSlot": "K",
-        "lineupSlotId": 17,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4572680,
         "name": "Tucker Kraft",
         "position": "TE",
         "nflTeam": "GB",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 4832800,
-        "name": "Denzel Boston",
-        "position": "WR",
-        "nflTeam": "CLE",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -361,19 +343,46 @@
         "injuryStatus": "QUESTIONABLE"
       },
       {
-        "playerId": 4433970,
-        "name": "J.J. McCarthy",
-        "position": "QB",
-        "nflTeam": "NYG",
+        "playerId": 5083754,
+        "name": "Ryan Flournoy",
+        "position": "WR",
+        "nflTeam": "DAL",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 5083754,
-        "name": "Ryan Flournoy",
+        "playerId": 4870653,
+        "name": "KC Concepcion",
         "position": "WR",
-        "nflTeam": "DAL",
+        "nflTeam": "CLE",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4869645,
+        "name": "Caleb Douglas",
+        "position": "WR",
+        "nflTeam": "MIA",
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3917232,
+        "name": "Tyler Bass",
+        "position": "K",
+        "nflTeam": "BUF",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16004,
+        "name": "Bengals D/ST",
+        "position": "D/ST",
+        "nflTeam": "CIN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
@@ -671,10 +680,10 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 17372,
-        "name": "Chris Boswell",
-        "position": "K",
-        "nflTeam": "PIT",
+        "playerId": 4723820,
+        "name": "Omar Cooper Jr.",
+        "position": "WR",
+        "nflTeam": "NYJ",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
@@ -1246,12 +1255,21 @@
         "injuryStatus": "QUESTIONABLE"
       },
       {
-        "playerId": 3117256,
-        "name": "Dalton Schultz",
+        "playerId": 3046439,
+        "name": "Hunter Henry",
         "position": "TE",
-        "nflTeam": "HOU",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "nflTeam": "NE",
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4249087,
+        "name": "Matt Gay",
+        "position": "K",
+        "nflTeam": "LV",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1716,7 +1734,7 @@
         "wins": 5,
         "losses": 2,
         "ties": 0,
-        "playoffPct": 92.3
+        "playoffPct": 92.9
       },
       {
         "seed": 2,
@@ -1727,7 +1745,7 @@
         "wins": 5,
         "losses": 2,
         "ties": 0,
-        "playoffPct": 83.2
+        "playoffPct": 84.2
       },
       {
         "seed": 3,
@@ -1738,7 +1756,7 @@
         "wins": 4,
         "losses": 3,
         "ties": 0,
-        "playoffPct": 82.3
+        "playoffPct": 80.0
       },
       {
         "seed": 4,
@@ -1749,7 +1767,7 @@
         "wins": 4,
         "losses": 3,
         "ties": 0,
-        "playoffPct": 66.6
+        "playoffPct": 61.2
       },
       {
         "seed": 5,
@@ -1760,7 +1778,7 @@
         "wins": 4,
         "losses": 3,
         "ties": 0,
-        "playoffPct": 76.1
+        "playoffPct": 75.3
       },
       {
         "seed": 6,
@@ -1771,7 +1789,7 @@
         "wins": 4,
         "losses": 3,
         "ties": 0,
-        "playoffPct": 70.2
+        "playoffPct": 71.0
       }
     ],
     "basementField": [
@@ -1784,7 +1802,7 @@
         "wins": 4,
         "losses": 3,
         "ties": 0,
-        "playoffPct": 50.6
+        "playoffPct": 58.9
       },
       {
         "seed": 8,
@@ -1795,7 +1813,7 @@
         "wins": 3,
         "losses": 4,
         "ties": 0,
-        "playoffPct": 52.6
+        "playoffPct": 54.0
       },
       {
         "seed": 9,
@@ -1806,7 +1824,7 @@
         "wins": 2,
         "losses": 5,
         "ties": 0,
-        "playoffPct": 24.2
+        "playoffPct": 21.0
       },
       {
         "seed": 10,
@@ -1817,7 +1835,7 @@
         "wins": 0,
         "losses": 7,
         "ties": 0,
-        "playoffPct": 2.0
+        "playoffPct": 1.7
       }
     ],
     "projectedChampionship": {
