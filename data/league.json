@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-28T17:52:04.585872+00:00",
+  "updatedAt": "2026-10-28T20:13:17.565924+00:00",
   "standings": [
     {
       "rank": 1,
@@ -787,7 +787,7 @@
         "nflTeam": "JAX",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4242355,
