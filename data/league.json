@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-28T17:06:32.325461+00:00",
+  "updatedAt": "2026-10-28T17:52:04.585872+00:00",
   "standings": [
     {
       "rank": 1,
@@ -979,6 +979,15 @@
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4870795,
+        "name": "Makai Lemon",
+        "position": "WR",
+        "nflTeam": "PHI",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
       }
     ],
     "8": [
@@ -1189,7 +1198,7 @@
         "nflTeam": "TEN",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4360310,
