@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-29T15:25:33.090446+00:00",
+  "updatedAt": "2026-10-29T16:22:32.366761+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,7 +192,7 @@
       "homeTeamId": 12,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 116.77,
+      "awayProjection": 115.09,
       "homeProjection": 137.01
     },
     {
@@ -284,8 +284,8 @@
         "name": "Rams D/ST",
         "position": "D/ST",
         "nflTeam": "LAR",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -383,8 +383,8 @@
         "name": "Bengals D/ST",
         "position": "D/ST",
         "nflTeam": "CIN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
       }
     ],
