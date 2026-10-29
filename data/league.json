@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-29T16:22:32.366761+00:00",
+  "updatedAt": "2026-10-29T17:18:32.915337+00:00",
   "standings": [
     {
       "rank": 1,
@@ -229,7 +229,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 149.27,
-      "homeProjection": 117.18
+      "homeProjection": 118.84
     }
   ],
   "rosters": {
@@ -603,8 +603,8 @@
         "name": "Dalton Kincaid",
         "position": "TE",
         "nflTeam": "BUF",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -684,8 +684,8 @@
         "name": "Omar Cooper Jr.",
         "position": "WR",
         "nflTeam": "NYJ",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       }
     ],
