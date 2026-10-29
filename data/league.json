@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-28T22:57:42.759028+00:00",
+  "updatedAt": "2026-10-29T00:09:03.760442+00:00",
   "standings": [
     {
       "rank": 1,
@@ -1353,7 +1353,7 @@
         "nflTeam": "ARI",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": -16026,
