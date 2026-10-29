@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-29T17:18:32.915337+00:00",
+  "updatedAt": "2026-10-29T20:25:13.595877+00:00",
   "standings": [
     {
       "rank": 1,
@@ -202,7 +202,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 98.0,
-      "homeProjection": 125.34
+      "homeProjection": 111.82
     },
     {
       "week": 8,
@@ -998,7 +998,7 @@
         "nflTeam": "DET",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4262921,
@@ -1297,8 +1297,8 @@
         "name": "Saquon Barkley",
         "position": "RB",
         "nflTeam": "PHI",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1306,8 +1306,8 @@
         "name": "A.J. Brown",
         "position": "WR",
         "nflTeam": "NE",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1351,8 +1351,8 @@
         "name": "Michael Wilson",
         "position": "WR",
         "nflTeam": "ARI",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1414,8 +1414,8 @@
         "name": "Treylon Burks",
         "position": "WR",
         "nflTeam": "WAS",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1432,8 +1432,8 @@
         "name": "Jonah Coleman",
         "position": "RB",
         "nflTeam": "DEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1591,7 +1591,7 @@
         "nflTeam": "DET",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4870808,
