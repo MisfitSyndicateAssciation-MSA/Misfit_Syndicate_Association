@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-29T21:57:28.099153+00:00",
+  "updatedAt": "2026-10-29T22:38:39.207422+00:00",
   "standings": [
     {
       "rank": 1,
@@ -228,7 +228,7 @@
       "homeTeamId": 4,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 149.56,
+      "awayProjection": 150.67,
       "homeProjection": 119.05
     }
   ],
@@ -949,8 +949,8 @@
         "name": "Chiefs D/ST",
         "position": "D/ST",
         "nflTeam": "KC",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -981,12 +981,12 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4870795,
-        "name": "Makai Lemon",
-        "position": "WR",
-        "nflTeam": "PHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "playerId": -16005,
+        "name": "Browns D/ST",
+        "position": "D/ST",
+        "nflTeam": "CLE",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
       }
     ],
