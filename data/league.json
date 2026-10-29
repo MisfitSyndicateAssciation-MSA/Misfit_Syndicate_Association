@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-29T07:39:00.697260+00:00",
+  "updatedAt": "2026-10-29T15:25:33.090446+00:00",
   "standings": [
     {
       "rank": 1,
@@ -210,8 +210,8 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 122.08,
-      "homeProjection": 122.74
+      "awayProjection": 125.57,
+      "homeProjection": 135.34
     },
     {
       "week": 8,
@@ -740,8 +740,8 @@
         "name": "DJ Moore",
         "position": "WR",
         "nflTeam": "BUF",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -817,21 +817,21 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": -16025,
-        "name": "49ers D/ST",
-        "position": "D/ST",
-        "nflTeam": "SF",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4683062,
         "name": "Xavier Worthy",
         "position": "WR",
         "nflTeam": "KC",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16028,
+        "name": "Commanders D/ST",
+        "position": "D/ST",
+        "nflTeam": "WAS",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1086,8 +1086,8 @@
         "name": "Bhayshul Tuten",
         "position": "RB",
         "nflTeam": "JAX",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1122,8 +1122,8 @@
         "name": "Quinshon Judkins",
         "position": "RB",
         "nflTeam": "CLE",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
