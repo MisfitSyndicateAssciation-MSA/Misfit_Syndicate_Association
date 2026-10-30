@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-30T01:42:18.706942+00:00",
+  "updatedAt": "2026-10-30T02:27:49.423335+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,10 +190,10 @@
       "week": 8,
       "awayTeamId": 1,
       "homeTeamId": 12,
-      "awayScore": 11.2,
-      "homeScore": 29.0,
-      "awayProjection": 122.21,
-      "homeProjection": 151.59
+      "awayScore": 13.1,
+      "homeScore": 37.3,
+      "awayProjection": 121.95,
+      "homeProjection": 153.79
     },
     {
       "week": 8,
@@ -208,9 +208,9 @@
       "week": 8,
       "awayTeamId": 8,
       "homeTeamId": 5,
-      "awayScore": 11.8,
+      "awayScore": 20.7,
       "homeScore": 0.0,
-      "awayProjection": 130.02,
+      "awayProjection": 135.89,
       "homeProjection": 135.09
     },
     {
@@ -218,9 +218,9 @@
       "awayTeamId": 9,
       "homeTeamId": 3,
       "awayScore": 0.0,
-      "homeScore": 2.0,
-      "awayProjection": 137.94,
-      "homeProjection": 121.98
+      "homeScore": 6.2,
+      "awayProjection": 137.5,
+      "homeProjection": 123.05
     },
     {
       "week": 8,
@@ -229,7 +229,7 @@
       "awayScore": 0.0,
       "homeScore": 14.0,
       "awayProjection": 150.67,
-      "homeProjection": 125.99
+      "homeProjection": 123.08
     }
   ],
   "rosters": {
@@ -1196,8 +1196,8 @@
         "name": "Carnell Tate",
         "position": "WR",
         "nflTeam": "TEN",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1279,6 +1279,15 @@
         "nflTeam": "LV",
         "lineupSlot": "K",
         "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4832800,
+        "name": "Denzel Boston",
+        "position": "WR",
+        "nflTeam": "CLE",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       }
     ],
