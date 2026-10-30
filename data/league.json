@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-30T21:11:59.468084+00:00",
+  "updatedAt": "2026-10-30T21:51:11.516120+00:00",
   "standings": [
     {
       "rank": 1,
@@ -202,7 +202,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 119.61,
-      "homeProjection": 111.69
+      "homeProjection": 115.38
     },
     {
       "week": 8,
@@ -1306,8 +1306,8 @@
         "name": "Saquon Barkley",
         "position": "RB",
         "nflTeam": "PHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1324,8 +1324,8 @@
         "name": "Tyler Warren",
         "position": "TE",
         "nflTeam": "IND",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1432,8 +1432,8 @@
         "name": "Mason Taylor",
         "position": "TE",
         "nflTeam": "NYJ",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1441,8 +1441,8 @@
         "name": "Jonah Coleman",
         "position": "RB",
         "nflTeam": "DEN",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
