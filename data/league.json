@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-30T07:30:08.161309+00:00",
+  "updatedAt": "2026-10-30T16:53:22.625763+00:00",
   "standings": [
     {
       "rank": 1,
@@ -201,7 +201,7 @@
       "homeTeamId": 10,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 117.98,
+      "awayProjection": 117.94,
       "homeProjection": 111.67
     },
     {
@@ -211,7 +211,7 @@
       "awayScore": 23.2,
       "homeScore": 0.0,
       "awayProjection": 133.6,
-      "homeProjection": 135.09
+      "homeProjection": 134.92
     },
     {
       "week": 8,
@@ -219,8 +219,8 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 11.8,
-      "awayProjection": 137.5,
-      "homeProjection": 123.71
+      "awayProjection": 137.41,
+      "homeProjection": 124.44
     },
     {
       "week": 8,
@@ -228,8 +228,8 @@
       "homeTeamId": 4,
       "awayScore": 0.0,
       "homeScore": 17.3,
-      "awayProjection": 150.67,
-      "homeProjection": 121.79
+      "awayProjection": 149.66,
+      "homeProjection": 120.87
     }
   ],
   "rosters": {
@@ -1115,7 +1115,7 @@
         "nflTeam": "TB",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4685702,
@@ -1326,7 +1326,7 @@
         "nflTeam": "IND",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 3916387,
