@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-30T04:09:05.941988+00:00",
+  "updatedAt": "2026-10-30T05:40:10.390815+00:00",
   "standings": [
     {
       "rank": 1,
@@ -201,7 +201,7 @@
       "homeTeamId": 10,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 97.52,
+      "awayProjection": 117.98,
       "homeProjection": 111.67
     },
     {
@@ -1452,8 +1452,8 @@
         "name": "Josh Allen",
         "position": "QB",
         "nflTeam": "BUF",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1506,8 +1506,8 @@
         "name": "Jameson Williams",
         "position": "WR",
         "nflTeam": "DET",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1524,8 +1524,8 @@
         "name": "Jordan Addison",
         "position": "WR",
         "nflTeam": "MIN",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1533,8 +1533,8 @@
         "name": "Mark Andrews",
         "position": "TE",
         "nflTeam": "BAL",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1551,8 +1551,8 @@
         "name": "Sam Darnold",
         "position": "QB",
         "nflTeam": "SEA",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1574,21 +1574,21 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 5082424,
-        "name": "Dominic Zvada",
-        "position": "K",
-        "nflTeam": "NYG",
-        "lineupSlot": "K",
-        "lineupSlotId": 17,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4428718,
         "name": "Tre Tucker",
         "position": "WR",
         "nflTeam": "LV",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 17372,
+        "name": "Chris Boswell",
+        "position": "K",
+        "nflTeam": "PIT",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
         "injuryStatus": "ACTIVE"
       }
     ],
