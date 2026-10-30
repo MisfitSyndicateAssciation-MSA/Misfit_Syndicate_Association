@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-30T20:27:23.345289+00:00",
+  "updatedAt": "2026-10-30T21:11:59.468084+00:00",
   "standings": [
     {
       "rank": 1,
@@ -220,7 +220,7 @@
       "awayScore": 0.0,
       "homeScore": 11.8,
       "awayProjection": 137.38,
-      "homeProjection": 124.53
+      "homeProjection": 115.19
     },
     {
       "week": 8,
@@ -540,7 +540,7 @@
         "nflTeam": "DEN",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       }
     ],
     "4": [
@@ -963,15 +963,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4686468,
-        "name": "Seth McGowan",
-        "position": "RB",
-        "nflTeam": "IND",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4360635,
         "name": "Chig Okonkwo",
         "position": "TE",
@@ -987,6 +978,15 @@
         "nflTeam": "CLE",
         "lineupSlot": "D/ST",
         "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 5081432,
+        "name": "Antonio Williams",
+        "position": "WR",
+        "nflTeam": "WAS",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1362,7 +1362,7 @@
         "nflTeam": "ARI",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": -16026,
@@ -1609,7 +1609,7 @@
         "nflTeam": "ARI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4685382,
