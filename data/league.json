@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-30T19:52:55.215226+00:00",
+  "updatedAt": "2026-10-30T20:27:23.345289+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 12,
       "awayScore": 17.3,
       "homeScore": 45.8,
-      "awayProjection": 122.75,
-      "homeProjection": 152.67
+      "awayProjection": 122.76,
+      "homeProjection": 152.71
     },
     {
       "week": 8,
@@ -201,8 +201,8 @@
       "homeTeamId": 10,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 117.94,
-      "homeProjection": 111.67
+      "awayProjection": 119.61,
+      "homeProjection": 111.69
     },
     {
       "week": 8,
@@ -211,7 +211,7 @@
       "awayScore": 23.2,
       "homeScore": 0.0,
       "awayProjection": 133.6,
-      "homeProjection": 134.92
+      "homeProjection": 134.9
     },
     {
       "week": 8,
@@ -219,8 +219,8 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 11.8,
-      "awayProjection": 137.41,
-      "homeProjection": 124.44
+      "awayProjection": 137.38,
+      "homeProjection": 124.53
     },
     {
       "week": 8,
@@ -228,7 +228,7 @@
       "homeTeamId": 4,
       "awayScore": 0.0,
       "homeScore": 17.3,
-      "awayProjection": 149.66,
+      "awayProjection": 149.64,
       "homeProjection": 120.87
     }
   ],
@@ -879,7 +879,7 @@
         "nflTeam": "LAC",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4685278,
@@ -1308,7 +1308,7 @@
         "nflTeam": "PHI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4047646,
@@ -1636,7 +1636,7 @@
         "nflTeam": "PHI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 2577417,
