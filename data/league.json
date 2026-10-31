@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-31T21:47:15.202107+00:00",
+  "updatedAt": "2026-10-31T22:18:45.415332+00:00",
   "standings": [
     {
       "rank": 1,
@@ -202,7 +202,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 119.79,
-      "homeProjection": 113.91
+      "homeProjection": 119.11
     },
     {
       "week": 8,
@@ -1324,8 +1324,8 @@
         "name": "Tyler Warren",
         "position": "TE",
         "nflTeam": "IND",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1342,8 +1342,8 @@
         "name": "Jadarian Price",
         "position": "RB",
         "nflTeam": "SEA",
-        "lineupSlot": "IR",
-        "lineupSlotId": 21,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "INJURY_RESERVE"
       },
       {
@@ -1396,8 +1396,8 @@
         "name": "Emanuel Wilson",
         "position": "RB",
         "nflTeam": "SEA",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1405,15 +1405,6 @@
         "name": "Titans D/ST",
         "position": "D/ST",
         "nflTeam": "TEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 4035671,
-        "name": "Tyler Huntley",
-        "position": "QB",
-        "nflTeam": "BAL",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
@@ -1432,8 +1423,8 @@
         "name": "Mason Taylor",
         "position": "TE",
         "nflTeam": "NYJ",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1441,8 +1432,8 @@
         "name": "Jonah Coleman",
         "position": "RB",
         "nflTeam": "DEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       }
     ],
