@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-31T19:25:03.041700+00:00",
+  "updatedAt": "2026-10-31T20:33:28.048560+00:00",
   "standings": [
     {
       "rank": 1,
@@ -540,7 +540,7 @@
         "nflTeam": "DEN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "INJURY_RESERVE"
       }
     ],
     "4": [
