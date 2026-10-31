@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-30T22:24:10.583825+00:00",
+  "updatedAt": "2026-10-31T01:22:50.328520+00:00",
   "standings": [
     {
       "rank": 1,
@@ -220,7 +220,7 @@
       "awayScore": 0.0,
       "homeScore": 11.8,
       "awayProjection": 137.39,
-      "homeProjection": 115.19
+      "homeProjection": 127.41
     },
     {
       "week": 8,
@@ -457,8 +457,8 @@
         "name": "DK Metcalf",
         "position": "WR",
         "nflTeam": "PIT",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -538,8 +538,8 @@
         "name": "RJ Harvey",
         "position": "RB",
         "nflTeam": "DEN",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "OUT"
       }
     ],
