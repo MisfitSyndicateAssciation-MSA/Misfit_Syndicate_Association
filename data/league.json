@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-10-31T17:28:56.015550+00:00",
+  "updatedAt": "2026-10-31T19:25:03.041700+00:00",
   "standings": [
     {
       "rank": 1,
@@ -201,7 +201,7 @@
       "homeTeamId": 10,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 119.63,
+      "awayProjection": 119.75,
       "homeProjection": 115.45
     },
     {
@@ -211,7 +211,7 @@
       "awayScore": 23.2,
       "homeScore": 0.0,
       "awayProjection": 133.62,
-      "homeProjection": 134.9
+      "homeProjection": 134.82
     },
     {
       "week": 8,
@@ -219,8 +219,8 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 11.8,
-      "awayProjection": 137.39,
-      "homeProjection": 127.41
+      "awayProjection": 137.76,
+      "homeProjection": 127.42
     },
     {
       "week": 8,
@@ -228,7 +228,7 @@
       "homeTeamId": 4,
       "awayScore": 0.0,
       "homeScore": 17.3,
-      "awayProjection": 149.96,
+      "awayProjection": 149.92,
       "homeProjection": 120.87
     }
   ],
@@ -733,7 +733,7 @@
         "nflTeam": "CHI",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 3915416,
