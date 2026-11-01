@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-11-01T19:14:42.487969+00:00",
+  "updatedAt": "2026-11-01T19:53:32.666604+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,46 +190,46 @@
       "week": 8,
       "awayTeamId": 1,
       "homeTeamId": 12,
-      "awayScore": 49.6,
-      "homeScore": 63.3,
-      "awayProjection": 108.55,
-      "homeProjection": 125.81
+      "awayScore": 67.1,
+      "homeScore": 68.8,
+      "awayProjection": 117.21,
+      "homeProjection": 119.95
     },
     {
       "week": 8,
       "awayTeamId": 11,
       "homeTeamId": 10,
-      "awayScore": 24.1,
-      "homeScore": 14.3,
-      "awayProjection": 107.04,
-      "homeProjection": 81.87
+      "awayScore": 31.0,
+      "homeScore": 16.1,
+      "awayProjection": 103.61,
+      "homeProjection": 77.09
     },
     {
       "week": 8,
       "awayTeamId": 8,
       "homeTeamId": 5,
-      "awayScore": 59.7,
-      "homeScore": 23.8,
-      "awayProjection": 118.43,
-      "homeProjection": 131.97
+      "awayScore": 89.3,
+      "homeScore": 31.0,
+      "awayProjection": 136.26,
+      "homeProjection": 130.76
     },
     {
       "week": 8,
       "awayTeamId": 9,
       "homeTeamId": 3,
-      "awayScore": 43.7,
-      "homeScore": 18.0,
-      "awayProjection": 139.65,
-      "homeProjection": 115.87
+      "awayScore": 47.1,
+      "homeScore": 19.3,
+      "awayProjection": 137.63,
+      "homeProjection": 112.23
     },
     {
       "week": 8,
       "awayTeamId": 6,
       "homeTeamId": 4,
-      "awayScore": 50.8,
-      "homeScore": 53.7,
-      "awayProjection": 146.55,
-      "homeProjection": 107.3
+      "awayScore": 65.2,
+      "homeScore": 74.3,
+      "awayProjection": 151.38,
+      "homeProjection": 116.84
     }
   ],
   "rosters": {
@@ -796,7 +796,7 @@
         "nflTeam": "DAL",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 3116165,
