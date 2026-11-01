@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-11-01T12:47:03.826147+00:00",
+  "updatedAt": "2026-11-01T14:16:50.157152+00:00",
   "standings": [
     {
       "rank": 1,
@@ -1693,15 +1693,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 5083315,
-        "name": "Kenyon Sadiq",
-        "position": "TE",
-        "nflTeam": "NYJ",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": -16003,
         "name": "Bears D/ST",
         "position": "D/ST",
@@ -1720,10 +1711,19 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": -16013,
-        "name": "Raiders D/ST",
+        "playerId": -16027,
+        "name": "Buccaneers D/ST",
         "position": "D/ST",
-        "nflTeam": "LV",
+        "nflTeam": "TB",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4870795,
+        "name": "Makai Lemon",
+        "position": "WR",
+        "nflTeam": "PHI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
