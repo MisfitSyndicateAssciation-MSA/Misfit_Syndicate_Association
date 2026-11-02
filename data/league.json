@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-11-02T01:01:52.061149+00:00",
+  "updatedAt": "2026-11-02T07:36:50.809411+00:00",
   "standings": [
     {
       "rank": 1,
@@ -200,27 +200,27 @@
       "awayTeamId": 11,
       "homeTeamId": 10,
       "awayScore": 94.5,
-      "homeScore": 66.8,
+      "homeScore": 90.3,
       "awayProjection": 109.25,
-      "homeProjection": 95.71
+      "homeProjection": 96.1
     },
     {
       "week": 8,
       "awayTeamId": 8,
       "homeTeamId": 5,
       "awayScore": 124.3,
-      "homeScore": 81.9,
+      "homeScore": 95.9,
       "awayProjection": 124.3,
-      "homeProjection": 122.64
+      "homeProjection": 129.78
     },
     {
       "week": 8,
       "awayTeamId": 9,
       "homeTeamId": 3,
       "awayScore": 132.5,
-      "homeScore": 48.5,
+      "homeScore": 86.0,
       "awayProjection": 132.5,
-      "homeProjection": 107.6
+      "homeProjection": 95.55
     },
     {
       "week": 8,
@@ -1270,7 +1270,7 @@
         "nflTeam": "NE",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4249087,
