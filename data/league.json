@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-11-03T00:00:11.107034+00:00",
+  "updatedAt": "2026-11-03T06:33:40.062762+00:00",
   "standings": [
     {
       "rank": 1,
@@ -191,44 +191,44 @@
       "awayTeamId": 1,
       "homeTeamId": 12,
       "awayScore": 120.8,
-      "homeScore": 120.0,
+      "homeScore": 130.0,
       "awayProjection": 120.8,
-      "homeProjection": 125.8
+      "homeProjection": 130.0
     },
     {
       "week": 8,
       "awayTeamId": 11,
       "homeTeamId": 10,
-      "awayScore": 94.5,
-      "homeScore": 90.3,
-      "awayProjection": 109.25,
-      "homeProjection": 96.1
+      "awayScore": 122.4,
+      "homeScore": 91.3,
+      "awayProjection": 122.4,
+      "homeProjection": 91.3
     },
     {
       "week": 8,
       "awayTeamId": 8,
       "homeTeamId": 5,
       "awayScore": 124.3,
-      "homeScore": 95.9,
+      "homeScore": 132.2,
       "awayProjection": 124.3,
-      "homeProjection": 129.78
+      "homeProjection": 132.2
     },
     {
       "week": 8,
       "awayTeamId": 9,
       "homeTeamId": 3,
       "awayScore": 132.5,
-      "homeScore": 86.0,
+      "homeScore": 88.0,
       "awayProjection": 132.5,
-      "homeProjection": 95.55
+      "homeProjection": 88.0
     },
     {
       "week": 8,
       "awayTeamId": 6,
       "homeTeamId": 4,
-      "awayScore": 126.1,
+      "awayScore": 144.7,
       "homeScore": 121.7,
-      "awayProjection": 139.54,
+      "awayProjection": 144.7,
       "homeProjection": 121.7
     }
   ],
@@ -787,7 +787,7 @@
         "nflTeam": "JAX",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4242355,
@@ -1088,7 +1088,7 @@
         "nflTeam": "JAX",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 15847,
