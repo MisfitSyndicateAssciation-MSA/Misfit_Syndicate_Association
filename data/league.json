@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 9,
-  "updatedAt": "2026-11-04T15:35:33.740324+00:00",
+  "updatedAt": "2026-11-04T21:29:05.250061+00:00",
   "standings": [
     {
       "rank": 1,
@@ -193,7 +193,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 139.41,
-      "homeProjection": 102.43
+      "homeProjection": 101.89
     },
     {
       "week": 9,
@@ -201,8 +201,8 @@
       "homeTeamId": 1,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 124.92,
-      "homeProjection": 133.58
+      "awayProjection": 124.51,
+      "homeProjection": 133.48
     },
     {
       "week": 9,
@@ -210,7 +210,7 @@
       "homeTeamId": 11,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 111.59,
+      "awayProjection": 111.83,
       "homeProjection": 106.9
     },
     {
@@ -219,7 +219,7 @@
       "homeTeamId": 8,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 118.37,
+      "awayProjection": 128.61,
       "homeProjection": 130.42
     },
     {
@@ -228,8 +228,8 @@
       "homeTeamId": 9,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 140.2,
-      "homeProjection": 130.46
+      "awayProjection": 141.58,
+      "homeProjection": 130.57
     }
   ],
   "rosters": {
@@ -540,8 +540,8 @@
         "name": "Malik Nabers",
         "position": "WR",
         "nflTeam": "NYG",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -608,15 +608,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": -16016,
-        "name": "Vikings D/ST",
-        "position": "D/ST",
-        "nflTeam": "MIN",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4685247,
         "name": "Braelon Allen",
         "position": "RB",
@@ -630,8 +621,8 @@
         "name": "Broncos D/ST",
         "position": "D/ST",
         "nflTeam": "DEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -666,8 +657,17 @@
         "name": "Omar Cooper Jr.",
         "position": "WR",
         "nflTeam": "NYJ",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16019,
+        "name": "Giants D/ST",
+        "position": "D/ST",
+        "nflTeam": "NYG",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -697,7 +697,7 @@
         "nflTeam": "NYJ",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4596448,
@@ -769,7 +769,7 @@
         "nflTeam": "JAX",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4242355,
@@ -859,8 +859,8 @@
         "name": "Ladd McConkey",
         "position": "WR",
         "nflTeam": "LAC",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -904,8 +904,8 @@
         "name": "Jalen Coker",
         "position": "WR",
         "nflTeam": "CAR",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -980,7 +980,7 @@
         "nflTeam": "DET",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4262921,
@@ -1526,7 +1526,7 @@
         "nflTeam": "SEA",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4360569,
