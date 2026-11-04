@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 9,
-  "updatedAt": "2026-11-03T20:39:02.666013+00:00",
+  "updatedAt": "2026-11-04T00:55:12.243989+00:00",
   "standings": [
     {
       "rank": 1,
@@ -210,7 +210,7 @@
       "homeTeamId": 11,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 121.1,
+      "awayProjection": 124.83,
       "homeProjection": 106.9
     },
     {
@@ -412,8 +412,8 @@
         "name": "Travis Etienne Jr.",
         "position": "RB",
         "nflTeam": "NO",
-        "lineupSlot": "IR",
-        "lineupSlotId": 21,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "INJURY_RESERVE"
       },
       {
@@ -430,8 +430,8 @@
         "name": "Harold Fannin Jr.",
         "position": "TE",
         "nflTeam": "CLE",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -448,8 +448,8 @@
         "name": "Dallas Goedert",
         "position": "TE",
         "nflTeam": "PHI",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -466,8 +466,8 @@
         "name": "Rachaad White",
         "position": "RB",
         "nflTeam": "WAS",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -520,8 +520,8 @@
         "name": "RJ Harvey",
         "position": "RB",
         "nflTeam": "DEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
         "injuryStatus": "INJURY_RESERVE"
       }
     ],
@@ -1034,7 +1034,7 @@
         "nflTeam": "BAL",
         "lineupSlot": "K",
         "lineupSlotId": 17,
-        "injuryStatus": "DOUBTFUL"
+        "injuryStatus": "INJURY_RESERVE"
       },
       {
         "playerId": -16030,
@@ -1582,7 +1582,7 @@
         "nflTeam": "ARI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "INJURY_RESERVE"
       },
       {
         "playerId": 4685382,
