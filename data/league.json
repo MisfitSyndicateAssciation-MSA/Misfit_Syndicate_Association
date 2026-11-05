@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 9,
-  "updatedAt": "2026-11-05T01:44:42.803440+00:00",
+  "updatedAt": "2026-11-05T08:34:21.967831+00:00",
   "standings": [
     {
       "rank": 1,
@@ -193,7 +193,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 139.41,
-      "homeProjection": 101.89
+      "homeProjection": 120.9
     },
     {
       "week": 9,
@@ -210,7 +210,7 @@
       "homeTeamId": 11,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 111.83,
+      "awayProjection": 126.89,
       "homeProjection": 106.9
     },
     {
@@ -412,8 +412,8 @@
         "name": "Travis Etienne Jr.",
         "position": "RB",
         "nflTeam": "NO",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "INJURY_RESERVE"
       },
       {
@@ -453,15 +453,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": -16033,
-        "name": "Ravens D/ST",
-        "position": "D/ST",
-        "nflTeam": "BAL",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4697815,
         "name": "Rachaad White",
         "position": "RB",
@@ -471,21 +462,12 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 2473037,
-        "name": "Jason Myers",
-        "position": "K",
-        "nflTeam": "SEA",
-        "lineupSlot": "K",
-        "lineupSlotId": 17,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": -16017,
         "name": "Patriots D/ST",
         "position": "D/ST",
         "nflTeam": "NE",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -511,8 +493,8 @@
         "name": "Woody Marks",
         "position": "RB",
         "nflTeam": "HOU",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -523,6 +505,24 @@
         "lineupSlot": "IR",
         "lineupSlotId": 21,
         "injuryStatus": "INJURY_RESERVE"
+      },
+      {
+        "playerId": -16008,
+        "name": "Lions D/ST",
+        "position": "D/ST",
+        "nflTeam": "DET",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 2971573,
+        "name": "Ka'imi Fairbairn",
+        "position": "K",
+        "nflTeam": "HOU",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
       }
     ],
     "4": [
@@ -1315,8 +1315,8 @@
         "name": "Lamar Jackson",
         "position": "QB",
         "nflTeam": "BAL",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "OUT"
       },
       {
@@ -1401,21 +1401,21 @@
         "injuryStatus": "QUESTIONABLE"
       },
       {
-        "playerId": 4808766,
-        "name": "Mason Taylor",
-        "position": "TE",
-        "nflTeam": "NYJ",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
-      },
-      {
         "playerId": 4702555,
         "name": "Jonah Coleman",
         "position": "RB",
         "nflTeam": "DEN",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4242512,
+        "name": "Malik Willis",
+        "position": "QB",
+        "nflTeam": "MIA",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       }
     ],
