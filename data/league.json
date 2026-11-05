@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 9,
-  "updatedAt": "2026-11-05T16:49:05.772720+00:00",
+  "updatedAt": "2026-11-05T22:25:00.602816+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 10,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 139.37,
-      "homeProjection": 120.9
+      "awayProjection": 123.51,
+      "homeProjection": 120.95
     },
     {
       "week": 9,
@@ -202,7 +202,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 124.49,
-      "homeProjection": 133.49
+      "homeProjection": 130.47
     },
     {
       "week": 9,
@@ -219,8 +219,8 @@
       "homeTeamId": 8,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 128.61,
-      "homeProjection": 135.52
+      "awayProjection": 130.54,
+      "homeProjection": 135.83
     },
     {
       "week": 9,
@@ -228,7 +228,7 @@
       "homeTeamId": 9,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 141.46,
+      "awayProjection": 140.32,
       "homeProjection": 130.55
     }
   ],
@@ -320,8 +320,8 @@
         "name": "George Pickens",
         "position": "WR",
         "nflTeam": "DAL",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -334,21 +334,12 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4426385,
-        "name": "Zach Charbonnet",
-        "position": "RB",
-        "nflTeam": "SEA",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 5083754,
         "name": "Ryan Flournoy",
         "position": "WR",
         "nflTeam": "DAL",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -356,8 +347,8 @@
         "name": "KC Concepcion",
         "position": "WR",
         "nflTeam": "CLE",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -367,6 +358,15 @@
         "nflTeam": "BUF",
         "lineupSlot": "K",
         "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4362619,
+        "name": "Chris Rodriguez Jr.",
+        "position": "RB",
+        "nflTeam": "JAX",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -396,7 +396,7 @@
         "nflTeam": "KC",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4685472,
@@ -432,7 +432,7 @@
         "nflTeam": "CLE",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4047650,
@@ -542,15 +542,15 @@
         "nflTeam": "NYG",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4427366,
         "name": "Breece Hall",
         "position": "RB",
         "nflTeam": "NYJ",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -587,7 +587,7 @@
         "nflTeam": "BUF",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3046779,
@@ -612,8 +612,8 @@
         "name": "Braelon Allen",
         "position": "RB",
         "nflTeam": "NYJ",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -650,7 +650,7 @@
         "nflTeam": "BUF",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4723820,
@@ -859,8 +859,8 @@
         "name": "Ladd McConkey",
         "position": "WR",
         "nflTeam": "LAC",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -904,8 +904,8 @@
         "name": "Jalen Coker",
         "position": "WR",
         "nflTeam": "CAR",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1070,7 +1070,7 @@
         "nflTeam": "KC",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4711533,
@@ -1088,7 +1088,7 @@
         "nflTeam": "TB",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4685702,
@@ -1317,7 +1317,7 @@
         "nflTeam": "BAL",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "INJURY_RESERVE"
       },
       {
         "playerId": 4685512,
@@ -1636,7 +1636,7 @@
         "nflTeam": "SF",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "DOUBTFUL"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3953687,
