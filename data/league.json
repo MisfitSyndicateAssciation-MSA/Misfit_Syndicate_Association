@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 9,
-  "updatedAt": "2026-11-04T21:29:05.250061+00:00",
+  "updatedAt": "2026-11-05T01:44:42.803440+00:00",
   "standings": [
     {
       "rank": 1,
@@ -220,7 +220,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 128.61,
-      "homeProjection": 130.42
+      "homeProjection": 135.45
     },
     {
       "week": 9,
@@ -322,7 +322,7 @@
         "nflTeam": "DAL",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4361411,
@@ -396,7 +396,7 @@
         "nflTeam": "KC",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4685472,
@@ -733,7 +733,7 @@
         "nflTeam": "LAR",
         "lineupSlot": "QB",
         "lineupSlotId": 0,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4569173,
@@ -1028,15 +1028,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4697745,
-        "name": "Tyler Loop",
-        "position": "K",
-        "nflTeam": "BAL",
-        "lineupSlot": "K",
-        "lineupSlotId": 17,
-        "injuryStatus": "INJURY_RESERVE"
-      },
-      {
         "playerId": -16030,
         "name": "Jaguars D/ST",
         "position": "D/ST",
@@ -1059,8 +1050,8 @@
         "name": "Parker Washington",
         "position": "WR",
         "nflTeam": "JAX",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1068,8 +1059,8 @@
         "name": "Bhayshul Tuten",
         "position": "RB",
         "nflTeam": "JAX",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1079,15 +1070,15 @@
         "nflTeam": "KC",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4711533,
         "name": "Ollie Gordon II",
         "position": "RB",
         "nflTeam": "MIA",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1118,10 +1109,19 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 8439,
-        "name": "Aaron Rodgers",
+        "playerId": 3150744,
+        "name": "Chase McLaughlin",
+        "position": "K",
+        "nflTeam": "TB",
+        "lineupSlot": "K",
+        "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4360698,
+        "name": "Joe Milton",
         "position": "QB",
-        "nflTeam": "PIT",
+        "nflTeam": "PHI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
@@ -1270,7 +1270,7 @@
         "nflTeam": "CLE",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       }
     ],
     "10": [
@@ -1290,7 +1290,7 @@
         "nflTeam": "PHI",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4047646,
@@ -1398,7 +1398,7 @@
         "nflTeam": "WAS",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4808766,
@@ -1407,7 +1407,7 @@
         "nflTeam": "NYJ",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4702555,
