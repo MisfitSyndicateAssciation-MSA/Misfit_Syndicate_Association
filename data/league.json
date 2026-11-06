@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 9,
-  "updatedAt": "2026-11-06T09:55:49.527010+00:00",
+  "updatedAt": "2026-11-06T17:15:28.792612+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 10,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 123.51,
-      "homeProjection": 121.16
+      "awayProjection": 133.82,
+      "homeProjection": 121.26
     },
     {
       "week": 9,
@@ -201,7 +201,7 @@
       "homeTeamId": 1,
       "awayScore": 5.7,
       "homeScore": 0.0,
-      "awayProjection": 116.02,
+      "awayProjection": 103.27,
       "homeProjection": 129.06
     },
     {
@@ -210,7 +210,7 @@
       "homeTeamId": 11,
       "awayScore": 0.0,
       "homeScore": 3.9,
-      "awayProjection": 126.81,
+      "awayProjection": 127.87,
       "homeProjection": 107.3
     },
     {
@@ -697,7 +697,7 @@
         "nflTeam": "NYJ",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4596448,
@@ -1643,8 +1643,8 @@
         "name": "Mike Evans",
         "position": "WR",
         "nflTeam": "SF",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1715,8 +1715,8 @@
         "name": "Makai Lemon",
         "position": "WR",
         "nflTeam": "PHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       }
     ]
