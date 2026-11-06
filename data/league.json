@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 9,
-  "updatedAt": "2026-11-05T22:25:00.602816+00:00",
+  "updatedAt": "2026-11-06T02:43:34.136476+00:00",
   "standings": [
     {
       "rank": 1,
@@ -193,43 +193,43 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 123.51,
-      "homeProjection": 120.95
+      "homeProjection": 121.16
     },
     {
       "week": 9,
       "awayTeamId": 5,
       "homeTeamId": 1,
-      "awayScore": 0.0,
+      "awayScore": 5.1,
       "homeScore": 0.0,
-      "awayProjection": 124.49,
-      "homeProjection": 130.47
+      "awayProjection": 122.5,
+      "homeProjection": 129.06
     },
     {
       "week": 9,
       "awayTeamId": 3,
       "homeTeamId": 11,
       "awayScore": 0.0,
-      "homeScore": 0.0,
-      "awayProjection": 126.91,
-      "homeProjection": 109.66
+      "homeScore": 1.7,
+      "awayProjection": 126.81,
+      "homeProjection": 108.23
     },
     {
       "week": 9,
       "awayTeamId": 4,
       "homeTeamId": 8,
-      "awayScore": 0.0,
-      "homeScore": 0.0,
-      "awayProjection": 130.54,
-      "homeProjection": 135.83
+      "awayScore": 5.0,
+      "homeScore": 33.3,
+      "awayProjection": 131.43,
+      "homeProjection": 146.77
     },
     {
       "week": 9,
       "awayTeamId": 6,
       "homeTeamId": 9,
       "awayScore": 0.0,
-      "homeScore": 0.0,
-      "awayProjection": 140.32,
-      "homeProjection": 130.55
+      "homeScore": 17.9,
+      "awayProjection": 141.46,
+      "homeProjection": 151.79
     }
   ],
   "rosters": {
@@ -551,7 +551,7 @@
         "nflTeam": "NYJ",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4239993,
@@ -859,8 +859,8 @@
         "name": "Ladd McConkey",
         "position": "WR",
         "nflTeam": "LAC",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -904,8 +904,8 @@
         "name": "Jalen Coker",
         "position": "WR",
         "nflTeam": "CAR",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1061,7 +1061,7 @@
         "nflTeam": "JAX",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 15847,
@@ -1160,8 +1160,8 @@
         "name": "Chris Olave",
         "position": "WR",
         "nflTeam": "NO",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1169,8 +1169,8 @@
         "name": "Cam Skattebo",
         "position": "RB",
         "nflTeam": "NYG",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1196,8 +1196,8 @@
         "name": "Isaiah Likely",
         "position": "TE",
         "nflTeam": "NYG",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1214,8 +1214,8 @@
         "name": "Steelers D/ST",
         "position": "D/ST",
         "nflTeam": "PIT",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1232,8 +1232,8 @@
         "name": "Blake Corum",
         "position": "RB",
         "nflTeam": "LAR",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1244,15 +1244,6 @@
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 3046439,
-        "name": "Hunter Henry",
-        "position": "TE",
-        "nflTeam": "NE",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
-        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4249087,
@@ -1268,9 +1259,18 @@
         "name": "Denzel Boston",
         "position": "WR",
         "nflTeam": "CLE",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
+      },
+      {
+        "playerId": -16002,
+        "name": "Bills D/ST",
+        "position": "D/ST",
+        "nflTeam": "BUF",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
       }
     ],
     "10": [
@@ -1315,8 +1315,8 @@
         "name": "Lamar Jackson",
         "position": "QB",
         "nflTeam": "BAL",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
         "injuryStatus": "INJURY_RESERVE"
       },
       {
@@ -1374,15 +1374,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4887558,
-        "name": "Emanuel Wilson",
-        "position": "RB",
-        "nflTeam": "SEA",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": -16010,
         "name": "Titans D/ST",
         "position": "D/ST",
@@ -1416,6 +1407,24 @@
         "nflTeam": "MIA",
         "lineupSlot": "QB",
         "lineupSlotId": 0,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4685415,
+        "name": "Travis Hunter",
+        "position": "WR",
+        "nflTeam": "JAX",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4433970,
+        "name": "J.J. McCarthy",
+        "position": "QB",
+        "nflTeam": "NYG",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
