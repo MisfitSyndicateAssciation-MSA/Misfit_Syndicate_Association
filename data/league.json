@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 9,
-  "updatedAt": "2026-11-07T01:56:23.977752+00:00",
+  "updatedAt": "2026-11-07T08:34:53.326996+00:00",
   "standings": [
     {
       "rank": 1,
@@ -289,15 +289,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 3042519,
-        "name": "Aaron Jones Sr.",
-        "position": "RB",
-        "nflTeam": "MIN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 3126486,
         "name": "Deebo Samuel Sr.",
         "position": "WR",
@@ -365,6 +356,15 @@
         "name": "Chris Rodriguez Jr.",
         "position": "RB",
         "nflTeam": "JAX",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3054850,
+        "name": "Alvin Kamara",
+        "position": "RB",
+        "nflTeam": "NO",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
