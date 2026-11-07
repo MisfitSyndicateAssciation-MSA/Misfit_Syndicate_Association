@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 9,
-  "updatedAt": "2026-11-06T22:10:13.675624+00:00",
+  "updatedAt": "2026-11-07T01:56:23.977752+00:00",
   "standings": [
     {
       "rank": 1,
@@ -201,7 +201,7 @@
       "homeTeamId": 1,
       "awayScore": 5.7,
       "homeScore": 0.0,
-      "awayProjection": 103.29,
+      "awayProjection": 112.59,
       "homeProjection": 129.34
     },
     {
@@ -228,8 +228,8 @@
       "homeTeamId": 9,
       "awayScore": 0.0,
       "homeScore": 20.9,
-      "awayProjection": 141.4,
-      "homeProjection": 128.55
+      "awayProjection": 142.75,
+      "homeProjection": 142.13
     }
   ],
   "rosters": {
@@ -695,8 +695,8 @@
         "name": "Garrett Wilson",
         "position": "WR",
         "nflTeam": "NYJ",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "OUT"
       },
       {
@@ -803,8 +803,8 @@
         "name": "Xavier Worthy",
         "position": "WR",
         "nflTeam": "KC",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -904,8 +904,8 @@
         "name": "Jalen Coker",
         "position": "WR",
         "nflTeam": "CAR",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -954,19 +954,19 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 5081432,
-        "name": "Antonio Williams",
-        "position": "WR",
-        "nflTeam": "WAS",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4373626,
         "name": "Tyler Allgeier",
         "position": "RB",
         "nflTeam": "ARI",
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4427095,
+        "name": "DeMario Douglas",
+        "position": "WR",
+        "nflTeam": "NE",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
@@ -1169,8 +1169,8 @@
         "name": "Cam Skattebo",
         "position": "RB",
         "nflTeam": "NYG",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "DOUBTFUL"
       },
       {
@@ -1228,15 +1228,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4429096,
-        "name": "Blake Corum",
-        "position": "RB",
-        "nflTeam": "LAR",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4372016,
         "name": "Jaylen Waddle",
         "position": "WR",
@@ -1270,6 +1261,15 @@
         "nflTeam": "BUF",
         "lineupSlot": "D/ST",
         "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4040761,
+        "name": "Devin Singletary",
+        "position": "RB",
+        "nflTeam": "NYG",
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       }
     ],
