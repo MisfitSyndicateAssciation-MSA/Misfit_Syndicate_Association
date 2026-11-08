@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 9,
-  "updatedAt": "2026-11-07T22:53:42.025501+00:00",
+  "updatedAt": "2026-11-08T02:03:21.376924+00:00",
   "standings": [
     {
       "rank": 1,
@@ -201,8 +201,8 @@
       "homeTeamId": 1,
       "awayScore": 5.7,
       "homeScore": 0.0,
-      "awayProjection": 112.92,
-      "homeProjection": 129.35
+      "awayProjection": 112.91,
+      "homeProjection": 129.36
     },
     {
       "week": 9,
@@ -228,7 +228,7 @@
       "homeTeamId": 9,
       "awayScore": 0.0,
       "homeScore": 20.9,
-      "awayProjection": 142.68,
+      "awayProjection": 140.48,
       "homeProjection": 141.73
     }
   ],
@@ -958,8 +958,8 @@
         "name": "Tyler Allgeier",
         "position": "RB",
         "nflTeam": "ARI",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -967,8 +967,8 @@
         "name": "DeMario Douglas",
         "position": "WR",
         "nflTeam": "NE",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       }
     ],
