@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 9,
-  "updatedAt": "2026-11-08T08:54:41.689350+00:00",
+  "updatedAt": "2026-11-08T15:49:14.888806+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,46 +190,46 @@
       "week": 9,
       "awayTeamId": 12,
       "homeTeamId": 10,
-      "awayScore": 0.0,
+      "awayScore": 1.8,
       "homeScore": 0.0,
-      "awayProjection": 133.86,
-      "homeProjection": 121.22
+      "awayProjection": 130.92,
+      "homeProjection": 121.25
     },
     {
       "week": 9,
       "awayTeamId": 5,
       "homeTeamId": 1,
       "awayScore": 5.7,
-      "homeScore": 0.0,
-      "awayProjection": 112.91,
-      "homeProjection": 129.36
+      "homeScore": 28.1,
+      "awayProjection": 112.39,
+      "homeProjection": 145.1
     },
     {
       "week": 9,
       "awayTeamId": 3,
       "homeTeamId": 11,
-      "awayScore": 0.0,
+      "awayScore": 12.6,
       "homeScore": 3.9,
-      "awayProjection": 127.83,
+      "awayProjection": 123.48,
       "homeProjection": 107.34
     },
     {
       "week": 9,
       "awayTeamId": 4,
       "homeTeamId": 8,
-      "awayScore": 17.0,
+      "awayScore": 27.6,
       "homeScore": 38.0,
-      "awayProjection": 139.33,
+      "awayProjection": 142.05,
       "homeProjection": 137.34
     },
     {
       "week": 9,
       "awayTeamId": 6,
       "homeTeamId": 9,
-      "awayScore": 0.0,
-      "homeScore": 20.9,
-      "awayProjection": 142.68,
-      "homeProjection": 141.73
+      "awayScore": 29.2,
+      "homeScore": 26.4,
+      "awayProjection": 161.19,
+      "homeProjection": 139.47
     }
   ],
   "rosters": {
@@ -808,10 +808,10 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": -16028,
-        "name": "Commanders D/ST",
+        "playerId": -16016,
+        "name": "Vikings D/ST",
         "position": "D/ST",
-        "nflTeam": "WAS",
+        "nflTeam": "MIN",
         "lineupSlot": "D/ST",
         "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
