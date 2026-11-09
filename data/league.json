@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 9,
-  "updatedAt": "2026-11-09T11:18:03.536317+00:00",
+  "updatedAt": "2026-11-09T21:29:52.083184+00:00",
   "standings": [
     {
       "rank": 1,
@@ -1407,7 +1407,7 @@
         "nflTeam": "MIA",
         "lineupSlot": "QB",
         "lineupSlotId": 0,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4685415,
@@ -1425,7 +1425,7 @@
         "nflTeam": "NYG",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       }
     ],
     "11": [
