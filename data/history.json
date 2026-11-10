@@ -1,7 +1,7 @@
 {
   "leagueId": 398889101,
   "season": 2026,
-  "completedThroughWeek": 8,
+  "completedThroughWeek": 9,
   "weeks": [
     {
       "week": 1,
@@ -2239,6 +2239,288 @@
           "streakType": "LOSS",
           "streakLength": 8,
           "powerScore": 9.7,
+          "formulaMode": "historicalBackfill"
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "matchups": [
+        {
+          "awayTeamId": 12,
+          "awayTeamName": "Ladiboyz",
+          "awayScore": 130.2,
+          "homeTeamId": 10,
+          "homeTeamName": "Db.EAtERs",
+          "homeScore": 121.4,
+          "winnerTeamId": 12,
+          "loserTeamId": 10,
+          "margin": 8.8
+        },
+        {
+          "awayTeamId": 5,
+          "awayTeamName": "Pitts Creek",
+          "awayScore": 97.2,
+          "homeTeamId": 1,
+          "homeTeamName": "Big Papi Queso",
+          "homeScore": 139.3,
+          "winnerTeamId": 1,
+          "loserTeamId": 5,
+          "margin": 42.1
+        },
+        {
+          "awayTeamId": 3,
+          "awayTeamName": "Team Ramrod",
+          "awayScore": 126.2,
+          "homeTeamId": 11,
+          "homeTeamName": "Red Zone Redbirds",
+          "homeScore": 73.5,
+          "winnerTeamId": 3,
+          "loserTeamId": 11,
+          "margin": 52.7
+        },
+        {
+          "awayTeamId": 4,
+          "awayTeamName": "Nabershood Cookout",
+          "awayScore": 121.7,
+          "homeTeamId": 8,
+          "homeTeamName": "Big Pickens Energy",
+          "homeScore": 103.9,
+          "winnerTeamId": 4,
+          "loserTeamId": 8,
+          "margin": 17.8
+        },
+        {
+          "awayTeamId": 6,
+          "awayTeamName": "Double Dookie Dawgs",
+          "awayScore": 157.8,
+          "homeTeamId": 9,
+          "homeTeamName": "Apukalypse Now, Skattebo Later",
+          "homeScore": 163.7,
+          "winnerTeamId": 9,
+          "loserTeamId": 6,
+          "margin": 5.9
+        }
+      ],
+      "highestScore": {
+        "teamId": 9,
+        "teamName": "Apukalypse Now, Skattebo Later",
+        "score": 163.7
+      },
+      "lowestScore": {
+        "teamId": 11,
+        "teamName": "Red Zone Redbirds",
+        "score": 73.5
+      },
+      "closestGame": {
+        "awayTeamId": 6,
+        "awayTeamName": "Double Dookie Dawgs",
+        "homeTeamId": 9,
+        "homeTeamName": "Apukalypse Now, Skattebo Later",
+        "awayScore": 157.8,
+        "homeScore": 163.7,
+        "margin": 5.9
+      },
+      "biggestBlowout": {
+        "awayTeamId": 3,
+        "awayTeamName": "Team Ramrod",
+        "homeTeamId": 11,
+        "homeTeamName": "Red Zone Redbirds",
+        "awayScore": 126.2,
+        "homeScore": 73.5,
+        "margin": 52.7
+      },
+      "awards": {
+        "kingOfTheWeek": {
+          "teamId": 9,
+          "teamName": "Apukalypse Now, Skattebo Later",
+          "score": 163.7
+        },
+        "frozenMisfit": {
+          "teamId": 11,
+          "teamName": "Red Zone Redbirds",
+          "score": 73.5
+        },
+        "theExecution": {
+          "teamId": 3,
+          "teamName": "Team Ramrod",
+          "opponentId": 11,
+          "opponentName": "Red Zone Redbirds",
+          "margin": 52.7
+        },
+        "photoFinish": {
+          "winnerTeamId": 9,
+          "winnerTeamName": "Apukalypse Now, Skattebo Later",
+          "loserTeamId": 6,
+          "loserTeamName": "Double Dookie Dawgs",
+          "margin": 5.9
+        },
+        "shouldHaveStayedHome": {
+          "teamId": 11,
+          "teamName": "Red Zone Redbirds",
+          "opponentId": 3,
+          "opponentName": "Team Ramrod",
+          "margin": 52.7
+        },
+        "giantKiller": {
+          "teamId": 3,
+          "teamName": "Team Ramrod",
+          "opponentId": 11,
+          "opponentName": "Red Zone Redbirds",
+          "enteringRank": 9,
+          "opponentEnteringRank": 4,
+          "rankGap": 5,
+          "margin": 52.7
+        },
+        "stockRising": {
+          "teamId": 9,
+          "teamName": "Apukalypse Now, Skattebo Later",
+          "score": 163.7,
+          "previousAverage": 112.0,
+          "improvement": 51.7,
+          "weeksCompared": 2
+        },
+        "benchwarmerOfTheWeek": {
+          "teamId": 4,
+          "teamName": "Nabershood Cookout",
+          "playerId": 4432577,
+          "playerName": "C.J. Stroud",
+          "position": "QB",
+          "nflTeam": "HOU",
+          "points": 54.0,
+          "lineupSlotId": 20,
+          "lineupSlot": "Bench"
+        }
+      },
+      "powerRankings": [
+        {
+          "rank": 1,
+          "teamId": 9,
+          "teamName": "Apukalypse Now, Skattebo Later",
+          "wins": 7,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 1255.7,
+          "streakType": "WIN",
+          "streakLength": 2,
+          "powerScore": 86.0,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 2,
+          "teamId": 6,
+          "teamName": "Double Dookie Dawgs",
+          "wins": 5,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 1239.8,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 69.6,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 3,
+          "teamId": 12,
+          "teamName": "Ladiboyz",
+          "wins": 6,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 1157.6,
+          "streakType": "WIN",
+          "streakLength": 4,
+          "powerScore": 68.3,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 4,
+          "teamId": 4,
+          "teamName": "Nabershood Cookout",
+          "wins": 6,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 1168.2,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 66.4,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 5,
+          "teamId": 11,
+          "teamName": "Red Zone Redbirds",
+          "wins": 5,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 1118.7,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 51.3,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 6,
+          "teamId": 1,
+          "teamName": "Big Papi Queso",
+          "wins": 5,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 1076.5,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 47.3,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 7,
+          "teamId": 5,
+          "teamName": "Pitts Creek",
+          "wins": 4,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1080.8,
+          "streakType": "LOSS",
+          "streakLength": 1,
+          "powerScore": 40.4,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 8,
+          "teamId": 3,
+          "teamName": "Team Ramrod",
+          "wins": 3,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1019.3,
+          "streakType": "WIN",
+          "streakLength": 1,
+          "powerScore": 28.2,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 9,
+          "teamId": 10,
+          "teamName": "Db.EAtERs",
+          "wins": 4,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 983.3,
+          "streakType": "LOSS",
+          "streakLength": 2,
+          "powerScore": 24.4,
+          "formulaMode": "historicalBackfill"
+        },
+        {
+          "rank": 10,
+          "teamId": 8,
+          "teamName": "Big Pickens Energy",
+          "wins": 0,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1020.2,
+          "streakType": "LOSS",
+          "streakLength": 9,
+          "powerScore": 5.6,
           "formulaMode": "historicalBackfill"
         }
       ]
