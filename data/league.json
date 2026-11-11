@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 10,
-  "updatedAt": "2026-11-10T19:11:51.557691+00:00",
+  "updatedAt": "2026-11-11T00:04:27.976868+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 12,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 100.7,
-      "homeProjection": 111.09
+      "awayProjection": 98.78,
+      "homeProjection": 113.02
     },
     {
       "week": 10,
@@ -201,8 +201,8 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 75.79,
-      "homeProjection": 123.43
+      "awayProjection": 61.14,
+      "homeProjection": 124.18
     },
     {
       "week": 10,
@@ -210,8 +210,8 @@
       "homeTeamId": 4,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 123.91,
-      "homeProjection": 123.13
+      "awayProjection": 127.26,
+      "homeProjection": 123.4
     },
     {
       "week": 10,
@@ -219,8 +219,8 @@
       "homeTeamId": 6,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 105.84,
-      "homeProjection": 137.91
+      "awayProjection": 104.87,
+      "homeProjection": 135.77
     },
     {
       "week": 10,
@@ -228,8 +228,8 @@
       "homeTeamId": 9,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 105.13,
-      "homeProjection": 121.28
+      "awayProjection": 107.37,
+      "homeProjection": 121.23
     }
   ],
   "rosters": {
@@ -329,8 +329,8 @@
         "name": "Ryan Flournoy",
         "position": "WR",
         "nflTeam": "DAL",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -365,8 +365,8 @@
         "name": "Blake Corum",
         "position": "RB",
         "nflTeam": "LAR",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -421,8 +421,8 @@
         "name": "Jayden Daniels",
         "position": "QB",
         "nflTeam": "WAS",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -475,15 +475,15 @@
         "name": "Bryce Young",
         "position": "QB",
         "nflTeam": "CAR",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 14880,
         "name": "Kirk Cousins",
         "position": "QB",
-        "nflTeam": "LV",
+        "nflTeam": "MIN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
@@ -951,7 +951,7 @@
         "nflTeam": "WAS",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4373626,
@@ -996,8 +996,8 @@
         "name": "Josh Jacobs",
         "position": "RB",
         "nflTeam": "GB",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
         "injuryStatus": "OUT"
       },
       {
@@ -1035,15 +1035,6 @@
         "lineupSlot": "D/ST",
         "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 4361432,
-        "name": "Romeo Doubs",
-        "position": "WR",
-        "nflTeam": "NE",
-        "lineupSlot": "IR",
-        "lineupSlotId": 21,
-        "injuryStatus": "INJURY_RESERVE"
       },
       {
         "playerId": 4432620,
@@ -1171,7 +1162,7 @@
         "nflTeam": "NYG",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4871023,
@@ -1344,7 +1335,7 @@
         "nflTeam": "ARI",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "OUT"
+        "injuryStatus": "INJURY_RESERVE"
       },
       {
         "playerId": -16026,
@@ -1389,7 +1380,7 @@
         "nflTeam": "WAS",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4702555,
@@ -1407,7 +1398,7 @@
         "nflTeam": "MIA",
         "lineupSlot": "QB",
         "lineupSlotId": 0,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "INJURY_RESERVE"
       },
       {
         "playerId": 4685415,
