@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 10,
-  "updatedAt": "2026-11-12T18:13:10.464026+00:00",
+  "updatedAt": "2026-11-12T23:41:37.426459+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 12,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 126.13,
-      "homeProjection": 127.68
+      "awayProjection": 125.51,
+      "homeProjection": 127.66
     },
     {
       "week": 10,
@@ -201,8 +201,8 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 106.91,
-      "homeProjection": 124.17
+      "awayProjection": 105.21,
+      "homeProjection": 124.25
     },
     {
       "week": 10,
@@ -210,8 +210,8 @@
       "homeTeamId": 4,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 131.89,
-      "homeProjection": 130.07
+      "awayProjection": 131.34,
+      "homeProjection": 129.66
     },
     {
       "week": 10,
@@ -219,8 +219,8 @@
       "homeTeamId": 6,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 104.85,
-      "homeProjection": 135.91
+      "awayProjection": 104.78,
+      "homeProjection": 133.78
     },
     {
       "week": 10,
@@ -229,7 +229,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 131.45,
-      "homeProjection": 131.64
+      "homeProjection": 131.42
     }
   ],
   "rosters": {
@@ -293,8 +293,8 @@
         "name": "Deebo Samuel Sr.",
         "position": "WR",
         "nflTeam": "SF",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -311,8 +311,8 @@
         "name": "George Pickens",
         "position": "WR",
         "nflTeam": "DAL",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -605,7 +605,7 @@
         "nflTeam": "DET",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4686361,
@@ -751,7 +751,7 @@
         "nflTeam": "NE",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "DOUBTFUL"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4431611,
@@ -769,7 +769,7 @@
         "nflTeam": "TEN",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3916433,
@@ -1389,7 +1389,7 @@
         "nflTeam": "WAS",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4702555,
@@ -1416,7 +1416,7 @@
         "nflTeam": "NYG",
         "lineupSlot": "QB",
         "lineupSlotId": 0,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 2991662,
@@ -1681,7 +1681,7 @@
         "nflTeam": "KC",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4241416,
@@ -1735,7 +1735,7 @@
         "nflTeam": "HOU",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       }
     ]
   },
