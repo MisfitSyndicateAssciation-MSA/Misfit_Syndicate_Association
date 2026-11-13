@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 10,
-  "updatedAt": "2026-11-12T23:41:37.426459+00:00",
+  "updatedAt": "2026-11-13T03:37:38.378507+00:00",
   "standings": [
     {
       "rank": 1,
@@ -199,9 +199,9 @@
       "week": 10,
       "awayTeamId": 10,
       "homeTeamId": 3,
-      "awayScore": 0.0,
+      "awayScore": 17.3,
       "homeScore": 0.0,
-      "awayProjection": 105.21,
+      "awayProjection": 101.68,
       "homeProjection": 124.25
     },
     {
@@ -209,9 +209,9 @@
       "awayTeamId": 1,
       "homeTeamId": 4,
       "awayScore": 0.0,
-      "homeScore": 0.0,
+      "homeScore": 7.4,
       "awayProjection": 131.34,
-      "homeProjection": 129.66
+      "homeProjection": 123.4
     },
     {
       "week": 10,
@@ -227,9 +227,9 @@
       "awayTeamId": 8,
       "homeTeamId": 9,
       "awayScore": 0.0,
-      "homeScore": 0.0,
+      "homeScore": 39.4,
       "awayProjection": 131.45,
-      "homeProjection": 131.42
+      "homeProjection": 151.8
     }
   ],
   "rosters": {
@@ -960,7 +960,7 @@
         "nflTeam": "WAS",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4373626,
@@ -1142,17 +1142,17 @@
         "name": "Puka Nacua",
         "position": "WR",
         "nflTeam": "LAR",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
+        "injuryStatus": "INJURY_RESERVE"
       },
       {
         "playerId": 4362238,
         "name": "Chase Brown",
         "position": "RB",
         "nflTeam": "CIN",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1178,8 +1178,8 @@
         "name": "Cam Skattebo",
         "position": "RB",
         "nflTeam": "NYG",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1277,8 +1277,17 @@
         "name": "Audric Estime",
         "position": "RB",
         "nflTeam": "NO",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 15818,
+        "name": "Keenan Allen",
+        "position": "WR",
+        "nflTeam": "SF",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1360,8 +1369,8 @@
         "name": "Juwan Johnson",
         "position": "TE",
         "nflTeam": "NO",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1387,8 +1396,8 @@
         "name": "Treylon Burks",
         "position": "WR",
         "nflTeam": "WAS",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
