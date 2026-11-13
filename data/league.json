@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 10,
-  "updatedAt": "2026-11-13T11:34:39.369497+00:00",
+  "updatedAt": "2026-11-13T18:44:48.842636+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 12,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 125.51,
-      "homeProjection": 127.66
+      "awayProjection": 125.57,
+      "homeProjection": 127.68
     },
     {
       "week": 10,
@@ -201,8 +201,8 @@
       "homeTeamId": 3,
       "awayScore": 28.1,
       "homeScore": 0.0,
-      "awayProjection": 108.48,
-      "homeProjection": 124.25
+      "awayProjection": 108.44,
+      "homeProjection": 124.19
     },
     {
       "week": 10,
@@ -220,7 +220,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 104.78,
-      "homeProjection": 133.78
+      "homeProjection": 134.74
     },
     {
       "week": 10,
@@ -228,8 +228,8 @@
       "homeTeamId": 9,
       "awayScore": 0.0,
       "homeScore": 57.9,
-      "awayProjection": 131.45,
-      "homeProjection": 166.7
+      "awayProjection": 131.26,
+      "homeProjection": 166.69
     }
   ],
   "rosters": {
@@ -668,7 +668,7 @@
         "nflTeam": "NYJ",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": -16004,
@@ -805,7 +805,7 @@
         "nflTeam": "NE",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 2576925,
@@ -949,8 +949,8 @@
         "name": "Germie Bernard",
         "position": "WR",
         "nflTeam": "PIT",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -976,8 +976,8 @@
         "name": "DeMario Douglas",
         "position": "WR",
         "nflTeam": "NE",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1189,7 +1189,7 @@
         "nflTeam": "TEN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4360310,
