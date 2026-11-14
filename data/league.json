@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 10,
-  "updatedAt": "2026-11-14T12:32:53.809222+00:00",
+  "updatedAt": "2026-11-14T18:28:00.330559+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 12,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 125.57,
-      "homeProjection": 116.09
+      "awayProjection": 125.39,
+      "homeProjection": 133.98
     },
     {
       "week": 10,
@@ -201,8 +201,8 @@
       "homeTeamId": 3,
       "awayScore": 28.1,
       "homeScore": 0.0,
-      "awayProjection": 108.43,
-      "homeProjection": 119.23
+      "awayProjection": 108.35,
+      "homeProjection": 119.74
     },
     {
       "week": 10,
@@ -211,7 +211,7 @@
       "awayScore": 0.0,
       "homeScore": 7.4,
       "awayProjection": 131.81,
-      "homeProjection": 120.8
+      "homeProjection": 120.81
     },
     {
       "week": 10,
@@ -219,8 +219,8 @@
       "homeTeamId": 6,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 104.62,
-      "homeProjection": 134.58
+      "awayProjection": 104.64,
+      "homeProjection": 134.6
     },
     {
       "week": 10,
@@ -229,7 +229,7 @@
       "awayScore": 0.0,
       "homeScore": 57.9,
       "awayProjection": 131.71,
-      "homeProjection": 166.67
+      "homeProjection": 157.36
     }
   ],
   "rosters": {
@@ -322,7 +322,7 @@
         "nflTeam": "PIT",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4870653,
@@ -1169,9 +1169,9 @@
         "name": "Kenneth Walker III",
         "position": "RB",
         "nflTeam": "KC",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
-        "injuryStatus": "QUESTIONABLE"
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4361370,
@@ -1295,8 +1295,8 @@
         "name": "Emmett Johnson",
         "position": "RB",
         "nflTeam": "KC",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1711,21 +1711,12 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": -16003,
-        "name": "Bears D/ST",
-        "position": "D/ST",
-        "nflTeam": "CHI",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4036133,
         "name": "T.J. Hockenson",
         "position": "TE",
         "nflTeam": "MIN",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "OUT"
       },
       {
@@ -1751,8 +1742,17 @@
         "name": "Tank Dell",
         "position": "WR",
         "nflTeam": "HOU",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": -16033,
+        "name": "Ravens D/ST",
+        "position": "D/ST",
+        "nflTeam": "BAL",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
       }
     ]
