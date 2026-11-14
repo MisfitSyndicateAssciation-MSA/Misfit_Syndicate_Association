@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 10,
-  "updatedAt": "2026-11-13T23:56:30.278321+00:00",
+  "updatedAt": "2026-11-14T05:49:04.418613+00:00",
   "standings": [
     {
       "rank": 1,
@@ -1273,19 +1273,19 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4569682,
-        "name": "Audric Estime",
-        "position": "RB",
-        "nflTeam": "NO",
+        "playerId": 15818,
+        "name": "Keenan Allen",
+        "position": "WR",
+        "nflTeam": "SF",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 15818,
-        "name": "Keenan Allen",
-        "position": "WR",
-        "nflTeam": "SF",
+        "playerId": 4832955,
+        "name": "Emmett Johnson",
+        "position": "RB",
+        "nflTeam": "KC",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
