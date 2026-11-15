@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 10,
-  "updatedAt": "2026-11-14T22:41:35.714925+00:00",
+  "updatedAt": "2026-11-15T02:10:05.080671+00:00",
   "standings": [
     {
       "rank": 1,
@@ -972,18 +972,18 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4373626,
-        "name": "Tyler Allgeier",
-        "position": "RB",
-        "nflTeam": "ARI",
+        "playerId": 4427095,
+        "name": "DeMario Douglas",
+        "position": "WR",
+        "nflTeam": "NE",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4427095,
-        "name": "DeMario Douglas",
-        "position": "WR",
+        "playerId": 4431431,
+        "name": "Corey Kiner",
+        "position": "RB",
         "nflTeam": "NE",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
