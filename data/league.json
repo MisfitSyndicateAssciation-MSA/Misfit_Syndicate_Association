@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-17T10:12:48.716222+00:00",
+  "updatedAt": "2026-11-17T19:12:32.745707+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 107.88,
-      "homeProjection": 103.4
+      "awayProjection": 110.96,
+      "homeProjection": 102.83
     },
     {
       "week": 11,
@@ -201,8 +201,8 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 120.9,
-      "homeProjection": 75.05
+      "awayProjection": 130.26,
+      "homeProjection": 74.62
     },
     {
       "week": 11,
@@ -210,8 +210,8 @@
       "homeTeamId": 10,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 135.5,
-      "homeProjection": 73.18
+      "awayProjection": 140.33,
+      "homeProjection": 72.77
     },
     {
       "week": 11,
@@ -219,8 +219,8 @@
       "homeTeamId": 1,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 101.08,
-      "homeProjection": 102.58
+      "awayProjection": 102.25,
+      "homeProjection": 125.85
     },
     {
       "week": 11,
@@ -229,7 +229,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 123.76,
-      "homeProjection": 82.15
+      "homeProjection": 83.23
     }
   ],
   "rosters": {
@@ -302,8 +302,8 @@
         "name": "Tucker Kraft",
         "position": "TE",
         "nflTeam": "GB",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -311,8 +311,8 @@
         "name": "George Pickens",
         "position": "WR",
         "nflTeam": "DAL",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -320,8 +320,8 @@
         "name": "Pat Freiermuth",
         "position": "TE",
         "nflTeam": "PIT",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -356,24 +356,6 @@
         "name": "Zach Charbonnet",
         "position": "RB",
         "nflTeam": "SEA",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": -16009,
-        "name": "Packers D/ST",
-        "position": "D/ST",
-        "nflTeam": "GB",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 4373678,
-        "name": "Khalil Shakir",
-        "position": "WR",
-        "nflTeam": "BUF",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
@@ -549,8 +531,8 @@
         "name": "Malik Nabers",
         "position": "WR",
         "nflTeam": "NYG",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -585,8 +567,8 @@
         "name": "Christian Watson",
         "position": "WR",
         "nflTeam": "GB",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -594,8 +576,8 @@
         "name": "Dalton Kincaid",
         "position": "TE",
         "nflTeam": "BUF",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -630,8 +612,8 @@
         "name": "Broncos D/ST",
         "position": "D/ST",
         "nflTeam": "DEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -675,8 +657,8 @@
         "name": "Bengals D/ST",
         "position": "D/ST",
         "nflTeam": "CIN",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -859,8 +841,8 @@
         "name": "Brock Bowers",
         "position": "TE",
         "nflTeam": "LV",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -879,7 +861,7 @@
         "nflTeam": "LAC",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4685278,
@@ -888,7 +870,7 @@
         "nflTeam": "CHI",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4431452,
@@ -915,7 +897,7 @@
         "nflTeam": "CHI",
         "lineupSlot": "IR",
         "lineupSlotId": 21,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4695883,
@@ -967,24 +949,6 @@
         "name": "Chig Okonkwo",
         "position": "TE",
         "nflTeam": "WAS",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 4427095,
-        "name": "DeMario Douglas",
-        "position": "WR",
-        "nflTeam": "NE",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 4431431,
-        "name": "Corey Kiner",
-        "position": "RB",
-        "nflTeam": "NE",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
@@ -1171,7 +1135,7 @@
         "nflTeam": "KC",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4361370,
@@ -1198,7 +1162,7 @@
         "nflTeam": "TEN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4360310,
@@ -1508,7 +1472,7 @@
         "nflTeam": "HOU",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4426388,
@@ -1645,7 +1609,7 @@
         "nflTeam": "PHI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 2577417,
@@ -1672,7 +1636,7 @@
         "nflTeam": "SF",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3953687,
@@ -1717,7 +1681,7 @@
         "nflTeam": "MIN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": -16027,
