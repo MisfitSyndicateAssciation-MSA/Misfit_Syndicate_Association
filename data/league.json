@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-18T09:09:39.414101+00:00",
+  "updatedAt": "2026-11-18T18:04:11.665781+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 110.96,
-      "homeProjection": 99.66
+      "awayProjection": 128.35,
+      "homeProjection": 100.47
     },
     {
       "week": 11,
@@ -202,7 +202,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 130.25,
-      "homeProjection": 74.61
+      "homeProjection": 126.73
     },
     {
       "week": 11,
@@ -211,7 +211,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 140.33,
-      "homeProjection": 72.8
+      "homeProjection": 72.58
     },
     {
       "week": 11,
@@ -220,7 +220,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 131.38,
-      "homeProjection": 131.3
+      "homeProjection": 131.52
     },
     {
       "week": 11,
@@ -228,8 +228,8 @@
       "homeTeamId": 11,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 123.76,
-      "homeProjection": 83.19
+      "awayProjection": 123.69,
+      "homeProjection": 83.06
     }
   ],
   "rosters": {
@@ -677,8 +677,8 @@
         "name": "Jaxon Smith-Njigba",
         "position": "WR",
         "nflTeam": "SEA",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -704,8 +704,8 @@
         "name": "Bucky Irving",
         "position": "RB",
         "nflTeam": "TB",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -713,8 +713,8 @@
         "name": "Colston Loveland",
         "position": "TE",
         "nflTeam": "CHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -731,8 +731,8 @@
         "name": "Matthew Stafford",
         "position": "QB",
         "nflTeam": "LAR",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -749,8 +749,8 @@
         "name": "Caleb Williams",
         "position": "QB",
         "nflTeam": "CHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -758,8 +758,8 @@
         "name": "Tony Pollard",
         "position": "RB",
         "nflTeam": "TEN",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -794,8 +794,8 @@
         "name": "Hunter Henry",
         "position": "TE",
         "nflTeam": "NE",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1643,8 +1643,8 @@
         "name": "Kyle Pitts Sr.",
         "position": "TE",
         "nflTeam": "ATL",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1670,8 +1670,8 @@
         "name": "Matthew Golden",
         "position": "WR",
         "nflTeam": "GB",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1697,8 +1697,8 @@
         "name": "T.J. Hockenson",
         "position": "TE",
         "nflTeam": "MIN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1715,8 +1715,8 @@
         "name": "Makai Lemon",
         "position": "WR",
         "nflTeam": "PHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
