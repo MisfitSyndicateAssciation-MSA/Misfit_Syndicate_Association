@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-17T19:12:32.745707+00:00",
+  "updatedAt": "2026-11-18T01:38:13.197042+00:00",
   "standings": [
     {
       "rank": 1,
@@ -193,7 +193,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 110.96,
-      "homeProjection": 102.83
+      "homeProjection": 99.66
     },
     {
       "week": 11,
@@ -201,8 +201,8 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 130.26,
-      "homeProjection": 74.62
+      "awayProjection": 130.25,
+      "homeProjection": 74.61
     },
     {
       "week": 11,
@@ -211,7 +211,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 140.33,
-      "homeProjection": 72.77
+      "homeProjection": 72.8
     },
     {
       "week": 11,
@@ -229,7 +229,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 123.76,
-      "homeProjection": 83.23
+      "homeProjection": 83.19
     }
   ],
   "rosters": {
@@ -895,8 +895,8 @@
         "name": "Kyle Monangai",
         "position": "RB",
         "nflTeam": "CHI",
-        "lineupSlot": "IR",
-        "lineupSlotId": 21,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
