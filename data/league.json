@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-18T18:04:11.665781+00:00",
+  "updatedAt": "2026-11-19T00:17:36.034261+00:00",
   "standings": [
     {
       "rank": 1,
@@ -495,7 +495,7 @@
         "nflTeam": "HOU",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "DOUBTFUL"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4568490,
@@ -587,7 +587,7 @@
         "nflTeam": "BUF",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3046779,
@@ -769,7 +769,7 @@
         "nflTeam": "JAX",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3055899,
@@ -805,7 +805,7 @@
         "nflTeam": "CAR",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4035687,
@@ -906,7 +906,7 @@
         "nflTeam": "CHI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4695883,
@@ -945,15 +945,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4685261,
-        "name": "Germie Bernard",
-        "position": "WR",
-        "nflTeam": "PIT",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4360635,
         "name": "Chig Okonkwo",
         "position": "TE",
@@ -969,7 +960,16 @@
         "nflTeam": "NO",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
+      },
+      {
+        "playerId": 4869645,
+        "name": "Caleb Douglas",
+        "position": "WR",
+        "nflTeam": "MIA",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "QUESTIONABLE"
       }
     ],
     "8": [
@@ -1052,7 +1052,7 @@
         "nflTeam": "JAX",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 15847,
@@ -1243,7 +1243,7 @@
         "nflTeam": "LV",
         "lineupSlot": "K",
         "lineupSlotId": 17,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4832800,
@@ -1490,7 +1490,7 @@
         "nflTeam": "HOU",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4426388,
