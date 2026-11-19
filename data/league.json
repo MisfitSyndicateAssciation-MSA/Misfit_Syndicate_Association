@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-19T07:39:57.851132+00:00",
+  "updatedAt": "2026-11-19T16:49:10.323480+00:00",
   "standings": [
     {
       "rank": 1,
@@ -18,7 +18,7 @@
       "pointsAgainst": 1203.7,
       "streakType": "WIN",
       "streakLength": 3,
-      "playoffPct": 100.0,
+      "playoffPct": 99.9,
       "playoffSeed": 1,
       "waiverRank": 8
     },
@@ -54,7 +54,7 @@
       "pointsAgainst": 1222.6,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 94.0,
+      "playoffPct": 94.3,
       "playoffSeed": 3,
       "waiverRank": 9
     },
@@ -72,7 +72,7 @@
       "pointsAgainst": 1242.6,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 88.6,
+      "playoffPct": 87.8,
       "playoffSeed": 4,
       "waiverRank": 6
     },
@@ -90,7 +90,7 @@
       "pointsAgainst": 1235.3,
       "streakType": "WIN",
       "streakLength": 2,
-      "playoffPct": 91.0,
+      "playoffPct": 91.4,
       "playoffSeed": 5,
       "waiverRank": 10
     },
@@ -108,7 +108,7 @@
       "pointsAgainst": 1131.9,
       "streakType": "LOSS",
       "streakLength": 2,
-      "playoffPct": 51.9,
+      "playoffPct": 51.6,
       "playoffSeed": 6,
       "waiverRank": 5
     },
@@ -126,7 +126,7 @@
       "pointsAgainst": 1301.1,
       "streakType": "LOSS",
       "streakLength": 2,
-      "playoffPct": 45.0,
+      "playoffPct": 45.2,
       "playoffSeed": 7,
       "waiverRank": 4
     },
@@ -144,7 +144,7 @@
       "pointsAgainst": 1197.2,
       "streakType": "WIN",
       "streakLength": 2,
-      "playoffPct": 22.9,
+      "playoffPct": 23.7,
       "playoffSeed": 8,
       "waiverRank": 3
     },
@@ -162,7 +162,7 @@
       "pointsAgainst": 1210.2,
       "streakType": "LOSS",
       "streakLength": 3,
-      "playoffPct": 7.8,
+      "playoffPct": 7.2,
       "playoffSeed": 9,
       "waiverRank": 2
     },
@@ -193,7 +193,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 128.35,
-      "homeProjection": 100.47
+      "homeProjection": 100.42
     },
     {
       "week": 11,
@@ -201,7 +201,7 @@
       "homeTeamId": 5,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 130.25,
+      "awayProjection": 130.23,
       "homeProjection": 126.73
     },
     {
@@ -211,7 +211,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 144.04,
-      "homeProjection": 72.58
+      "homeProjection": 72.6
     },
     {
       "week": 11,
@@ -219,8 +219,8 @@
       "homeTeamId": 1,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 131.38,
-      "homeProjection": 131.52
+      "awayProjection": 107.57,
+      "homeProjection": 132.22
     },
     {
       "week": 11,
@@ -228,8 +228,8 @@
       "homeTeamId": 11,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 123.69,
-      "homeProjection": 83.06
+      "awayProjection": 135.33,
+      "homeProjection": 82.97
     }
   ],
   "rosters": {
@@ -1005,8 +1005,8 @@
         "name": "George Kittle",
         "position": "TE",
         "nflTeam": "SF",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1014,8 +1014,8 @@
         "name": "Bo Nix",
         "position": "QB",
         "nflTeam": "DEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1059,8 +1059,8 @@
         "name": "Travis Kelce",
         "position": "TE",
         "nflTeam": "KC",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1113,8 +1113,8 @@
         "name": "Jacoby Brissett",
         "position": "QB",
         "nflTeam": "BAL",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1761,7 +1761,7 @@
         "wins": 8,
         "losses": 2,
         "ties": 0,
-        "playoffPct": 100.0
+        "playoffPct": 99.9
       },
       {
         "seed": 2,
@@ -1783,7 +1783,7 @@
         "wins": 6,
         "losses": 4,
         "ties": 0,
-        "playoffPct": 94.0
+        "playoffPct": 94.3
       },
       {
         "seed": 4,
@@ -1794,7 +1794,7 @@
         "wins": 6,
         "losses": 4,
         "ties": 0,
-        "playoffPct": 88.6
+        "playoffPct": 87.8
       },
       {
         "seed": 5,
@@ -1805,7 +1805,7 @@
         "wins": 6,
         "losses": 4,
         "ties": 0,
-        "playoffPct": 91.0
+        "playoffPct": 91.4
       },
       {
         "seed": 6,
@@ -1816,7 +1816,7 @@
         "wins": 5,
         "losses": 5,
         "ties": 0,
-        "playoffPct": 51.9
+        "playoffPct": 51.6
       }
     ],
     "basementField": [
@@ -1829,7 +1829,7 @@
         "wins": 4,
         "losses": 6,
         "ties": 0,
-        "playoffPct": 45.0
+        "playoffPct": 45.2
       },
       {
         "seed": 8,
@@ -1840,7 +1840,7 @@
         "wins": 4,
         "losses": 6,
         "ties": 0,
-        "playoffPct": 22.9
+        "playoffPct": 23.7
       },
       {
         "seed": 9,
@@ -1851,7 +1851,7 @@
         "wins": 4,
         "losses": 6,
         "ties": 0,
-        "playoffPct": 7.8
+        "playoffPct": 7.2
       },
       {
         "seed": 10,
