@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-19T16:49:10.323480+00:00",
+  "updatedAt": "2026-11-19T23:17:14.755400+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,7 +192,7 @@
       "homeTeamId": 3,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 128.35,
+      "awayProjection": 128.2,
       "homeProjection": 100.42
     },
     {
@@ -220,7 +220,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 107.57,
-      "homeProjection": 132.22
+      "homeProjection": 133.07
     },
     {
       "week": 11,
@@ -266,8 +266,8 @@
         "name": "Rome Odunze",
         "position": "WR",
         "nflTeam": "CHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -293,8 +293,8 @@
         "name": "Deebo Samuel Sr.",
         "position": "WR",
         "nflTeam": "SF",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -352,21 +352,21 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4429086,
-        "name": "Michael Mayer",
-        "position": "TE",
-        "nflTeam": "LV",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": -16003,
         "name": "Bears D/ST",
         "position": "D/ST",
         "nflTeam": "CHI",
         "lineupSlot": "D/ST",
         "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3116164,
+        "name": "Mike Gesicki",
+        "position": "TE",
+        "nflTeam": "CIN",
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1627,7 +1627,7 @@
         "nflTeam": "PHI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 2577417,
