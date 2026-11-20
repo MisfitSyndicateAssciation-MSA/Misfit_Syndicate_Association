@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-20T12:47:06.133579+00:00",
+  "updatedAt": "2026-11-20T20:48:28.579265+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 3,
       "awayScore": 5.7,
       "homeScore": 6.0,
-      "awayProjection": 123.43,
-      "homeProjection": 95.77
+      "awayProjection": 123.42,
+      "homeProjection": 94.95
     },
     {
       "week": 11,
@@ -201,8 +201,8 @@
       "homeTeamId": 5,
       "awayScore": 27.7,
       "homeScore": 0.0,
-      "awayProjection": 130.18,
-      "homeProjection": 126.73
+      "awayProjection": 121.78,
+      "homeProjection": 127.06
     },
     {
       "week": 11,
@@ -210,8 +210,8 @@
       "homeTeamId": 10,
       "awayScore": 0.0,
       "homeScore": 4.2,
-      "awayProjection": 144.04,
-      "homeProjection": 58.77
+      "awayProjection": 139.5,
+      "homeProjection": 93.71
     },
     {
       "week": 11,
@@ -220,7 +220,7 @@
       "awayScore": 0.0,
       "homeScore": 22.5,
       "awayProjection": 131.69,
-      "homeProjection": 123.05
+      "homeProjection": 123.04
     },
     {
       "week": 11,
@@ -228,8 +228,8 @@
       "homeTeamId": 11,
       "awayScore": 0.0,
       "homeScore": 33.7,
-      "awayProjection": 135.33,
-      "homeProjection": 123.37
+      "awayProjection": 135.41,
+      "homeProjection": 123.56
     }
   ],
   "rosters": {
@@ -596,7 +596,7 @@
         "nflTeam": "BUF",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "DOUBTFUL"
       },
       {
         "playerId": 3046779,
@@ -668,7 +668,7 @@
         "nflTeam": "NYJ",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": -16004,
@@ -886,8 +886,8 @@
         "name": "Luther Burden III",
         "position": "WR",
         "nflTeam": "CHI",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -895,9 +895,9 @@
         "name": "Drake Maye",
         "position": "QB",
         "nflTeam": "NE",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "DOUBTFUL"
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4569987,
@@ -967,9 +967,9 @@
         "name": "Jordyn Tyson",
         "position": "WR",
         "nflTeam": "NO",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4688380,
@@ -1162,7 +1162,7 @@
         "nflTeam": "KC",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4361370,
@@ -1207,7 +1207,7 @@
         "nflTeam": "NYG",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4361741,
@@ -1306,8 +1306,8 @@
         "name": "Saquon Barkley",
         "position": "RB",
         "nflTeam": "PHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1317,7 +1317,7 @@
         "nflTeam": "NE",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "DOUBTFUL"
       },
       {
         "playerId": 4431459,
@@ -1342,8 +1342,8 @@
         "name": "Jadarian Price",
         "position": "RB",
         "nflTeam": "SEA",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1351,8 +1351,8 @@
         "name": "Courtland Sutton",
         "position": "WR",
         "nflTeam": "DEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1360,8 +1360,8 @@
         "name": "Seahawks D/ST",
         "position": "D/ST",
         "nflTeam": "SEA",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1387,8 +1387,8 @@
         "name": "Titans D/ST",
         "position": "D/ST",
         "nflTeam": "TEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1396,8 +1396,8 @@
         "name": "Treylon Burks",
         "position": "WR",
         "nflTeam": "WAS",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1405,8 +1405,8 @@
         "name": "Jonah Coleman",
         "position": "RB",
         "nflTeam": "DEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1432,8 +1432,8 @@
         "name": "Mack Hollins",
         "position": "WR",
         "nflTeam": "NE",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1441,8 +1441,8 @@
         "name": "Rico Dowdle",
         "position": "RB",
         "nflTeam": "PIT",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1708,7 +1708,7 @@
         "nflTeam": "MIN",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": -16027,
