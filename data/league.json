@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-19T23:17:14.755400+00:00",
+  "updatedAt": "2026-11-20T04:03:44.517668+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,18 +190,18 @@
       "week": 11,
       "awayTeamId": 12,
       "homeTeamId": 3,
-      "awayScore": 0.0,
-      "homeScore": 0.0,
-      "awayProjection": 128.2,
-      "homeProjection": 100.42
+      "awayScore": 5.7,
+      "homeScore": 6.0,
+      "awayProjection": 123.96,
+      "homeProjection": 96.31
     },
     {
       "week": 11,
       "awayTeamId": 4,
       "homeTeamId": 5,
-      "awayScore": 0.0,
+      "awayScore": 27.8,
       "homeScore": 0.0,
-      "awayProjection": 130.23,
+      "awayProjection": 131.7,
       "homeProjection": 126.73
     },
     {
@@ -209,27 +209,27 @@
       "awayTeamId": 6,
       "homeTeamId": 10,
       "awayScore": 0.0,
-      "homeScore": 0.0,
+      "homeScore": 4.2,
       "awayProjection": 144.04,
-      "homeProjection": 72.6
+      "homeProjection": 59.69
     },
     {
       "week": 11,
       "awayTeamId": 9,
       "homeTeamId": 1,
       "awayScore": 0.0,
-      "homeScore": 0.0,
-      "awayProjection": 107.57,
-      "homeProjection": 133.07
+      "homeScore": 22.5,
+      "awayProjection": 131.69,
+      "homeProjection": 124.72
     },
     {
       "week": 11,
       "awayTeamId": 8,
       "homeTeamId": 11,
       "awayScore": 0.0,
-      "homeScore": 0.0,
+      "homeScore": 31.9,
       "awayProjection": 135.33,
-      "homeProjection": 82.97
+      "homeProjection": 122.39
     }
   ],
   "rosters": {
@@ -1151,8 +1151,8 @@
         "name": "Kenneth Walker III",
         "position": "RB",
         "nflTeam": "KC",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1178,8 +1178,8 @@
         "name": "Carnell Tate",
         "position": "WR",
         "nflTeam": "TEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -1268,8 +1268,8 @@
         "name": "Keenan Allen",
         "position": "WR",
         "nflTeam": "SF",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1277,8 +1277,8 @@
         "name": "Emmett Johnson",
         "position": "RB",
         "nflTeam": "KC",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1461,8 +1461,8 @@
         "name": "Kyren Williams",
         "position": "RB",
         "nflTeam": "LAR",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1479,18 +1479,9 @@
         "name": "D'Andre Swift",
         "position": "RB",
         "nflTeam": "CHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 4432708,
-        "name": "Marvin Harrison Jr.",
-        "position": "WR",
-        "nflTeam": "HOU",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "OUT"
       },
       {
         "playerId": 4426388,
@@ -1511,31 +1502,13 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4429205,
-        "name": "Jordan Addison",
-        "position": "WR",
-        "nflTeam": "MIN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "OUT"
-      },
-      {
         "playerId": 3116365,
         "name": "Mark Andrews",
         "position": "TE",
         "nflTeam": "BAL",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 4678008,
-        "name": "Jonathon Brooks",
-        "position": "RB",
-        "nflTeam": "CAR",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "INJURY_RESERVE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 3912547,
@@ -1551,8 +1524,8 @@
         "name": "Jordan Mason",
         "position": "RB",
         "nflTeam": "MIN",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1569,15 +1542,42 @@
         "name": "Tre Tucker",
         "position": "WR",
         "nflTeam": "LV",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4035538,
+        "name": "David Montgomery",
+        "position": "RB",
+        "nflTeam": "HOU",
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4686422,
+        "name": "Xavier Hutchinson",
+        "position": "WR",
+        "nflTeam": "HOU",
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4597500,
+        "name": "Adonai Mitchell",
+        "position": "WR",
+        "nflTeam": "NYJ",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 2473037,
-        "name": "Jason Myers",
+        "playerId": 4362081,
+        "name": "Cameron Dicker",
         "position": "K",
-        "nflTeam": "SEA",
+        "nflTeam": "LAC",
         "lineupSlot": "K",
         "lineupSlotId": 17,
         "injuryStatus": "ACTIVE"
