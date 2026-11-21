@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-20T20:48:28.579265+00:00",
+  "updatedAt": "2026-11-21T01:50:07.078690+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 3,
       "awayScore": 5.7,
       "homeScore": 6.0,
-      "awayProjection": 123.42,
-      "homeProjection": 94.95
+      "awayProjection": 125.59,
+      "homeProjection": 95.04
     },
     {
       "week": 11,
@@ -202,7 +202,7 @@
       "awayScore": 27.7,
       "homeScore": 0.0,
       "awayProjection": 121.78,
-      "homeProjection": 127.06
+      "homeProjection": 127.07
     },
     {
       "week": 11,
@@ -210,8 +210,8 @@
       "homeTeamId": 10,
       "awayScore": 0.0,
       "homeScore": 4.2,
-      "awayProjection": 139.5,
-      "homeProjection": 93.71
+      "awayProjection": 139.51,
+      "homeProjection": 93.77
     },
     {
       "week": 11,
@@ -219,8 +219,8 @@
       "homeTeamId": 1,
       "awayScore": 0.0,
       "homeScore": 22.5,
-      "awayProjection": 131.69,
-      "homeProjection": 123.04
+      "awayProjection": 127.52,
+      "homeProjection": 122.93
     },
     {
       "week": 11,
@@ -468,7 +468,7 @@
         "nflTeam": "WAS",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": -16017,
@@ -778,7 +778,7 @@
         "nflTeam": "JAX",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 3055899,
@@ -979,6 +979,15 @@
         "lineupSlot": "QB",
         "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4373678,
+        "name": "Khalil Shakir",
+        "position": "WR",
+        "nflTeam": "BUF",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
       }
     ],
     "8": [
@@ -1061,7 +1070,7 @@
         "nflTeam": "JAX",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 15847,
@@ -1196,8 +1205,8 @@
         "name": "Trevor Lawrence",
         "position": "QB",
         "nflTeam": "JAX",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1207,15 +1216,15 @@
         "nflTeam": "NYG",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4361741,
         "name": "Brock Purdy",
         "position": "QB",
         "nflTeam": "SF",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1243,7 +1252,7 @@
         "nflTeam": "DEN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4249087,
@@ -1398,7 +1407,7 @@
         "nflTeam": "WAS",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4702555,
