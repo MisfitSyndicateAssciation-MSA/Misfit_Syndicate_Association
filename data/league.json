@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-21T16:39:59.370311+00:00",
+  "updatedAt": "2026-11-21T21:53:57.107913+00:00",
   "standings": [
     {
       "rank": 1,
@@ -210,7 +210,7 @@
       "homeTeamId": 10,
       "awayScore": 0.0,
       "homeScore": 4.2,
-      "awayProjection": 134.22,
+      "awayProjection": 138.06,
       "homeProjection": 93.77
     },
     {
@@ -219,7 +219,7 @@
       "homeTeamId": 1,
       "awayScore": 0.0,
       "homeScore": 22.5,
-      "awayProjection": 127.52,
+      "awayProjection": 129.52,
       "homeProjection": 122.93
     },
     {
@@ -882,15 +882,6 @@
         "injuryStatus": "QUESTIONABLE"
       },
       {
-        "playerId": 4685278,
-        "name": "Luther Burden III",
-        "position": "WR",
-        "nflTeam": "CHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4431452,
         "name": "Drake Maye",
         "position": "QB",
@@ -976,8 +967,8 @@
         "name": "Cam Ward",
         "position": "QB",
         "nflTeam": "TEN",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -987,6 +978,15 @@
         "nflTeam": "BUF",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4360310,
+        "name": "Trevor Lawrence",
+        "position": "QB",
+        "nflTeam": "JAX",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1196,18 +1196,9 @@
         "name": "Carnell Tate",
         "position": "WR",
         "nflTeam": "TEN",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
-      },
-      {
-        "playerId": 4360310,
-        "name": "Trevor Lawrence",
-        "position": "QB",
-        "nflTeam": "JAX",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4361050,
@@ -1297,6 +1288,15 @@
         "nflTeam": "KC",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4685278,
+        "name": "Luther Burden III",
+        "position": "WR",
+        "nflTeam": "CHI",
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1407,7 +1407,7 @@
         "nflTeam": "WAS",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4702555,
