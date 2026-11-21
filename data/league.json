@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-21T08:55:38.959320+00:00",
+  "updatedAt": "2026-11-21T16:39:59.370311+00:00",
   "standings": [
     {
       "rank": 1,
@@ -193,7 +193,7 @@
       "awayScore": 5.7,
       "homeScore": 6.0,
       "awayProjection": 125.59,
-      "homeProjection": 95.04
+      "homeProjection": 95.05
     },
     {
       "week": 11,
@@ -202,7 +202,7 @@
       "awayScore": 27.7,
       "homeScore": 0.0,
       "awayProjection": 121.78,
-      "homeProjection": 127.07
+      "homeProjection": 127.06
     },
     {
       "week": 11,
@@ -210,7 +210,7 @@
       "homeTeamId": 10,
       "awayScore": 0.0,
       "homeScore": 4.2,
-      "awayProjection": 139.51,
+      "awayProjection": 134.22,
       "homeProjection": 93.77
     },
     {
@@ -228,7 +228,7 @@
       "homeTeamId": 11,
       "awayScore": 0.0,
       "homeScore": 33.7,
-      "awayProjection": 135.41,
+      "awayProjection": 135.44,
       "homeProjection": 123.56
     }
   ],
@@ -859,8 +859,8 @@
         "name": "Brock Bowers",
         "position": "TE",
         "nflTeam": "LV",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "QUESTIONABLE"
       },
       {
@@ -958,8 +958,8 @@
         "name": "Chig Okonkwo",
         "position": "TE",
         "nflTeam": "WAS",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
