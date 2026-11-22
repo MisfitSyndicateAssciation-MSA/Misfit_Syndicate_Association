@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-22T17:19:59.713369+00:00",
+  "updatedAt": "2026-11-22T22:36:57.486717+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,46 +190,46 @@
       "week": 11,
       "awayTeamId": 12,
       "homeTeamId": 3,
-      "awayScore": 5.7,
-      "homeScore": 6.0,
-      "awayProjection": 131.91,
-      "homeProjection": 95.68
+      "awayScore": 150.9,
+      "homeScore": 56.0,
+      "awayProjection": 162.6,
+      "homeProjection": 81.96
     },
     {
       "week": 11,
       "awayTeamId": 4,
       "homeTeamId": 5,
-      "awayScore": 27.7,
-      "homeScore": 0.0,
-      "awayProjection": 130.33,
-      "homeProjection": 129.43
+      "awayScore": 85.5,
+      "homeScore": 118.2,
+      "awayProjection": 129.25,
+      "homeProjection": 129.58
     },
     {
       "week": 11,
       "awayTeamId": 6,
       "homeTeamId": 10,
-      "awayScore": 0.0,
-      "homeScore": 4.2,
-      "awayProjection": 138.28,
-      "homeProjection": 93.75
+      "awayScore": 48.2,
+      "homeScore": 53.6,
+      "awayProjection": 117.99,
+      "homeProjection": 89.08
     },
     {
       "week": 11,
       "awayTeamId": 9,
       "homeTeamId": 1,
-      "awayScore": 0.0,
-      "homeScore": 22.5,
-      "awayProjection": 129.5,
-      "homeProjection": 122.9
+      "awayScore": 59.1,
+      "homeScore": 86.8,
+      "awayProjection": 117.66,
+      "homeProjection": 143.14
     },
     {
       "week": 11,
       "awayTeamId": 8,
       "homeTeamId": 11,
-      "awayScore": 0.0,
-      "homeScore": 33.7,
-      "awayProjection": 135.45,
-      "homeProjection": 123.57
+      "awayScore": 80.7,
+      "homeScore": 107.7,
+      "awayProjection": 135.73,
+      "homeProjection": 117.94
     }
   ],
   "rosters": {
@@ -861,7 +861,7 @@
         "nflTeam": "LV",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4361579,
@@ -879,7 +879,7 @@
         "nflTeam": "LAC",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4431452,
@@ -915,7 +915,7 @@
         "nflTeam": "CAR",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4360689,
@@ -1252,7 +1252,7 @@
         "nflTeam": "LV",
         "lineupSlot": "K",
         "lineupSlotId": 17,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4832800,
@@ -1380,7 +1380,7 @@
         "nflTeam": "NO",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4571557,
