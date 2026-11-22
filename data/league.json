@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-22T01:55:06.660662+00:00",
+  "updatedAt": "2026-11-22T09:28:12.926234+00:00",
   "standings": [
     {
       "rank": 1,
@@ -36,7 +36,7 @@
       "pointsAgainst": 1221.3,
       "streakType": "WIN",
       "streakLength": 5,
-      "playoffPct": 98.7,
+      "playoffPct": 98.9,
       "playoffSeed": 2,
       "waiverRank": 7
     },
@@ -54,7 +54,7 @@
       "pointsAgainst": 1222.6,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 93.1,
+      "playoffPct": 94.4,
       "playoffSeed": 3,
       "waiverRank": 9
     },
@@ -72,7 +72,7 @@
       "pointsAgainst": 1242.6,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 87.5,
+      "playoffPct": 87.4,
       "playoffSeed": 4,
       "waiverRank": 6
     },
@@ -90,7 +90,7 @@
       "pointsAgainst": 1235.3,
       "streakType": "WIN",
       "streakLength": 2,
-      "playoffPct": 91.0,
+      "playoffPct": 90.3,
       "playoffSeed": 5,
       "waiverRank": 10
     },
@@ -108,7 +108,7 @@
       "pointsAgainst": 1131.9,
       "streakType": "LOSS",
       "streakLength": 2,
-      "playoffPct": 58.1,
+      "playoffPct": 55.6,
       "playoffSeed": 6,
       "waiverRank": 5
     },
@@ -126,7 +126,7 @@
       "pointsAgainst": 1301.1,
       "streakType": "LOSS",
       "streakLength": 2,
-      "playoffPct": 42.7,
+      "playoffPct": 45.1,
       "playoffSeed": 7,
       "waiverRank": 4
     },
@@ -144,7 +144,7 @@
       "pointsAgainst": 1197.2,
       "streakType": "WIN",
       "streakLength": 2,
-      "playoffPct": 22.8,
+      "playoffPct": 21.9,
       "playoffSeed": 8,
       "waiverRank": 3
     },
@@ -162,7 +162,7 @@
       "pointsAgainst": 1210.2,
       "streakType": "LOSS",
       "streakLength": 3,
-      "playoffPct": 6.2,
+      "playoffPct": 6.3,
       "playoffSeed": 9,
       "waiverRank": 2
     },
@@ -192,7 +192,7 @@
       "homeTeamId": 3,
       "awayScore": 5.7,
       "homeScore": 6.0,
-      "awayProjection": 125.59,
+      "awayProjection": 131.08,
       "homeProjection": 95.05
     },
     {
@@ -1643,8 +1643,8 @@
         "name": "DeVonta Smith",
         "position": "WR",
         "nflTeam": "PHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "WR",
+        "lineupSlotId": 4,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1733,8 +1733,8 @@
         "name": "Makai Lemon",
         "position": "WR",
         "nflTeam": "PHI",
-        "lineupSlot": "WR",
-        "lineupSlotId": 4,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1790,7 +1790,7 @@
         "wins": 7,
         "losses": 3,
         "ties": 0,
-        "playoffPct": 98.7
+        "playoffPct": 98.9
       },
       {
         "seed": 3,
@@ -1801,7 +1801,7 @@
         "wins": 6,
         "losses": 4,
         "ties": 0,
-        "playoffPct": 93.1
+        "playoffPct": 94.4
       },
       {
         "seed": 4,
@@ -1812,7 +1812,7 @@
         "wins": 6,
         "losses": 4,
         "ties": 0,
-        "playoffPct": 87.5
+        "playoffPct": 87.4
       },
       {
         "seed": 5,
@@ -1823,7 +1823,7 @@
         "wins": 6,
         "losses": 4,
         "ties": 0,
-        "playoffPct": 91.0
+        "playoffPct": 90.3
       },
       {
         "seed": 6,
@@ -1834,7 +1834,7 @@
         "wins": 5,
         "losses": 5,
         "ties": 0,
-        "playoffPct": 58.1
+        "playoffPct": 55.6
       }
     ],
     "basementField": [
@@ -1847,7 +1847,7 @@
         "wins": 4,
         "losses": 6,
         "ties": 0,
-        "playoffPct": 42.7
+        "playoffPct": 45.1
       },
       {
         "seed": 8,
@@ -1858,7 +1858,7 @@
         "wins": 4,
         "losses": 6,
         "ties": 0,
-        "playoffPct": 22.8
+        "playoffPct": 21.9
       },
       {
         "seed": 9,
@@ -1869,7 +1869,7 @@
         "wins": 4,
         "losses": 6,
         "ties": 0,
-        "playoffPct": 6.2
+        "playoffPct": 6.3
       },
       {
         "seed": 10,
