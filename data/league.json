@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-22T09:28:12.926234+00:00",
+  "updatedAt": "2026-11-22T17:19:59.713369+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 3,
       "awayScore": 5.7,
       "homeScore": 6.0,
-      "awayProjection": 131.08,
-      "homeProjection": 95.05
+      "awayProjection": 131.91,
+      "homeProjection": 95.68
     },
     {
       "week": 11,
@@ -201,8 +201,8 @@
       "homeTeamId": 5,
       "awayScore": 27.7,
       "homeScore": 0.0,
-      "awayProjection": 121.78,
-      "homeProjection": 127.06
+      "awayProjection": 130.33,
+      "homeProjection": 129.43
     },
     {
       "week": 11,
@@ -210,8 +210,8 @@
       "homeTeamId": 10,
       "awayScore": 0.0,
       "homeScore": 4.2,
-      "awayProjection": 138.06,
-      "homeProjection": 93.77
+      "awayProjection": 138.28,
+      "homeProjection": 93.75
     },
     {
       "week": 11,
@@ -219,8 +219,8 @@
       "homeTeamId": 1,
       "awayScore": 0.0,
       "homeScore": 22.5,
-      "awayProjection": 129.52,
-      "homeProjection": 122.93
+      "awayProjection": 129.5,
+      "homeProjection": 122.9
     },
     {
       "week": 11,
@@ -228,8 +228,8 @@
       "homeTeamId": 11,
       "awayScore": 0.0,
       "homeScore": 33.7,
-      "awayProjection": 135.44,
-      "homeProjection": 123.56
+      "awayProjection": 135.45,
+      "homeProjection": 123.57
     }
   ],
   "rosters": {
@@ -370,13 +370,13 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4883647,
-        "name": "Elic Ayomanor",
+        "playerId": 4429205,
+        "name": "Jordan Addison",
         "position": "WR",
-        "nflTeam": "TEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "nflTeam": "MIN",
+        "lineupSlot": "IR",
+        "lineupSlotId": 21,
+        "injuryStatus": "OUT"
       }
     ],
     "3": [
@@ -594,9 +594,9 @@
         "name": "Dalton Kincaid",
         "position": "TE",
         "nflTeam": "BUF",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
-        "injuryStatus": "DOUBTFUL"
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 3046779,
@@ -648,8 +648,8 @@
         "name": "J.K. Dobbins",
         "position": "RB",
         "nflTeam": "DEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -814,7 +814,7 @@
         "nflTeam": "CAR",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4035687,
@@ -1198,7 +1198,7 @@
         "nflTeam": "TEN",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4361050,
