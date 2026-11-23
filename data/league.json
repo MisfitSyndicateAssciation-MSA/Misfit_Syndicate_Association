@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-22T22:36:57.486717+00:00",
+  "updatedAt": "2026-11-23T03:07:15.458997+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,46 +190,46 @@
       "week": 11,
       "awayTeamId": 12,
       "homeTeamId": 3,
-      "awayScore": 150.9,
-      "homeScore": 56.0,
-      "awayProjection": 162.6,
-      "homeProjection": 81.96
+      "awayScore": 158.9,
+      "homeScore": 59.0,
+      "awayProjection": 164.75,
+      "homeProjection": 75.85
     },
     {
       "week": 11,
       "awayTeamId": 4,
       "homeTeamId": 5,
-      "awayScore": 85.5,
-      "homeScore": 118.2,
-      "awayProjection": 129.25,
-      "homeProjection": 129.58
+      "awayScore": 116.6,
+      "homeScore": 124.1,
+      "awayProjection": 133.38,
+      "homeProjection": 124.84
     },
     {
       "week": 11,
       "awayTeamId": 6,
       "homeTeamId": 10,
-      "awayScore": 48.2,
-      "homeScore": 53.6,
-      "awayProjection": 117.99,
-      "homeProjection": 89.08
+      "awayScore": 87.6,
+      "homeScore": 89.1,
+      "awayProjection": 128.13,
+      "homeProjection": 97.64
     },
     {
       "week": 11,
       "awayTeamId": 9,
       "homeTeamId": 1,
-      "awayScore": 59.1,
-      "homeScore": 86.8,
-      "awayProjection": 117.66,
-      "homeProjection": 143.14
+      "awayScore": 95.1,
+      "homeScore": 91.8,
+      "awayProjection": 120.86,
+      "homeProjection": 138.19
     },
     {
       "week": 11,
       "awayTeamId": 8,
       "homeTeamId": 11,
-      "awayScore": 80.7,
-      "homeScore": 107.7,
-      "awayProjection": 135.73,
-      "homeProjection": 117.94
+      "awayScore": 101.6,
+      "homeScore": 109.7,
+      "awayProjection": 111.6,
+      "homeProjection": 109.7
     }
   ],
   "rosters": {
@@ -1317,7 +1317,7 @@
         "nflTeam": "PHI",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4047646,
@@ -1672,7 +1672,7 @@
         "nflTeam": "SF",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 3953687,
