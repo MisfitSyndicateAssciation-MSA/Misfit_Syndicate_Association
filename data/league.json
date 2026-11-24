@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-23T12:28:57.627109+00:00",
+  "updatedAt": "2026-11-24T00:17:02.183404+00:00",
   "standings": [
     {
       "rank": 1,
@@ -459,7 +459,7 @@
         "nflTeam": "PHI",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4697815,
@@ -468,7 +468,7 @@
         "nflTeam": "WAS",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": -16017,
@@ -614,7 +614,7 @@
         "nflTeam": "JAX",
         "lineupSlot": "K",
         "lineupSlotId": 17,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4685247,
@@ -915,7 +915,7 @@
         "nflTeam": "CAR",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4360689,
@@ -1070,7 +1070,7 @@
         "nflTeam": "JAX",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 15847,
@@ -1481,7 +1481,7 @@
         "nflTeam": "LAR",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 16800,
