@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 12,
-  "updatedAt": "2026-11-24T10:06:27.441208+00:00",
+  "updatedAt": "2026-11-24T20:38:42.197185+00:00",
   "standings": [
     {
       "rank": 1,
@@ -192,8 +192,8 @@
       "homeTeamId": 12,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 122.43,
-      "homeProjection": 129.62
+      "awayProjection": 120.81,
+      "homeProjection": 140.92
     },
     {
       "week": 12,
@@ -201,8 +201,8 @@
       "homeTeamId": 6,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 99.29,
-      "homeProjection": 131.38
+      "awayProjection": 92.49,
+      "homeProjection": 145.83
     },
     {
       "week": 12,
@@ -210,8 +210,8 @@
       "homeTeamId": 9,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 119.86,
-      "homeProjection": 110.88
+      "awayProjection": 118.53,
+      "homeProjection": 131.93
     },
     {
       "week": 12,
@@ -219,8 +219,8 @@
       "homeTeamId": 8,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 106.38,
-      "homeProjection": 131.38
+      "awayProjection": 104.93,
+      "homeProjection": 132.32
     },
     {
       "week": 12,
@@ -228,8 +228,8 @@
       "homeTeamId": 11,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 128.19,
-      "homeProjection": 109.46
+      "awayProjection": 128.54,
+      "homeProjection": 107.85
     }
   ],
   "rosters": {
@@ -239,8 +239,8 @@
         "name": "Jonathan Taylor",
         "position": "RB",
         "nflTeam": "IND",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -266,8 +266,8 @@
         "name": "Rome Odunze",
         "position": "WR",
         "nflTeam": "CHI",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -302,8 +302,8 @@
         "name": "Tucker Kraft",
         "position": "TE",
         "nflTeam": "GB",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "TE",
+        "lineupSlotId": 6,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -320,8 +320,8 @@
         "name": "KC Concepcion",
         "position": "WR",
         "nflTeam": "CLE",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -338,8 +338,8 @@
         "name": "Blake Corum",
         "position": "RB",
         "nflTeam": "LAR",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -365,8 +365,8 @@
         "name": "Mike Gesicki",
         "position": "TE",
         "nflTeam": "CIN",
-        "lineupSlot": "TE",
-        "lineupSlotId": 6,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -376,7 +376,7 @@
         "nflTeam": "MIN",
         "lineupSlot": "IR",
         "lineupSlotId": 21,
-        "injuryStatus": "OUT"
+        "injuryStatus": "DOUBTFUL"
       }
     ],
     "3": [
@@ -504,7 +504,7 @@
         "nflTeam": "HOU",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4568490,
@@ -596,7 +596,7 @@
         "nflTeam": "BUF",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3046779,
@@ -668,7 +668,7 @@
         "nflTeam": "NYJ",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": -16004,
@@ -861,7 +861,7 @@
         "nflTeam": "LV",
         "lineupSlot": "TE",
         "lineupSlotId": 6,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4361579,
@@ -1016,7 +1016,7 @@
         "nflTeam": "GB",
         "lineupSlot": "IR",
         "lineupSlotId": 21,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3040151,
@@ -1086,8 +1086,8 @@
         "name": "Ollie Gordon II",
         "position": "RB",
         "nflTeam": "MIA",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1104,8 +1104,8 @@
         "name": "Quinshon Judkins",
         "position": "RB",
         "nflTeam": "CLE",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1171,7 +1171,7 @@
         "nflTeam": "KC",
         "lineupSlot": "RB",
         "lineupSlotId": 2,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4361370,
@@ -1261,7 +1261,7 @@
         "nflTeam": "CLE",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": -16002,
@@ -1535,7 +1535,7 @@
         "nflTeam": "SEA",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4360569,
@@ -1688,8 +1688,8 @@
         "name": "Matthew Golden",
         "position": "WR",
         "nflTeam": "GB",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1724,8 +1724,8 @@
         "name": "Buccaneers D/ST",
         "position": "D/ST",
         "nflTeam": "TB",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1742,8 +1742,8 @@
         "name": "Tank Dell",
         "position": "WR",
         "nflTeam": "HOU",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1751,8 +1751,8 @@
         "name": "Ravens D/ST",
         "position": "D/ST",
         "nflTeam": "BAL",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ]
