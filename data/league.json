@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 12,
-  "updatedAt": "2026-11-25T03:45:39.000055+00:00",
+  "updatedAt": "2026-11-25T13:37:20.935432+00:00",
   "standings": [
     {
       "rank": 1,
@@ -20,7 +20,7 @@
       "streakLength": 1,
       "playoffPct": 100.0,
       "playoffSeed": 1,
-      "waiverRank": 10
+      "waiverRank": 7
     },
     {
       "rank": 2,
@@ -38,7 +38,7 @@
       "streakLength": 6,
       "playoffPct": 100.0,
       "playoffSeed": 2,
-      "waiverRank": 9
+      "waiverRank": 6
     },
     {
       "rank": 3,
@@ -54,9 +54,9 @@
       "pointsAgainst": 1316.7,
       "streakType": "WIN",
       "streakLength": 2,
-      "playoffPct": 98.1,
+      "playoffPct": 98.2,
       "playoffSeed": 3,
-      "waiverRank": 8
+      "waiverRank": 10
     },
     {
       "rank": 4,
@@ -72,9 +72,9 @@
       "pointsAgainst": 1363.7,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 97.5,
+      "playoffPct": 97.7,
       "playoffSeed": 4,
-      "waiverRank": 7
+      "waiverRank": 5
     },
     {
       "rank": 5,
@@ -90,9 +90,9 @@
       "pointsAgainst": 1343.0,
       "streakType": "WIN",
       "streakLength": 3,
-      "playoffPct": 97.6,
+      "playoffPct": 98.1,
       "playoffSeed": 5,
-      "waiverRank": 6
+      "waiverRank": 9
     },
     {
       "rank": 6,
@@ -108,9 +108,9 @@
       "pointsAgainst": 1241.5,
       "streakType": "WIN",
       "streakLength": 1,
-      "playoffPct": 74.3,
+      "playoffPct": 76.5,
       "playoffSeed": 6,
-      "waiverRank": 5
+      "waiverRank": 4
     },
     {
       "rank": 7,
@@ -126,9 +126,9 @@
       "pointsAgainst": 1430.0,
       "streakType": "LOSS",
       "streakLength": 3,
-      "playoffPct": 22.6,
+      "playoffPct": 19.7,
       "playoffSeed": 7,
-      "waiverRank": 4
+      "waiverRank": 3
     },
     {
       "rank": 8,
@@ -144,9 +144,9 @@
       "pointsAgainst": 1359.6,
       "streakType": "LOSS",
       "streakLength": 1,
-      "playoffPct": 7.7,
+      "playoffPct": 6.9,
       "playoffSeed": 8,
-      "waiverRank": 3
+      "waiverRank": 2
     },
     {
       "rank": 9,
@@ -162,9 +162,9 @@
       "pointsAgainst": 1316.5,
       "streakType": "LOSS",
       "streakLength": 4,
-      "playoffPct": 2.3,
+      "playoffPct": 2.9,
       "playoffSeed": 9,
-      "waiverRank": 2
+      "waiverRank": 1
     },
     {
       "rank": 10,
@@ -182,7 +182,7 @@
       "streakLength": 11,
       "playoffPct": 0.0,
       "playoffSeed": 10,
-      "waiverRank": 1
+      "waiverRank": 8
     }
   ],
   "matchups": [
@@ -228,7 +228,7 @@
       "homeTeamId": 11,
       "awayScore": 0.0,
       "homeScore": 0.0,
-      "awayProjection": 128.54,
+      "awayProjection": 132.38,
       "homeProjection": 107.85
     }
   ],
@@ -352,15 +352,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": -16003,
-        "name": "Bears D/ST",
-        "position": "D/ST",
-        "nflTeam": "CHI",
-        "lineupSlot": "D/ST",
-        "lineupSlotId": 16,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 3116164,
         "name": "Mike Gesicki",
         "position": "TE",
@@ -377,6 +368,15 @@
         "lineupSlot": "IR",
         "lineupSlotId": 21,
         "injuryStatus": "DOUBTFUL"
+      },
+      {
+        "playerId": -16025,
+        "name": "49ers D/ST",
+        "position": "D/ST",
+        "nflTeam": "SF",
+        "lineupSlot": "D/ST",
+        "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
       }
     ],
     "3": [
@@ -900,24 +900,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4608686,
-        "name": "Kyle Monangai",
-        "position": "RB",
-        "nflTeam": "CHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
-        "playerId": 4695883,
-        "name": "Jalen Coker",
-        "position": "WR",
-        "nflTeam": "CAR",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4360689,
         "name": "Tyler Shough",
         "position": "QB",
@@ -963,15 +945,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4688380,
-        "name": "Cam Ward",
-        "position": "QB",
-        "nflTeam": "TEN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4373678,
         "name": "Khalil Shakir",
         "position": "WR",
@@ -987,6 +960,33 @@
         "nflTeam": "JAX",
         "lineupSlot": "QB",
         "lineupSlotId": 0,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4710855,
+        "name": "Konata Mumpfield",
+        "position": "WR",
+        "nflTeam": "LAR",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4575131,
+        "name": "Jacory Croskey-Merritt",
+        "position": "RB",
+        "nflTeam": "WAS",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 5081432,
+        "name": "Antonio Williams",
+        "position": "WR",
+        "nflTeam": "WAS",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1109,15 +1109,6 @@
         "injuryStatus": "ACTIVE"
       },
       {
-        "playerId": 4360698,
-        "name": "Joe Milton",
-        "position": "QB",
-        "nflTeam": "PHI",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4688813,
         "name": "Josh Downs",
         "position": "WR",
@@ -1142,6 +1133,15 @@
         "nflTeam": "ARI",
         "lineupSlot": "K",
         "lineupSlotId": 17,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 4837248,
+        "name": "Fernando Mendoza",
+        "position": "QB",
+        "nflTeam": "LV",
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       }
     ],
@@ -1801,7 +1801,7 @@
         "wins": 7,
         "losses": 4,
         "ties": 0,
-        "playoffPct": 98.1
+        "playoffPct": 98.2
       },
       {
         "seed": 4,
@@ -1812,7 +1812,7 @@
         "wins": 7,
         "losses": 4,
         "ties": 0,
-        "playoffPct": 97.5
+        "playoffPct": 97.7
       },
       {
         "seed": 5,
@@ -1823,7 +1823,7 @@
         "wins": 7,
         "losses": 4,
         "ties": 0,
-        "playoffPct": 97.6
+        "playoffPct": 98.1
       },
       {
         "seed": 6,
@@ -1834,7 +1834,7 @@
         "wins": 6,
         "losses": 5,
         "ties": 0,
-        "playoffPct": 74.3
+        "playoffPct": 76.5
       }
     ],
     "basementField": [
@@ -1847,7 +1847,7 @@
         "wins": 4,
         "losses": 7,
         "ties": 0,
-        "playoffPct": 22.6
+        "playoffPct": 19.7
       },
       {
         "seed": 8,
@@ -1858,7 +1858,7 @@
         "wins": 4,
         "losses": 7,
         "ties": 0,
-        "playoffPct": 7.7
+        "playoffPct": 6.9
       },
       {
         "seed": 9,
@@ -1869,7 +1869,7 @@
         "wins": 4,
         "losses": 7,
         "ties": 0,
-        "playoffPct": 2.3
+        "playoffPct": 2.9
       },
       {
         "seed": 10,
