@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 12,
-  "updatedAt": "2026-11-25T22:46:01.129006+00:00",
+  "updatedAt": "2026-11-26T04:31:21.177717+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,10 +190,10 @@
       "week": 12,
       "awayTeamId": 4,
       "homeTeamId": 12,
-      "awayScore": 0.0,
-      "homeScore": 0.0,
-      "awayProjection": 131.02,
-      "homeProjection": 141.0
+      "awayScore": 16.5,
+      "homeScore": 4.9,
+      "awayProjection": 133.37,
+      "homeProjection": 129.18
     },
     {
       "week": 12,
@@ -211,7 +211,7 @@
       "awayScore": 0.0,
       "homeScore": 0.0,
       "awayProjection": 118.65,
-      "homeProjection": 110.49
+      "homeProjection": 128.23
     },
     {
       "week": 12,
@@ -226,9 +226,9 @@
       "week": 12,
       "awayTeamId": 1,
       "homeTeamId": 11,
-      "awayScore": 0.0,
+      "awayScore": 31.9,
       "homeScore": 0.0,
-      "awayProjection": 132.39,
+      "awayProjection": 141.14,
       "homeProjection": 107.85
     }
   ],
@@ -587,7 +587,7 @@
         "nflTeam": "GB",
         "lineupSlot": "FLEX",
         "lineupSlotId": 23,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 4385690,
@@ -688,7 +688,7 @@
         "nflTeam": "SEA",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 3043078,
@@ -1016,7 +1016,7 @@
         "nflTeam": "GB",
         "lineupSlot": "IR",
         "lineupSlotId": 21,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "OUT"
       },
       {
         "playerId": 3040151,
@@ -1169,8 +1169,8 @@
         "name": "Kenneth Walker III",
         "position": "RB",
         "nflTeam": "KC",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "OUT"
       },
       {
@@ -1286,8 +1286,8 @@
         "name": "Emmett Johnson",
         "position": "RB",
         "nflTeam": "KC",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1407,7 +1407,7 @@
         "nflTeam": "WAS",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4702555,
@@ -1535,7 +1535,7 @@
         "nflTeam": "SEA",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 4360569,
@@ -1636,7 +1636,7 @@
         "nflTeam": "BAL",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4241478,
