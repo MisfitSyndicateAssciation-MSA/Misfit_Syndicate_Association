@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 12,
-  "updatedAt": "2026-11-26T23:08:08.737915+00:00",
+  "updatedAt": "2026-11-27T05:01:28.459343+00:00",
   "standings": [
     {
       "rank": 1,
@@ -190,46 +190,46 @@
       "week": 12,
       "awayTeamId": 4,
       "homeTeamId": 12,
-      "awayScore": 30.9,
-      "homeScore": 94.1,
-      "awayProjection": 136.96,
-      "homeProjection": 171.37
+      "awayScore": 50.4,
+      "homeScore": 141.0,
+      "awayProjection": 142.17,
+      "homeProjection": 190.2
     },
     {
       "week": 12,
       "awayTeamId": 3,
       "homeTeamId": 6,
-      "awayScore": 0.0,
-      "homeScore": 19.2,
-      "awayProjection": 115.43,
-      "homeProjection": 159.02
+      "awayScore": 3.9,
+      "homeScore": 33.3,
+      "awayProjection": 108.26,
+      "homeProjection": 160.0
     },
     {
       "week": 12,
       "awayTeamId": 5,
       "homeTeamId": 9,
-      "awayScore": 29.0,
-      "homeScore": 7.5,
-      "awayProjection": 126.74,
-      "homeProjection": 123.24
+      "awayScore": 35.5,
+      "homeScore": 27.1,
+      "awayProjection": 113.41,
+      "homeProjection": 125.1
     },
     {
       "week": 12,
       "awayTeamId": 10,
       "homeTeamId": 8,
-      "awayScore": 9.4,
-      "homeScore": 21.6,
-      "awayProjection": 99.7,
-      "homeProjection": 136.13
+      "awayScore": 21.1,
+      "homeScore": 32.7,
+      "awayProjection": 91.71,
+      "homeProjection": 135.73
     },
     {
       "week": 12,
       "awayTeamId": 1,
       "homeTeamId": 11,
-      "awayScore": 36.5,
-      "homeScore": 43.2,
-      "awayProjection": 139.26,
-      "homeProjection": 124.57
+      "awayScore": 54.6,
+      "homeScore": 45.5,
+      "awayProjection": 138.57,
+      "homeProjection": 109.95
     }
   ],
   "rosters": {
@@ -459,7 +459,7 @@
         "nflTeam": "PHI",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "OUT"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 4697815,
@@ -596,7 +596,7 @@
         "nflTeam": "BUF",
         "lineupSlot": "Bench",
         "lineupSlotId": 20,
-        "injuryStatus": "QUESTIONABLE"
+        "injuryStatus": "ACTIVE"
       },
       {
         "playerId": 3046779,
@@ -895,8 +895,8 @@
         "name": "Jaylen Warren",
         "position": "RB",
         "nflTeam": "PIT",
-        "lineupSlot": "RB",
-        "lineupSlotId": 2,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -967,8 +967,8 @@
         "name": "Jacory Croskey-Merritt",
         "position": "RB",
         "nflTeam": "WAS",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "RB",
+        "lineupSlotId": 2,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1542,8 +1542,8 @@
         "name": "Jordan Mason",
         "position": "RB",
         "nflTeam": "MIN",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
+        "lineupSlot": "FLEX",
+        "lineupSlotId": 23,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1578,8 +1578,8 @@
         "name": "Xavier Hutchinson",
         "position": "WR",
         "nflTeam": "HOU",
-        "lineupSlot": "FLEX",
-        "lineupSlotId": 23,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "ACTIVE"
       },
       {
@@ -1645,7 +1645,7 @@
         "nflTeam": "PHI",
         "lineupSlot": "WR",
         "lineupSlotId": 4,
-        "injuryStatus": "ACTIVE"
+        "injuryStatus": "QUESTIONABLE"
       },
       {
         "playerId": 2577417,
