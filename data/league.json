@@ -2,7 +2,7 @@
   "leagueId": 398889101,
   "season": 2026,
   "currentWeek": 12,
-  "updatedAt": "2026-11-27T23:18:03.038172+00:00",
+  "updatedAt": "2026-11-28T04:47:25.011525+00:00",
   "standings": [
     {
       "rank": 1,
@@ -211,7 +211,7 @@
       "awayScore": 35.5,
       "homeScore": 27.1,
       "awayProjection": 113.49,
-      "homeProjection": 102.49
+      "homeProjection": 124.75
     },
     {
       "week": 12,
@@ -1214,8 +1214,8 @@
         "name": "Brock Purdy",
         "position": "QB",
         "nflTeam": "SF",
-        "lineupSlot": "QB",
-        "lineupSlotId": 0,
+        "lineupSlot": "Bench",
+        "lineupSlotId": 20,
         "injuryStatus": "OUT"
       },
       {
@@ -1264,15 +1264,6 @@
         "injuryStatus": "QUESTIONABLE"
       },
       {
-        "playerId": 15818,
-        "name": "Keenan Allen",
-        "position": "WR",
-        "nflTeam": "SF",
-        "lineupSlot": "Bench",
-        "lineupSlotId": 20,
-        "injuryStatus": "ACTIVE"
-      },
-      {
         "playerId": 4832955,
         "name": "Emmett Johnson",
         "position": "RB",
@@ -1297,6 +1288,15 @@
         "nflTeam": "NYG",
         "lineupSlot": "D/ST",
         "lineupSlotId": 16,
+        "injuryStatus": "ACTIVE"
+      },
+      {
+        "playerId": 3122840,
+        "name": "Deshaun Watson",
+        "position": "QB",
+        "nflTeam": "CLE",
+        "lineupSlot": "QB",
+        "lineupSlotId": 0,
         "injuryStatus": "ACTIVE"
       }
     ],
